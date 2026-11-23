@@ -153,7 +153,7 @@ a,button{touch-action:manipulation;}
 
 .page{display:none;}
 .page.active{display:block;}
-.page-inner{padding:clamp(32px,6vw,52px) 0 clamp(56px,8vw,80px);}
+.page-inner{padding-top:clamp(32px,6vw,52px);padding-bottom:clamp(56px,8vw,80px);}
 
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
