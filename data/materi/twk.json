@@ -1,0 +1,77 @@
+{
+  "subtes": "twk",
+  "label": "TWK",
+  "topik": [
+    {
+      "id": "twk-nasionalisme",
+      "nomor": 1,
+      "judul": "Nasionalisme",
+      "subjudul": "Kesetiaan pada bangsa tanpa merendahkan bangsa lain",
+      "ringkasan": "Nasionalisme adalah paham kebangsaan yang menempatkan kesetiaan tertinggi pada bangsa dan negara. Nasionalisme Indonesia bukan chauvinisme.",
+      "flag": "Sering keluar",
+      "poinJudul": "Poin kunci",
+      "poin": [
+        "**Cinta tanah air** dan bangga menjadi bagian dari bangsa Indonesia.",
+        "**Rela berkorban** untuk kepentingan bangsa di atas kepentingan pribadi.",
+        "**Menjaga persatuan** dalam keberagaman.",
+        "**Menghargai bangsa lain** tanpa kehilangan identitas."
+      ],
+      "catatan": "Pilih respons yang mengedepankan kepentingan bersama."
+    },
+    {
+      "id": "twk-integritas",
+      "nomor": 2,
+      "judul": "Integritas",
+      "subjudul": "Konsistensi antara nilai, ucapan, dan tindakan",
+      "ringkasan": "Integritas adalah kesesuaian antara nilai yang diyakini, ucapan, dan tindakan — termasuk saat tidak ada yang mengawasi.",
+      "poinJudul": "Indikator",
+      "poin": [
+        "**Jujur** — menyampaikan fakta apa adanya.",
+        "**Konsisten** — sama di depan maupun di belakang.",
+        "**Tanggung jawab** — mengakui kesalahan dan memperbaikinya.",
+        "**Menolak gratifikasi.**"
+      ]
+    },
+    {
+      "id": "twk-bela-negara",
+      "nomor": 3,
+      "judul": "Bela Negara",
+      "subjudul": "Hak sekaligus kewajiban setiap warga negara",
+      "ringkasan": "Dasar hukumnya Pasal 27 ayat (3) UUD 1945.",
+      "poinJudul": "Lima nilai dasar",
+      "poin": [
+        "Cinta tanah air.",
+        "Kesadaran berbangsa dan bernegara.",
+        "Yakin Pancasila sebagai ideologi negara.",
+        "Rela berkorban untuk bangsa dan negara.",
+        "Memiliki kemampuan awal bela negara."
+      ]
+    },
+    {
+      "id": "twk-pilar-negara",
+      "nomor": 4,
+      "judul": "Pilar Negara",
+      "subjudul": "Pancasila, UUD 1945, NKRI, Bhinneka Tunggal Ika",
+      "ringkasan": "Empat pilar kebangsaan menjadi kerangka utama soal TWK.",
+      "flag": "Sering keluar",
+      "poinJudul": "Hafalan pasal yang sering diuji",
+      "poin": [
+        "**Pasal 1 ayat (1)** — negara kesatuan berbentuk republik. **Ayat (3)** — negara hukum.",
+        "**Pasal 27** — kesamaan di depan hukum. **Pasal 28** — HAM. **Pasal 31** — pendidikan. **Pasal 33** — perekonomian."
+      ]
+    },
+    {
+      "id": "twk-bahasa-negara",
+      "nomor": 5,
+      "judul": "Bahasa Negara",
+      "subjudul": "Kedudukan Bahasa Indonesia dan kalimat efektif",
+      "ringkasan": "Pasal 36 UUD 1945 menyatakan bahwa bahasa negara ialah Bahasa Indonesia.",
+      "poinJudul": "Sering diuji",
+      "poin": [
+        "**Kata baku:** praktik, analisis, apotek, izin, silakan.",
+        "**Penulisan “di”:** kata depan dipisah, awalan disambung.",
+        "**Kalimat efektif:** subjek dan predikat jelas."
+      ]
+    }
+  ]
+}

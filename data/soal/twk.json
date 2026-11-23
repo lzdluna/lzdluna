@@ -1,0 +1,174 @@
+{
+  "subtes": "twk",
+  "label": "TWK",
+  "soal": [
+    {
+      "id": "twk-01",
+      "teks": "Berdasarkan Pasal 1 ayat (3) UUD 1945, Indonesia merupakan negara …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Serikat"
+        },
+        {
+          "kode": "B",
+          "teks": "Hukum",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Kesatuan"
+        },
+        {
+          "kode": "D",
+          "teks": "Republik"
+        },
+        {
+          "kode": "E",
+          "teks": "Demokrasi"
+        }
+      ],
+      "pembahasan": "Pasal 1 ayat (3) UUD 1945 menyatakan bahwa Negara Indonesia adalah negara hukum — penyelenggaraan negara berdasarkan hukum, bukan kekuasaan semata."
+    },
+    {
+      "id": "twk-02",
+      "teks": "Pancasila disahkan sebagai dasar negara Indonesia pada tanggal …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "1 Juni 1945"
+        },
+        {
+          "kode": "B",
+          "teks": "22 Juni 1945"
+        },
+        {
+          "kode": "C",
+          "teks": "18 Agustus 1945",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "17 Agustus 1945"
+        },
+        {
+          "kode": "E",
+          "teks": "29 Mei 1945"
+        }
+      ],
+      "pembahasan": "Pada sidang PPKI tanggal 18 Agustus 1945, Pancasila (rumusan final) disahkan bersama UUD 1945. Tanggal 1 Juni adalah pidato Soekarno, 22 Juni adalah Piagam Jakarta, 17 Agustus adalah proklamasi."
+    },
+    {
+      "id": "twk-03",
+      "teks": "Semboyan \"Bhinneka Tunggal Ika\" diambil dari kitab …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Negarakertagama"
+        },
+        {
+          "kode": "B",
+          "teks": "Sutasoma",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Arjunawiwaha"
+        },
+        {
+          "kode": "D",
+          "teks": "Bharatayudha"
+        },
+        {
+          "kode": "E",
+          "teks": "Ramayana"
+        }
+      ],
+      "pembahasan": "Semboyan ini berasal dari Kakawin Sutasoma karya Mpu Tantular pada masa Majapahit. Negarakertagama ditulis Mpu Prapanca, Arjunawiwaha oleh Mpu Kanwa."
+    },
+    {
+      "id": "twk-04",
+      "teks": "Dasar hukum kewajiban bela negara bagi setiap warga negara adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pasal 27 ayat (3) UUD 1945",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Pasal 28 UUD 1945"
+        },
+        {
+          "kode": "C",
+          "teks": "Pasal 30 ayat (1) UUD 1945"
+        },
+        {
+          "kode": "D",
+          "teks": "Pasal 33 ayat (1) UUD 1945"
+        },
+        {
+          "kode": "E",
+          "teks": "Pasal 36 UUD 1945"
+        }
+      ],
+      "pembahasan": "Berbunyi: \"Setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara.\" Ketentuan teknisnya diatur UU No. 3 Tahun 2002 tentang Pertahanan Negara."
+    },
+    {
+      "id": "twk-05",
+      "teks": "Penulisan kata baku yang benar adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Apotik"
+        },
+        {
+          "kode": "B",
+          "teks": "Apotek",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Analisa"
+        },
+        {
+          "kode": "D",
+          "teks": "Praktek"
+        },
+        {
+          "kode": "E",
+          "teks": "Ijin"
+        }
+      ],
+      "pembahasan": "Bentuk baku menurut KBBI: apotek (bukan apotik), analisis (bukan analisa), praktik (bukan praktek), izin (bukan ijin), silakan (bukan silahkan)."
+    },
+    {
+      "id": "twk-06",
+      "teks": "Lambang negara Indonesia, Garuda Pancasila, diatur dalam …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "UU No. 24 Tahun 2009",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "UU No. 12 Tahun 2011"
+        },
+        {
+          "kode": "C",
+          "teks": "UU No. 5 Tahun 2014"
+        },
+        {
+          "kode": "D",
+          "teks": "UU No. 20 Tahun 2003"
+        },
+        {
+          "kode": "E",
+          "teks": "UU No. 23 Tahun 2006"
+        }
+      ],
+      "pembahasan": "Tentang Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan. UU No. 12/2011 tentang Pembentukan Peraturan, UU No. 5/2014 tentang ASN, UU No. 20/2003 tentang Sisdiknas."
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "subtes": "tkp",
+  "label": "TKP",
+  "soal": [
+    {
+      "id": "tkp-01",
+      "teks": "Saat melayani masyarakat, ada warga yang datang dengan nada marah karena antrean panjang. Respons terbaik Anda adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Meminta warga sabar dan menunggu tanpa penjelasan"
+        },
+        {
+          "kode": "B",
+          "teks": "Mengabaikan karena masih melayani yang lain"
+        },
+        {
+          "kode": "C",
+          "teks": "Menyapa dengan tenang, menjelaskan perkiraan waktu tunggu, dan meminta maaf",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Menyuruh warga pulang dan kembali lain hari"
+        },
+        {
+          "kode": "E",
+          "teks": "Meminta rekan kerja menangani warga tersebut"
+        }
+      ],
+      "pembahasan": "Respons terbaik menggabungkan empati, penjelasan, dan permintaan maaf — pola yang biasanya diberi skor 5 dalam TKP."
+    },
+    {
+      "id": "tkp-02",
+      "teks": "Rekan kerja Anda sering menyelesaikan tugas tidak sesuai standar sehingga menghambat pekerjaan tim. Sikap Anda …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Membiarkan karena bukan tanggung jawab saya"
+        },
+        {
+          "kode": "B",
+          "teks": "Melaporkan ke atasan tanpa memberi tahu rekan tersebut"
+        },
+        {
+          "kode": "C",
+          "teks": "Mengajak rekan tersebut berdiskusi dan membantu memahami standar yang benar",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Mengerjakan tugasnya sendiri agar cepat selesai"
+        },
+        {
+          "kode": "E",
+          "teks": "Menegurnya di depan rekan kerja lain agar jera"
+        }
+      ],
+      "pembahasan": "Jejaring kerja yang baik menuntut kolaborasi dan pembinaan, bukan pelaporan diam-diam atau menegur di depan orang banyak. Membantu rekan memahami standar adalah bentuk profesionalisme."
+    },
+    {
+      "id": "tkp-03",
+      "teks": "Atasan memberi Anda tugas baru yang belum pernah Anda kerjakan dengan tenggat singkat. Sikap Anda …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Menolak karena di luar kemampuan"
+        },
+        {
+          "kode": "B",
+          "teks": "Menerima, lalu mempelajari dan mencari referensi atau bertanya kepada yang lebih berpengalaman",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Menerima tetapi mengerjakan semampunya tanpa usaha belajar"
+        },
+        {
+          "kode": "D",
+          "teks": "Meminta rekan lain mengerjakan"
+        },
+        {
+          "kode": "E",
+          "teks": "Meminta perpanjangan waktu tanpa mencoba dulu"
+        }
+      ],
+      "pembahasan": "Profesionalisme menuntut kemauan belajar dan mengambil inisiatif. Menerima tugas, mempelajarinya, dan mencari bantuan yang tepat mencerminkan sikap berkembang."
+    },
+    {
+      "id": "tkp-04",
+      "teks": "Dalam rapat, pendapat Anda berbeda dengan mayoritas tim. Sikap Anda …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Diam saja mengikuti keputusan mayoritas"
+        },
+        {
+          "kode": "B",
+          "teks": "Memaksa pendapat sendiri diterima"
+        },
+        {
+          "kode": "C",
+          "teks": "Menyampaikan argumen dengan data dan tetap menerima keputusan bersama",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Meninggalkan rapat karena tidak setuju"
+        },
+        {
+          "kode": "E",
+          "teks": "Menyampaikan ketidaksetujuan setelah rapat kepada atasan"
+        }
+      ],
+      "pembahasan": "Sikap terbaik adalah menyampaikan argumen berbasis data dan tetap menghormati keputusan bersama. Ini mencerminkan profesionalisme dan jejaring kerja yang sehat."
+    },
+    {
+      "id": "tkp-05",
+      "teks": "Anda menemukan kesalahan data dalam laporan yang akan segera diserahkan ke pimpinan. Sikap Anda …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Membiarkan karena bukan bagian tugas saya"
+        },
+        {
+          "kode": "B",
+          "teks": "Memperbaiki sendiri tanpa memberi tahu siapa pun"
+        },
+        {
+          "kode": "C",
+          "teks": "Melaporkan ke atasan atau rekan penyusun dan mengusulkan perbaikan",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Menyerahkan laporan apa adanya"
+        },
+        {
+          "kode": "E",
+          "teks": "Menyalahkan rekan yang membuat data"
+        }
+      ],
+      "pembahasan": "Integritas dan tanggung jawab menuntut Anda melaporkan dan mengusulkan perbaikan, bukan mendiamkan, memperbaiki diam-diam, atau menyalahkan. Ini melindungi kualitas hasil tim."
+    },
+    {
+      "id": "tkp-06",
+      "teks": "Anda mendengar rekan kerja menyebarkan informasi yang mengarah pada paham radikal. Sikap Anda …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Mengabaikan karena bukan urusan saya"
+        },
+        {
+          "kode": "B",
+          "teks": "Menyebarkan juga agar orang lain tahu"
+        },
+        {
+          "kode": "C",
+          "teks": "Mengajak diskusi secara santun dan melaporkan ke pihak berwenang jika berlanjut",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Memutuskan hubungan kerja"
+        },
+        {
+          "kode": "E",
+          "teks": "Menyebarkan klarifikasi di media sosial pribadi"
+        }
+      ],
+      "pembahasan": "Sikap terbaik adalah tenang, tidak menyebarkan, mengajak dialog, dan menindaklanjuti melalui jalur resmi. Ini mencerminkan kematangan dalam aspek anti-radikalisme."
+    }
+  ]
+}

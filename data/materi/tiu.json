@@ -1,0 +1,74 @@
+{
+  "subtes": "tiu",
+  "label": "TIU",
+  "topik": [
+    {
+      "id": "tiu-verbal",
+      "nomor": 1,
+      "judul": "Verbal: Sinonim & Analogi",
+      "subjudul": "Hubungan makna dan padanan kata",
+      "ringkasan": "Soal verbal menguji kemampuan memahami hubungan makna antar kata.",
+      "flag": "Sering keluar",
+      "poinJudul": "Jenis hubungan analogi",
+      "poin": [
+        "**Fungsi:** pisau : memotong.",
+        "**Bagian–keseluruhan:** roda : mobil.",
+        "**Sebab–akibat:** hujan : banjir.",
+        "**Tingkat:** hangat : panas."
+      ]
+    },
+    {
+      "id": "tiu-silogisme",
+      "nomor": 2,
+      "judul": "Silogisme & Penalaran Analitis",
+      "subjudul": "Menarik kesimpulan dari premis",
+      "ringkasan": "Silogisme menarik kesimpulan dari dua premis atau lebih.",
+      "poinJudul": "Pola yang sering muncul",
+      "poin": [
+        "**Modus ponens:** P → Q; P benar; maka Q benar.",
+        "**Modus tollens:** P → Q; Q salah; maka P salah.",
+        "**Silogisme hipotetis:** P → Q; Q → R; maka P → R."
+      ]
+    },
+    {
+      "id": "tiu-aritmatika",
+      "nomor": 3,
+      "judul": "Numerik: Aritmatika & Persen",
+      "subjudul": "Hitung cepat tanpa kalkulator",
+      "ringkasan": "Soal numerik menuntut kecepatan, bukan hanya ketepatan.",
+      "poinJudul": "Rumus yang sering dipakai",
+      "poin": [
+        "**Persen:** x% dari N = (x/100) × N.",
+        "**Diskon bertingkat:** dihitung berurutan, bukan dijumlahkan.",
+        "**Kerja bersama:** 1/t = 1/t₁ + 1/t₂."
+      ]
+    },
+    {
+      "id": "tiu-deret",
+      "nomor": 4,
+      "judul": "Deret Angka",
+      "subjudul": "Mengenali pola barisan",
+      "ringkasan": "Periksa pola secara berurutan: selisih, rasio, lalu pola bertingkat atau berselang.",
+      "poinJudul": "Jenis pola",
+      "poin": [
+        "**Aritmetika:** selisih tetap.",
+        "**Geometri:** rasio tetap.",
+        "**Fibonacci:** jumlah dua suku sebelumnya.",
+        "**Pola loncat:** dua deret berselang-seling."
+      ]
+    },
+    {
+      "id": "tiu-figural",
+      "nomor": 5,
+      "judul": "Figural",
+      "subjudul": "Rotasi, pencerminan, jumlah sisi",
+      "ringkasan": "Soal figural menguji kemampuan membaca perubahan bentuk gambar.",
+      "poinJudul": "Hal yang perlu diperiksa",
+      "poin": [
+        "**Rotasi:** arah dan besar sudut.",
+        "**Pencerminan:** sumbu vertikal atau horizontal.",
+        "**Jumlah sisi:** bertambah, berkurang, atau tetap."
+      ]
+    }
+  ]
+}

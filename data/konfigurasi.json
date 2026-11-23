@@ -1,0 +1,79 @@
+{
+  "tahun": 2024,
+  "regulasi": {
+    "nama": "KepmenPANRB No. 321 Tahun 2024",
+    "url": "https://www.bkn.go.id/regulasi/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-republik-indonesia-nomor-321-tahun-2024/"
+  },
+  "skd": {
+    "soal": 110,
+    "menit": 100,
+    "skorMaks": 550
+  },
+  "subtes": [
+    {
+      "kode": "TWK",
+      "subtes": "twk",
+      "nama": "Tes Wawasan Kebangsaan",
+      "subjudul": "Konseptual · implementasi nilai",
+      "soal": 30,
+      "passing": 65,
+      "maks": 150,
+      "nilaiPerSoal": "Benar 5 · Salah 0",
+      "targetAman": "75–85",
+      "cakupan": [
+        "**Nasionalisme** — kepentingan nasional di atas pribadi",
+        "**Integritas** — kejujuran, konsistensi, ketangguhan",
+        "**Bela negara** — peran aktif mempertahankan bangsa",
+        "**Pilar negara** — Pancasila, UUD 1945, Bhinneka Tunggal Ika, NKRI",
+        "**Bahasa negara** — Bahasa Indonesia yang baik dan benar"
+      ]
+    },
+    {
+      "kode": "TIU",
+      "subtes": "tiu",
+      "nama": "Tes Intelegensia Umum",
+      "subjudul": "Logika · kecepatan · tanpa kalkulator",
+      "soal": 35,
+      "passing": 80,
+      "maks": 175,
+      "nilaiPerSoal": "Benar 5 · Salah 0",
+      "targetAman": "95–110",
+      "cakupan": [
+        "**Verbal** — sinonim, antonim, analogi, silogisme",
+        "**Numerik** — operasi hitung, persen, deret, soal cerita",
+        "**Figural** — analogi gambar, ketidaksamaan, serial"
+      ]
+    },
+    {
+      "kode": "TKP",
+      "subtes": "tkp",
+      "nama": "Tes Karakteristik Pribadi",
+      "subjudul": "Perilaku · skor 1–5 per opsi",
+      "soal": 45,
+      "passing": 166,
+      "maks": 225,
+      "nilaiPerSoal": "Skala 1–5 · Kosong 0",
+      "targetAman": "180–200",
+      "cakupan": [
+        "**Pelayanan publik** — ramah, cepat, solutif",
+        "**Jejaring kerja** — kolaborasi dan berbagi info",
+        "**Sosial budaya** — toleransi dan adaptasi",
+        "**TIK** — teknologi untuk kinerja",
+        "**Profesionalisme** — sesuai tuntutan jabatan",
+        "**Anti-radikalisme** — sikap terhadap stimulus"
+      ]
+    }
+  ],
+  "jalurKhusus": [
+    {
+      "label": "Cumlaude/diaspora",
+      "kumulatif": 311,
+      "tiu": 85
+    },
+    {
+      "label": "Disabilitas, putra/putri Papua, dan putra/putri daerah tertinggal",
+      "kumulatif": 286,
+      "tiu": 60
+    }
+  ]
+}

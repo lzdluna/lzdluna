@@ -1,0 +1,102 @@
+{
+  "resmi": [
+    {
+      "id": "resmi-01",
+      "ikon": "BK",
+      "judul": "BKN — Badan Kepegawaian Negara",
+      "deskripsi": "Pengumuman seleksi, jadwal tahapan, dan arsip regulasi kepegawaian.",
+      "tag": "Sumber utama",
+      "url": "https://www.bkn.go.id/"
+    },
+    {
+      "id": "resmi-02",
+      "ikon": "SS",
+      "judul": "SSCASN — Portal Pendaftaran",
+      "deskripsi": "Akun, pemilihan formasi, dan pengumuman hasil seleksi yang sah.",
+      "tag": "Pendaftaran",
+      "url": "https://sscasn.bkn.go.id/"
+    },
+    {
+      "id": "resmi-03",
+      "ikon": "CAT",
+      "judul": "Simulasi CAT BKN",
+      "deskripsi": "Antarmuka ujian resmi dengan soal dummy. Perlu akun SSCASN untuk masuk.",
+      "tag": "Simulasi resmi",
+      "url": "https://cat.bkn.go.id/"
+    },
+    {
+      "id": "resmi-04",
+      "ikon": "321",
+      "judul": "KepmenPANRB No. 321 Tahun 2024",
+      "deskripsi": "Dasar hukum nilai ambang batas SKD yang dipakai di halaman ini.",
+      "tag": "Regulasi",
+      "url": "https://www.bkn.go.id/regulasi/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-republik-indonesia-nomor-321-tahun-2024/"
+    }
+  ],
+  "tambahan": [
+    {
+      "id": "tambahan-01",
+      "ikon": "Ja",
+      "judul": "JadiASN — Materi SKD Lengkap",
+      "deskripsi": "Rangkuman TWK, TIU, dan TKP per sub-materi.",
+      "tag": "Materi konsep",
+      "url": "https://jadiasn.id/materi-skd-cpns/"
+    },
+    {
+      "id": "tambahan-02",
+      "ikon": "De",
+      "judul": "Dealls — 100+ Contoh Soal TIU",
+      "deskripsi": "Soal verbal, numerik, logika, dan figural dengan pembahasan.",
+      "tag": "Contoh soal TIU",
+      "url": "https://dealls.com/pengembangan-karir/contoh-soal-tiu"
+    },
+    {
+      "id": "tambahan-03",
+      "ikon": "JS",
+      "judul": "JadiSekdin — 50 Soal SKD + Pembahasan",
+      "deskripsi": "Paket TWK, TIU, TKP dengan pembahasan singkat.",
+      "tag": "Paket latihan",
+      "url": "https://jadisekdin.id/soal-skd-cpns-2026/"
+    },
+    {
+      "id": "tambahan-04",
+      "ikon": "55",
+      "judul": "JadiASN — 55 Latihan Soal + PDF",
+      "deskripsi": "55 soal ilustratif plus tiga dokumen PDF TWK/TIU/TKP.",
+      "tag": "Soal + PDF",
+      "url": "https://jadiasn.id/55-latihan-soal-cpns/"
+    },
+    {
+      "id": "tambahan-05",
+      "ikon": "PP",
+      "judul": "PejuangPNS — TKP Pelayanan Publik + Skor",
+      "deskripsi": "Contoh soal TKP dengan estimasi skor 1–5 per opsi.",
+      "tag": "TKP mendalam",
+      "url": "https://pejuangpns.com/artikel/contoh-soal-tkp-pelayanan-publik-pembahasan"
+    },
+    {
+      "id": "tambahan-06",
+      "ikon": "TC",
+      "judul": "Tes-CPNS.com — 50 Soal TIU + Strategi",
+      "deskripsi": "Soal TIU dengan pembahasan dan tips membaca pola.",
+      "tag": "TIU + strategi",
+      "url": "https://tes-cpns.com/artikel/50-contoh-soal-tiu-cpns-2026-dan-pembahasan"
+    },
+    {
+      "id": "tambahan-07",
+      "ikon": "Mi",
+      "judul": "MisipNS — Struktur & Skor Aman SKD",
+      "deskripsi": "Struktur SKD, sistem penilaian, dan target skor aman.",
+      "tag": "Orientasi & target",
+      "url": "https://www.misipns.com/blog/apa-itu-skd-cpns"
+    },
+    {
+      "id": "tambahan-08",
+      "ikon": "PL",
+      "judul": "PLC Pekanbaru — Trik Mengerjakan per Tipe Soal",
+      "deskripsi": "Strategi urutan pengerjaan dan pendekatan per subtes.",
+      "tag": "Strategi ujian",
+      "url": "https://www.plcpekanbaru.com/artikel/detail/1723/trik-cerdas-mengerjakan-skd-sesuai-tipe-soal"
+    }
+  ]
+}

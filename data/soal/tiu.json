@@ -1,0 +1,174 @@
+{
+  "subtes": "tiu",
+  "label": "TIU",
+  "soal": [
+    {
+      "id": "tiu-01",
+      "teks": "NADA : MELODI = BAIT : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Puisi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Lagu"
+        },
+        {
+          "kode": "C",
+          "teks": "Irama"
+        },
+        {
+          "kode": "D",
+          "teks": "Syair"
+        },
+        {
+          "kode": "E",
+          "teks": "Kalimat"
+        }
+      ],
+      "pembahasan": "Hubungan komponen pembentuk: nada membentuk melodi, bait membentuk puisi. Pola analogi \"komponen → hasil\" sering muncul di TIU."
+    },
+    {
+      "id": "tiu-02",
+      "teks": "Lanjutkan deret berikut: 3, 6, 11, 18, 27, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "36"
+        },
+        {
+          "kode": "B",
+          "teks": "38",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "40"
+        },
+        {
+          "kode": "D",
+          "teks": "35"
+        },
+        {
+          "kode": "E",
+          "teks": "42"
+        }
+      ],
+      "pembahasan": "Selisih bertingkat naik: +3, +5, +7, +9, lalu +11. Maka 27 + 11 = 38. Periksa dulu selisih antar suku sebelum menebak."
+    },
+    {
+      "id": "tiu-03",
+      "teks": "Semua PNS wajib disiplin. Sebagian pegawai di kantor X adalah PNS. Kesimpulan yang tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua pegawai kantor X disiplin"
+        },
+        {
+          "kode": "B",
+          "teks": "Sebagian pegawai kantor X disiplin",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Semua PNS di kantor X disiplin"
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak ada pegawai kantor X yang disiplin"
+        },
+        {
+          "kode": "E",
+          "teks": "Pegawai kantor X tidak disiplin"
+        }
+      ],
+      "pembahasan": "Karena hanya \"sebagian\" pegawai kantor X adalah PNS, maka hanya sebagian itu yang dapat disimpulkan disiplin. Kesimpulan \"semua\" melampaui cakupan premis."
+    },
+    {
+      "id": "tiu-04",
+      "teks": "Sebuah baju berharga Rp200.000 mendapat diskon 20%, lalu tambahan diskon 10% dari harga setelah diskon pertama. Harga akhirnya adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Rp144.000",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Rp140.000"
+        },
+        {
+          "kode": "C",
+          "teks": "Rp150.000"
+        },
+        {
+          "kode": "D",
+          "teks": "Rp160.000"
+        },
+        {
+          "kode": "E",
+          "teks": "Rp130.000"
+        }
+      ],
+      "pembahasan": "Diskon bertingkat dihitung berurutan: 200.000 × 0,80 = 160.000, lalu 160.000 × 0,90 = 144.000. Bukan dijumlahkan menjadi 30%."
+    },
+    {
+      "id": "tiu-05",
+      "teks": "Sinonim kata \"baku\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Standar",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bebas"
+        },
+        {
+          "kode": "C",
+          "teks": "Kasar"
+        },
+        {
+          "kode": "D",
+          "teks": "Berbeda"
+        },
+        {
+          "kode": "E",
+          "teks": "Umum"
+        }
+      ],
+      "pembahasan": "\"Baku\" berarti pokok, utama, tolok ukur, atau sesuai standar yang ditetapkan. Dalam konteks bahasa, \"kata baku\" = kata yang sesuai standar (KBBI/PUEBI)."
+    },
+    {
+      "id": "tiu-06",
+      "teks": "DOKTER : STETOSKOP = PETANI : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sawah"
+        },
+        {
+          "kode": "B",
+          "teks": "Cangkul",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Padi"
+        },
+        {
+          "kode": "D",
+          "teks": "Traktor"
+        },
+        {
+          "kode": "E",
+          "teks": "Kerbau"
+        }
+      ],
+      "pembahasan": "Hubungannya adalah \"profesi → alat kerja manual\". Stetoskop adalah alat kerja dokter, cangkul adalah alat kerja petani. \"Traktor\" adalah mesin, bukan alat manual — kurang sejajar."
+    }
+  ]
+}

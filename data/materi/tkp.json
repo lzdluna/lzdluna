@@ -1,0 +1,81 @@
+{
+  "subtes": "tkp",
+  "label": "TKP",
+  "topik": [
+    {
+      "id": "tkp-pelayanan",
+      "nomor": 1,
+      "judul": "Pelayanan Publik",
+      "subjudul": "Ramah, cepat, tepat, solutif",
+      "ringkasan": "Aspek ini menguji cara merespons kebutuhan masyarakat.",
+      "flag": "Sering keluar",
+      "poinJudul": "Poin kunci",
+      "poin": [
+        "**Empati:** memahami keluhan tanpa terbawa emosi.",
+        "**Solusi konkret.**",
+        "**Tidak melempar tanggung jawab.**",
+        "**Sesuai kewenangan.**"
+      ]
+    },
+    {
+      "id": "tkp-jejaring",
+      "nomor": 2,
+      "judul": "Jejaring Kerja",
+      "subjudul": "Kolaborasi dan berbagi informasi",
+      "ringkasan": "Aspek ini menilai kemampuan membangun hubungan kerja untuk tujuan organisasi.",
+      "poin": [
+        "Berbagi informasi yang relevan.",
+        "Mengoordinasikan pekerjaan lintas bagian.",
+        "Membangun relasi jangka panjang."
+      ]
+    },
+    {
+      "id": "tkp-sosbud",
+      "nomor": 3,
+      "judul": "Sosial Budaya",
+      "subjudul": "Toleransi dan adaptasi",
+      "ringkasan": "Aspek ini menilai sikap terhadap keberagaman.",
+      "poin": [
+        "Menghargai perbedaan.",
+        "Beradaptasi tanpa kehilangan identitas.",
+        "Tidak memaksakan nilai pribadi."
+      ]
+    },
+    {
+      "id": "tkp-tik",
+      "nomor": 4,
+      "judul": "Teknologi Informasi & Komunikasi",
+      "subjudul": "Memanfaatkan teknologi untuk kinerja",
+      "ringkasan": "Aspek TIK menilai kemauan memanfaatkan teknologi.",
+      "poin": [
+        "Mempelajari aplikasi atau sistem baru.",
+        "Menggunakan teknologi untuk efisiensi.",
+        "Menjaga keamanan data."
+      ]
+    },
+    {
+      "id": "tkp-profesionalisme",
+      "nomor": 5,
+      "judul": "Profesionalisme",
+      "subjudul": "Tugas sesuai tuntutan jabatan",
+      "ringkasan": "Aspek ini menilai cara menjalankan tugas sesuai standar.",
+      "poin": [
+        "Disiplin waktu dan prosedur.",
+        "Bertanggung jawab atas hasil kerja.",
+        "Menjaga kualitas meski tanpa pengawasan."
+      ]
+    },
+    {
+      "id": "tkp-radikalisme",
+      "nomor": 6,
+      "judul": "Anti-Radikalisme",
+      "subjudul": "Sikap terhadap stimulus radikal",
+      "ringkasan": "Aspek ini menilai sikap terhadap paham yang bertentangan dengan Pancasila.",
+      "poin": [
+        "Kritis terhadap informasi.",
+        "Memverifikasi sumber.",
+        "Melaporkan ke kanal resmi."
+      ]
+    }
+  ]
+}
