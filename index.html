@@ -9,7 +9,7 @@
 <style>
   :root{
     --bg:#faf7f0;--bg-soft:#f3eee2;--card:#fffdf8;
-    --ink:#1b1a17;--ink-soft:#4a463f;--muted:#7d776c;
+    --ink:#1b1a17;--ink-soft:#4a463f;--muted:#6b6459;
     --line:#e3dccd;--accent:#14345c;--accent-soft:#1f4a7d;--accent-wash:#e8eef6;
     --green:#1f5d31;--green-wash:#e7f0e8;
     --amber:#8a4a12;--amber-wash:#fdeee0;
@@ -182,9 +182,7 @@
     background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);padding:26px 24px;
     box-shadow:var(--shadow);display:flex;flex-direction:column;
-    transition:transform .22s ease, box-shadow .22s ease;
   }
-  .card:hover{transform:translateY(-3px);border-color:#cfc5b0;}
   .card-kode{
     font-family:Georgia,serif;font-size:13px;letter-spacing:.1em;
     color:var(--accent);background:var(--accent-wash);
@@ -415,6 +413,7 @@
   }
   .timer-info h3{font-family:Georgia,serif;font-weight:400;font-size:1.1rem;margin:0 0 4px;}
   .timer-info p{margin:0;font-size:13.5px;color:var(--muted);max-width:42ch;}
+  .timer-info .timer-note{margin:8px 0 0;font-size:13px;font-weight:600;color:var(--accent);min-height:1.2em;}
   .timer-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .timer-display{
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -510,13 +509,20 @@
   .q-text{font-size:15.5px;margin:0 0 16px;color:var(--ink);font-weight:500;}
   .q-opts{display:grid;gap:7px;margin:0 0 16px;}
   .q-opt{
-    font-size:14px;padding:9px 13px;border-radius:8px;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+    width:100%;text-align:left;font-family:inherit;font-size:14px;line-height:1.5;
+    padding:9px 13px;border-radius:8px;
     background:var(--bg-soft);color:var(--ink-soft);
-    border:1px solid transparent;transition:all .15s;cursor:pointer;
+    border:1px solid transparent;cursor:pointer;
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
   }
-  .q-opt:hover{background:#fff;border-color:var(--line);}
+  .q-opt:hover:not(:disabled){background:#fff;border-color:var(--line);}
+  .q-opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .q-opt:disabled{cursor:default;opacity:1;-webkit-text-fill-color:currentColor;}
   .q-opt.correct{background:var(--green-wash);color:var(--green);border-color:#c5dcc9;font-weight:600;}
   .q-opt.wrong{background:var(--red-wash);color:var(--red);border-color:#f0ccc5;}
+  .q-opt.correct::after{content:"✓";font-weight:700;flex:0 0 auto;}
+  .q-opt.wrong::after{content:"✕";font-weight:700;flex:0 0 auto;}
   .q-toggle{
     background:none;border:1px solid var(--line);
     color:var(--accent);font-size:13.5px;font-weight:600;
@@ -601,7 +607,7 @@
 
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
-    .jump:hover,.card:hover,.src:hover{transform:none;}
+    .jump:hover,.src:hover{transform:none;}
   }
 
   .page[data-page="beranda"]{display:block;}
@@ -625,7 +631,7 @@
       <a href="#/latihan" data-nav="latihan">Latihan</a>
       <a href="#/catatan" data-nav="catatan">Catatan</a>
     </nav>
-    <button class="timer-pill" id="navTimer" type="button" aria-label="Buka timer latihan">
+    <button class="timer-pill" id="navTimer" type="button" aria-label="Buka halaman simulasi dan timer latihan">
       <span class="tp-dot"></span>
       <span id="navTimerText">100:00</span>
     </button>
@@ -1136,8 +1142,16 @@
       </div>
 
       <div class="note-strip">
-        <b>Jalur khusus:</b> cumlaude/diaspora — TIU minimal 85, kumulatif 311. Disabilitas dan
-        putra/putri Papua serta Kalimantan — TIU minimal 60, kumulatif 286.
+        <b>Jalur khusus (KepmenPANRB No. 321 Tahun 2024):</b> cumlaude/diaspora — nilai
+        kumulatif minimal 311, TIU minimal 85. Disabilitas, putra/putri Papua, dan putra/putri
+        daerah tertinggal — kumulatif minimal 286, TIU minimal 60.
+        Putra/putri Kalimantan memakai ambang batas yang sama dengan formasi umum, bukan 286.
+      </div>
+
+      <div class="note-strip warn">
+        <b>Angka di halaman ini mengacu pada seleksi 2024.</b> Ambang batas ditetapkan ulang
+        setiap tahun lewat KepmenPANRB, jadi selalu cocokkan dengan pengumuman resmi tahun
+        berjalan sebelum memilih formasi.
       </div>
     </div>
   </div>
@@ -1149,74 +1163,125 @@
         <div class="sec-num">02 — Bank Data</div>
         <h2>Sumber yang saya pakai, dipilah berdasarkan fungsi.</h2>
         <p class="sec-desc">
-          Semua tautan mengarah ke sumber eksternal, diurutkan berdasarkan kegunaan.
+          Dua bagian: kanal resmi pemerintah sebagai acuan aturan, lalu bahan belajar tambahan
+          untuk latihan harian.
+        </p>
+      </div>
+
+      <div class="sub-head" style="margin-top:0;">
+        <h2>Sumber resmi.</h2>
+        <p class="sec-desc">
+          Ambang batas, jadwal, dan tata cara seleksi hanya boleh diambil dari kanal pemerintah.
+          Semua tautan di bawah ini mengarah ke domain resmi.
+        </p>
+      </div>
+
+      <div class="src-list">
+        <a class="src" href="https://www.bkn.go.id/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">BK</span>
+          <div class="src-body">
+            <h4>BKN — Badan Kepegawaian Negara</h4>
+            <p>Pengumuman seleksi, jadwal tahapan, dan arsip regulasi kepegawaian.</p>
+            <span class="src-tag">Sumber utama</span>
+          </div>
+        </a>
+        <a class="src" href="https://sscasn.bkn.go.id/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">SS</span>
+          <div class="src-body">
+            <h4>SSCASN — Portal Pendaftaran</h4>
+            <p>Akun, pemilihan formasi, dan pengumuman hasil seleksi yang sah.</p>
+            <span class="src-tag">Pendaftaran</span>
+          </div>
+        </a>
+        <a class="src" href="https://cat.bkn.go.id/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">CAT</span>
+          <div class="src-body">
+            <h4>Simulasi CAT BKN</h4>
+            <p>Antarmuka ujian resmi dengan soal dummy. Perlu akun SSCASN untuk masuk.</p>
+            <span class="src-tag">Simulasi resmi</span>
+          </div>
+        </a>
+        <a class="src" href="https://www.bkn.go.id/regulasi/keputusan-menteri-pendayagunaan-aparatur-negara-dan-reformasi-birokrasi-republik-indonesia-nomor-321-tahun-2024/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">321</span>
+          <div class="src-body">
+            <h4>KepmenPANRB No. 321 Tahun 2024</h4>
+            <p>Dasar hukum nilai ambang batas SKD yang dipakai di halaman ini.</p>
+            <span class="src-tag">Regulasi</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sub-head">
+        <h2>Bahan belajar tambahan.</h2>
+        <p class="sec-desc">
+          Bukan sumber resmi — dipakai untuk memperbanyak latihan soal dan pembahasan.
         </p>
       </div>
 
       <div class="src-list">
         <a class="src" href="https://jadiasn.id/materi-skd-cpns/" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">Ja</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>JadiASN — Materi SKD Lengkap</h4>
             <p>Rangkuman TWK, TIU, dan TKP per sub-materi.</p>
             <span class="src-tag">Materi konsep</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://dealls.com/pengembangan-karir/contoh-soal-tiu" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">De</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>Dealls — 100+ Contoh Soal TIU</h4>
             <p>Soal verbal, numerik, logika, dan figural dengan pembahasan.</p>
             <span class="src-tag">Contoh soal TIU</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://jadisekdin.id/soal-skd-cpns-2026/" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">JS</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>JadiSekdin — 50 Soal SKD + Pembahasan</h4>
             <p>Paket TWK, TIU, TKP dengan pembahasan singkat.</p>
             <span class="src-tag">Paket latihan</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://jadiasn.id/55-latihan-soal-cpns/" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">55</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>JadiASN — 55 Latihan Soal + PDF</h4>
             <p>55 soal ilustratif plus tiga dokumen PDF TWK/TIU/TKP.</p>
             <span class="src-tag">Soal + PDF</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="http://pejuangpns.com/artikel/contoh-soal-tkp-pelayanan-publik-pembahasan" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">PP</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>PejuangPNS — TKP Pelayanan Publik + Skor</h4>
             <p>Contoh soal TKP dengan estimasi skor 1–5 per opsi.</p>
             <span class="src-tag">TKP mendalam</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://tes-cpns.com/artikel/50-contoh-soal-tiu-cpns-2026-dan-pembahasan" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">TC</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>Tes-CPNS.com — 50 Soal TIU + Strategi</h4>
             <p>Soal TIU dengan pembahasan dan tips membaca pola.</p>
             <span class="src-tag">TIU + strategi</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://www.misipns.com/blog/apa-itu-skd-cpns" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">Mi</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>MisipNS — Struktur &amp; Skor Aman SKD</h4>
             <p>Struktur SKD, sistem penilaian, dan target skor aman.</p>
             <span class="src-tag">Orientasi &amp; target</span>
-          </span>
+          </div>
         </a>
         <a class="src" href="https://www.plcpekanbaru.com/artikel/detail/1723/trik-cerdas-mengerjakan-skd-sesuai-tipe-soal" target="_blank" rel="noopener noreferrer">
           <span class="src-ic">PL</span>
-          <span class="src-body">
+          <div class="src-body">
             <h4>PLC Pekanbaru — Trik Mengerjakan per Tipe Soal</h4>
             <p>Strategi urutan pengerjaan dan pendekatan per subtes.</p>
             <span class="src-tag">Strategi ujian</span>
-          </span>
+          </div>
         </a>
       </div>
 
@@ -1289,7 +1354,8 @@
       <div class="timer-box">
         <div class="timer-info">
           <h3>Timer latihan 100 menit</h3>
-          <p>Timer tetap berjalan meski kamu pindah tab — indikatornya muncul di navigasi atas.</p>
+          <p>Timer dihitung dari jam asli, jadi tetap akurat meski kamu pindah tab atau memuat ulang halaman. Indikatornya muncul di navigasi atas.</p>
+          <p class="timer-note" id="timerNote" role="status" aria-live="polite"></p>
         </div>
         <div class="timer-controls">
           <div class="timer-display" id="timerDisplay" aria-live="off">100:00</div>
@@ -1408,11 +1474,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Berdasarkan Pasal 1 ayat (3) UUD 1945, Indonesia merupakan negara …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. Serikat</div>
-            <div class="q-opt" data-opt data-correct>B. Hukum</div>
-            <div class="q-opt" data-opt>C. Kesatuan</div>
-            <div class="q-opt" data-opt>D. Republik</div>
-            <div class="q-opt" data-opt>E. Demokrasi</div>
+            <button class="q-opt" type="button" data-opt>A. Serikat</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. Hukum</button>
+            <button class="q-opt" type="button" data-opt>C. Kesatuan</button>
+            <button class="q-opt" type="button" data-opt>D. Republik</button>
+            <button class="q-opt" type="button" data-opt>E. Demokrasi</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1425,11 +1491,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Pancasila disahkan sebagai dasar negara Indonesia pada tanggal …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. 1 Juni 1945</div>
-            <div class="q-opt" data-opt>B. 22 Juni 1945</div>
-            <div class="q-opt" data-opt data-correct>C. 18 Agustus 1945</div>
-            <div class="q-opt" data-opt>D. 17 Agustus 1945</div>
-            <div class="q-opt" data-opt>E. 29 Mei 1945</div>
+            <button class="q-opt" type="button" data-opt>A. 1 Juni 1945</button>
+            <button class="q-opt" type="button" data-opt>B. 22 Juni 1945</button>
+            <button class="q-opt" type="button" data-opt data-correct>C. 18 Agustus 1945</button>
+            <button class="q-opt" type="button" data-opt>D. 17 Agustus 1945</button>
+            <button class="q-opt" type="button" data-opt>E. 29 Mei 1945</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1442,11 +1508,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Semboyan "Bhinneka Tunggal Ika" diambil dari kitab …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. Negarakertagama</div>
-            <div class="q-opt" data-opt data-correct>B. Sutasoma</div>
-            <div class="q-opt" data-opt>C. Arjunawiwaha</div>
-            <div class="q-opt" data-opt>D. Bharatayudha</div>
-            <div class="q-opt" data-opt>E. Ramayana</div>
+            <button class="q-opt" type="button" data-opt>A. Negarakertagama</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. Sutasoma</button>
+            <button class="q-opt" type="button" data-opt>C. Arjunawiwaha</button>
+            <button class="q-opt" type="button" data-opt>D. Bharatayudha</button>
+            <button class="q-opt" type="button" data-opt>E. Ramayana</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1459,11 +1525,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Dasar hukum kewajiban bela negara bagi setiap warga negara adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt data-correct>A. Pasal 27 ayat (3) UUD 1945</div>
-            <div class="q-opt" data-opt>B. Pasal 28 UUD 1945</div>
-            <div class="q-opt" data-opt>C. Pasal 30 ayat (1) UUD 1945</div>
-            <div class="q-opt" data-opt>D. Pasal 33 ayat (1) UUD 1945</div>
-            <div class="q-opt" data-opt>E. Pasal 36 UUD 1945</div>
+            <button class="q-opt" type="button" data-opt data-correct>A. Pasal 27 ayat (3) UUD 1945</button>
+            <button class="q-opt" type="button" data-opt>B. Pasal 28 UUD 1945</button>
+            <button class="q-opt" type="button" data-opt>C. Pasal 30 ayat (1) UUD 1945</button>
+            <button class="q-opt" type="button" data-opt>D. Pasal 33 ayat (1) UUD 1945</button>
+            <button class="q-opt" type="button" data-opt>E. Pasal 36 UUD 1945</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1476,11 +1542,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Penulisan kata baku yang benar adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. Apotik</div>
-            <div class="q-opt" data-opt data-correct>B. Apotek</div>
-            <div class="q-opt" data-opt>C. Analisa</div>
-            <div class="q-opt" data-opt>D. Praktek</div>
-            <div class="q-opt" data-opt>E. Ijin</div>
+            <button class="q-opt" type="button" data-opt>A. Apotik</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. Apotek</button>
+            <button class="q-opt" type="button" data-opt>C. Analisa</button>
+            <button class="q-opt" type="button" data-opt>D. Praktek</button>
+            <button class="q-opt" type="button" data-opt>E. Ijin</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1493,11 +1559,11 @@
           <div class="q-head"><span class="q-badge">TWK</span></div>
           <p class="q-text">Lambang negara Indonesia, Garuda Pancasila, diatur dalam …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt data-correct>A. UU No. 24 Tahun 2009</div>
-            <div class="q-opt" data-opt>B. UU No. 12 Tahun 2011</div>
-            <div class="q-opt" data-opt>C. UU No. 5 Tahun 2014</div>
-            <div class="q-opt" data-opt>D. UU No. 20 Tahun 2003</div>
-            <div class="q-opt" data-opt>E. UU No. 23 Tahun 2006</div>
+            <button class="q-opt" type="button" data-opt data-correct>A. UU No. 24 Tahun 2009</button>
+            <button class="q-opt" type="button" data-opt>B. UU No. 12 Tahun 2011</button>
+            <button class="q-opt" type="button" data-opt>C. UU No. 5 Tahun 2014</button>
+            <button class="q-opt" type="button" data-opt>D. UU No. 20 Tahun 2003</button>
+            <button class="q-opt" type="button" data-opt>E. UU No. 23 Tahun 2006</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1512,11 +1578,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">NADA : MELODI = BAIT : …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt data-correct>A. Puisi</div>
-            <div class="q-opt" data-opt>B. Lagu</div>
-            <div class="q-opt" data-opt>C. Irama</div>
-            <div class="q-opt" data-opt>D. Syair</div>
-            <div class="q-opt" data-opt>E. Kalimat</div>
+            <button class="q-opt" type="button" data-opt data-correct>A. Puisi</button>
+            <button class="q-opt" type="button" data-opt>B. Lagu</button>
+            <button class="q-opt" type="button" data-opt>C. Irama</button>
+            <button class="q-opt" type="button" data-opt>D. Syair</button>
+            <button class="q-opt" type="button" data-opt>E. Kalimat</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1529,11 +1595,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">Lanjutkan deret berikut: 3, 6, 11, 18, 27, …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. 36</div>
-            <div class="q-opt" data-opt data-correct>B. 38</div>
-            <div class="q-opt" data-opt>C. 40</div>
-            <div class="q-opt" data-opt>D. 35</div>
-            <div class="q-opt" data-opt>E. 42</div>
+            <button class="q-opt" type="button" data-opt>A. 36</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. 38</button>
+            <button class="q-opt" type="button" data-opt>C. 40</button>
+            <button class="q-opt" type="button" data-opt>D. 35</button>
+            <button class="q-opt" type="button" data-opt>E. 42</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1546,11 +1612,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">Semua PNS wajib disiplin. Sebagian pegawai di kantor X adalah PNS. Kesimpulan yang tepat adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. Semua pegawai kantor X disiplin</div>
-            <div class="q-opt" data-opt data-correct>B. Sebagian pegawai kantor X disiplin</div>
-            <div class="q-opt" data-opt>C. Semua PNS di kantor X disiplin</div>
-            <div class="q-opt" data-opt>D. Tidak ada pegawai kantor X yang disiplin</div>
-            <div class="q-opt" data-opt>E. Pegawai kantor X tidak disiplin</div>
+            <button class="q-opt" type="button" data-opt>A. Semua pegawai kantor X disiplin</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. Sebagian pegawai kantor X disiplin</button>
+            <button class="q-opt" type="button" data-opt>C. Semua PNS di kantor X disiplin</button>
+            <button class="q-opt" type="button" data-opt>D. Tidak ada pegawai kantor X yang disiplin</button>
+            <button class="q-opt" type="button" data-opt>E. Pegawai kantor X tidak disiplin</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1563,11 +1629,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">Sebuah baju berharga Rp200.000 mendapat diskon 20%, lalu tambahan diskon 10% dari harga setelah diskon pertama. Harga akhirnya adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt data-correct>A. Rp144.000</div>
-            <div class="q-opt" data-opt>B. Rp140.000</div>
-            <div class="q-opt" data-opt>C. Rp150.000</div>
-            <div class="q-opt" data-opt>D. Rp160.000</div>
-            <div class="q-opt" data-opt>E. Rp130.000</div>
+            <button class="q-opt" type="button" data-opt data-correct>A. Rp144.000</button>
+            <button class="q-opt" type="button" data-opt>B. Rp140.000</button>
+            <button class="q-opt" type="button" data-opt>C. Rp150.000</button>
+            <button class="q-opt" type="button" data-opt>D. Rp160.000</button>
+            <button class="q-opt" type="button" data-opt>E. Rp130.000</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1580,11 +1646,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">Sinonim kata "baku" yang paling tepat adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt data-correct>A. Standar</div>
-            <div class="q-opt" data-opt>B. Bebas</div>
-            <div class="q-opt" data-opt>C. Kasar</div>
-            <div class="q-opt" data-opt>D. Berbeda</div>
-            <div class="q-opt" data-opt>E. Umum</div>
+            <button class="q-opt" type="button" data-opt data-correct>A. Standar</button>
+            <button class="q-opt" type="button" data-opt>B. Bebas</button>
+            <button class="q-opt" type="button" data-opt>C. Kasar</button>
+            <button class="q-opt" type="button" data-opt>D. Berbeda</button>
+            <button class="q-opt" type="button" data-opt>E. Umum</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1597,11 +1663,11 @@
           <div class="q-head"><span class="q-badge tiu">TIU</span></div>
           <p class="q-text">DOKTER : STETOSKOP = PETANI : …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>A. Sawah</div>
-            <div class="q-opt" data-opt data-correct>B. Cangkul</div>
-            <div class="q-opt" data-opt>C. Padi</div>
-            <div class="q-opt" data-opt>D. Traktor</div>
-            <div class="q-opt" data-opt>E. Kerbau</div>
+            <button class="q-opt" type="button" data-opt>A. Sawah</button>
+            <button class="q-opt" type="button" data-opt data-correct>B. Cangkul</button>
+            <button class="q-opt" type="button" data-opt>C. Padi</button>
+            <button class="q-opt" type="button" data-opt>D. Traktor</button>
+            <button class="q-opt" type="button" data-opt>E. Kerbau</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1616,11 +1682,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Saat melayani masyarakat, ada warga yang datang dengan nada marah karena antrean panjang. Respons terbaik Anda adalah …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Meminta warga sabar dan menunggu tanpa penjelasan</div>
-            <div class="q-opt" data-opt>Mengabaikan karena masih melayani yang lain</div>
-            <div class="q-opt" data-opt data-correct>Menyapa dengan tenang, menjelaskan perkiraan waktu tunggu, dan meminta maaf</div>
-            <div class="q-opt" data-opt>Menyuruh warga pulang dan kembali lain hari</div>
-            <div class="q-opt" data-opt>Meminta rekan kerja menangani warga tersebut</div>
+            <button class="q-opt" type="button" data-opt>Meminta warga sabar dan menunggu tanpa penjelasan</button>
+            <button class="q-opt" type="button" data-opt>Mengabaikan karena masih melayani yang lain</button>
+            <button class="q-opt" type="button" data-opt data-correct>Menyapa dengan tenang, menjelaskan perkiraan waktu tunggu, dan meminta maaf</button>
+            <button class="q-opt" type="button" data-opt>Menyuruh warga pulang dan kembali lain hari</button>
+            <button class="q-opt" type="button" data-opt>Meminta rekan kerja menangani warga tersebut</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1633,11 +1699,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Rekan kerja Anda sering menyelesaikan tugas tidak sesuai standar sehingga menghambat pekerjaan tim. Sikap Anda …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Membiarkan karena bukan tanggung jawab saya</div>
-            <div class="q-opt" data-opt>Melaporkan ke atasan tanpa memberi tahu rekan tersebut</div>
-            <div class="q-opt" data-opt data-correct>Mengajak rekan tersebut berdiskusi dan membantu memahami standar yang benar</div>
-            <div class="q-opt" data-opt>Mengerjakan tugasnya sendiri agar cepat selesai</div>
-            <div class="q-opt" data-opt>Menegurnya di depan rekan kerja lain agar jera</div>
+            <button class="q-opt" type="button" data-opt>Membiarkan karena bukan tanggung jawab saya</button>
+            <button class="q-opt" type="button" data-opt>Melaporkan ke atasan tanpa memberi tahu rekan tersebut</button>
+            <button class="q-opt" type="button" data-opt data-correct>Mengajak rekan tersebut berdiskusi dan membantu memahami standar yang benar</button>
+            <button class="q-opt" type="button" data-opt>Mengerjakan tugasnya sendiri agar cepat selesai</button>
+            <button class="q-opt" type="button" data-opt>Menegurnya di depan rekan kerja lain agar jera</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1650,11 +1716,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Atasan memberi Anda tugas baru yang belum pernah Anda kerjakan dengan tenggat singkat. Sikap Anda …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Menolak karena di luar kemampuan</div>
-            <div class="q-opt" data-opt data-correct>Menerima, lalu mempelajari dan mencari referensi atau bertanya kepada yang lebih berpengalaman</div>
-            <div class="q-opt" data-opt>Menerima tetapi mengerjakan semampunya tanpa usaha belajar</div>
-            <div class="q-opt" data-opt>Meminta rekan lain mengerjakan</div>
-            <div class="q-opt" data-opt>Meminta perpanjangan waktu tanpa mencoba dulu</div>
+            <button class="q-opt" type="button" data-opt>Menolak karena di luar kemampuan</button>
+            <button class="q-opt" type="button" data-opt data-correct>Menerima, lalu mempelajari dan mencari referensi atau bertanya kepada yang lebih berpengalaman</button>
+            <button class="q-opt" type="button" data-opt>Menerima tetapi mengerjakan semampunya tanpa usaha belajar</button>
+            <button class="q-opt" type="button" data-opt>Meminta rekan lain mengerjakan</button>
+            <button class="q-opt" type="button" data-opt>Meminta perpanjangan waktu tanpa mencoba dulu</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1667,11 +1733,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Dalam rapat, pendapat Anda berbeda dengan mayoritas tim. Sikap Anda …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Diam saja mengikuti keputusan mayoritas</div>
-            <div class="q-opt" data-opt>Memaksa pendapat sendiri diterima</div>
-            <div class="q-opt" data-opt data-correct>Menyampaikan argumen dengan data dan tetap menerima keputusan bersama</div>
-            <div class="q-opt" data-opt>Meninggalkan rapat karena tidak setuju</div>
-            <div class="q-opt" data-opt>Menyampaikan ketidaksetujuan setelah rapat kepada atasan</div>
+            <button class="q-opt" type="button" data-opt>Diam saja mengikuti keputusan mayoritas</button>
+            <button class="q-opt" type="button" data-opt>Memaksa pendapat sendiri diterima</button>
+            <button class="q-opt" type="button" data-opt data-correct>Menyampaikan argumen dengan data dan tetap menerima keputusan bersama</button>
+            <button class="q-opt" type="button" data-opt>Meninggalkan rapat karena tidak setuju</button>
+            <button class="q-opt" type="button" data-opt>Menyampaikan ketidaksetujuan setelah rapat kepada atasan</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1684,11 +1750,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Anda menemukan kesalahan data dalam laporan yang akan segera diserahkan ke pimpinan. Sikap Anda …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Membiarkan karena bukan bagian tugas saya</div>
-            <div class="q-opt" data-opt>Memperbaiki sendiri tanpa memberi tahu siapa pun</div>
-            <div class="q-opt" data-opt data-correct>Melaporkan ke atasan atau rekan penyusun dan mengusulkan perbaikan</div>
-            <div class="q-opt" data-opt>Menyerahkan laporan apa adanya</div>
-            <div class="q-opt" data-opt>Menyalahkan rekan yang membuat data</div>
+            <button class="q-opt" type="button" data-opt>Membiarkan karena bukan bagian tugas saya</button>
+            <button class="q-opt" type="button" data-opt>Memperbaiki sendiri tanpa memberi tahu siapa pun</button>
+            <button class="q-opt" type="button" data-opt data-correct>Melaporkan ke atasan atau rekan penyusun dan mengusulkan perbaikan</button>
+            <button class="q-opt" type="button" data-opt>Menyerahkan laporan apa adanya</button>
+            <button class="q-opt" type="button" data-opt>Menyalahkan rekan yang membuat data</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1701,11 +1767,11 @@
           <div class="q-head"><span class="q-badge tkp">TKP</span></div>
           <p class="q-text">Anda mendengar rekan kerja menyebarkan informasi yang mengarah pada paham radikal. Sikap Anda …</p>
           <div class="q-opts">
-            <div class="q-opt" data-opt>Mengabaikan karena bukan urusan saya</div>
-            <div class="q-opt" data-opt>Menyebarkan juga agar orang lain tahu</div>
-            <div class="q-opt" data-opt data-correct>Mengajak diskusi secara santun dan melaporkan ke pihak berwenang jika berlanjut</div>
-            <div class="q-opt" data-opt>Memutuskan hubungan kerja</div>
-            <div class="q-opt" data-opt>Menyebarkan klarifikasi di media sosial pribadi</div>
+            <button class="q-opt" type="button" data-opt>Mengabaikan karena bukan urusan saya</button>
+            <button class="q-opt" type="button" data-opt>Menyebarkan juga agar orang lain tahu</button>
+            <button class="q-opt" type="button" data-opt data-correct>Mengajak diskusi secara santun dan melaporkan ke pihak berwenang jika berlanjut</button>
+            <button class="q-opt" type="button" data-opt>Memutuskan hubungan kerja</button>
+            <button class="q-opt" type="button" data-opt>Menyebarkan klarifikasi di media sosial pribadi</button>
           </div>
           <button class="q-toggle" type="button">Buka pembahasan</button>
           <div class="q-explain">
@@ -1793,7 +1859,7 @@
     </div>
     <div class="foot-right">
       <p class="credit">Disusun oleh <a href="#/catatan">lz.dln</a></p>
-      <p style="margin-top:6px;"><a href="https://github.com" target="_blank" rel="noopener noreferrer">Repositori GitHub</a></p>
+      <p style="margin-top:6px;"><a href="https://github.com/lzdluna/lzdluna" target="_blank" rel="noopener noreferrer">Repositori GitHub</a></p>
     </div>
   </div>
 </footer>
@@ -1801,6 +1867,8 @@
 <script>
 (function () {
   'use strict';
+
+  var titleFlashId = null;
 
   function eachNode(nodes, fn) {
     if (!nodes) return;
@@ -1836,6 +1904,7 @@
     }
 
     function showPage(id) {
+      if (titleFlashId) { window.clearInterval(titleFlashId); titleFlashId = null; }
       eachNode(pageEls, function (p) {
         if (p.getAttribute('data-page') === id) {
           p.classList.add('active');
@@ -1859,13 +1928,16 @@
     }
 
     document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       var el = e.target;
       while (el && el !== document) {
         if (el.tagName === 'A') {
           var href = el.getAttribute('href') || '';
           if (href.indexOf('#/') === 0) {
-            var id = href.substring(2).split('?')[0];
-            navigateTo(id);
+            e.preventDefault();
+            /* Biarkan hashchange yang menangani agar riwayat browser tetap utuh. */
+            if (location.hash === href) navigateTo(href.substring(2).split('?')[0]);
+            else location.hash = href;
             return;
           }
           break;
@@ -1884,23 +1956,35 @@
   }
 
   /* ============================================================
-     TIMER
+     TIMER — dihitung dari jam asli (Date.now) supaya tetap akurat
+     ketika tab di-throttle; status disimpan di sessionStorage
      ============================================================ */
   try {
     var TOTAL = 100 * 60;
+    var TIMER_KEY = 'skdnotes.timer.v1';
     var remaining = TOTAL;
+    var deadline = 0;
     var intervalId = null;
+    var finished = false;
+    var audioCtx = null;
 
     var display = document.getElementById('timerDisplay');
     var toggleBtn = document.getElementById('timerToggle');
     var resetBtn = document.getElementById('timerReset');
     var navTimer = document.getElementById('navTimer');
     var navTimerText = document.getElementById('navTimerText');
+    var timerNote = document.getElementById('timerNote');
 
     function format(sec) {
+      sec = Math.max(0, sec);
       var m = Math.floor(sec / 60);
       var s = sec % 60;
       return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function remainingNow() {
+      if (!deadline) return remaining;
+      return Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
     }
 
     function renderTimer() {
@@ -1911,45 +1995,182 @@
         else display.classList.remove('warn');
       }
       if (navTimerText) navTimerText.textContent = txt;
-      if (navTimer) {
-        if (remaining === 0) navTimer.classList.add('done');
-        else navTimer.classList.remove('done');
+      if (navTimer) navTimer.classList.toggle('done', finished || remaining === 0);
+    }
+
+    function setNote(msg) {
+      if (timerNote) timerNote.textContent = msg || '';
+    }
+
+    function saveTimer() {
+      try {
+        if (!window.sessionStorage) return;
+        window.sessionStorage.setItem(TIMER_KEY, JSON.stringify({
+          running: intervalId !== null,
+          deadline: deadline,
+          remaining: remaining
+        }));
+      } catch (e) {}
+    }
+
+    /* AudioContext dibuat saat klik (gesture) agar alarm masih boleh bunyi
+       setelah 100 menit tanpa interaksi. */
+    function primeAudio() {
+      try {
+        var Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        if (!audioCtx) audioCtx = new Ctx();
+        if (audioCtx.state === 'suspended' && audioCtx.resume) audioCtx.resume();
+      } catch (e) {}
+    }
+
+    function beep() {
+      try {
+        if (!audioCtx) return;
+        var t0 = audioCtx.currentTime;
+        for (var i = 0; i < 3; i++) {
+          var osc = audioCtx.createOscillator();
+          var gain = audioCtx.createGain();
+          var t = t0 + i * 0.34;
+          osc.type = 'sine';
+          osc.frequency.value = 880;
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          gain.gain.setValueAtTime(0.0001, t);
+          gain.gain.exponentialRampToValueAtTime(0.18, t + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+          osc.start(t);
+          osc.stop(t + 0.32);
+        }
+      } catch (e) {}
+    }
+
+    function flashTitle() {
+      var base = document.title;
+      var n = 0;
+      if (titleFlashId) window.clearInterval(titleFlashId);
+      titleFlashId = window.setInterval(function () {
+        n += 1;
+        document.title = (n % 2) ? 'Waktu habis — SKD Notes' : base;
+        if (n >= 12) {
+          window.clearInterval(titleFlashId);
+          titleFlashId = null;
+          document.title = base;
+        }
+      }, 900);
+    }
+
+    function finishTimer(quiet) {
+      if (intervalId !== null) { window.clearInterval(intervalId); intervalId = null; }
+      finished = true;
+      remaining = 0;
+      renderTimer();
+      if (toggleBtn) { toggleBtn.textContent = 'Mulai ulang'; toggleBtn.classList.add('primary'); }
+      if (quiet) {
+        setNote('Sesi sebelumnya sudah berakhir. Tekan Reset untuk mulai lagi.');
+      } else {
+        setNote('Waktu habis. Tekan Reset untuk memulai sesi baru.');
+        beep();
+        flashTitle();
       }
+      saveTimer();
     }
 
     function tick() {
-      if (remaining <= 0) { stopTimer(); remaining = 0; renderTimer(); return; }
-      remaining -= 1;
+      remaining = remainingNow();
+      if (remaining <= 0) { finishTimer(false); return; }
       renderTimer();
+      if (remaining % 5 === 0) saveTimer();
     }
 
-    function startTimer() {
+    function startTimer(resumed) {
       if (intervalId !== null) return;
-      intervalId = window.setInterval(tick, 1000);
+      if (!resumed || !deadline || deadline <= Date.now()) {
+        if (remaining <= 0) remaining = TOTAL;
+        deadline = Date.now() + remaining * 1000;
+      }
+      finished = false;
       if (toggleBtn) { toggleBtn.textContent = 'Jeda'; toggleBtn.classList.remove('primary'); }
       if (navTimer) navTimer.classList.add('show');
+      setNote('');
+      intervalId = window.setInterval(tick, 250);
+      renderTimer();
+      saveTimer();
     }
 
-    function stopTimer() {
+    function pauseTimer() {
       if (intervalId === null) return;
       window.clearInterval(intervalId);
       intervalId = null;
-      if (toggleBtn) {
-        toggleBtn.textContent = remaining === 0 ? 'Selesai' : 'Lanjut';
+      remaining = remainingNow();
+      if (remaining <= 0) { finishTimer(false); return; }
+      if (toggleBtn) { toggleBtn.textContent = 'Lanjut'; toggleBtn.classList.add('primary'); }
+      renderTimer();
+      saveTimer();
+    }
+
+    function loadTimer() {
+      var raw = null;
+      try {
+        if (!window.sessionStorage) return;
+        raw = window.sessionStorage.getItem(TIMER_KEY);
+      } catch (e) { return; }
+      if (!raw) return;
+
+      var saved = null;
+      try { saved = JSON.parse(raw); } catch (e) { saved = null; }
+      if (!saved || typeof saved.remaining !== 'number') return;
+
+      remaining = Math.max(0, Math.min(TOTAL, Math.round(saved.remaining)));
+
+      if (saved.running && typeof saved.deadline === 'number') {
+        deadline = saved.deadline;
+        remaining = remainingNow();
+        if (remaining > 0) {
+          startTimer(true);
+          setNote('Timer dilanjutkan dari sesi sebelumnya.');
+          return;
+        }
+        finishTimer(true);
+        return;
+      }
+
+      if (remaining === 0) {
+        finished = true;
+        if (toggleBtn) toggleBtn.textContent = 'Mulai ulang';
+      } else if (toggleBtn) {
+        toggleBtn.textContent = remaining >= TOTAL ? 'Mulai' : 'Lanjut';
         toggleBtn.classList.add('primary');
       }
+      renderTimer();
     }
 
     if (display && toggleBtn && resetBtn) {
       toggleBtn.addEventListener('click', function () {
-        if (intervalId !== null) stopTimer();
-        else { if (remaining === 0) remaining = TOTAL; startTimer(); }
+        if (intervalId !== null) { pauseTimer(); return; }
+        primeAudio();
+        if (remaining <= 0) remaining = TOTAL;
+        startTimer(false);
       });
+
       resetBtn.addEventListener('click', function () {
-        stopTimer(); remaining = TOTAL;
-        toggleBtn.textContent = 'Mulai'; toggleBtn.classList.add('primary');
+        if (intervalId !== null) { window.clearInterval(intervalId); intervalId = null; }
+        if (titleFlashId) { window.clearInterval(titleFlashId); titleFlashId = null; }
+        remaining = TOTAL;
+        deadline = 0;
+        finished = false;
+        if (toggleBtn) { toggleBtn.textContent = 'Mulai'; toggleBtn.classList.add('primary'); }
+        setNote('');
         renderTimer();
+        saveTimer();
       });
+
+      /* Sinkron ulang tepat saat tab kembali aktif, bukan menunggu tick berikutnya. */
+      document.addEventListener('visibilitychange', function () {
+        if (intervalId !== null && !document.hidden) tick();
+      }, false);
+
+      loadTimer();
       renderTimer();
     }
 
@@ -1979,7 +2200,7 @@
       if (qWrongEl) qWrongEl.textContent = qStats.wrong;
     }
 
-    eachNode(document.querySelectorAll('[data-quiz]'), function (item) {
+    eachNode(document.querySelectorAll('[data-quiz]'), function (item, idx) {
       qTotal++;
       var toggle = item.querySelector('.q-toggle');
       var explain = item.querySelector('.q-explain');
@@ -1988,12 +2209,25 @@
 
       if (!toggle || !explain) return;
 
+      var explainId = 'q-explain-' + (idx + 1);
+      explain.id = explainId;
+      explain.setAttribute('aria-live', 'polite');
+      toggle.setAttribute('aria-controls', explainId);
+      toggle.setAttribute('aria-expanded', 'false');
+
+      function setOpen(open) {
+        if (open) explain.classList.add('open');
+        else explain.classList.remove('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.textContent = open ? 'Tutup pembahasan' : 'Buka pembahasan';
+      }
+
       toggle.addEventListener('click', function () {
-        var isOpen = explain.classList.toggle('open');
-        toggle.textContent = isOpen ? 'Tutup pembahasan' : 'Buka pembahasan';
+        var isOpen = !explain.classList.contains('open');
+        setOpen(isOpen);
         if (isOpen && !answered) {
           eachNode(opts, function (opt) {
-            if (opt.getAttribute('data-correct') !== null) opt.classList.add('correct');
+            if (opt.hasAttribute('data-correct')) opt.classList.add('correct');
           });
         }
       });
@@ -2001,23 +2235,23 @@
       eachNode(opts, function (opt) {
         opt.addEventListener('click', function () {
           if (answered) return;
-          eachNode(opts, function (o) { o.style.pointerEvents = 'none'; });
-          var isCorrect = opt.getAttribute('data-correct') !== null;
-          if (isCorrect) {
-            opt.classList.add('correct');
-            qStats.correct++;
-          } else {
-            opt.classList.add('wrong');
-            qStats.wrong++;
-            eachNode(opts, function (o) {
-              if (o.getAttribute('data-correct') !== null) o.classList.add('correct');
-            });
-          }
+          answered = true;
+          var isCorrect = opt.hasAttribute('data-correct');
+
+          eachNode(opts, function (o) {
+            o.disabled = true;
+            if (o.hasAttribute('data-correct')) o.classList.add('correct');
+          });
+          if (!isCorrect) opt.classList.add('wrong');
+
+          if (isCorrect) qStats.correct++;
+          else qStats.wrong++;
           qStats.done++;
           updateQuizStats();
-          answered = true;
-          explain.classList.add('open');
-          toggle.textContent = 'Tutup pembahasan';
+          setOpen(true);
+
+          /* Fokus pindah ke toggle karena tombol yang diklik jadi nonaktif. */
+          try { toggle.focus({ preventScroll: true }); } catch (e) { try { toggle.focus(); } catch (e2) {} }
         });
       });
 
@@ -2027,10 +2261,9 @@
         eachNode(opts, function (o) {
           o.classList.remove('correct');
           o.classList.remove('wrong');
-          o.style.pointerEvents = '';
+          o.disabled = false;
         });
-        explain.classList.remove('open');
-        toggle.textContent = 'Buka pembahasan';
+        setOpen(false);
       });
     });
 
