@@ -205,6 +205,9 @@ scripts/            ekstrak · validasi · dokumen · kontras · responsif · uj
 - Semua teks dirender lewat `textContent`. Tidak ada `innerHTML`; satu-satunya
   markup yang dibangkitkan adalah `<b>` dari penanda `**tebal**`.
 - Nol request eksternal. Tidak ada Tailwind CDN, tidak ada Google Fonts.
+- Satu pengecualian aset lokal: `assets/img/qris.jpg` (QRIS donasi, ~108KB).
+  Gambar QRIS wajib piksel-asli agar bisa dipindai kamera, jadi tidak bisa
+  diganti SVG inline seperti dekorasi lain.
 
 ---
 
@@ -239,6 +242,16 @@ kolom di bawah 720px:
 
 Muncul di nav hanya saat timer berjalan. Latar tinta, teks putih, ber-border
 2.5px dengan `--shadow-sm`. Kliknya menavigasi ke `#/simulasi`.
+
+### Kopi (Traktir kopi)
+
+Tombol apung kanan-bawah: stiker pill kuning `Traktir kopi, kuy ☕`, diputar −1.5°,
+ber-border 2.5px dengan `--shadow-lg`. Hover meluruskan + mengangkat, tekan
+mengikuti fisika standar. Klik membuka modal QRIS (`role="dialog"`,
+`aria-modal`) berisi gambar `assets/img/qris.jpg`, NMID, tombol Salin NMID,
+dan tombol Tutup. Tutup via tombol, klik backdrop, atau Esc — fokus kembali
+ke tombol apung. Di ≤560px tombol merapat ke tepi; `prefers-reduced-motion`
+mematikan putaran dan animasi pop.
 
 ### Cards
 

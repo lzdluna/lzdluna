@@ -542,6 +542,24 @@
 <script defer src="assets/js/quiz.js"></script>
 <script defer src="assets/js/materi.js"></script>
 <script defer src="assets/js/sumber.js"></script>
+<script defer src="assets/js/kopi.js"></script>
 <script defer src="assets/js/app.js"></script>
+
+<button class="kopi-btn" id="kopiBtn" type="button" aria-haspopup="dialog" aria-controls="kopiDialog" aria-label="Traktir kopi, kuy, buka kode QRIS">Traktir kopi, kuy ☕</button>
+
+<div class="kopi-backdrop" id="kopiBackdrop" hidden>
+  <div class="kopi-modal" role="dialog" aria-modal="true" aria-labelledby="kopiTitle" id="kopiDialog">
+    <p class="kopi-eyebrow">Sawer seikhlasnya</p>
+    <h2 id="kopiTitle">Traktir kopi buat aku ☕</h2>
+    <p class="kopi-desc">Belajarnya gratis, kopinya yang bikin melek. Scan aja pakai e-wallet atau m-banking apa pun.</p>
+    <img class="kopi-qris" src="assets/img/qris.jpg" alt="Kode QRIS BTECH ATAMBUA" loading="lazy" />
+    <p class="kopi-nmid">NMID: <b id="kopiNmid">ID1025465424329</b></p>
+    <div class="kopi-actions">
+      <button class="t-btn" id="kopiSalin" type="button">Salin NMID</button>
+      <button class="t-btn primary" id="kopiTutup" type="button">Tutup</button>
+    </div>
+    <p class="kopi-status" id="kopiStatus" role="status" aria-live="polite"></p>
+  </div>
+</div>
 </body>
 </html>

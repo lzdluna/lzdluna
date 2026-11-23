@@ -105,15 +105,17 @@ for (const k of ['skdnotes.materi.done.v1', 'skdnotes.timer.v1']) {
   cek('key ' + k + ' didokumentasikan', doc.includes(k));
 }
 
-for (const m of ['render', 'router', 'timer', 'quiz', 'materi', 'sumber', 'app']) {
+for (const m of ['render', 'router', 'timer', 'quiz', 'materi', 'sumber', 'kopi', 'app']) {
   cek('modul ' + m + '.js ada', fs.existsSync(path.join(ROOT, 'assets/js/' + m + '.js')));
   cek('DESIGN.md menyebut modul ' + m, doc.includes(m));
 }
 
-cek('7 modul dimuat dengan defer', (html.match(/<script defer src="assets\/js\//g) || []).length === 7);
+cek('8 modul dimuat dengan defer', (html.match(/<script defer src="assets\/js\//g) || []).length === 8);
 cek('tanpa CSS inline', !html.includes('<style>'));
 cek('tanpa JS inline', !/<script>/.test(html));
 cek('tanpa aset eksternal', !/(cdn\.|fonts\.googleapis|fonts\.gstatic)/.test(html));
+cek('ada gambar QRIS lokal', html.includes('assets/img/qris.jpg'));
+cek('DESIGN mendokumentasikan pengecualian QRIS', doc.includes('assets/img/qris.jpg'));
 cek('data-stat dipakai', (html.match(/data-stat="/g) || []).length >= 8);
 cek('favicon memakai isian oranye', html.includes('%23ff8a3c'));
 

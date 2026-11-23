@@ -1010,6 +1010,70 @@ td{border-bottom:1.5px solid var(--line);}
 }
 
 /* ============================================================
+   KOPI — tombol apung "Traktir kopi" + modal QRIS
+   Satu pengecualian aset gambar: QRIS butuh dipindai kamera,
+   jadi tidak bisa diganti SVG inline seperti dekorasi lain.
+   ============================================================ */
+.kopi-btn{
+  position:fixed;right:18px;bottom:18px;z-index:200;
+  background:var(--yellow);color:var(--ink);
+  border:2.5px solid var(--line);border-radius:99px;
+  box-shadow:var(--shadow-lg);
+  font:800 14px/1 var(--font-display);
+  padding:14px 18px;cursor:pointer;
+  transform:rotate(-1.5deg);
+  transition:transform .12s ease, box-shadow .12s ease;
+  min-height:44px;
+}
+.kopi-btn:hover{transform:rotate(0deg) translate(-2px,-2px);box-shadow:var(--shadow-xl);}
+.kopi-btn:active{transform:translate(2px,2px);box-shadow:none;}
+.kopi-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+.kopi-backdrop{
+  position:fixed;inset:0;z-index:300;
+  background:rgba(17,17,17,.55);
+  display:grid;place-items:center;padding:20px;
+}
+.kopi-backdrop[hidden]{display:none;}
+.kopi-modal{
+  background:var(--card);color:var(--ink);
+  border:2.5px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-xl);
+  max-width:380px;width:100%;
+  padding:26px 24px;text-align:center;
+  transform:rotate(-.6deg);
+  animation:kopi-pop .18s ease-out;
+}
+.kopi-eyebrow{
+  font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 6px;
+}
+.kopi-modal h2{font-size:1.3rem;margin:0 0 8px;}
+.kopi-desc{font-size:13.5px;color:var(--ink-soft);margin:0 0 16px;line-height:1.6;}
+.kopi-qris{
+  width:100%;max-width:260px;height:auto;display:block;margin:0 auto 12px;
+  border:2.5px solid var(--line);border-radius:12px;background:#fff;
+}
+.kopi-nmid{font-size:13px;color:var(--muted);margin:0 0 14px;}
+.kopi-nmid b{color:var(--ink);}
+.kopi-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.kopi-status{font-size:12.5px;font-weight:800;margin:12px 0 0;min-height:1.2em;}
+@keyframes kopi-pop{
+  from{transform:rotate(-.6deg) scale(.96);}
+  to{transform:rotate(-.6deg) scale(1);}
+}
+@media (prefers-reduced-motion:reduce){
+  .kopi-btn{transform:none;}
+  .kopi-btn:hover{transform:none;}
+  .kopi-modal{animation:none;transform:none;}
+}
+@media (max-width:560px){
+  .kopi-btn{right:12px;bottom:12px;padding:12px 15px;font-size:13px;}
+}
+@media (pointer:coarse){
+  .kopi-btn,.kopi-actions .t-btn{min-height:44px;}
+}
+
+/* ============================================================
    RESPONSIF — 720 / 600 / 480 / 360 px
    Diurutkan dari lebar ke sempit. Blok ini sengaja di akhir berkas
    agar menang atas aturan dasar dengan spesifisitas sama.

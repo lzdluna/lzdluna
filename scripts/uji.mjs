@@ -383,6 +383,43 @@ try {
       /^Jawaban: [A-E]\. .+\.$/.test(first.querySelector('.q-explain b').textContent),
       first.querySelector('.q-explain b').textContent);
 
+    /* -------------------------------------------------------- traktir kopi */
+    const kopiBtn = d.getElementById('kopiBtn');
+    const kopiBackdrop = d.getElementById('kopiBackdrop');
+    const kopiTutup = d.getElementById('kopiTutup');
+    const kopiSalin = d.getElementById('kopiSalin');
+    const kopiNmid = d.getElementById('kopiNmid');
+    const kopiStatus = d.getElementById('kopiStatus');
+    cek('tombol traktir ada', !!kopiBtn);
+    cek('label tombol traktir', /Traktir kopi, kuy/.test(kopiBtn.textContent), kopiBtn.textContent);
+    cek('modal tersembunyi awal', kopiBackdrop.hidden === true);
+    cek('modal punya role dialog', d.getElementById('kopiDialog').getAttribute('role') === 'dialog');
+    cek('gambar QRIS ada', !!d.querySelector('.kopi-qris') && /\.jpg$/.test(d.querySelector('.kopi-qris').getAttribute('src')));
+
+    klik(dom.window, kopiBtn);
+    cek('klik membuka modal', kopiBackdrop.hidden === false);
+    cek('fokus pindah ke tombol tutup', d.activeElement === kopiTutup);
+
+    klik(dom.window, kopiTutup);
+    cek('tombol tutup menutup modal', kopiBackdrop.hidden === true);
+    cek('fokus kembali ke tombol traktir', d.activeElement === kopiBtn);
+
+    klik(dom.window, kopiBtn);
+    kopiBackdrop.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
+    cek('klik backdrop menutup modal', kopiBackdrop.hidden === true);
+
+    klik(dom.window, kopiBtn);
+    d.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    cek('Esc menutup modal', kopiBackdrop.hidden === true);
+    cek('Esc mengembalikan fokus', d.activeElement === kopiBtn);
+
+    klik(dom.window, kopiBtn);
+    klik(dom.window, kopiSalin);
+    await tunggu(50);
+    cek('status salin muncul', kopiStatus.textContent.length > 0, kopiStatus.textContent);
+    cek('NMID terbaca', /ID1025465424329/.test(kopiNmid.textContent), kopiNmid.textContent);
+    klik(dom.window, kopiTutup);
+
     /* -------------------------------------------------------------- timer */
     const tgl = d.getElementById('timerToggle');
     const disp = d.getElementById('timerDisplay');

@@ -190,6 +190,7 @@ window.SKD = window.SKD || {};
     SKD.materi.init(materi);
     SKD.sumber.init(sumber);
     SKD.quiz.init(soal);
+    if (SKD.kopi) SKD.kopi.init();
 
     SKD.router.init();
     SKD.timer.init();
