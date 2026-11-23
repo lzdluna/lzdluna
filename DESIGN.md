@@ -4,8 +4,9 @@
 
 SKD Notes adalah halaman belajar SKD CPNS yang **dibaca seperti buku**, bukan
 dipakai seperti dashboard. Arah visualnya editorial print: latar kertas hangat,
-garis tipis berwarna gamping, judul serif Georgia berketebalan 400, dan satu warna
-aksen navy yang dipakai hemat.
+garis tipis berwarna gamping, judul serif Georgia berketebalan 400, dengan palet
+**LocalGuide** — merah-orange untuk aksi primer, teal untuk tautan, kuning untuk
+penanda — dipakai hemat di atas kertas.
 
 Tiga prinsip yang membentuk semua keputusan desain:
 
@@ -35,38 +36,65 @@ Semua token didefinisikan di `:root` pada `assets/css/skd.css`.
 - **Muted** `--muted` `#6B6459` — label, caption, metadata, header tabel.
 - **Line** `--line` `#E3DCCD` — semua garis dan border 1px.
 
-### Aksen
+### Aksen (palet LocalGuide)
 
-- **Accent (Navy)** `--accent` `#14345C` — tautan, tombol primer, state aktif.
-- **Accent Soft** `--accent-soft` `#1F4A7D` — hover tombol primer.
-- **Accent Wash** `--accent-wash` `#E8EEF6` — callout informasi, badge subtes.
+- **Primary Red-Orange** `--accent` `#EA580C` — tombol primer, state aktif, penanda kunci.
+- **Primary Dark** `--accent-soft` `#C2410C` — hover tombol primer.
+- **Primary Wash** `--accent-wash` `#FDF1E8` — callout, latar badge.
+- **Secondary Teal** `--teal` `#0D9488` — semua tautan teks, aksi sekunder.
 
-### Semantik
+### Semantik (palet LocalGuide)
 
-- **Success** `--green` `#1F5D31` / `--green-wash` `#E7F0E8` — jawaban benar,
+- **Success** `--green` `#16A34A` / `--green-wash` `#E9F7EF` — jawaban benar,
   "sudah dipelajari", badge "Resmi".
-- **Warning** `--amber` `#8A4A12` / `--amber-wash` `#FDEEE0` — peringatan,
-  badge "Latihan".
-- **Error** `--red` `#A8341F` / `--red-wash` `#FBE9E5` — jawaban salah,
+- **Warning** `--amber` `#EAB308` / `--amber-wash` `#FEF7E0` — peringatan,
+  badge "Latihan", skor TKP tingkat menengah.
+- **Error** `--red` `#DC2626` / `--red-wash` `#FDECEC` — jawaban salah,
   timer di bawah 5 menit.
 
-### Kontras (terukur, WCAG AA)
+### Penyimpangan yang disengaja dari LocalGuide
 
-`--muted` sengaja di-tuning ke `#6B6459`. Nilai sebelumnya `#7D776C` gagal di latar
-`--bg-soft` (3.84:1). Palet sekarang lolos 4.5:1 di semua kombinasi:
+| LocalGuide | Di proyek ini | Alasan |
+|---|---|---|
+| Background `#FFFFFF` | `#FAF7F0` (kertas) | Karakter editorial print dipertahankan; dipilih sadar |
+| Surface Default `#FFFFFF` | `#FFFDF8` | Menjaga kehangatan kertas |
 
-| Teks | di `--bg` | di `--bg-soft` | di `--card` |
-|---|---|---|---|
-| `--ink` | 16.26 | 15.03 | 17.12 |
-| `--ink-soft` | 8.77 | 8.10 | 9.23 |
-| `--muted` | 5.46 | 5.05 | 5.75 |
-| `--accent` | 11.71 | 10.83 | 12.33 |
-| `--green` | 7.36 | 6.80 | 7.74 |
-| `--amber` | 6.40 | 5.91 | 6.73 |
-| `--red` | 6.18 | 5.71 | 6.50 |
+Warna Primary, Secondary, Tertiary, Success, Warning, Error, dan Info dipakai
+**verbatim**, sesuai peran yang ditetapkan LocalGuide.
 
-Nilai terendah di seluruh palet: `--muted` pada `--red-wash` = **4.98:1**.
-Jangan mengubah token warna tanpa menghitung ulang tabel ini.
+### Kontras (terukur — TIDAK memenuhi WCAG AA)
+
+> **Peringatan.** Palet LocalGuide dirancang untuk latar putih. Di latar kertas
+> proyek ini, seluruh warna semantik **gagal** ambang 4.5:1 bila dipakai sebagai
+> teks. Ini keputusan sadar, bukan kelalaian. Angka di bawah adalah hasil ukur,
+> bukan perkiraan.
+
+| Token | Hex | di `--bg` | di `--bg-soft` | di `--card` | AA |
+|---|---|---|---|---|---|
+| `--accent` | `#EA580C` | 3.33 | 3.07 | 3.50 | ❌ |
+| `--accent-soft` | `#C2410C` | 4.84 | 4.47 | 5.09 | ❌ (bg-soft) |
+| `--teal` | `#0D9488` | 3.50 | 3.23 | 3.68 | ❌ |
+| `--green` | `#16A34A` | 3.08 | 2.85 | 3.24 | ❌ |
+| `--amber` | `#EAB308` | 1.79 | 1.66 | 1.89 | ❌ |
+| `--red` | `#DC2626` | 4.51 | 4.17 | 4.75 | ❌ (bg-soft) |
+| `--ink` | `#1B1A17` | 16.26 | 15.03 | 17.12 | ✅ |
+| `--ink-soft` | `#4A463F` | 8.77 | 8.10 | 9.23 | ✅ |
+| `--muted` | `#6B6459` | 5.46 | 5.05 | 5.75 | ✅ |
+
+Teks putih di atas tombol juga di bawah ambang: `#FFFFFF` pada `--accent` = **3.56:1**.
+
+**Yang terkena:** `.note-strip` (paragraf penuh), `.acc-note`, `.timer-note`,
+`.q-toggle`, `.src-tag`, `.jump-go`, `.order-opt b`, `.card-kode`, `.acc-num`,
+`.q-badge`, `.acc-flag`, serta label `Benar`/`Salah` pada pelacak skor.
+
+**Yang aman:** seluruh teks isi (`--ink`, `--ink-soft`) dan metadata (`--muted`)
+tetap lolos — dan itu mayoritas teks di halaman.
+
+**Cara memulihkan AA tanpa mengganti hue:** gelapkan token hingga lolos, dengan
+`--accent` `#BB460A` (4.91), `--teal` `#0B7970` (4.93), `--amber` `#886805`
+(4.87), `--green` `#117D39` (4.89), `--red` `#D22424` (4.88). Angka dalam
+kurung adalah rasio terhadap `--bg`. Jalankan `npm run uji` setelah mengubah —
+tes mengunci nilai token, jadi perubahan akan terdeteksi.
 
 ---
 
@@ -230,13 +258,16 @@ bertambah. Reset mengembalikan semuanya ke "belum dijawab".
 
 ## Accessibility
 
-Standar minimum yang sudah diterapkan dan tidak boleh diturunkan:
+Standar yang diterapkan. **Satu butir sengaja tidak dipenuhi** — lihat catatan di
+bawah:
 
-1. Kontras ≥ 4.5:1 untuk semua teks.
+1. ⚠️ **Kontras tidak memenuhi 4.5:1** untuk warna semantik dan aksen. Teks isi
+   (`--ink`, `--ink-soft`, `--muted`) tetap lolos. Rincian dan cara memulihkan
+   ada di bagian [Kontras](#kontras-terukur--tidak-memenuhi-wcag-aa).
 2. Semua kontrol adalah elemen native (`button`, `a`, `input`), bukan `div`
    dengan click handler.
 3. Status tidak hanya warna — benar/salah memakai `✓`/`✕`, nav memakai
-   `aria-current`.
+   `aria-current`. Ini makin penting karena kontras warna rendah.
 4. ARIA secukupnya: `aria-expanded` + `aria-controls` pada toggle pembahasan,
    `aria-selected` pada tab, `role="status"` + `aria-live` pada pesan timer.
 5. `:focus-visible` dengan outline `--accent` 2px, offset 2px.
@@ -262,24 +293,28 @@ migrasi diam-diam.
 
 1. **Do** pertahankan judul serif weight 400. Hierarki datang dari ukuran dan
    warna, bukan bold.
-2. **Do** pakai navy sebagai satu-satunya warna interaktif; hijau/amber/merah
-   hanya untuk makna.
+2. **Do** pakai `--accent` (merah-orange) untuk aksi primer dan `--teal` untuk
+   tautan; hijau/amber/merah hanya untuk makna.
 3. **Do** beri hover lift hanya pada elemen yang bisa diklik.
-4. **Do** sertakan ikon di samping warna untuk status benar/salah.
-5. **Do** jaga semua teks ≥ 4.5:1; hitung ulang tabel kontras bila token berubah.
+4. **Do** sertakan ikon di samping warna untuk status benar/salah — sekarang
+   wajib, karena kontras warna rendah.
+5. **Do** ukur ulang tabel kontras bila token berubah, dan perbarui angka di
+   dokumen ini. Jangan mengklaim AA tanpa mengukur.
 6. **Do** pertahankan base body 16.5px / 1.68 — ini halaman bacaan panjang.
 7. **Do** hormati `prefers-reduced-motion` pada setiap animasi baru.
-8. **Don't** menambah webfont, CDN, atau aset eksternal. Halaman harus utuh tanpa
+8. **Don't** memakai warna aksen untuk paragraf panjang. Semakin banyak teks
+   berwarna, semakin sulit dibaca pada kontras 3.3:1.
+9. **Don't** menambah webfont, CDN, atau aset eksternal. Halaman harus utuh tanpa
    jaringan.
-9. **Don't** memakai putih murni `#FFFFFF` sebagai latar halaman — selalu kertas
-   hangat.
-10. **Don't** membuat bayangan berlapis atau glow. Satu token bayangan saja.
-11. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
+10. **Don't** memakai putih murni `#FFFFFF` sebagai latar halaman — selalu kertas
+    hangat.
+11. **Don't** membuat bayangan berlapis atau glow. Satu token bayangan saja.
+12. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
     di dalam `span`.
-12. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
-13. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat` agar
+13. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
+14. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat` agar
     selalu sama dengan isi `data/*.json`.
-14. **Don't** mengklaim halaman ini resmi. Selalu tegaskan "bukan situs resmi BKN"
+15. **Don't** mengklaim halaman ini resmi. Selalu tegaskan "bukan situs resmi BKN"
     dan cantumkan tahun regulasi.
 
 ---
@@ -288,6 +323,13 @@ migrasi diam-diam.
 
 Dicatat jujur supaya tidak dianggap sudah selesai:
 
+- **Kontras di bawah WCAG AA** untuk seluruh warna semantik dan aksen
+  (3.07–4.84:1). Ini konsekuensi langsung dari memakai palet LocalGuide verbatim
+  di atas latar kertas. Varian yang sudah dihitung untuk memulihkan AA ada di
+  bagian Kontras. Bila aksesibilitas diprioritaskan kembali, ganti lima token
+  dengan varian gelap — tidak perlu mengubah struktur CSS.
+- Teks putih di atas tombol `--accent` = 3.56:1. Alternatif: teks `--ink` di atas
+  tombol, atau gelapkan `--accent`.
 - Progres kuis belum persisten (materi sudah). Jika ditambahkan, pakai
   `sessionStorage` dengan key berversi, sejalan dengan timer.
 - Tab materi belum mendukung navigasi panah kiri/kanan sesuai pola WAI-ARIA

@@ -127,6 +127,16 @@ try {
     cek(':root --muted = #6b6459', nilai(':root', '--muted') === '#6b6459', nilai(':root', '--muted'));
     cek(':root --radius = 14px', nilai(':root', '--radius') === '14px');
     cek(':root --maxw = 1080px', nilai(':root', '--maxw') === '1080px');
+
+    /* Palet LocalGuide, verbatim. */
+    cek(':root --accent = #ea580c', nilai(':root', '--accent') === '#ea580c', nilai(':root', '--accent'));
+    cek(':root --teal = #0d9488', nilai(':root', '--teal') === '#0d9488', nilai(':root', '--teal'));
+    cek(':root --green = #16a34a', nilai(':root', '--green') === '#16a34a', nilai(':root', '--green'));
+    cek(':root --amber = #eab308', nilai(':root', '--amber') === '#eab308', nilai(':root', '--amber'));
+    cek(':root --red = #dc2626', nilai(':root', '--red') === '#dc2626', nilai(':root', '--red'));
+    cek('tautan memakai teal', /var\(--teal\)/.test(nilai('a', 'color')), nilai('a', 'color'));
+    cek('kredit memakai teal', /var\(--teal\)/.test(nilai('.credit a', 'color')), nilai('.credit a', 'color'));
+    cek('latar tetap kertas hangat', nilai(':root', '--bg') === '#faf7f0', nilai(':root', '--bg'));
     cek('custom property terbaca di documentElement',
       dom.window.getComputedStyle(d.documentElement).getPropertyValue('--muted').trim() === '#6b6459');
 
