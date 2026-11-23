@@ -1,0 +1,25 @@
+# Dependensi
+node_modules/
+.npm/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Log dan file sementara
+*.log
+*.tmp
+
+# Artefak verifikasi lokal
+scripts/out/
+scripts/.cache/

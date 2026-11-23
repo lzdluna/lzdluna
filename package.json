@@ -1,0 +1,17 @@
+{
+  "name": "lzdluna-skd-notes",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SKD Notes — halaman belajar SKD CPNS statis untuk GitHub Pages",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "ekstrak": "node scripts/ekstrak.mjs",
+    "validasi": "node scripts/validasi.mjs",
+    "uji": "node scripts/uji.mjs",
+    "cek": "npm run validasi && npm run uji"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}
