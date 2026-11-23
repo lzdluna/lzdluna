@@ -1,0 +1,28 @@
+name: Validasi data
+
+# Hanya memeriksa. Situs tetap 100% statis dan disajikan GitHub Pages.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validasi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Validasi data/*.json
+        run: npm run validasi
+
+      - name: Uji perilaku halaman
+        run: npm run uji
