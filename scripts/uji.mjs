@@ -223,28 +223,36 @@ try {
     cek('cakupan memakai <b>', !!twkCard.querySelector('.cakupan li b'));
 
     /* ------------------------------------------------------------- router */
+    const aktif = (nama) => d.querySelector('.page[data-page="' + nama + '"]').classList.contains('active');
+
+    /* Navigasi berbasis hash bersifat asinkron; tunggu sampai halaman tujuan
+       benar-benar aktif, jangan mengandalkan jeda tetap. */
+    async function tungguHalaman(nama, batas = 2000) {
+      const mulai = Date.now();
+      while (Date.now() - mulai < batas) {
+        if (aktif(nama)) return true;
+        await tunggu(20);
+      }
+      return false;
+    }
+
     const navMateri = d.querySelector('[data-nav="materi"]');
     klik(dom.window, navMateri);
-    await tunggu(30);
-    cek('klik nav Materi pindah halaman', d.querySelector('.page[data-page="materi"]').classList.contains('active'));
+    cek('klik nav Materi pindah halaman', await tungguHalaman('materi'));
     cek('hash berubah', dom.window.location.hash === '#/materi', dom.window.location.hash);
     cek('nav aktif ditandai', navMateri.classList.contains('active'));
     cek('title jadi judul Materi', d.title === 'Materi — SKD Notes', d.title);
-    cek('halaman lama disembunyikan', !d.querySelector('.page[data-page="beranda"]').classList.contains('active'));
+    cek('halaman lama disembunyikan', !aktif('beranda'));
 
     dom.window.history.back();
-    await tunggu(30);
-    cek('tombol back kembali ke beranda',
-      d.querySelector('.page[data-page="beranda"]').classList.contains('active'));
+    cek('tombol back kembali ke beranda', await tungguHalaman('beranda'), dom.window.location.hash);
 
     dom.window.location.hash = '#/tidak-ada';
-    await tunggu(30);
-    cek('hash tak dikenal fallback ke beranda',
-      d.querySelector('.page[data-page="beranda"]').classList.contains('active'));
+    cek('hash tak dikenal fallback ke beranda', await tungguHalaman('beranda'));
 
     /* --------------------------------------------------------------- kuis */
     dom.window.location.hash = '#/latihan';
-    await tunggu(30);
+    cek('navigasi ke halaman latihan', await tungguHalaman('latihan'));
 
     const first = items[0];
     const salah = first.querySelector('[data-opt]:not([data-correct])');

@@ -8,12 +8,16 @@
   --amber:#eab308;--amber-wash:#fef7e0;
   --red:#dc2626;--red-wash:#fdecec;
   --radius:14px;--maxw:1080px;
+  /* Studygram: stabilo, tinta tangan, pita */
+  --stabilo:#fdf0a3;--stabilo-teal:#c9ece7;--hand:#3d352b;
   --shadow:0 1px 2px rgba(27,26,23,.04), 0 8px 28px -18px rgba(27,26,23,.35);
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
   margin:0;background:var(--bg);color:var(--ink);
+  background-image:radial-gradient(circle at 1px 1px, rgba(27,26,23,.07) 1px, transparent 0);
+  background-size:22px 22px;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size:16.5px;line-height:1.68;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
@@ -152,7 +156,7 @@ h2{
   transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .jump:hover{
-  transform:translateY(-3px);border-color:var(--accent);text-decoration:none;
+  transform:translateY(-3px) rotate(-.7deg);border-color:var(--accent);text-decoration:none;
   box-shadow:0 2px 4px rgba(27,26,23,.05), 0 18px 40px -24px rgba(27,26,23,.45);
 }
 .jump-num{
@@ -172,9 +176,18 @@ h2{
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 @media (max-width:860px){.grid-3{grid-template-columns:1fr;}}
 .card{
+  position:relative;
   background:var(--card);border:1px solid var(--line);
   border-radius:var(--radius);padding:26px 24px;
   box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.card::before{
+  content:"";position:absolute;top:-9px;left:50%;
+  width:66px;height:18px;border-radius:2px;
+  transform:translateX(-50%) rotate(-1.6deg);
+  background:repeating-linear-gradient(90deg,
+    rgba(234,88,12,.30) 0 6px, rgba(234,88,12,.15) 6px 12px);
+  box-shadow:0 1px 2px rgba(27,26,23,.10);
 }
 .card-kode{
   font-family:Georgia,serif;font-size:13px;letter-spacing:.1em;
@@ -244,8 +257,8 @@ h2{
 .me-tab.active{background:var(--accent);color:#fff;border-color:var(--accent);}
 .me-tab.active span{background:rgba(255,255,255,.22);color:#fff;}
 .me-progress{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);}
-.me-bar{width:86px;height:6px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;}
-.me-bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .35s ease;}
+.me-bar{width:86px;height:8px;background:rgba(27,26,23,.09);border-radius:3px;overflow:hidden;transform:rotate(-1deg);}
+.me-bar i{display:block;height:100%;width:0;background:var(--stabilo);border-radius:3px;transition:width .35s ease;}
 .me-tools{
   display:flex;gap:8px;align-items:center;flex-wrap:wrap;
   padding:14px 20px;border-bottom:1px solid var(--line);
@@ -291,6 +304,9 @@ h2{
   font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
   font-weight:700;color:var(--green);background:var(--green-wash);
   padding:3px 8px;border-radius:5px;flex:0 0 auto;
+  transform:rotate(-2.5deg);
+  box-shadow:1px 1px 0 rgba(27,26,23,.14);
+  border:1px solid rgba(22,163,74,.28);
 }
 .acc-chev{
   width:22px;height:22px;display:grid;place-items:center;
@@ -496,6 +512,7 @@ td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
   font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
   font-weight:700;padding:4px 9px;border-radius:5px;
   background:var(--accent-wash);color:var(--accent);
+  transform:rotate(-2deg);box-shadow:1px 1px 0 rgba(27,26,23,.12);
 }
 .q-badge.tiu{background:var(--amber-wash);color:var(--amber);}
 .q-badge.tkp{background:var(--green-wash);color:var(--green);}
@@ -617,3 +634,102 @@ footer{padding:46px 0 54px;background:var(--bg-soft);border-top:1px solid var(--
 }
 #galat{margin-top:24px;}
 #galat[hidden]{display:none;}
+
+/* ============================================================
+   STUDYGRAM — stabilo, coretan tangan, pita, tempelan
+   Semua dekorasi memakai CSS atau SVG inline: tidak ada berkas
+   gambar, sesuai batasan tanpa aset eksternal.
+   ============================================================ */
+
+/* Stabilo: penanda tebal di dalam konten jadi sorotan marker.
+   Efeknya gradien, jadi teks tetap gelap di atas sorotan terang. */
+.kp li b,.cakupan li b,.acc-note b,.q-explain b,.note-strip b{
+  background:linear-gradient(180deg,
+    transparent 52%, var(--stabilo) 52%, var(--stabilo) 94%, transparent 94%);
+  padding:0 2px;
+  font-weight:700;
+}
+.cakupan li b{background:linear-gradient(180deg,
+    transparent 52%, var(--stabilo-teal) 52%, var(--stabilo-teal) 94%, transparent 94%);}
+
+/* Garis bawah bergelombang ala tangan di bawah judul seksi */
+.page-head h2,.sub-head h2{position:relative;padding-bottom:10px;}
+.page-head h2::after,.sub-head h2::after{
+  content:"";position:absolute;left:0;bottom:0;
+  width:132px;height:9px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='132' height='9' viewBox='0 0 132 9'%3E%3Cpath d='M1 6c13-6 26 6 39 0s26-6 39 0 26 6 39 0' fill='none' stroke='%23ea580c' stroke-width='2.4' stroke-linecap='round' opacity='.65'/%3E%3C/svg%3E") no-repeat left center;
+  background-size:contain;
+}
+
+/* Nomor kartu di beranda: lingkaran coretan tangan */
+.jump-num{
+  position:relative;display:inline-block;
+  width:34px;height:34px;line-height:34px;text-align:center;
+  margin-bottom:8px;letter-spacing:0;
+  color:var(--accent);
+}
+.jump-num::before{
+  content:"";position:absolute;inset:-3px -5px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='44' viewBox='0 0 48 44'%3E%3Cpath d='M24 3c9 0 18 4 20 12 2 8-3 16-11 21-8 5-19 5-26-1C1 29-1 20 3 13 7 6 15 3 24 3z' fill='none' stroke='%23ea580c' stroke-width='2.2' opacity='.5'/%3E%3C/svg%3E") no-repeat center;
+  background-size:contain;
+}
+
+/* Panah coretan untuk tautan "buka" */
+.jump-go{position:relative;}
+.jump:hover .jump-go{color:var(--accent);}
+
+/* Kartu sumber: sudut terlipat seperti catatan */
+.src{position:relative;}
+.src:hover{transform:rotate(-.5deg);}
+
+/* Tempelan: kartu subtes sedikit beda sudut supaya terasa ditempel manual */
+.grid-3 > .card:nth-child(1){transform:rotate(-.35deg);}
+.grid-3 > .card:nth-child(2){transform:rotate(.25deg);}
+.grid-3 > .card:nth-child(3){transform:rotate(-.2deg);}
+
+/* Sorotan stabilo pada baris tabel "Target Aman" */
+#tabelAmbangBatas td:last-child{
+  background:linear-gradient(180deg,transparent 50%,var(--stabilo) 50%,var(--stabilo) 96%,transparent 96%);
+  font-weight:700;
+}
+
+/* Animasi "pop" saat jawaban benar */
+@keyframes pop{
+  0%{transform:scale(1);}
+  45%{transform:scale(1.035) rotate(-.4deg);}
+  100%{transform:scale(1);}
+}
+.q-opt.correct{animation:pop .32s ease-out;}
+
+/* Tanda centang digambar tangan pada topik selesai */
+.acc.done .acc-num{
+  position:relative;
+  background:var(--stabilo);color:var(--hand);
+}
+
+/* Stiker kecil di kartu profil */
+.id-card{position:relative;}
+.id-card::after{
+  content:"study with me";position:absolute;top:14px;right:-8px;
+  transform:rotate(6deg);
+  font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  color:var(--teal);background:var(--stabilo-teal);
+  padding:3px 9px;border-radius:3px;
+  box-shadow:1px 1px 0 rgba(27,26,23,.12);
+}
+
+/* Catatan pinggir miring */
+.quote{
+  border-left:3px solid var(--accent);
+  background:linear-gradient(180deg,transparent 0,transparent 100%);
+  transform:rotate(-.4deg);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .grid-3 > .card:nth-child(1),
+  .grid-3 > .card:nth-child(2),
+  .grid-3 > .card:nth-child(3),
+  .quote{transform:none;}
+  .q-opt.correct{animation:none;}
+  .jump:hover,.src:hover{transform:none;}
+}

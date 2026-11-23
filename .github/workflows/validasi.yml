@@ -24,5 +24,8 @@ jobs:
       - name: Validasi data/*.json
         run: npm run validasi
 
+      - name: Periksa konsistensi DESIGN.md
+        run: npm run dokumen
+
       - name: Uji perilaku halaman
         run: npm run uji

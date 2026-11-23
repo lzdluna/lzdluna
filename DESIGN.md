@@ -37,7 +37,6 @@ Semua token didefinisikan di `:root` pada `assets/css/skd.css`.
 - **Line** `--line` `#E3DCCD` — semua garis dan border 1px.
 
 ### Aksen (palet LocalGuide)
-
 - **Primary Red-Orange** `--accent` `#EA580C` — tombol primer, state aktif, penanda kunci.
 - **Primary Dark** `--accent-soft` `#C2410C` — hover tombol primer.
 - **Primary Wash** `--accent-wash` `#FDF1E8` — callout, latar badge.
@@ -51,6 +50,17 @@ Semua token didefinisikan di `:root` pada `assets/css/skd.css`.
   badge "Latihan", skor TKP tingkat menengah.
 - **Error** `--red` `#DC2626` / `--red-wash` `#FDECEC` — jawaban salah,
   timer di bawah 5 menit.
+
+### Studygram (lapisan dekoratif)
+
+Tiga token tambahan, semuanya untuk meniru alat tulis, bukan UI:
+
+- **Stabilo** `--stabilo` `#FDF0A3` — sorotan marker kuning.
+- **Stabilo Teal** `--stabilo-teal` `#C9ECE7` — sorotan sekunder.
+- **Hand** `--hand` `#3D352B` — tinta untuk teks di atas stabilo.
+
+Aturan pakai: stabilo **selalu di belakang teks gelap**, tidak pernah sebagai
+warna teks. Karena itu lapisan ini menambah keterbacaan, bukan menguranginya.
 
 ### Penyimpangan yang disengaja dari LocalGuide
 
@@ -256,6 +266,47 @@ bertambah. Reset mengembalikan semuanya ke "belum dijawab".
 
 ---
 
+## Studygram Layer
+
+Halaman ini dibaca oleh orang yang sedang belajar, jadi bahasanya sengaja
+meniru **buku catatan yang ditempel-tempel**, bukan dashboard. Semua dekorasi
+memakai CSS atau SVG inline — tidak ada satu pun berkas gambar.
+
+### Prinsip
+
+**Playful di kulit, serius di isi.** Yang boleh lucu: sapaan, progres, umpan
+balik, dekorasi. Yang tidak boleh disentuh humor: ambang batas, nomor regulasi,
+disclaimer "bukan situs resmi BKN". Kredibilitas halaman bertumpu pada angka
+yang benar.
+
+### Elemen
+
+| Elemen | Implementasi | Di mana |
+|---|---|---|
+| **Stabilo** | `linear-gradient` menutup 52%–94% tinggi teks di belakang `<b>` | `.kp li b`, `.q-explain b`, `.note-strip b` |
+| **Stabilo teal** | Sama, warna sekunder | `.cakupan li b` |
+| **Pita washi** | `::before` 66×18px, garis diagonal, diputar −1.6° | `.card` (kartu subtes) |
+| **Stiker** | `transform: rotate(-2.5deg)` + `box-shadow` 1px | `.acc-flag`, `.q-badge` |
+| **Coretan judul** | SVG `path` bergelombang sebagai `background-image` | `.page-head h2::after`, `.sub-head h2::after` |
+| **Lingkaran nomor** | SVG `path` elips tidak rapi | `.jump-num::before` |
+| **Kertas titik** | `radial-gradient` 1px, `background-size: 22px` | `body` |
+| **Sudut kartu** | Rotasi kecil berbeda per kartu (−0.35°, 0.25°, −0.2°) | `.grid-3 > .card` |
+| **Stiker profil** | `::after` bertuliskan "study with me" | `.id-card` |
+| **Pop** | `@keyframes` skala 1 → 1.035 → 1 selama 0.32s | `.q-opt.correct` |
+
+Semua rotasi dan animasi dimatikan di `@media (prefers-reduced-motion: reduce)`.
+
+### Nada tulisan
+
+- Penulis menyebut diri **"aku"**, pembaca **"kamu"**. Jangan campur dengan
+  "saya" atau "Anda".
+- Slang yang dipakai hanya yang **tahan lama**: "nggak", "gas", "kuy", "mager",
+  "santai". Hindari istilah tren yang akan basi dalam hitungan bulan.
+- Emoji dipakai **hemat**, satu per kalimat, dan hanya di mikrocopy — bukan di
+  judul seksi atau tabel aturan.
+
+---
+
 ## Accessibility
 
 Standar yang diterapkan. **Satu butir sengaja tidak dipenuhi** — lihat catatan di
@@ -304,17 +355,23 @@ migrasi diam-diam.
 7. **Do** hormati `prefers-reduced-motion` pada setiap animasi baru.
 8. **Don't** memakai warna aksen untuk paragraf panjang. Semakin banyak teks
    berwarna, semakin sulit dibaca pada kontras 3.3:1.
-9. **Don't** menambah webfont, CDN, atau aset eksternal. Halaman harus utuh tanpa
-   jaringan.
-10. **Don't** memakai putih murni `#FFFFFF` sebagai latar halaman — selalu kertas
+9. **Do** pakai stabilo untuk menekankan kata kunci, bukan warna teks. Sorotan
+   menambah keterbacaan; teks berwarna menguranginya.
+10. **Do** jaga "playful di kulit, serius di isi": angka, pasal, dan disclaimer
+    tetap datar dan tanpa hiasan.
+11. **Don't** memakai slang tren yang cepat basi ("no cap", "rizz"). Pakai
+    bahasa sehari-hari yang tahan lama.
+12. **Don't** menambah webfont, CDN, atau aset eksternal. Halaman harus utuh tanpa
+    jaringan.
+13. **Don't** memakai putih murni `#FFFFFF` sebagai latar halaman — selalu kertas
     hangat.
-11. **Don't** membuat bayangan berlapis atau glow. Satu token bayangan saja.
-12. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
+14. **Don't** membuat bayangan berlapis atau glow. Satu token bayangan saja.
+15. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
     di dalam `span`.
-13. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
-14. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat` agar
+16. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
+17. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat` agar
     selalu sama dengan isi `data/*.json`.
-15. **Don't** mengklaim halaman ini resmi. Selalu tegaskan "bukan situs resmi BKN"
+18. **Don't** mengklaim halaman ini resmi. Selalu tegaskan "bukan situs resmi BKN"
     dan cantumkan tahun regulasi.
 
 ---
@@ -330,6 +387,8 @@ Dicatat jujur supaya tidak dianggap sudah selesai:
   dengan varian gelap — tidak perlu mengubah struktur CSS.
 - Teks putih di atas tombol `--accent` = 3.56:1. Alternatif: teks `--ink` di atas
   tombol, atau gelapkan `--accent`.
+- Emoji di mikrocopy (🤔 ☕ 🔥) ikut dibacakan pembaca layar karena berada di
+  dalam teks. Jumlahnya sengaja dibatasi; jangan menambah tanpa alasan.
 - Progres kuis belum persisten (materi sudah). Jika ditambahkan, pakai
   `sessionStorage` dengan key berversi, sejalan dengan timer.
 - Tab materi belum mendukung navigasi panah kiri/kanan sesuai pola WAI-ARIA

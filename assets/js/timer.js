@@ -125,9 +125,9 @@ window.SKD = window.SKD || {};
       toggleBtn.classList.add('primary');
     }
     if (quiet) {
-      setNote('Sesi sebelumnya sudah berakhir. Tekan Reset untuk mulai lagi.');
+      setNote('Sesi sebelumnya udah kelar. Tekan Reset buat mulai lagi.');
     } else {
-      setNote('Waktu habis. Tekan Reset untuk memulai sesi baru.');
+      setNote('Waktu habis! 100 menit kelar, gas istirahat ☕');
       beep();
       flashTitle();
     }
@@ -204,7 +204,7 @@ window.SKD = window.SKD || {};
       remaining = remainingNow();
       if (remaining > 0) {
         startTimer(true);
-        setNote('Timer dilanjutkan dari sesi sebelumnya.');
+        setNote('Timer lanjut dari sesi sebelumnya. Gas terus 🔥');
         return;
       }
       finishTimer(true);

@@ -66,7 +66,7 @@ window.SKD = window.SKD || {};
       body.appendChild(note);
     }
 
-    body.appendChild(SKD.el('button', { cls: 'mark-btn', attrs: { type: 'button' }, text: 'Tandai sudah dipelajari' }));
+    body.appendChild(SKD.el('button', { cls: 'mark-btn', attrs: { type: 'button' }, text: 'Udah, lanjut ✓' }));
     acc.appendChild(body);
 
     return acc;
@@ -82,7 +82,7 @@ window.SKD = window.SKD || {};
       p.appendChild(topik(t));
     });
 
-    p.appendChild(SKD.el('div', { cls: 'me-empty', text: 'Tidak ada topik yang cocok dengan pencarian.' }));
+    p.appendChild(SKD.el('div', { cls: 'me-empty', text: 'Nggak ketemu 🤔 coba kata kunci lain' }));
     return p;
   }
 
@@ -111,7 +111,7 @@ window.SKD = window.SKD || {};
         acc.classList.add('done');
         if (btn) {
           btn.classList.add('on');
-          btn.textContent = '✓ Sudah dipelajari';
+          btn.textContent = '✓ Udah, lanjut';
         }
       }
     });
@@ -200,12 +200,12 @@ window.SKD = window.SKD || {};
           delete done[id];
           acc.classList.remove('done');
           btn.classList.remove('on');
-          btn.textContent = 'Tandai sudah dipelajari';
+          btn.textContent = 'Udah, lanjut ✓';
         } else {
           done[id] = true;
           acc.classList.add('done');
           btn.classList.add('on');
-          btn.textContent = '✓ Sudah dipelajari';
+          btn.textContent = '✓ Udah, lanjut';
         }
         simpan();
         updateProgress();

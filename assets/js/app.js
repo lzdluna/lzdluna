@@ -198,8 +198,8 @@ window.SKD = window.SKD || {};
   function boot() {
     if (location.protocol === 'file:') {
       tampilkanGalat(
-        'Halaman ini membaca data dari berkas JSON, sehingga tidak bisa dibuka langsung ' +
-        'sebagai file. Jalankan "npm run serve" lalu buka alamat yang ditampilkan.'
+        'Halaman ini baca data dari berkas JSON, jadi nggak bisa dibuka langsung ' +
+        'dengan double-click. Jalankan "npm run serve", lalu buka alamat yang muncul.'
       );
       selesaiSibuk();
       return;
@@ -227,7 +227,8 @@ window.SKD = window.SKD || {};
       .catch(function (e) {
         if (window.console) console.error(e);
         tampilkanGalat(
-          'Periksa koneksi lalu muat ulang. (' + (e && e.message ? e.message : 'galat tidak diketahui') + ')'
+          'Datanya gagal dimuat nih. Cek koneksi lalu muat ulang. (' +
+          (e && e.message ? e.message : 'galat tidak diketahui') + ')'
         );
         selesaiSibuk();
       });

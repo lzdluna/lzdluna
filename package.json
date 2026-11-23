@@ -9,7 +9,8 @@
     "ekstrak": "node scripts/ekstrak.mjs",
     "validasi": "node scripts/validasi.mjs",
     "uji": "node scripts/uji.mjs",
-    "cek": "npm run validasi && npm run uji"
+    "dokumen": "node scripts/cek-dokumen.mjs",
+    "cek": "npm run validasi && npm run dokumen && npm run uji"
   },
   "devDependencies": {
     "jsdom": "^26.1.0"
