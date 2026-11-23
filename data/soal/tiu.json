@@ -169,6 +169,1602 @@
         }
       ],
       "pembahasan": "Hubungannya adalah \"profesi → alat kerja manual\". Stetoskop adalah alat kerja dokter, cangkul adalah alat kerja petani. \"Traktor\" adalah mesin, bukan alat manual — kurang sejajar."
+    },
+    {
+      "id": "tiu-07",
+      "teks": "Antonim kata \"konsisten\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tetap"
+        },
+        {
+          "kode": "B",
+          "teks": "Berubah-ubah",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Stabil"
+        },
+        {
+          "kode": "D",
+          "teks": "Taat"
+        },
+        {
+          "kode": "E",
+          "teks": "Rutin"
+        }
+      ],
+      "pembahasan": "Konsisten = tetap, ajek, tidak berubah. Lawannya berubah-ubah."
+    },
+    {
+      "id": "tiu-08",
+      "teks": "Rata-rata dari 70, 80, 85, dan 95 adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "80"
+        },
+        {
+          "kode": "B",
+          "teks": "81,5"
+        },
+        {
+          "kode": "C",
+          "teks": "82,5",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "85"
+        },
+        {
+          "kode": "E",
+          "teks": "87,5"
+        }
+      ],
+      "pembahasan": "Jumlah 70 + 80 + 85 + 95 = 330. Bagi 4 → 82,5. Jangan kebalik jumlah ÷ banyak data."
+    },
+    {
+      "id": "tiu-09",
+      "teks": "Jika hujan maka tanah basah. Sekarang tanah basah. Kesimpulan yang tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pasti kemarin hujan"
+        },
+        {
+          "kode": "B",
+          "teks": "Kemarin tidak hujan"
+        },
+        {
+          "kode": "C",
+          "teks": "Mungkin hujan, tapi tidak bisa dipastikan",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Tanah basah pasti karena hujan"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak ada hubungan hujan dan basah"
+        }
+      ],
+      "pembahasan": "Ini jebakan affirming the consequent. Q benar tidak bikin P pasti benar — tanah bisa basah karena disiram."
+    },
+    {
+      "id": "tiu-10",
+      "teks": "Sinonim kata \"presisi\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Keraguan"
+        },
+        {
+          "kode": "B",
+          "teks": "Ketepatan",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Kelambatan"
+        },
+        {
+          "kode": "D",
+          "teks": "Kebiasaan"
+        },
+        {
+          "kode": "E",
+          "teks": "Kesulitan"
+        }
+      ],
+      "pembahasan": "Presisi = ketepatan atau kecermatan, apalagi soal ukuran dan kerja teknis."
+    },
+    {
+      "id": "tiu-11",
+      "teks": "DOKTER : PASIEN = GURU : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sekolah"
+        },
+        {
+          "kode": "B",
+          "teks": "Buku"
+        },
+        {
+          "kode": "C",
+          "teks": "Murid",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Kelas"
+        },
+        {
+          "kode": "E",
+          "teks": "Pelajaran"
+        }
+      ],
+      "pembahasan": "Polanya profesi → orang yang dilayani. Dokter melayani pasien, guru mengajar murid."
+    },
+    {
+      "id": "tiu-12",
+      "teks": "Lanjutkan deret: 2, 6, 12, 20, 30, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "38"
+        },
+        {
+          "kode": "B",
+          "teks": "40"
+        },
+        {
+          "kode": "C",
+          "teks": "42",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "44"
+        },
+        {
+          "kode": "E",
+          "teks": "46"
+        }
+      ],
+      "pembahasan": "Selisihnya +4, +6, +8, +10, lalu +12. Jadi 30 + 12 = 42. Selalu cek selisih dulu."
+    },
+    {
+      "id": "tiu-13",
+      "teks": "Lanjutkan deret: 5, 10, 20, 40, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "60"
+        },
+        {
+          "kode": "B",
+          "teks": "70"
+        },
+        {
+          "kode": "C",
+          "teks": "80",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "90"
+        },
+        {
+          "kode": "E",
+          "teks": "100"
+        }
+      ],
+      "pembahasan": "Polanya dikali 2 terus. Jadi 40 × 2 = 80."
+    },
+    {
+      "id": "tiu-14",
+      "teks": "Jika 5 pulpen harganya Rp35.000, harga 8 pulpen yang sama adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Rp49.000"
+        },
+        {
+          "kode": "B",
+          "teks": "Rp52.000"
+        },
+        {
+          "kode": "C",
+          "teks": "Rp56.000",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Rp60.000"
+        },
+        {
+          "kode": "E",
+          "teks": "Rp64.000"
+        }
+      ],
+      "pembahasan": "Satu pulpen = 35.000 ÷ 5 = 7.000. Delapan pulpen = 8 × 7.000 = 56.000."
+    },
+    {
+      "id": "tiu-15",
+      "teks": "Semua A adalah B. Semua B adalah C. Kesimpulan yang tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua C adalah A"
+        },
+        {
+          "kode": "B",
+          "teks": "Semua A adalah C",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sebagian C bukan A"
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak ada A yang C"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak bisa disimpulkan"
+        }
+      ],
+      "pembahasan": "Kalau A di dalam B dan B di dalam C, otomatis A di dalam C. Jangan kebalik jadi semua C adalah A."
+    },
+    {
+      "id": "tiu-16",
+      "teks": "Antonim kata \"pesimis\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Optimis",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Pasrah"
+        },
+        {
+          "kode": "C",
+          "teks": "Ragu"
+        },
+        {
+          "kode": "D",
+          "teks": "Takut"
+        },
+        {
+          "kode": "E",
+          "teks": "Lesu"
+        }
+      ],
+      "pembahasan": "Pesimis lawan katanya optimis. Jangan ketuker sama ragu yang cuma varian pesimis."
+    },
+    {
+      "id": "tiu-17",
+      "teks": "BUKU : MEMBACA = RADIO : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Melihat"
+        },
+        {
+          "kode": "B",
+          "teks": "Menulis"
+        },
+        {
+          "kode": "C",
+          "teks": "Mendengar",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Menggambar"
+        },
+        {
+          "kode": "E",
+          "teks": "Menghitung"
+        }
+      ],
+      "pembahasan": "Polanya alat → kegiatannya. Buku dibaca, radio didengarkan."
+    },
+    {
+      "id": "tiu-18",
+      "teks": "Lanjutkan deret: 81, 72, 64, 57, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "48"
+        },
+        {
+          "kode": "B",
+          "teks": "50"
+        },
+        {
+          "kode": "C",
+          "teks": "51",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "52"
+        },
+        {
+          "kode": "E",
+          "teks": "53"
+        }
+      ],
+      "pembahasan": "Selisihnya -9, -8, -7, lalu -6. Jadi 57 - 6 = 51. Tulis selisihnya biar tidak tebak-tebakan."
+    },
+    {
+      "id": "tiu-19",
+      "teks": "Lanjutkan deret: 4, 9, 16, 25, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "30"
+        },
+        {
+          "kode": "B",
+          "teks": "32"
+        },
+        {
+          "kode": "C",
+          "teks": "35"
+        },
+        {
+          "kode": "D",
+          "teks": "36",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "40"
+        }
+      ],
+      "pembahasan": "Ini deret kuadrat: 2², 3², 4², 5², lalu 6² = 36. Hafal kuadrat 1-10 ngebantu banget."
+    },
+    {
+      "id": "tiu-20",
+      "teks": "Enam pekerja selesai dalam 10 hari. Dengan kecepatan sama, 12 pekerja selesai dalam …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "4 hari"
+        },
+        {
+          "kode": "B",
+          "teks": "5 hari",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "8 hari"
+        },
+        {
+          "kode": "D",
+          "teks": "12 hari"
+        },
+        {
+          "kode": "E",
+          "teks": "20 hari"
+        }
+      ],
+      "pembahasan": "Pekerja nambah → waktu berkurang. Total usaha 6 × 10 = 60 dibagi 12 = 5 hari."
+    },
+    {
+      "id": "tiu-21",
+      "teks": "Kereta melaju 60 km/jam selama 3 jam. Jarak yang ditempuh adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "120 km"
+        },
+        {
+          "kode": "B",
+          "teks": "150 km"
+        },
+        {
+          "kode": "C",
+          "teks": "180 km",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "200 km"
+        },
+        {
+          "kode": "E",
+          "teks": "240 km"
+        }
+      ],
+      "pembahasan": "Jarak = kecepatan × waktu = 60 × 3 = 180 km. Satuan jamnya coret biar yakin."
+    },
+    {
+      "id": "tiu-22",
+      "teks": "Semua guru adalah pekerja. Sebagian pekerja adalah penulis. Kesimpulan yang tepat …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua guru penulis"
+        },
+        {
+          "kode": "B",
+          "teks": "Tidak ada guru penulis"
+        },
+        {
+          "kode": "C",
+          "teks": "Tidak bisa disimpulkan pasti",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Semua penulis guru"
+        },
+        {
+          "kode": "E",
+          "teks": "Sebagian guru pasti penulis"
+        }
+      ],
+      "pembahasan": "Guru di dalam pekerja, penulis cuma sebagian pekerja. Irisannya belum pasti — jangan maksa kesimpulan."
+    },
+    {
+      "id": "tiu-23",
+      "teks": "Jika semua siswa hadir maka kelas penuh. Kelas tidak penuh. Artinya …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua siswa hadir"
+        },
+        {
+          "kode": "B",
+          "teks": "Tidak semua siswa hadir",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Kelas dibubarkan"
+        },
+        {
+          "kode": "D",
+          "teks": "Semua siswa rajin"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak ada hubungan"
+        }
+      ],
+      "pembahasan": "Modus tollens: akibatnya salah → sebabnya tidak penuh. Jadi minimal ada yang tidak hadir."
+    },
+    {
+      "id": "tiu-24",
+      "teks": "Sinonim kata \"valid\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sah",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Salah"
+        },
+        {
+          "kode": "C",
+          "teks": "Lemah"
+        },
+        {
+          "kode": "D",
+          "teks": "Kabur"
+        },
+        {
+          "kode": "E",
+          "teks": "Basi"
+        }
+      ],
+      "pembahasan": "Valid = sah atau benar. Jangan ketuker sama salah yang mirip bunyi."
+    },
+    {
+      "id": "tiu-25",
+      "teks": "Antonim kata \"maksimal\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Optimal"
+        },
+        {
+          "kode": "B",
+          "teks": "Penuh"
+        },
+        {
+          "kode": "C",
+          "teks": "Besar"
+        },
+        {
+          "kode": "D",
+          "teks": "Minimal",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "Luas"
+        }
+      ],
+      "pembahasan": "Maksimal paling tinggi, minimal paling rendah. Optimal itu jebakan karena artinya terbaik."
+    },
+    {
+      "id": "tiu-26",
+      "teks": "API : PANAS = ES : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cair"
+        },
+        {
+          "kode": "B",
+          "teks": "Dingin",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Padat"
+        },
+        {
+          "kode": "D",
+          "teks": "Air"
+        },
+        {
+          "kode": "E",
+          "teks": "Salju"
+        }
+      ],
+      "pembahasan": "Polanya benda → ciri khasnya. Api itu panas, es itu dingin."
+    },
+    {
+      "id": "tiu-27",
+      "teks": "Lanjutkan deret: 3, 7, 13, 21, 31, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "39"
+        },
+        {
+          "kode": "B",
+          "teks": "41"
+        },
+        {
+          "kode": "C",
+          "teks": "43",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "45"
+        },
+        {
+          "kode": "E",
+          "teks": "47"
+        }
+      ],
+      "pembahasan": "Selisih +4, +6, +8, +10, lalu +12. Jadi 31 + 12 = 43."
+    },
+    {
+      "id": "tiu-28",
+      "teks": "25% dari 360 adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "60"
+        },
+        {
+          "kode": "B",
+          "teks": "75"
+        },
+        {
+          "kode": "C",
+          "teks": "80"
+        },
+        {
+          "kode": "D",
+          "teks": "90",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "100"
+        }
+      ],
+      "pembahasan": "25% = seperempat. Jadi 360 ÷ 4 = 90. Jangan ubah ke desimal dulu biar cepat."
+    },
+    {
+      "id": "tiu-29",
+      "teks": "Rata-rata 70, 80, 85, 95 tadi 82,5. Kalau ditambah satu nilai 90, rata-rata barunya …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "82"
+        },
+        {
+          "kode": "B",
+          "teks": "83"
+        },
+        {
+          "kode": "C",
+          "teks": "84",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "85"
+        },
+        {
+          "kode": "E",
+          "teks": "86"
+        }
+      ],
+      "pembahasan": "Jumlah lama 330 + 90 = 420 dibagi 5 = 84. Nilai baru di atas rata-rata lama narik rata-rata naik."
+    },
+    {
+      "id": "tiu-30",
+      "teks": "Jika 2a + 8 = 24, nilai 3a adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "18"
+        },
+        {
+          "kode": "B",
+          "teks": "21"
+        },
+        {
+          "kode": "C",
+          "teks": "24",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "27"
+        },
+        {
+          "kode": "E",
+          "teks": "30"
+        }
+      ],
+      "pembahasan": "2a = 24 - 8 = 16, jadi a = 8. Maka 3a = 24."
+    },
+    {
+      "id": "tiu-31",
+      "teks": "Semua burung bisa terbang. Penguin adalah burung. Maka …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Penguin bisa terbang",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Penguin bukan burung"
+        },
+        {
+          "kode": "C",
+          "teks": "Semua yang bersayap pasti penguin"
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak ada burung bisa terbang"
+        },
+        {
+          "kode": "E",
+          "teks": "Penguin adalah ikan"
+        }
+      ],
+      "pembahasan": "Ikuti premis soalnya, bukan fakta dunia nyata. Premis bilang semua burung bisa terbang, penguin burung → bisa terbang."
+    },
+    {
+      "id": "tiu-32",
+      "teks": "Sinonim kata \"efektif\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tepat guna",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Sia-sia"
+        },
+        {
+          "kode": "C",
+          "teks": "Lambat"
+        },
+        {
+          "kode": "D",
+          "teks": "Rumit"
+        },
+        {
+          "kode": "E",
+          "teks": "Kaku"
+        }
+      ],
+      "pembahasan": "Efektif = tepat guna atau membuahkan hasil. Lawannya sia-sia."
+    },
+    {
+      "id": "tiu-33",
+      "teks": "Sinonim kata \"signifikan\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kecil"
+        },
+        {
+          "kode": "B",
+          "teks": "Tidak penting"
+        },
+        {
+          "kode": "C",
+          "teks": "Penting",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Lemah"
+        },
+        {
+          "kode": "E",
+          "teks": "Samar"
+        }
+      ],
+      "pembahasan": "Signifikan = penting atau bermakna besar. Jangan ketuker sama samar."
+    },
+    {
+      "id": "tiu-34",
+      "teks": "Antonim kata \"stabil\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tetap"
+        },
+        {
+          "kode": "B",
+          "teks": "Seimbang"
+        },
+        {
+          "kode": "C",
+          "teks": "Tidak menentu",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Aman"
+        },
+        {
+          "kode": "E",
+          "teks": "Tenang"
+        }
+      ],
+      "pembahasan": "Stabil = tetap. Lawannya goyah atau tidak menentu."
+    },
+    {
+      "id": "tiu-35",
+      "teks": "HUJAN : BASAH = API : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Gelap"
+        },
+        {
+          "kode": "B",
+          "teks": "Dingin"
+        },
+        {
+          "kode": "C",
+          "teks": "Kering"
+        },
+        {
+          "kode": "D",
+          "teks": "Panas",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "Asap"
+        }
+      ],
+      "pembahasan": "Polanya sebab → akibat khasnya. Hujan bikin basah, api bikin panas."
+    },
+    {
+      "id": "tiu-36",
+      "teks": "Lanjutkan deret: 7, 14, 28, 56, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "84"
+        },
+        {
+          "kode": "B",
+          "teks": "98"
+        },
+        {
+          "kode": "C",
+          "teks": "102"
+        },
+        {
+          "kode": "D",
+          "teks": "112",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "124"
+        }
+      ],
+      "pembahasan": "Dikali 2 terus. Jadi 56 × 2 = 112."
+    },
+    {
+      "id": "tiu-37",
+      "teks": "Lanjutkan deret: 3, 6, 10, 15, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "19"
+        },
+        {
+          "kode": "B",
+          "teks": "20"
+        },
+        {
+          "kode": "C",
+          "teks": "21",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "22"
+        },
+        {
+          "kode": "E",
+          "teks": "23"
+        }
+      ],
+      "pembahasan": "Selisih +3, +4, +5, lalu +6. Jadi 15 + 6 = 21."
+    },
+    {
+      "id": "tiu-38",
+      "teks": "3 liter bensin buat 45 km. Dengan 5 liter bisa tempuh …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "60 km"
+        },
+        {
+          "kode": "B",
+          "teks": "70 km"
+        },
+        {
+          "kode": "C",
+          "teks": "75 km",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "80 km"
+        },
+        {
+          "kode": "E",
+          "teks": "90 km"
+        }
+      ],
+      "pembahasan": "Satu liter = 45 ÷ 3 = 15 km. Lima liter = 5 × 15 = 75 km."
+    },
+    {
+      "id": "tiu-39",
+      "teks": "Jika 3x + 5 = 26, nilai x adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "5"
+        },
+        {
+          "kode": "B",
+          "teks": "6"
+        },
+        {
+          "kode": "C",
+          "teks": "7",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "8"
+        },
+        {
+          "kode": "E",
+          "teks": "9"
+        }
+      ],
+      "pembahasan": "3x = 26 - 5 = 21, jadi x = 7. Kurangi dulu baru bagi."
+    },
+    {
+      "id": "tiu-40",
+      "teks": "Sinonim kata \"kompleks\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sederhana"
+        },
+        {
+          "kode": "B",
+          "teks": "Rumit",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Mudah"
+        },
+        {
+          "kode": "D",
+          "teks": "Cepat"
+        },
+        {
+          "kode": "E",
+          "teks": "Biasa"
+        }
+      ],
+      "pembahasan": "Kompleks = rumit atau tidak sederhana. Jangan ketuker sama biasa."
+    },
+    {
+      "id": "tiu-41",
+      "teks": "Antonim kata \"aktif\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dinamis"
+        },
+        {
+          "kode": "B",
+          "teks": "Sibuk"
+        },
+        {
+          "kode": "C",
+          "teks": "Pasif",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Gerak"
+        },
+        {
+          "kode": "E",
+          "teks": "Rajin"
+        }
+      ],
+      "pembahasan": "Aktif lawan katanya pasif. Dinamis dan rajin itu kawan aktif, bukan lawan."
+    },
+    {
+      "id": "tiu-42",
+      "teks": "KAKI : BERJALAN = TANGAN : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Melihat"
+        },
+        {
+          "kode": "B",
+          "teks": "Menulis",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Mendengar"
+        },
+        {
+          "kode": "D",
+          "teks": "Berlari"
+        },
+        {
+          "kode": "E",
+          "teks": "Duduk"
+        }
+      ],
+      "pembahasan": "Polanya anggota tubuh → fungsinya. Kaki buat jalan, tangan buat tulis."
+    },
+    {
+      "id": "tiu-43",
+      "teks": "Lanjutkan deret: 84, 76, 69, 63, 58, 54, 51, 49, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "46"
+        },
+        {
+          "kode": "B",
+          "teks": "47"
+        },
+        {
+          "kode": "C",
+          "teks": "48",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "50"
+        },
+        {
+          "kode": "E",
+          "teks": "52"
+        }
+      ],
+      "pembahasan": "Selisih -8, -7, -6, -5, -4, -3, -2, lalu -1. Jadi 49 - 1 = 48."
+    },
+    {
+      "id": "tiu-44",
+      "teks": "Harga tas Rp250.000 didiskon 20%. Harga bayarnya adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Rp180.000"
+        },
+        {
+          "kode": "B",
+          "teks": "Rp190.000"
+        },
+        {
+          "kode": "C",
+          "teks": "Rp200.000",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Rp210.000"
+        },
+        {
+          "kode": "E",
+          "teks": "Rp225.000"
+        }
+      ],
+      "pembahasan": "Diskon 20% × 250.000 = 50.000. Bayar 250.000 - 50.000 = 200.000."
+    },
+    {
+      "id": "tiu-45",
+      "teks": "Pedagang beli 10 buku Rp500.000, jual semua Rp650.000. Untungnya …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "20%"
+        },
+        {
+          "kode": "B",
+          "teks": "25%"
+        },
+        {
+          "kode": "C",
+          "teks": "30%",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "35%"
+        },
+        {
+          "kode": "E",
+          "teks": "40%"
+        }
+      ],
+      "pembahasan": "Untung 150.000 dari modal 500.000 = 150 ÷ 500 × 100% = 30%."
+    },
+    {
+      "id": "tiu-46",
+      "teks": "Umur ayah 45, anak 15. Berapa tahun lagi umur ayah dua kali umur anak …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "10"
+        },
+        {
+          "kode": "B",
+          "teks": "12"
+        },
+        {
+          "kode": "C",
+          "teks": "15",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "18"
+        },
+        {
+          "kode": "E",
+          "teks": "20"
+        }
+      ],
+      "pembahasan": "Misal x tahun lagi: 45 + x = 2(15 + x). Jadi 45 + x = 30 + 2x, x = 15."
+    },
+    {
+      "id": "tiu-47",
+      "teks": "Semua mobil adalah kendaraan. Sebagian kendaraan listrik. Kesimpulan tepat …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua mobil listrik"
+        },
+        {
+          "kode": "B",
+          "teks": "Sebagian mobil listrik"
+        },
+        {
+          "kode": "C",
+          "teks": "Tidak bisa disimpulkan pasti",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak ada mobil listrik"
+        },
+        {
+          "kode": "E",
+          "teks": "Semua listrik adalah mobil"
+        }
+      ],
+      "pembahasan": "Mobil di dalam kendaraan, listrik cuma sebagian kendaraan. Irisan mobil-listrik belum pasti."
+    },
+    {
+      "id": "tiu-48",
+      "teks": "Sinonim kata \"fleksibel\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kaku"
+        },
+        {
+          "kode": "B",
+          "teks": "Lentur",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Tegang"
+        },
+        {
+          "kode": "D",
+          "teks": "Keras"
+        },
+        {
+          "kode": "E",
+          "teks": "Kaku sekali"
+        }
+      ],
+      "pembahasan": "Fleksibel = lentur atau gampang menyesuaikan. Kaku itu lawannya."
+    },
+    {
+      "id": "tiu-49",
+      "teks": "Antonim kata \"cepat\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kilat"
+        },
+        {
+          "kode": "B",
+          "teks": "Lambat",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Instan"
+        },
+        {
+          "kode": "D",
+          "teks": "Gesit"
+        },
+        {
+          "kode": "E",
+          "teks": "Sigap"
+        }
+      ],
+      "pembahasan": "Cepat lawan katanya lambat. Kilat, instan, gesit, sigap itu kawan cepat."
+    },
+    {
+      "id": "tiu-50",
+      "teks": "PENA : MENULIS = KAMERA : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Melihat"
+        },
+        {
+          "kode": "B",
+          "teks": "Menghapus"
+        },
+        {
+          "kode": "C",
+          "teks": "Memotret",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Mendengar"
+        },
+        {
+          "kode": "E",
+          "teks": "Merekam suara"
+        }
+      ],
+      "pembahasan": "Alat → kegiatannya. Pena buat nulis, kamera buat motret."
+    },
+    {
+      "id": "tiu-51",
+      "teks": "Lanjutkan deret: 5, 9, 13, 17, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "19"
+        },
+        {
+          "kode": "B",
+          "teks": "20"
+        },
+        {
+          "kode": "C",
+          "teks": "21",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "22"
+        },
+        {
+          "kode": "E",
+          "teks": "23"
+        }
+      ],
+      "pembahasan": "Tambah 4 terus. Jadi 17 + 4 = 21."
+    },
+    {
+      "id": "tiu-52",
+      "teks": "36 × 25 = …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "800"
+        },
+        {
+          "kode": "B",
+          "teks": "850"
+        },
+        {
+          "kode": "C",
+          "teks": "900",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "950"
+        },
+        {
+          "kode": "E",
+          "teks": "1000"
+        }
+      ],
+      "pembahasan": "36 × 100 = 3600 dibagi 4 = 900. Trik ×25 = ×100 ÷ 4."
+    },
+    {
+      "id": "tiu-53",
+      "teks": "900 ÷ 15 = …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "50"
+        },
+        {
+          "kode": "B",
+          "teks": "55"
+        },
+        {
+          "kode": "C",
+          "teks": "60",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "65"
+        },
+        {
+          "kode": "E",
+          "teks": "70"
+        }
+      ],
+      "pembahasan": "900 ÷ 3 = 300, bagi 5 = 60. Atau 15 × 60 = 900."
+    },
+    {
+      "id": "tiu-54",
+      "teks": "Jika A lebih besar dari B, dan B lebih besar dari C, maka …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "C lebih besar dari A"
+        },
+        {
+          "kode": "B",
+          "teks": "A lebih kecil dari C"
+        },
+        {
+          "kode": "C",
+          "teks": "A lebih besar dari C",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak bisa disimpulkan"
+        },
+        {
+          "kode": "E",
+          "teks": "A sama dengan C"
+        }
+      ],
+      "pembahasan": "Relasi transitif: A > B > C maka A > C. Urutkan dari paling besar biar jelas."
+    },
+    {
+      "id": "tiu-55",
+      "teks": "Semua X adalah Y. Semua Y adalah Z. Maka …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua Z adalah X"
+        },
+        {
+          "kode": "B",
+          "teks": "Semua X adalah Z",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sebagian Z bukan X"
+        },
+        {
+          "kode": "D",
+          "teks": "Tidak ada X yang Z"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak bisa disimpulkan"
+        }
+      ],
+      "pembahasan": "X di dalam Y, Y di dalam Z, otomatis X di dalam Z. Jangan kebalik."
+    },
+    {
+      "id": "tiu-56",
+      "teks": "Sinonim kata \"strategi\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Rencana",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Acak"
+        },
+        {
+          "kode": "C",
+          "teks": "Kesalahan"
+        },
+        {
+          "kode": "D",
+          "teks": "Gangguan"
+        },
+        {
+          "kode": "E",
+          "teks": "Batal"
+        }
+      ],
+      "pembahasan": "Strategi = rencana atau siasat. Acak itu lawannya."
+    },
+    {
+      "id": "tiu-57",
+      "teks": "Antonim kata \"kuat\" yang paling tepat adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kokoh"
+        },
+        {
+          "kode": "B",
+          "teks": "Lemah",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Besar"
+        },
+        {
+          "kode": "D",
+          "teks": "Tegap"
+        },
+        {
+          "kode": "E",
+          "teks": "Keras"
+        }
+      ],
+      "pembahasan": "Kuat lawan katanya lemah. Kokoh, tegap, keras itu kawan kuat."
+    },
+    {
+      "id": "tiu-58",
+      "teks": "MATAHARI : SIANG = BULAN : …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pagi"
+        },
+        {
+          "kode": "B",
+          "teks": "Malam",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sore"
+        },
+        {
+          "kode": "D",
+          "teks": "Siang"
+        },
+        {
+          "kode": "E",
+          "teks": "Terang"
+        }
+      ],
+      "pembahasan": "Benda langit → waktunya. Matahari siang, bulan malam."
+    },
+    {
+      "id": "tiu-59",
+      "teks": "Lanjutkan deret: 2, 4, 8, 16, …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "20"
+        },
+        {
+          "kode": "B",
+          "teks": "24"
+        },
+        {
+          "kode": "C",
+          "teks": "32",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "30"
+        },
+        {
+          "kode": "E",
+          "teks": "28"
+        }
+      ],
+      "pembahasan": "Dikali 2 terus. Jadi 16 × 2 = 32."
+    },
+    {
+      "id": "tiu-60",
+      "teks": "3/4 + 2/5 = …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "5/9"
+        },
+        {
+          "kode": "B",
+          "teks": "1,15",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "1,05"
+        },
+        {
+          "kode": "D",
+          "teks": "5/20"
+        },
+        {
+          "kode": "E",
+          "teks": "1/2"
+        }
+      ],
+      "pembahasan": "Samakan penyebut 20: 15/20 + 8/20 = 23/20 = 1,15. Pembilang tidak boleh langsung dijumlah."
+    },
+    {
+      "id": "tiu-61",
+      "teks": "15% dari 240 + 1/4 dari 80 = …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "52"
+        },
+        {
+          "kode": "B",
+          "teks": "56",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "60"
+        },
+        {
+          "kode": "D",
+          "teks": "64"
+        },
+        {
+          "kode": "E",
+          "teks": "48"
+        }
+      ],
+      "pembahasan": "15% × 240 = 36. 1/4 × 80 = 20. Jumlah 56."
+    },
+    {
+      "id": "tiu-62",
+      "teks": "Jika hujan maka jalan basah. Jalan tidak basah. Maka …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Hujan pasti turun"
+        },
+        {
+          "kode": "B",
+          "teks": "Hujan tidak turun",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Mungkin hujan tidak turun"
+        },
+        {
+          "kode": "D",
+          "teks": "Jalan rusak"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak bisa disimpulkan"
+        }
+      ],
+      "pembahasan": "Modus tollens: akibat salah → sebab salah. Jalan kering berarti tidak hujan."
+    },
+    {
+      "id": "tiu-63",
+      "teks": "Semua siswa rajin. Sebagian rajin adalah atlet. Maka …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua siswa atlet"
+        },
+        {
+          "kode": "B",
+          "teks": "Sebagian siswa atlet",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Tidak ada siswa atlet"
+        },
+        {
+          "kode": "D",
+          "teks": "Semua atlet siswa"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak bisa disimpulkan"
+        }
+      ],
+      "pembahasan": "Siswa di dalam rajin, atlet sebagian rajin. Irisannya sebagian siswa — ini pola yang valid."
     }
   ]
 }

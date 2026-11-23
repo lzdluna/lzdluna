@@ -169,6 +169,1882 @@
         }
       ],
       "pembahasan": "Sikap terbaik adalah tenang, tidak menyebarkan, mengajak dialog, dan menindaklanjuti melalui jalur resmi. Ini mencerminkan kematangan dalam aspek anti-radikalisme."
+    },
+    {
+      "id": "tkp-07",
+      "teks": "Aplikasi layanan lagi gangguan pas antrean numpuk dan warga mulai marah. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Umumkan gangguan dan perkiraan pulih, catat warga yang sudah datang sebagai antrean prioritas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bilang gangguan dari server pusat jadi di luar wewenangmu"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh warga pulang dan datang lagi besok"
+        },
+        {
+          "kode": "D",
+          "teks": "Diam dan lanjut kerja lain biar tidak ditanya"
+        },
+        {
+          "kode": "E",
+          "teks": "Minta warga menunggu tanpa kepastian waktu"
+        }
+      ],
+      "pembahasan": "Pola skor 5 = tenang + transparan + solusi + tindak lanjut. Opsi B benar fakta tapi tanpa solusi, jadi kalah."
+    },
+    {
+      "id": "tkp-08",
+      "teks": "Warga nawarin uang biar berkasnya dipercepat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima karena kasian dia buru-buru"
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak tegas, jelaskan prosedur, proses sesuai antrean",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Pura-pura tidak dengar"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta rekan lain yang urus biar kamu aman"
+        },
+        {
+          "kode": "E",
+          "teks": "Proses diam-diam biar cepat tanpa antre"
+        }
+      ],
+      "pembahasan": "Soal uang = tolak gratifikasi + tetap adil sesuai antrean. Kasihan tapi langgar SOP itu jebakan klasik."
+    },
+    {
+      "id": "tkp-09",
+      "teks": "Rekan barumu belum paham aplikasi kantor dan kerjanya jadi lambat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bantu jelasin alur aplikasinya sampai ia bisa mandiri",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tertawakan biar ia cepat belajar"
+        },
+        {
+          "kode": "C",
+          "teks": "Biarin salah terus biar kapok"
+        },
+        {
+          "kode": "D",
+          "teks": "Ambil alih semua tugasnya biar cepat"
+        },
+        {
+          "kode": "E",
+          "teks": "Suruh belajar sendiri tanpa arahan"
+        }
+      ],
+      "pembahasan": "Jejaring kerja = berbagi info + bantu rekan naik level. Bukan ambil alih, bukan biarin."
+    },
+    {
+      "id": "tkp-10",
+      "teks": "Rekan nyeletuk yang nyinggung suku tertentu saat istirahat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut nimbrung biar rame"
+        },
+        {
+          "kode": "B",
+          "teks": "Ingatkan dengan sopan biar hargai perbedaan",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar omongannya ke grup lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Balas dengan hinaan balik"
+        },
+        {
+          "kode": "E",
+          "teks": "Diam saja walau suasana tidak enak"
+        }
+      ],
+      "pembahasan": "Sosial budaya = toleran + berani ingatkan dengan sopan. Ikut-ikutan atau diam bikin masalah awet."
+    },
+    {
+      "id": "tkp-11",
+      "teks": "Kantor mulai pakai aplikasi kerja baru dan kamu belum lancar. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pelajari panduannya dan terapkan buat tugasmu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak dan pakai cara lama diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Lempar semua tugas ke rekan"
+        },
+        {
+          "kode": "D",
+          "teks": "Tunggu orang lain paham dulu"
+        },
+        {
+          "kode": "E",
+          "teks": "Protes biar aplikasi dibatalkan"
+        }
+      ],
+      "pembahasan": "TIK = mau belajar teknologi baru buat kinerja. Nolak atau nunggu itu skor kecil."
+    },
+    {
+      "id": "tkp-12",
+      "teks": "Kamu sadar ada salah ketik data di dokumen yang sudah dikirim ke atasan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Hubungi penerima dan kirim perbaikannya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Biarin saja siapa tahu tidak ketahuan"
+        },
+        {
+          "kode": "C",
+          "teks": "Hapus dokumen tanpa kabar"
+        },
+        {
+          "kode": "D",
+          "teks": "Salahkan rekan yang bikin data"
+        },
+        {
+          "kode": "E",
+          "teks": "Tunggu sampai ditegur baru benerin"
+        }
+      ],
+      "pembahasan": "Profesionalisme = akui salah + cepat perbaiki + kabari yang terdampak. Bukan alibi."
+    },
+    {
+      "id": "tkp-13",
+      "teks": "Ada info berantai yang isinya ajakan benci pemerintah dan Pancasila. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Teruskan ke grup biar semua waspada"
+        },
+        {
+          "kode": "B",
+          "teks": "Cek kebenarannya, jangan sebar, laporkan lewat kanal resmi",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Percaya saja karena yang kirim senior"
+        },
+        {
+          "kode": "D",
+          "teks": "Bikin klarifikasi sendiri di medsos"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan total tanpa catat apa-apa"
+        }
+      ],
+      "pembahasan": "Anti-radikalisme = kritis + verifikasi + jalur resmi. Teruskan info = ikut sebar, walau niatnya waspada."
+    },
+    {
+      "id": "tkp-14",
+      "teks": "Warga lansia bingung pakai formulir digital. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dampingi isi formulir sesuai ketentuan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh cari bantuan sendiri"
+        },
+        {
+          "kode": "C",
+          "teks": "Isi data seenaknya tanpa tanya"
+        },
+        {
+          "kode": "D",
+          "teks": "Suruh pulang dan datang lain hari"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan karena antrean panjang"
+        }
+      ],
+      "pembahasan": "Pelayanan inklusif = petugas yang menyesuaikan, apalagi buat kelompok rentan. Bukan warga yang disuruh beradaptasi."
+    },
+    {
+      "id": "tkp-15",
+      "teks": "Dua rekan ribut soal pembagian tugas. Kamu diminta nenangin. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ajak diskusi berdasar beban kerja dan tenggat",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bela teman terdekatmu"
+        },
+        {
+          "kode": "C",
+          "teks": "Paksa ikut keputusanmu"
+        },
+        {
+          "kode": "D",
+          "teks": "Biarin ribut sampai capek sendiri"
+        },
+        {
+          "kode": "E",
+          "teks": "Hindari dan pura-pura sibuk"
+        }
+      ],
+      "pembahasan": "Jejaring kerja sehat = fasilitasi diskusi + adil. Bela teman atau maksa itu bikin konflik awet."
+    },
+    {
+      "id": "tkp-16",
+      "teks": "Atasan minta data yang belum kamu verifikasi, katanya buru-buru. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan status datanya dan segera selesaikan verifikasi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bikin angka kira-kira biar kelihatan siap"
+        },
+        {
+          "kode": "C",
+          "teks": "Kirim apa adanya tanpa penjelasan"
+        },
+        {
+          "kode": "D",
+          "teks": "Tolak mentah-mentah tanpa solusi"
+        },
+        {
+          "kode": "E",
+          "teks": "Pakai data lama seolah terbaru"
+        }
+      ],
+      "pembahasan": "Profesional = teliti + transparan. Data ngasal itu jebakan, walau atas nama cepat."
+    },
+    {
+      "id": "tkp-17",
+      "teks": "Kerabatmu minta didahulukan di antrean layanan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Minta ia ikut antre seperti warga lain",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Selipkan berkasnya diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Buatkan jalur khusus dadakan"
+        },
+        {
+          "kode": "D",
+          "teks": "Dahulukan karena keluarga"
+        },
+        {
+          "kode": "E",
+          "teks": "Minta rekan yang selipkan biar kamu aman"
+        }
+      ],
+      "pembahasan": "Adil + sesuai wewenang = tidak ada slot khusus keluarga. Ini gabungan pelayanan publik dan anti gratifikasi."
+    },
+    {
+      "id": "tkp-18",
+      "teks": "Kamu harus kirim dokumen berisi data pribadi warga. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cek kewenangan penerima dan kirim lewat saluran aman",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Kirim lewat grup umum biar cepat"
+        },
+        {
+          "kode": "C",
+          "teks": "Unggah ke medsos biar transparan"
+        },
+        {
+          "kode": "D",
+          "teks": "Kirim ke email pribadi biar gampang"
+        },
+        {
+          "kode": "E",
+          "teks": "Bagikan tanpa cek siapa penerima"
+        }
+      ],
+      "pembahasan": "Data pribadi = cek penerima + saluran aman. Cepat tapi bocor itu gagal total."
+    },
+    {
+      "id": "tkp-19",
+      "teks": "Warga komplain lewat medsos karena tiket laporannya ditutup tanpa penyelesaian. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Buka lagi tiketnya, telusuri riwayatnya, dorong penyelesaian nyata",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tutup lagi karena sudah pernah dilaporkan"
+        },
+        {
+          "kode": "C",
+          "teks": "Balas bahwa laporan sudah sesuai prosedur"
+        },
+        {
+          "kode": "D",
+          "teks": "Suruh lapor lewat kanal lain"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan karena nadanya emosi"
+        }
+      ],
+      "pembahasan": "Status selesai tanpa penyelesaian = gagal layanan. Buka eskalasi + selesaikan beneran, bukan bela status."
+    },
+    {
+      "id": "tkp-20",
+      "teks": "Warga marah karena suratnya molor 2 minggu dari janji 5 hari. Respons terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tenangkan, cek berkas, jelaskan penyebab, kasih kepastian waktu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Balik marah karena ia tidak sopan"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh menunggu tanpa kejelasan"
+        },
+        {
+          "kode": "D",
+          "teks": "Abaikan dan lanjut kerja lain"
+        },
+        {
+          "kode": "E",
+          "teks": "Suruh ajukan pengaduan tertulis dulu"
+        }
+      ],
+      "pembahasan": "Salah di kita → akui + telusuri + kepastian. Minta pengaduan tertulis itu prosedural tapi tidak selesaikan hari itu."
+    },
+    {
+      "id": "tkp-21",
+      "teks": "Atasan kasih tugas baru yang belum pernah kamu pegang dengan tenggat mepet. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima lalu pelajari dan tanya yang berpengalaman",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak mentah-mentah"
+        },
+        {
+          "kode": "C",
+          "teks": "Terima tapi kerjakan semampunya tanpa belajar"
+        },
+        {
+          "kode": "D",
+          "teks": "Lempar ke rekan lain"
+        },
+        {
+          "kode": "E",
+          "teks": "Minta mundur tanpa coba dulu"
+        }
+      ],
+      "pembahasan": "Profesional = mau belajar + inisiatif cari bantuan. Nolak atau asal kerjakan itu skor kecil."
+    },
+    {
+      "id": "tkp-22",
+      "teks": "Pendapatmu beda dari mayoritas tim di rapat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sampaikan argumen pakai data dan terima keputusan bersama",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Diam saja walau yakin benar"
+        },
+        {
+          "kode": "C",
+          "teks": "Paksa pendapatmu diterima"
+        },
+        {
+          "kode": "D",
+          "teks": "Walkout dari rapat"
+        },
+        {
+          "kode": "E",
+          "teks": "Ngomongin penolakan ke atasan setelah rapat"
+        }
+      ],
+      "pembahasan": "Suarakan + hormati hasil bareng. Maksa atau diam dua-duanya gagal: satu egois, satu pasif."
+    },
+    {
+      "id": "tkp-23",
+      "teks": "Kamu nemu salah data di laporan yang mau diserahkan ke pimpinan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Laporkan ke penyusun dan usulkan perbaikan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Biarin karena bukan tugasmu"
+        },
+        {
+          "kode": "C",
+          "teks": "Betulkan diam-diam tanpa kabar"
+        },
+        {
+          "kode": "D",
+          "teks": "Serahkan apa adanya"
+        },
+        {
+          "kode": "E",
+          "teks": "Salahkan pembuatnya"
+        }
+      ],
+      "pembahasan": "Integritas + tanggung jawab = laporkan + usulkan benerin. Diam atau main salah-salahan itu skor kecil."
+    },
+    {
+      "id": "tkp-24",
+      "teks": "Rekan kerja sebarkan info yang mengarah ke paham radikal. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ajak diskusi santun dan laporkan bila lanjut",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut sebar biar orang tahu"
+        },
+        {
+          "kode": "C",
+          "teks": "Putus hubungan kerja total"
+        },
+        {
+          "kode": "D",
+          "teks": "Bikin klarifikasi sendiri di medsos"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan karena bukan urusanmu"
+        }
+      ],
+      "pembahasan": "Tenang + dialog + jalur resmi. Ikut sebar walau niat klarifikasi = ikut nyebar masalah."
+    },
+    {
+      "id": "tkp-25",
+      "teks": "Warga lansia berkursi roda mau urus akta, loket di lantai 2 dan lift rusak. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Turun bawa formulir, dampingi, lalu urus berkasnya ke atas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Minta ia naik perlahan dibantu keluarga"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh pulang dan datang lain hari"
+        },
+        {
+          "kode": "D",
+          "teks": "Kasih nomor antrean dan suruh tunggu lift"
+        },
+        {
+          "kode": "E",
+          "teks": "Suruh urus online tanpa dampingi"
+        }
+      ],
+      "pembahasan": "Kendala sarana kantor jangan jadi beban warga. Petugas yang turun tangan = skor 5."
+    },
+    {
+      "id": "tkp-26",
+      "teks": "Sistem layanan daring gangguan pas antrean numpuk. Selain umumkan info, langkah terbaik berikutnya adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Catat warga yang sudah datang sebagai antrean prioritas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh semua pulang tanpa data"
+        },
+        {
+          "kode": "C",
+          "teks": "Terima berkas manual tanpa catat kontak"
+        },
+        {
+          "kode": "D",
+          "teks": "Salahkan server pusat terus"
+        },
+        {
+          "kode": "E",
+          "teks": "Tutup layanan tanpa kabar"
+        }
+      ],
+      "pembahasan": "Transparan + tindak lanjut = warga tidak antre dua kali. Terima berkas tanpa kontak = niat baik tapi tidak tuntas."
+    },
+    {
+      "id": "tkp-27",
+      "teks": "Rekan minta kamu ubah angka laporan biar kelihatan bagus. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak dan pertahankan data yang benar",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikuti biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Ubah sebagian saja"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta imbalan dulu"
+        },
+        {
+          "kode": "E",
+          "teks": "Biarin ia ubah sendiri"
+        }
+      ],
+      "pembahasan": "Integritas = data benar tidak bisa ditawar. Tolak tegas + tawarkan benerin yang sah."
+    },
+    {
+      "id": "tkp-28",
+      "teks": "Tugas menumpuk: rutin plus dadakan dari atasan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Atur prioritas dan koordinasi dengan atasan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Buang tugas rutin diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Tolak tugas tambahan"
+        },
+        {
+          "kode": "D",
+          "teks": "Salahkan pembagi tugas"
+        },
+        {
+          "kode": "E",
+          "teks": "Lempar semua ke rekan"
+        }
+      ],
+      "pembahasan": "Profesional = prioritas + komunikasi. Buang tugas atau lempar itu mindah masalah."
+    },
+    {
+      "id": "tkp-29",
+      "teks": "Kamu lihat antrean berdesakan dan ada ibu hamil berdiri lama. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dahulukan ibu hamil ke kursi prioritas dan atur antrean",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Biarin karena semua sama-sama antre"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh ia pulang dan kembali besok"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta warga lain yang urus"
+        },
+        {
+          "kode": "E",
+          "teks": "Tegur ia karena tidak bawa surat prioritas"
+        }
+      ],
+      "pembahasan": "Kelompok rentan dapat perlakuan khusus. Sama rata di sini justru tidak adil."
+    },
+    {
+      "id": "tkp-30",
+      "teks": "Rekan satu tim sering telat kumpulin bagian tugasnya. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ajak ngobrol, cari sebabnya, dan sepakati tenggat yang jelas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Lapor ke atasan tanpa ngomong dulu"
+        },
+        {
+          "kode": "C",
+          "teks": "Tegur keras di depan tim"
+        },
+        {
+          "kode": "D",
+          "teks": "Kerjakan bagiannya diam-diam tiap kali"
+        },
+        {
+          "kode": "E",
+          "teks": "Biarin biar ia ditegur atasan"
+        }
+      ],
+      "pembahasan": "Bina dulu baru eskalasi. Negur di depan umum atau ngerjain terus bikin tim tidak sehat."
+    },
+    {
+      "id": "tkp-31",
+      "teks": "Ada warga beda budaya yang caranya tidak biasa buatmu. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Hargai, tanya sopan kebutuhannya, layani sesuai aturan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Paksa ikut caramu"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek di depan warga lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Tolak layani karena beda"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan dan layani seadanya"
+        }
+      ],
+      "pembahasan": "Toleran + adaptif + tetap prosedural. Memaksakan nilai pribadi itu skor kecil."
+    },
+    {
+      "id": "tkp-32",
+      "teks": "Kamu diminta pimpin rapat dadakan gantikan atasan yang berhalangan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Siapkan agenda singkat, pimpin diskusi, catat keputusan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak karena bukan tugasmu"
+        },
+        {
+          "kode": "C",
+          "teks": "Biarkan rapat ngalor-ngidul"
+        },
+        {
+          "kode": "D",
+          "teks": "Putuskan semua sendiri biar cepat"
+        },
+        {
+          "kode": "E",
+          "teks": "Batalkan rapat tanpa kabar"
+        }
+      ],
+      "pembahasan": "Profesional = siap ambil peran + tertib + catat hasil. Nolak atau asal pimpin dua-duanya gagal."
+    },
+    {
+      "id": "tkp-33",
+      "teks": "Teman sekantor kirim link mencurigakan yang katanya bansos. Sikap TIK yang paling aman adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cek alamat resminya, jangan klik asal, laporkan bila palsu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Klik langsung biar tidak ketinggalan"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar ke semua grup"
+        },
+        {
+          "kode": "D",
+          "teks": "Isi data pribadi biar cepat cair"
+        },
+        {
+          "kode": "E",
+          "teks": "Unduh lampirannya walau tidak dikenal"
+        }
+      ],
+      "pembahasan": "Aman digital = verifikasi + jangan sebar + lapor. Klik dan isi data itu jalan tol penipuan."
+    },
+    {
+      "id": "tkp-34",
+      "teks": "Kamu dikritik warga dengan nada tinggi di depan umum padahal kamu sudah sesuai prosedur. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tetap tenang, dengarkan, jelaskan prosedur tanpa emosi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Balas dengan nada lebih tinggi"
+        },
+        {
+          "kode": "C",
+          "teks": "Usir warga itu"
+        },
+        {
+          "kode": "D",
+          "teks": "Nangis dan tinggalkan loket"
+        },
+        {
+          "kode": "E",
+          "teks": "Langgar prosedur biar ia diam"
+        }
+      ],
+      "pembahasan": "Pengendalian diri = tenang + empati + tetap di rel aturan. Balas emosi atau langgar aturan dua-duanya kalah."
+    },
+    {
+      "id": "tkp-35",
+      "teks": "Ada calo yang tawari jalur cepat urus dokumen warga. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak dan arahkan warga ikut jalur resmi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Pakai jasa calo biar cepat"
+        },
+        {
+          "kode": "C",
+          "teks": "Minta komisi dari calo"
+        },
+        {
+          "kode": "D",
+          "teks": "Diamkan karena bukan tugasmu"
+        },
+        {
+          "kode": "E",
+          "teks": "Sebar nomor calo ke warga"
+        }
+      ],
+      "pembahasan": "Calo = gratifikasi + langgar antrean. Tolak + arahkan resmi, sekalian edukasi warga."
+    },
+    {
+      "id": "tkp-36",
+      "teks": "Jadwal piket bergeser dadakan dan kamu kebagian malam hari. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima dan atur ulang rencanamu, koordinasi bila bentrok penting",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Kabur dan matikan HP"
+        },
+        {
+          "kode": "C",
+          "teks": "Paksa tukar tanpa tanya"
+        },
+        {
+          "kode": "D",
+          "teks": "Datang tapi tidur di pos"
+        },
+        {
+          "kode": "E",
+          "teks": "Ngomel di grup dan ancam keluar"
+        }
+      ],
+      "pembahasan": "Disiplin + tanggung jawab = terima + kelola + koordinasi sah. Kabur atau asal tukar itu gagal."
+    },
+    {
+      "id": "tkp-37",
+      "teks": "Warga minta penjelasan prosedur yang panjang dan ia lambat paham. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan pelan dengan bahasa sederhana dan cek pemahamannya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh baca sendiri ditempel di dinding"
+        },
+        {
+          "kode": "C",
+          "teks": "Bentak biar cepat paham"
+        },
+        {
+          "kode": "D",
+          "teks": "Lempar ke rekan lain"
+        },
+        {
+          "kode": "E",
+          "teks": "Isi formulirnya tanpa jelaskan"
+        }
+      ],
+      "pembahasan": "Pelayanan = sabar + jelas + pastikan paham. Cepat tapi warga bingung itu gagal layanan."
+    },
+    {
+      "id": "tkp-38",
+      "teks": "Warga antre protes karena loket buka telat 30 menit tanpa kabar. Respons terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Minta maaf, jelaskan sebabnya, percepat layanan dan atur antrean",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Salahkan petugas yang bawa kunci"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh warga maklum tanpa penjelasan"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup loket biar tidak diprotes"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan protes dan kerja pelan"
+        }
+      ],
+      "pembahasan": "Telat dari pihak kita → akui + jelaskan + percepat. Nyalahin atau nyuruh maklum itu skor kecil."
+    },
+    {
+      "id": "tkp-39",
+      "teks": "Tugas kelompok mandek karena satu anggota hilang kabar. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Hubungi baik-baik, bagi ulang tugas sementara, kabari dosen bila perlu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Coret namanya diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Biarkan tugas mandek"
+        },
+        {
+          "kode": "D",
+          "teks": "Jelekkan ia di grup besar"
+        },
+        {
+          "kode": "E",
+          "teks": "Kerjakan semua sendiri sambil ngomel"
+        }
+      ],
+      "pembahasan": "Jejaring = komunikasi + solusi sementara + jalur resmi. Coret diam-diam atau jelekkan itu gagal."
+    },
+    {
+      "id": "tkp-40",
+      "teks": "Teman magang beda daerah belum paham budaya kantormu. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kenalkan aturan dengan sabar dan libatkan ia bertahap",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ejek logatnya biar cepat akrab"
+        },
+        {
+          "kode": "C",
+          "teks": "Kucilkan biar ia belajar sendiri"
+        },
+        {
+          "kode": "D",
+          "teks": "Paksa ikut caramu mentah-mentah"
+        },
+        {
+          "kode": "E",
+          "teks": "Lapor biar ia dipindah"
+        }
+      ],
+      "pembahasan": "Adaptasi dua arah: kamu sabar jelaskan, ia bertahap ikut. Ejek atau kucilkan itu gagal sosbud."
+    },
+    {
+      "id": "tkp-41",
+      "teks": "Kantor pindah ke absensi wajah dan kamu gagap di minggu pertama. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Minta panduan, latihan, dan biasakan sampai lancar",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Titip absen ke rekan"
+        },
+        {
+          "kode": "C",
+          "teks": "Protes dan minta kembali manual"
+        },
+        {
+          "kode": "D",
+          "teks": "Bolongkan absen tiap hari"
+        },
+        {
+          "kode": "E",
+          "teks": "Rusak alatnya biar gagal"
+        }
+      ],
+      "pembahasan": "TIK + disiplin = mau belajar sistem baru. Titip absen itu pelanggaran integritas juga."
+    },
+    {
+      "id": "tkp-42",
+      "teks": "Kamu diminta lembur dadakan padahal ada acara keluarga. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cek urgensi, komunikasikan ke keluarga dan atasan, cari jalan tengah",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Kabur tanpa kabar"
+        },
+        {
+          "kode": "C",
+          "teks": "Ngamuk ke atasan"
+        },
+        {
+          "kode": "D",
+          "teks": "Janji lembur tapi tidak datang"
+        },
+        {
+          "kode": "E",
+          "teks": "Lempar ke rekan tanpa izin"
+        }
+      ],
+      "pembahasan": "Profesional = cek prioritas + komunikasi dua arah. Kabur atau janji palsu itu gagal."
+    },
+    {
+      "id": "tkp-43",
+      "teks": "Grup alumni sebar konten yang hina Pancasila. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ingatkan sopan, jangan teruskan, laporkan bila berulang",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut sebar biar rame"
+        },
+        {
+          "kode": "C",
+          "teks": "Bela kontennya biar terlihat kritis"
+        },
+        {
+          "kode": "D",
+          "teks": "Keluar grup tanpa jejak dan diam total"
+        },
+        {
+          "kode": "E",
+          "teks": "Ajak debat kusir sampai subuh"
+        }
+      ],
+      "pembahasan": "Anti-radikal = ingatkan + tahan sebar + lapor. Keluar diam itu lumayan tapi kalah dari yang ingatkan."
+    },
+    {
+      "id": "tkp-44",
+      "teks": "Warga bawa berkas kurang satu lembar dan marah disuruh balik. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan yang kurang dengan tenang dan bantu cara melengkapinya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Loloskan tanpa syarat biar tidak marah"
+        },
+        {
+          "kode": "C",
+          "teks": "Bentak balik biar kapok"
+        },
+        {
+          "kode": "D",
+          "teks": "Usir dari loket"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan dan panggil antrean berikut"
+        }
+      ],
+      "pembahasan": "Aturan tetap tegak + bantu warga penuhi syarat. Loloskan kasihan itu jebakan langgar SOP."
+    },
+    {
+      "id": "tkp-45",
+      "teks": "Printer kantor macet pas cetak berkas warga yang antre. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Alihkan ke printer lain, kabari perkiraan waktu, catat antrean",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh warga bawa pulang dan cetak sendiri"
+        },
+        {
+          "kode": "C",
+          "teks": "Salahkan bagian sarana"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup layanan hari itu"
+        },
+        {
+          "kode": "E",
+          "teks": "Diam dan tunggu teknisi tanpa kabar"
+        }
+      ],
+      "pembahasan": "Kendala alat = cari jalan + kabari + catat. Mindah beban ke warga atau diam itu gagal."
+    },
+    {
+      "id": "tkp-46",
+      "teks": "Rekan lembur bantu tugasmu yang menumpuk. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ucapkan terima kasih dan ganti bantu saat ia butuh",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Anggap wajar karena ia junior"
+        },
+        {
+          "kode": "C",
+          "teks": "Pamer hasil kerja sendiri"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta bantuan lagi tanpa balas"
+        },
+        {
+          "kode": "E",
+          "teks": "Lupakan begitu saja"
+        }
+      ],
+      "pembahasan": "Jejaring = timbal balik + hargai bantuan. Anggap wajar itu gagal etika kerja."
+    },
+    {
+      "id": "tkp-47",
+      "teks": "Warga titip berkas ke satpam biar cepat diproses. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak titipan dan arahkan ikut antre resmi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Terima karena kasihan"
+        },
+        {
+          "kode": "C",
+          "teks": "Proses diam-diam"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta uang rokok"
+        },
+        {
+          "kode": "E",
+          "teks": "Buang berkasnya"
+        }
+      ],
+      "pembahasan": "Titipan = langgar antrean + rawan gratifikasi. Tolak + arahkan resmi."
+    },
+    {
+      "id": "tkp-48",
+      "teks": "Rekan kerjamu lembur tiap hari sampai kelelahan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tawarkan bagi tugas dan ingatkan jaga kesehatan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Biarin karena itu pilihannya"
+        },
+        {
+          "kode": "C",
+          "teks": "Tambahi tugasnya biar kapok"
+        },
+        {
+          "kode": "D",
+          "teks": "Jelekkan di belakang"
+        },
+        {
+          "kode": "E",
+          "teks": "Lapor biar ia dihukum"
+        }
+      ],
+      "pembahasan": "Tawarkan bantuan + ingatkan sehat. Biarin atau tambahi tugas itu gagal jejaring."
+    },
+    {
+      "id": "tkp-49",
+      "teks": "Warga pendatang belum paham alur layanan di daerahmu. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan alur dengan sabar tanpa bedakan asal",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh tanya warga lain"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek karena gaptek"
+        },
+        {
+          "kode": "D",
+          "teks": "Tolak layani karena bukan warga asli"
+        },
+        {
+          "kode": "E",
+          "teks": "Layani asal-asalan"
+        }
+      ],
+      "pembahasan": "Jelaskan sabar + adil. Bedakan asal itu diskriminasi."
+    },
+    {
+      "id": "tkp-50",
+      "teks": "Kamu diminta jadi notulen rapat padahal belum pernah. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima, pelajari formatnya, dan catat dengan teliti",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak mentah-mentah"
+        },
+        {
+          "kode": "C",
+          "teks": "Terima tapi catat asal-asalan"
+        },
+        {
+          "kode": "D",
+          "teks": "Suruh rekan gantikan tanpa izin"
+        },
+        {
+          "kode": "E",
+          "teks": "Hilang saat rapat mulai"
+        }
+      ],
+      "pembahasan": "Terima + belajar + teliti. Nolak atau asal catat itu gagal profesional."
+    },
+    {
+      "id": "tkp-51",
+      "teks": "Data warga bocor karena kamu kirim ke grup salah. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Akui, tarik dan hapus bila bisa, laporkan dan cegah meluas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Hapus chat diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Salahkan HP-nya"
+        },
+        {
+          "kode": "D",
+          "teks": "Biarin karena sudah terkirim"
+        },
+        {
+          "kode": "E",
+          "teks": "Keluar grup dan hilang"
+        }
+      ],
+      "pembahasan": "Akui + tarik + lapor + cegah. Hapus diam-diam tanpa lapor itu gagal tanggung jawab."
+    },
+    {
+      "id": "tkp-52",
+      "teks": "Ada pesan provokasi yang bawa-bawa suku di grup kos. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ingatkan jaga ucapan, jangan teruskan, laporkan bila berulang",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut komentar panas"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar ke grup lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Ajak tawuran"
+        },
+        {
+          "kode": "E",
+          "teks": "Keluar tanpa jejak"
+        }
+      ],
+      "pembahasan": "Ingatkan + tahan + lapor. Ikut panas atau sebar itu gagal anti-radikal."
+    },
+    {
+      "id": "tkp-53",
+      "teks": "Warga komplain biaya resmi tidak jelas. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan rincian resmi dan tunjukkan papan tarifnya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh bayar saja tanpa rincian"
+        },
+        {
+          "kode": "C",
+          "teks": "Naikkan diam-diam"
+        },
+        {
+          "kode": "D",
+          "teks": "Usir yang protes"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan pertanyaan"
+        }
+      ],
+      "pembahasan": "Transparan + tunjukkan dasar tarif. Suruh bayar tanpa rincian itu gagal akuntabel."
+    },
+    {
+      "id": "tkp-54",
+      "teks": "Antrean offline dan online numpuk bareng. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Umumkan urutan gabungan yang adil dan jalankan tertib",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Dahulukan yang teriak paling keras"
+        },
+        {
+          "kode": "C",
+          "teks": "Acak sesukamu"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup salah satu tanpa kabar"
+        },
+        {
+          "kode": "E",
+          "teks": "Suruh semua daftar ulang besok"
+        }
+      ],
+      "pembahasan": "Umumkan + adil + tertib. Dahulukan yang teriak itu gagal adil."
+    },
+    {
+      "id": "tkp-55",
+      "teks": "Rekan senior ajari cara pintas yang langgar SOP tapi cepat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak cara pintas dan tetap ikut SOP",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut biar disayang senior"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar cara pintas ke semua"
+        },
+        {
+          "kode": "D",
+          "teks": "Lapor ke medsos"
+        },
+        {
+          "kode": "E",
+          "teks": "Ancam senior biar diam"
+        }
+      ],
+      "pembahasan": "Tolak + tetap SOP. Ikut senior tapi langgar aturan itu gagal integritas."
+    },
+    {
+      "id": "tkp-56",
+      "teks": "Warga bawa map lusuh berisi syarat lengkap tapi petugas lain nolak karena tampilannya. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tetap layani berdasar kelengkapan, bukan tampilan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut nolak biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh ganti map baru dulu"
+        },
+        {
+          "kode": "D",
+          "teks": "Ejek penampilannya"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan dan panggil antrean lain"
+        }
+      ],
+      "pembahasan": "Nilai syaratnya, bukan bungkusnya. Nolak karena tampilan itu diskriminasi."
+    },
+    {
+      "id": "tkp-57",
+      "teks": "Ketua tim bagi tugas tidak merata dan kamu kebagian paling berat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sampaikan keberatan dengan data dan usulkan bagi ulang adil",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Terima sambil ngedumel tiap hari"
+        },
+        {
+          "kode": "C",
+          "teks": "Kabur dari tim"
+        },
+        {
+          "kode": "D",
+          "teks": "Jelekkan ketua ke semua orang"
+        },
+        {
+          "kode": "E",
+          "teks": "Acak tugas seenaknya"
+        }
+      ],
+      "pembahasan": "Suarakan + tawarkan solusi adil. Ngedumel atau kabur itu gagal jejaring."
+    },
+    {
+      "id": "tkp-58",
+      "teks": "Teman kos masak dengan bumbu menyengat tiap subuh dan ganggu yang lain. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ajak ngobrol dan sepakati jadwal atau ventilasi",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Buang masakannya diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek makanannya tiap hari"
+        },
+        {
+          "kode": "D",
+          "teks": "Lapor polisi langsung"
+        },
+        {
+          "kode": "E",
+          "teks": "Pindah tanpa pamit"
+        }
+      ],
+      "pembahasan": "Toleran + cari jalan tengah. Buang, ejek, atau lapor over itu gagal sosbud."
+    },
+    {
+      "id": "tkp-59",
+      "teks": "Kamu gaptek spreadsheet padahal laporan wajib pakai itu. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Belajar bertahap, ikut tutorial, dan minta bimbingan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak pakai dan minta manual terus"
+        },
+        {
+          "kode": "C",
+          "teks": "Minta rekan kerjakan semua"
+        },
+        {
+          "kode": "D",
+          "teks": "Palsukan angka biar cepat"
+        },
+        {
+          "kode": "E",
+          "teks": "Hilang saat deadline"
+        }
+      ],
+      "pembahasan": "TIK = mau belajar alat kerja. Nolak atau palsukan itu gagal ganda."
+    },
+    {
+      "id": "tkp-60",
+      "teks": "Kamu telat 10 menit karena macet dan ada apel penting. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Segera masuk tertib, minta maaf, dan catat pelajaran atur waktu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Putar balik dan bolos sekalian"
+        },
+        {
+          "kode": "C",
+          "teks": "Masuk sambil berisik"
+        },
+        {
+          "kode": "D",
+          "teks": "Salahkan macet ke semua orang"
+        },
+        {
+          "kode": "E",
+          "teks": "Palsukan izin sakit"
+        }
+      ],
+      "pembahasan": "Disiplin = akui + tertib + perbaiki. Bolos atau palsu izin itu gagal profesional."
+    },
+    {
+      "id": "tkp-61",
+      "teks": "Di grup kerja ada yang sebar hoaks politik. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ingatkan cek sumber, jangan teruskan, laporkan bila hoaks",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut teruskan biar update"
+        },
+        {
+          "kode": "C",
+          "teks": "Tambahi bumbu biar heboh"
+        },
+        {
+          "kode": "D",
+          "teks": "Keluar grup tanpa kabar"
+        },
+        {
+          "kode": "E",
+          "teks": "Ajak ribut pendukung beda"
+        }
+      ],
+      "pembahasan": "Anti hoaks = ingatkan + tahan + lapor. Teruskan atau bumbuhi itu ikut sebar masalah."
+    },
+    {
+      "id": "tkp-62",
+      "teks": "Warga tanya syarat yang sama berulang kali karena lupa. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Jelaskan lagi sabar dan kasih catatan ringkas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bentak biar ingat"
+        },
+        {
+          "kode": "C",
+          "teks": "Usir dari loket"
+        },
+        {
+          "kode": "D",
+          "teks": "Suruh hafalkan di tempat"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan pertanyaan ulang"
+        }
+      ],
+      "pembahasan": "Sabar + solusi ringkas. Bentak atau usir itu gagal pelayanan."
+    },
+    {
+      "id": "tkp-63",
+      "teks": "Listrik padam dan antrean manual menumpuk. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Alihkan ke manual tertib, umumkan urutan, catat semua",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bubarkan antrean tanpa solusi"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh pulang semua"
+        },
+        {
+          "kode": "D",
+          "teks": "Diam tunggu listrik tanpa kabar"
+        },
+        {
+          "kode": "E",
+          "teks": "Dahulukan kenalan saja"
+        }
+      ],
+      "pembahasan": "Darurat = mode manual + transparan + catat. Bubarkan atau diam itu gagal."
+    },
+    {
+      "id": "tkp-64",
+      "teks": "Rekan pinjam alat kerjamu dan rusak. Ia minta rahasiakan dari atasan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ajak ia lapor bareng dan cari ganti rugi yang adil",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tutup rapat-rapat"
+        },
+        {
+          "kode": "C",
+          "teks": "Viralkan ke grup besar"
+        },
+        {
+          "kode": "D",
+          "teks": "Rusak balik alatnya"
+        },
+        {
+          "kode": "E",
+          "teks": "Minta uang diam-diam"
+        }
+      ],
+      "pembahasan": "Jujur + tanggung jawab bareng. Tutup-tutupi atau viralkan dua-duanya gagal."
+    },
+    {
+      "id": "tkp-65",
+      "teks": "Warga difabel netra butuh isi formulir dan antre panjang. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dahulukan ke jalur prioritas dan bacakan bantu isi formulir",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh antre biasa tanpa bantuan"
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh pulang bawa pendamping"
+        },
+        {
+          "kode": "D",
+          "teks": "Isi asal tanpa bacakan"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan karena sibuk"
+        }
+      ],
+      "pembahasan": "Kelompok rentan = dahulukan + bantu akses. Suruh pulang itu gagal inklusif."
+    },
+    {
+      "id": "tkp-66",
+      "teks": "Anggota tim beda pendapat soal metode kerja. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Uji tiap usulan dengan data kecil lalu pilih yang terbukti",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Dukung yang paling senior tanpa uji"
+        },
+        {
+          "kode": "C",
+          "teks": "Paksa caramu sendiri"
+        },
+        {
+          "kode": "D",
+          "teks": "Biarkan debat tanpa putusan"
+        },
+        {
+          "kode": "E",
+          "teks": "Bubar tim"
+        }
+      ],
+      "pembahasan": "Kolaborasi sehat = uji + data + putuskan. Senioritas atau paksaan itu gagal."
+    },
+    {
+      "id": "tkp-67",
+      "teks": "Kamu dinas ke daerah yang adatnya ketat. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pelajari dan hormati adatnya tanpa tinggalkan tugas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Abaikan adat karena tugas lebih penting"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek adatnya biar cair"
+        },
+        {
+          "kode": "D",
+          "teks": "Tolak dinas"
+        },
+        {
+          "kode": "E",
+          "teks": "Paksa adat ikut caramu"
+        }
+      ],
+      "pembahasan": "Adaptif = hormat + tetap tugas. Ejek atau paksa itu gagal sosbud."
+    },
+    {
+      "id": "tkp-68",
+      "teks": "Kamu diminta buat grafik dari data mentah padahal belum bisa. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pelajari fungsi dasarnya dan kerjakan bertahap",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak dan minta orang lain terus"
+        },
+        {
+          "kode": "C",
+          "teks": "Asal warnai biar kelihatan jadi"
+        },
+        {
+          "kode": "D",
+          "teks": "Kirim data mentah tanpa olah"
+        },
+        {
+          "kode": "E",
+          "teks": "Hilang saat diminta hasil"
+        }
+      ],
+      "pembahasan": "TIK + profesional = belajar + bertahap. Asal jadi itu gagal kualitas."
+    },
+    {
+      "id": "tkp-69",
+      "teks": "Kamu janji selesaikan laporan Jumat tapi data telat dari rekan. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kabari atasan lebih awal, kejar data, usulkan jadwal susulan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Diam sampai ditagih"
+        },
+        {
+          "kode": "C",
+          "teks": "Salahkan rekan ke atasan"
+        },
+        {
+          "kode": "D",
+          "teks": "Kirim laporan kosong"
+        },
+        {
+          "kode": "E",
+          "teks": "Palsukan tanggal kirim"
+        }
+      ],
+      "pembahasan": "Komunikasi dini + solusi. Diam atau palsukan itu gagal profesional."
+    },
+    {
+      "id": "tkp-70",
+      "teks": "Ada yang sebar paham khilafah gantikan Pancasila di grup kos. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tegaskan Pancasila final, jangan teruskan, laporkan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut dukung biar kritis"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar biar diskusi rame"
+        },
+        {
+          "kode": "D",
+          "teks": "Ajak debat sampai pagi"
+        },
+        {
+          "kode": "E",
+          "teks": "Keluar tanpa jejak"
+        }
+      ],
+      "pembahasan": "Pancasila final, tidak bisa ditawar. Tegaskan + tahan + lapor."
+    },
+    {
+      "id": "tkp-71",
+      "teks": "Warga datang 5 menit sebelum tutup dengan berkas kurang. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima yang ada, catat kurangnya, beri batas susulan jelas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Usir karena mepet tutup"
+        },
+        {
+          "kode": "C",
+          "teks": "Loloskan semua tanpa syarat"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup lebih awal"
+        },
+        {
+          "kode": "E",
+          "teks": "Abaikan dan beres-beres"
+        }
+      ],
+      "pembahasan": "Fleksibel tapi tertib: terima + catat + susulan jelas. Loloskan atau usir dua-duanya gagal."
+    },
+    {
+      "id": "tkp-72",
+      "teks": "Server antrean mati dan nomor urut hilang. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Buat ulang manual tertib, umumkan, catat semua",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Suruh rebutan siapa cepat"
+        },
+        {
+          "kode": "C",
+          "teks": "Tutup layanan seharian"
+        },
+        {
+          "kode": "D",
+          "teks": "Dahulukan kenalan"
+        },
+        {
+          "kode": "E",
+          "teks": "Diam tunggu server nyala"
+        }
+      ],
+      "pembahasan": "Sistem mati = mode manual + transparan + catat. Rebutan atau diam itu gagal."
+    },
+    {
+      "id": "tkp-73",
+      "teks": "Rekan ajak kamu bohong absen biar kelihatan rajin. Sikap terbaik kamu adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak dan tetap isi jujur apa adanya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Ajari cara bohong lebih rapi"
+        },
+        {
+          "kode": "D",
+          "teks": "Lapor ke medsos"
+        },
+        {
+          "kode": "E",
+          "teks": "Ancam balik biar diam"
+        }
+      ],
+      "pembahasan": "Integritas tidak bisa kompromi. Tolak + jujur, bukan ikut atau ancam."
     }
   ]
 }

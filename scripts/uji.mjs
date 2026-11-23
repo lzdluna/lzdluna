@@ -232,10 +232,10 @@ try {
     cek('halaman berhasil dimuat dari data JSON', hasil === 'siap', hasil);
 
     const items = [...d.querySelectorAll('[data-quiz]')];
-    cek('18 soal dirender', items.length === 18, items.length);
+    cek('200 soal dirender', items.length === 200, items.length);
 
     const opsi = items.flatMap((q) => [...q.querySelectorAll('[data-opt]')]);
-    cek('90 opsi jawaban', opsi.length === 90, opsi.length);
+    cek('1000 opsi jawaban', opsi.length === 1000, opsi.length);
     cek('semua opsi <button type=button>', opsi.every((o) => o.tagName === 'BUTTON' && o.type === 'button'));
     cek('opsi diberi label A-E', opsi[0].textContent.startsWith('A. ') && opsi[4].textContent.startsWith('E. '));
     cek('tiap soal punya tepat 1 kunci',
@@ -262,7 +262,7 @@ try {
 
     /* -------------------------------------------------------- angka turunan */
     const stat = (k) => (d.querySelector('[data-stat="' + k + '"]') || {}).textContent;
-    cek('data-stat totalSoal = 18', stat('totalSoal') === '18', stat('totalSoal'));
+    cek('data-stat totalSoal = 200', stat('totalSoal') === '200', stat('totalSoal'));
     cek('data-stat totalTopik = 16', stat('totalTopik') === '16', stat('totalTopik'));
     cek('data-stat skdSoal = 110', stat('skdSoal') === '110', stat('skdSoal'));
     cek('data-stat skdMenit = 100', stat('skdMenit') === '100', stat('skdMenit'));
@@ -366,19 +366,19 @@ try {
     cek('reset menutup pembahasan', !first.querySelector('.q-explain').classList.contains('open'));
 
     const filterBtns = [...d.querySelectorAll('.qf-btn')];
-    cek('filter: Semua (18)', filterBtns[0].textContent === 'Semua (18)', filterBtns[0].textContent);
-    cek('filter: TWK (6)', filterBtns[1].textContent === 'TWK (6)', filterBtns[1].textContent);
+    cek('filter: Semua (200)', filterBtns[0].textContent === 'Semua (200)', filterBtns[0].textContent);
+    cek('filter: TWK (64)', filterBtns[1].textContent === 'TWK (64)', filterBtns[1].textContent);
 
     klik(dom.window, filterBtns[3]);
     const tampil = items.filter((q) => q.style.display !== 'none');
-    cek('filter TKP menyisakan 6 soal', tampil.length === 6, tampil.length);
+    cek('filter TKP menyisakan 73 soal', tampil.length === 73, tampil.length);
     cek('semua yang tampil bertipe tkp', tampil.every((q) => q.getAttribute('data-subtes') === 'tkp'));
     klik(dom.window, filterBtns[0]);
-    cek('filter Semua mengembalikan 18', items.filter((q) => q.style.display !== 'none').length === 18);
+    cek('filter Semua mengembalikan 200', items.filter((q) => q.style.display !== 'none').length === 200);
 
     cek('baris jawaban TKP tanpa teks panjang',
-      /^Jawaban terbaik: [A-E]\.$/.test(items[12].querySelector('.q-explain b').textContent),
-      items[12].querySelector('.q-explain b').textContent);
+      /^Jawaban terbaik: [A-E]\.$/.test(items[127].querySelector('.q-explain b').textContent),
+      items[127].querySelector('.q-explain b').textContent);
     cek('baris jawaban TWK memuat teks opsi',
       /^Jawaban: [A-E]\. .+\.$/.test(first.querySelector('.q-explain b').textContent),
       first.querySelector('.q-explain b').textContent);

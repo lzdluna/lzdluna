@@ -14,7 +14,10 @@
         "**Fungsi:** pisau : memotong.",
         "**Bagian–keseluruhan:** roda : mobil.",
         "**Sebab–akibat:** hujan : banjir.",
-        "**Tingkat:** hangat : panas."
+        "**Tingkat:** hangat : panas.",
+        "**Antonim:** optimis : pesimis, aktif : pasif, maksimal : minimal.",
+        "**Tempat kerja:** dokter : rumah sakit = guru : sekolah.",
+        "**Alat–kegiatan:** buku : membaca = radio : mendengar."
       ]
     },
     {
@@ -27,7 +30,9 @@
       "poin": [
         "**Modus ponens:** P → Q; P benar; maka Q benar.",
         "**Modus tollens:** P → Q; Q salah; maka P salah.",
-        "**Silogisme hipotetis:** P → Q; Q → R; maka P → R."
+        "**Silogisme hipotetis:** P → Q; Q → R; maka P → R.",
+        "**Jebakan affirming:** P → Q, Q benar ≠ P pasti benar. Contoh hujan → basah, tanah basah belum tentu kemarin hujan.",
+        "**Analitis posisi:** tulis urutan syarat satu-satu, jangan lompat ke kesimpulan."
       ]
     },
     {
@@ -40,7 +45,10 @@
       "poin": [
         "**Persen:** x% dari N = (x/100) × N.",
         "**Diskon bertingkat:** dihitung berurutan, bukan dijumlahkan.",
-        "**Kerja bersama:** 1/t = 1/t₁ + 1/t₂."
+        "**Kerja bersama:** 1/t = 1/t₁ + 1/t₂.",
+        "**Perbandingan senilai:** 3 liter → 45 km, maka 5 liter → 75 km.",
+        "**Perbandingan berbalik:** 6 pekerja × 10 hari = 12 pekerja × 5 hari.",
+        "**Rata-rata:** jumlah ÷ banyak data. **Kecepatan:** jarak ÷ waktu."
       ]
     },
     {

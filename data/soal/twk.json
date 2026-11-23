@@ -169,6 +169,1630 @@
         }
       ],
       "pembahasan": "Tentang Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan. UU No. 12/2011 tentang Pembentukan Peraturan, UU No. 5/2014 tentang ASN, UU No. 20/2003 tentang Sisdiknas."
+    },
+    {
+      "id": "twk-07",
+      "teks": "Kamu jadi petugas loket. Ada warga dari suku, agama, dan latar ekonomi beda-beda antre bareng. Sikap yang paling pas sama sila kedua Pancasila adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dahulukan yang satu daerah sama kamu biar cepat"
+        },
+        {
+          "kode": "B",
+          "teks": "Layani semua dengan adil tanpa bedain latar",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Pisah antrean berdasarkan asal daerah"
+        },
+        {
+          "kode": "D",
+          "teks": "Minta warga yang beda bahasa bawa penerjemah sendiri tanpa dibantu"
+        },
+        {
+          "kode": "E",
+          "teks": "Tolak warga yang berkasnya bikin kamu repot"
+        }
+      ],
+      "pembahasan": "Sila kedua itu soal martabat dan adil tanpa diskriminasi. Pola yang sering keluar: hormat + adil + tidak pilih-pilih."
+    },
+    {
+      "id": "twk-08",
+      "teks": "Di rapat RT ada beda pendapat soal jadwal ronda. Biar sesuai sila keempat, langkah yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut suara paling keras biar cepat selesai"
+        },
+        {
+          "kode": "B",
+          "teks": "Ketua mutusin sendiri tanpa tanya warga"
+        },
+        {
+          "kode": "C",
+          "teks": "Bermusyawarah sampai dapat keputusan bareng",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Undi diam-diam tanpa diskusi"
+        },
+        {
+          "kode": "E",
+          "teks": "Batalkan ronda biar nggak ribut"
+        }
+      ],
+      "pembahasan": "Sila keempat = kerakyatan + hikmat + permusyawaratan. Jadi kuncinya ajak diskusi, bukan paksain kehendak."
+    },
+    {
+      "id": "twk-09",
+      "teks": "Kamu lihat teman sekantor nyelipin berkas saudaranya biar didahulukan. Sikap yang paling mencerminkan integritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut nitip berkasmu juga mumpung bisa"
+        },
+        {
+          "kode": "B",
+          "teks": "Diam saja biar tidak ribut sama teman"
+        },
+        {
+          "kode": "C",
+          "teks": "Ingatkan baik-baik dan minta ia ikut antre sesuai prosedur",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Lapor ke medsos biar viral"
+        },
+        {
+          "kode": "E",
+          "teks": "Bantu sembunyikan biar tidak ketahuan"
+        }
+      ],
+      "pembahasan": "Integritas = jujur + konsisten + tanggung jawab. Ingatkan langsung dan jaga prosedur, bukan ikut-ikutan atau diam."
+    },
+    {
+      "id": "twk-10",
+      "teks": "Warga komplek beda suku ribut soal jadwal siskamling. Biar sesuai Bhinneka Tunggal Ika, sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bela kelompok sukumu sendiri"
+        },
+        {
+          "kode": "B",
+          "teks": "Ajak rembug bareng dan bagi jadwal adil buat semua",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Bubarkan siskamling biar tidak ribut"
+        },
+        {
+          "kode": "D",
+          "teks": "Serahkan ke kelompok paling vokal"
+        },
+        {
+          "kode": "E",
+          "teks": "Pindah komplek biar aman"
+        }
+      ],
+      "pembahasan": "Bhinneka = beda-beda tapi tetap satu. Kuncinya rembug + adil, bukan bela kelompok sendiri."
+    },
+    {
+      "id": "twk-11",
+      "teks": "Contoh bela negara yang bisa kamu lakuin sebagai pelajar adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bolak-balik ganti aturan main saat diskusi"
+        },
+        {
+          "kode": "B",
+          "teks": "Belajar rajin, taat aturan, dan ikut kerja bakti",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar kabar belum jelas biar heboh"
+        },
+        {
+          "kode": "D",
+          "teks": "Coret-coret fasilitas umum"
+        },
+        {
+          "kode": "E",
+          "teks": "Kabur dari tugas kelompok"
+        }
+      ],
+      "pembahasan": "Bela negara versi sehari-hari = cinta tanah air + sadar aturan + rela berkorban waktu dan tenaga buat bersama."
+    },
+    {
+      "id": "twk-12",
+      "teks": "Pancasila sebagai ideologi terbuka artinya …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bisa diganti kapan saja sesuai tren"
+        },
+        {
+          "kode": "B",
+          "teks": "Nilainya tetap tapi terbuka pada pembaruan cara melaksanakannya",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Semua paham asing boleh masuk tanpa saring"
+        },
+        {
+          "kode": "D",
+          "teks": "Hanya milik kelompok tertentu"
+        },
+        {
+          "kode": "E",
+          "teks": "Tidak boleh ditafsirkan sama sekali"
+        }
+      ],
+      "pembahasan": "Terbuka = nilai dasarnya kukuh, tapi cara menerapkannya menyesuaikan zaman. Bukan ganti-ganti ideologi."
+    },
+    {
+      "id": "twk-13",
+      "teks": "Kalimat yang polanya K-S-P-O adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Adik bermain bola di lapangan"
+        },
+        {
+          "kode": "B",
+          "teks": "Kemarin ibu memasak sayur",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Buku itu dibaca kakak"
+        },
+        {
+          "kode": "D",
+          "teks": "Paman membeli sepeda baru"
+        },
+        {
+          "kode": "E",
+          "teks": "Di taman anak-anak bermain"
+        }
+      ],
+      "pembahasan": "Kemarin (K) + ibu (S) + memasak (P) + sayur (O). Opsi lain K-nya hilang atau posisinya beda."
+    },
+    {
+      "id": "twk-14",
+      "teks": "Penulisan yang benar menurut kaidah adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "di mana-mana"
+        },
+        {
+          "kode": "B",
+          "teks": "diantar jemput"
+        },
+        {
+          "kode": "C",
+          "teks": "dikelola dengan baik",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "di banding yang lain"
+        },
+        {
+          "kode": "E",
+          "teks": "di terima kemarin"
+        }
+      ],
+      "pembahasan": "Awalan di- disambung (dikelola, diantar, diterima). Kata depan di dipisah (di mana-mana, di banding). Cek dulu: bisa diganti kata kerja pasif atau tempat."
+    },
+    {
+      "id": "twk-15",
+      "teks": "Sikap nasionalisme yang pas buat ASN di era digital adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bangga pakai produk lokal dan saring hoaks sebelum sebar",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak semua budaya luar mentah-mentah"
+        },
+        {
+          "kode": "C",
+          "teks": "Pamer gaya hidup mewah biar kelihatan maju"
+        },
+        {
+          "kode": "D",
+          "teks": "Sebar info heboh biar cepat viral"
+        },
+        {
+          "kode": "E",
+          "teks": "Nutup diri dari kerja sama antardaerah"
+        }
+      ],
+      "pembahasan": "Nasionalisme modern = cinta tanah air + melek digital + jaga persatuan. Bukan anti-asing, tapi saring dan bangga sama karya sendiri."
+    },
+    {
+      "id": "twk-16",
+      "teks": "Gotong royong di kantor paling kelihatan saat …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Semua sibuk pencitraan masing-masing"
+        },
+        {
+          "kode": "B",
+          "teks": "Lembur bareng selesaikan layanan yang menumpuk tanpa saling lempar",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Tugas berat dikasih ke anak baru terus"
+        },
+        {
+          "kode": "D",
+          "teks": "Rapat dibatalkan biar cepat pulang"
+        },
+        {
+          "kode": "E",
+          "teks": "Saling lapor biar kelihatan rajin"
+        }
+      ],
+      "pembahasan": "Gotong royong = rela berkorban + jaga persatuan. Ukurannya aksi bareng, bukan pencitraan."
+    },
+    {
+      "id": "twk-17",
+      "teks": "Di kos ada teman beda agama mau ibadah. Sikap yang paling pas sama sila pertama adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Hormati dan kasih ruang tanpa ganggu",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ajak pindah keyakinan biar sama"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek ritualnya biar seru"
+        },
+        {
+          "kode": "D",
+          "teks": "Larang ibadah di kos"
+        },
+        {
+          "kode": "E",
+          "teks": "Pura-pura tidak lihat tapi ngomongin di belakang"
+        }
+      ],
+      "pembahasan": "Sila pertama = hormat kebebasan beragama. Toleran itu aktif kasih ruang, bukan pasif atau ikut campur."
+    },
+    {
+      "id": "twk-18",
+      "teks": "Bansos di RW-mu terbatas. Biar sesuai sila kelima, cara bagi yang paling adil adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bagi rata ke semua biar tidak ribut"
+        },
+        {
+          "kode": "B",
+          "teks": "Dahulukan yang paling membutuhkan sesuai data",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Kasih ke kerabat panitia dulu"
+        },
+        {
+          "kode": "D",
+          "teks": "Siapa cepat dia dapat"
+        },
+        {
+          "kode": "E",
+          "teks": "Tahan dulu sampai ada yang protes"
+        }
+      ],
+      "pembahasan": "Adil bukan rata-rata, tapi tepat sasaran. Sila kelima = keadilan sosial, yang rentan didahulukan berdasar data."
+    },
+    {
+      "id": "twk-19",
+      "teks": "Kamu diminta atasan ubah angka laporan biar kelihatan bagus. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikuti saja biar aman"
+        },
+        {
+          "kode": "B",
+          "teks": "Ubah sebagian biar tidak ketahuan"
+        },
+        {
+          "kode": "C",
+          "teks": "Tolak dan pertahankan data yang benar",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Minta imbalan dulu baru ubah"
+        },
+        {
+          "kode": "E",
+          "teks": "Biarin rekan lain yang ubah"
+        }
+      ],
+      "pembahasan": "Integritas = jujur walau diperintah. Tolak + jelaskan dengan sopan, pertahankan data benar."
+    },
+    {
+      "id": "twk-20",
+      "teks": "Dapat broadcast yang isinya hasutan benci pemerintah dan Pancasila. Sikap bela negara yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Teruskan biar semua waspada"
+        },
+        {
+          "kode": "B",
+          "teks": "Cek kebenarannya, jangan sebar, laporkan lewat kanal resmi",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Percaya karena dari senior"
+        },
+        {
+          "kode": "D",
+          "teks": "Balas dengan hasutan balik"
+        },
+        {
+          "kode": "E",
+          "teks": "Simpan dan sebar nanti"
+        }
+      ],
+      "pembahasan": "Bela negara digital = saring sebelum sharing. Cek + tahan + lapor resmi, bukan ikut sebar."
+    },
+    {
+      "id": "twk-21",
+      "teks": "Kapan Bahasa Indonesia wajib dipakai menurut aturan bahasa negara …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ngobrol santai sama keluarga di rumah"
+        },
+        {
+          "kode": "B",
+          "teks": "Dokumen resmi negara dan forum kebangsaan",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Doa pribadi"
+        },
+        {
+          "kode": "D",
+          "teks": "Bahasa daerah dilarang total"
+        },
+        {
+          "kode": "E",
+          "teks": "Cuma buat ujian bahasa"
+        }
+      ],
+      "pembahasan": "Bahasa Indonesia = bahasa negara dan persatuan, wajib di ruang resmi. Bahasa daerah tetap hidup di ruang santai."
+    },
+    {
+      "id": "twk-22",
+      "teks": "Manakah kata baku yang benar …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "System"
+        },
+        {
+          "kode": "B",
+          "teks": "Sistem",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Karir"
+        },
+        {
+          "kode": "D",
+          "teks": "Tehnik"
+        },
+        {
+          "kode": "E",
+          "teks": "Jadwal-jadwal"
+        }
+      ],
+      "pembahasan": "Yang baku: sistem, karier, teknik. Jangan ketuker sama ejaan asing atau dobel yang tidak perlu."
+    },
+    {
+      "id": "twk-23",
+      "teks": "Bentuk nasionalisme ekonomi yang paling nyata buat pelajar adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bangga pakai produk UMKM lokal dan promosikan dengan jujur",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Borong barang impor biar keren"
+        },
+        {
+          "kode": "C",
+          "teks": "Nyinyir produk lokal terus"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup diri dari ide bisnis luar"
+        },
+        {
+          "kode": "E",
+          "teks": "Pamer merek luar biar dipandang"
+        }
+      ],
+      "pembahasan": "Cinta tanah air versi dompet = dukung karya sendiri tanpa anti-asing. Pakai, nilai jujur, promosikan."
+    },
+    {
+      "id": "twk-24",
+      "teks": "Makna NKRI buat kamu sebagai warga adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Negara kesatuan, satu kedaulatan, daerah ikut jaga keutuhan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tiap daerah boleh bikin aturan negara sendiri"
+        },
+        {
+          "kode": "C",
+          "teks": "Pusat dan daerah jalan sendiri-sendiri"
+        },
+        {
+          "kode": "D",
+          "teks": "Negara serikat dengan banyak kepala negara"
+        },
+        {
+          "kode": "E",
+          "teks": "Otonomi artinya pisah dari Indonesia"
+        }
+      ],
+      "pembahasan": "NKRI = kesatuan dengan otonomi, bukan federal. Desentralisasi buat layani, bukan buat pisah."
+    },
+    {
+      "id": "twk-25",
+      "teks": "Tim kampusmu beda daerah dan beda bahasa. Biar sesuai sila ketiga, sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bikin kubu per daerah biar nyaman"
+        },
+        {
+          "kode": "B",
+          "teks": "Pakai bahasa persatuan dan bagi peran adil",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Ngomong pakai bahasa daerah sendiri terus"
+        },
+        {
+          "kode": "D",
+          "teks": "Keluar tim karena beda latar"
+        },
+        {
+          "kode": "E",
+          "teks": "Ikut yang paling dominan saja"
+        }
+      ],
+      "pembahasan": "Persatuan = beda latar tetap satu tim. Bahasa persatuan + peran adil itu kuncinya."
+    },
+    {
+      "id": "twk-26",
+      "teks": "Kamu nemu flashdisk berisi data penting di lorong kantor. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Simpan buat sendiri"
+        },
+        {
+          "kode": "B",
+          "teks": "Buka-buka isinya buat kepo"
+        },
+        {
+          "kode": "C",
+          "teks": "Serahkan ke bagian umum atau umumkan penemuan",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Buang biar tidak ribet"
+        },
+        {
+          "kode": "E",
+          "teks": "Jual ke yang mau bayar"
+        }
+      ],
+      "pembahasan": "Jujur + tanggung jawab = amankan dan serahkan lewat jalur yang jelas, bukan manfaatkan."
+    },
+    {
+      "id": "twk-27",
+      "teks": "Ada tawuran antar kelompok di dekat rumahmu. Sikap bela negara yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut nonton dan sebar videonya"
+        },
+        {
+          "kode": "B",
+          "teks": "Bela salah satu biar menang"
+        },
+        {
+          "kode": "C",
+          "teks": "Lerai dengan aman dan hubungi aparat atau tokoh warga",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Komporin biar makin rame"
+        },
+        {
+          "kode": "E",
+          "teks": "Tutup pintu dan pura-pura tidak tahu"
+        }
+      ],
+      "pembahasan": "Jaga persatuan + taat hukum. Damaikan yang aman, sisanya serahkan ke yang berwenang."
+    },
+    {
+      "id": "twk-28",
+      "teks": "Guru minta contoh sila kedua di sekolah. Yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bantu teman yang kesulitan tanpa pilih-pilih",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bantu yang se-geng saja"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek teman yang lambat"
+        },
+        {
+          "kode": "D",
+          "teks": "Nyotek biar nilai bagus"
+        },
+        {
+          "kode": "E",
+          "teks": "Bullying biar disiplin"
+        }
+      ],
+      "pembahasan": "Sila kedua = martabat + adil. Waspada jebakan pilih-pilih: bantu se-geng saja itu bukan adil."
+    },
+    {
+      "id": "twk-29",
+      "teks": "Kalimat efektif yang subjek dan predikatnya jelas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kepada para peserta dimohon antre"
+        },
+        {
+          "kode": "B",
+          "teks": "Para peserta dimohon antre dengan tertib",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Dengan tertib para peserta"
+        },
+        {
+          "kode": "D",
+          "teks": "Antre dengan tertib kepada"
+        },
+        {
+          "kode": "E",
+          "teks": "Dimohon kepada antre tertib"
+        }
+      ],
+      "pembahasan": "Efektif = subjek jelas + predikat jelas, tanpa kepada yang menggantung. B paling rapi."
+    },
+    {
+      "id": "twk-30",
+      "teks": "Saat upacara bendera, sikap nasionalisme yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Khusyuk ikut tata cara dan hormati bendera",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ngobrol biar tidak bosan"
+        },
+        {
+          "kode": "C",
+          "teks": "Main HP selama amanat"
+        },
+        {
+          "kode": "D",
+          "teks": "Kabur ke kantin"
+        },
+        {
+          "kode": "E",
+          "teks": "Bikin gaduh biar seru"
+        }
+      ],
+      "pembahasan": "Hormat bendera = khusyuk + ikut tata cara. Ngobrol, main HP, kabur, dan gaduh itu contoh tidak hormat."
+    },
+    {
+      "id": "twk-31",
+      "teks": "Bedanya nasionalisme dan chauvinisme adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Nasionalisme bangga tanpa rendahkan bangsa lain, chauvinisme merasa paling unggul",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Sama saja keduanya"
+        },
+        {
+          "kode": "C",
+          "teks": "Chauvinisme lebih baik"
+        },
+        {
+          "kode": "D",
+          "teks": "Nasionalisme artinya tutup diri"
+        },
+        {
+          "kode": "E",
+          "teks": "Chauvinisme artinya cinta damai"
+        }
+      ],
+      "pembahasan": "Nasionalisme Indonesia bukan chauvinisme. Bangga boleh, ngerendahin bangsa lain jangan."
+    },
+    {
+      "id": "twk-32",
+      "teks": "Panitia bagi kaos kegiatan cuma ke teman dekat. Biar adil sesuai sila kelima kamu usul …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bagi berdasar kebutuhan dan peran, data dibuka",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Siapa dekat panitia dapat dua"
+        },
+        {
+          "kode": "C",
+          "teks": "Diumpetin biar langka"
+        },
+        {
+          "kode": "D",
+          "teks": "Dijual ke peserta"
+        },
+        {
+          "kode": "E",
+          "teks": "Dibuang biar tidak rebutan"
+        }
+      ],
+      "pembahasan": "Adil = transparan + tepat sasaran. Bagi ke teman dekat, diumpetin, dijual, atau dibuang itu contoh tidak adil."
+    },
+    {
+      "id": "twk-33",
+      "teks": "Kubu kalah vs menang pasca pilihan ketua OSIS masih panas. Biar tetap satu, sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sindiri kubu kalah tiap istirahat"
+        },
+        {
+          "kode": "B",
+          "teks": "Rangkul semua dan ajak kerja bareng buat program",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Bubarkan OSIS biar tidak ribut"
+        },
+        {
+          "kode": "D",
+          "teks": "Dukung kubu menang saja"
+        },
+        {
+          "kode": "E",
+          "teks": "Keluar OSIS dan ajak boikot"
+        }
+      ],
+      "pembahasan": "Persatuan = menang-kalah tetap satu tim. Rangkul + kerja bareng, bukan sindir atau boikot."
+    },
+    {
+      "id": "twk-34",
+      "teks": "Kamu nemu dompet berisi uang di selasar masjid. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ambil uangnya, dompetnya buang"
+        },
+        {
+          "kode": "B",
+          "teks": "Simpan dan tunggu yang cari sambil umumkan penemuan",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Bagi-bagi ke teman biar berkah"
+        },
+        {
+          "kode": "D",
+          "teks": "Buang ke tempat sampah"
+        },
+        {
+          "kode": "E",
+          "teks": "Pura-pura tidak lihat"
+        }
+      ],
+      "pembahasan": "Jujur + tanggung jawab = amankan + umumkan + serahkan. Ambil atau bagi-bagi itu gagal integritas."
+    },
+    {
+      "id": "twk-35",
+      "teks": "Contoh bela negara paling nyata buat anak kos adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut ronda, lapor tamu, dan jaga kebersihan bareng",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Begadang berisik tiap malam"
+        },
+        {
+          "kode": "C",
+          "teks": "Coret tembok kos"
+        },
+        {
+          "kode": "D",
+          "teks": "Kabur dari iuran keamanan"
+        },
+        {
+          "kode": "E",
+          "teks": "Sebar gosip kos sebelah"
+        }
+      ],
+      "pembahasan": "Bela negara harian = sadar aturan + rela berkorban + jaga lingkungan. Bukan gaya berisik dan kabur iuran."
+    },
+    {
+      "id": "twk-36",
+      "teks": "Dua temanmu rayakan hari besar beda agama di minggu yang sama. Sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Larangan keduanya biar adil"
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut campur atur cara ibadahnya"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek yang sepi biar rame"
+        },
+        {
+          "kode": "D",
+          "teks": "Ucapkan selamat dan kasih ruang secukupnya",
+          "benar": true
+        },
+        {
+          "kode": "E",
+          "teks": "Adu domba biar seru"
+        }
+      ],
+      "pembahasan": "Sila pertama = hormat + kasih ruang. Bukan ngatur, ngejek, atau ngadu."
+    },
+    {
+      "id": "twk-37",
+      "teks": "Pengumuman yang bahasanya paling efektif adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Kepada seluruh mahasiswa dimohon hadir tepat waktu"
+        },
+        {
+          "kode": "B",
+          "teks": "Seluruh mahasiswa dimohon hadir tepat waktu",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Dengan hormat kepada dimohon hadir"
+        },
+        {
+          "kode": "D",
+          "teks": "Hadir tepat waktu kepada mahasiswa"
+        },
+        {
+          "kode": "E",
+          "teks": "Dimohon kepada seluruh hadir"
+        }
+      ],
+      "pembahasan": "Hindari kepada yang menggantung di depan subjek. Subjek jelas + predikat jelas itu paling rapi."
+    },
+    {
+      "id": "twk-38",
+      "teks": "Dapat info heboh belum jelas soal kebijakan kampus. Sikap nasionalisme digital yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cek sumber resmi dulu sebelum sebar",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Sebar cepat biar viral duluan"
+        },
+        {
+          "kode": "C",
+          "teks": "Tambahi bumbu biar heboh"
+        },
+        {
+          "kode": "D",
+          "teks": "Sebar ke semua grup tanpa baca"
+        },
+        {
+          "kode": "E",
+          "teks": "Bikin versi hoaks tandingan"
+        }
+      ],
+      "pembahasan": "Saring sebelum sharing. Cek + tahan + lapor itu bela negara versi jempol."
+    },
+    {
+      "id": "twk-39",
+      "teks": "Pengawas ujian longgar dan teman ngajak nyontek. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut nyontek mumpung aman"
+        },
+        {
+          "kode": "B",
+          "teks": "Bagi jawaban biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Tolak dan kerjakan sendiri dengan jujur",
+          "benar": true
+        },
+        {
+          "kode": "D",
+          "teks": "Foto soal dan sebar"
+        },
+        {
+          "kode": "E",
+          "teks": "Tukar lembar jawaban"
+        }
+      ],
+      "pembahasan": "Integritas = jujur walau tidak diawasi. Nyontek, bagi jawaban, dan tukar lembar itu gagal semua."
+    },
+    {
+      "id": "twk-40",
+      "teks": "Jadwal piket kelas selalu jatuh ke anak yang pendiam. Biar adil kamu usul …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bagi rata bergilir dan tempel jadwalnya terbuka",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bebankan terus ke yang pendiam"
+        },
+        {
+          "kode": "C",
+          "teks": "Hapus piket biar tidak ribet"
+        },
+        {
+          "kode": "D",
+          "teks": "Siapa dekat ketua bebas piket"
+        },
+        {
+          "kode": "E",
+          "teks": "Undi diam-diam tiap pekan"
+        }
+      ],
+      "pembahasan": "Adil = terbuka + bergilir + bisa dicek semua. Bebankan ke yang diam itu tidak adil."
+    },
+    {
+      "id": "twk-41",
+      "teks": "Kelasmu mau pilih ketua, ada dua calon beda suku. Biar sesuai persatuan, sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Pilih berdasar rekam jejak dan program, bukan suku",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Pilih yang sesuku biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Golput dan ajak boikot"
+        },
+        {
+          "kode": "D",
+          "teks": "Sebar isu jelek lawan"
+        },
+        {
+          "kode": "E",
+          "teks": "Bubarkan pemilihan"
+        }
+      ],
+      "pembahasan": "Persatuan = nilai orangnya, bukan sukunya. Program + rekam jejak itu ukurannya."
+    },
+    {
+      "id": "twk-42",
+      "teks": "Kamu disuruh tanda tangan absen titipan teman. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak dan suruh ia absen sendiri",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tandatangani biar cepat"
+        },
+        {
+          "kode": "C",
+          "teks": "Tandatangani plus tambah nama lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Foto dan sebar"
+        },
+        {
+          "kode": "E",
+          "teks": "Palsukan tanda tangannya"
+        }
+      ],
+      "pembahasan": "Absen titipan itu pemalsuan kehadiran. Tolak + suruh absen sendiri, sekecil apa pun."
+    },
+    {
+      "id": "twk-43",
+      "teks": "Ada ajakan tawuran antar sekolah lewat grup chat. Sikap bela negara yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut biar tidak dikira penakut"
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak ikut, ingatkan, dan laporkan ke guru atau aparat",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar lokasinya biar rame"
+        },
+        {
+          "kode": "D",
+          "teks": "Siapkan senjata tandingan"
+        },
+        {
+          "kode": "E",
+          "teks": "Nonton dari jauh dan rekam"
+        }
+      ],
+      "pembahasan": "Tolak + ingatkan + lapor. Ikut, sebar, atau nonton itu gagal bela negara."
+    },
+    {
+      "id": "twk-44",
+      "teks": "Temanmu diejek karena logat daerahnya. Sikap yang paling pas sama sila kedua adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ikut ketawa biar akrab"
+        },
+        {
+          "kode": "B",
+          "teks": "Bela dengan hentikan ejekan dan hargai bahasanya",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Suruh ia ubah logat total"
+        },
+        {
+          "kode": "D",
+          "teks": "Jauhi biar tidak kena ejek"
+        },
+        {
+          "kode": "E",
+          "teks": "Rekam dan sebar"
+        }
+      ],
+      "pembahasan": "Hentikan + hargai. Ikut ketawa atau paksa ubah logat itu tidak hormat martabat."
+    },
+    {
+      "id": "twk-45",
+      "teks": "Penulisan yang benar menurut kaidah adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Terima kasih",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Terimakasih"
+        },
+        {
+          "kode": "C",
+          "teks": "Bertanggungjawab"
+        },
+        {
+          "kode": "D",
+          "teks": "Di mana mana"
+        },
+        {
+          "kode": "E",
+          "teks": "Ke pada"
+        }
+      ],
+      "pembahasan": "Terima kasih dipisah. Terimakasih, bertanggungjawab, di mana mana, dan ke pada itu salah tulis."
+    },
+    {
+      "id": "twk-46",
+      "teks": "Lagu kebangsaan diputar di acara resmi. Sikap nasionalisme yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Berdiri tegak dan hormat dengan khusyuk",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Duduk santai sambil ngobrol"
+        },
+        {
+          "kode": "C",
+          "teks": "Keluar ruangan biar cepat"
+        },
+        {
+          "kode": "D",
+          "teks": "Main HP pelan-pelan"
+        },
+        {
+          "kode": "E",
+          "teks": "Bikin suara gaduh"
+        }
+      ],
+      "pembahasan": "Hormat simbol negara = berdiri + khusyuk. Duduk, keluar, main HP, gaduh itu tidak hormat."
+    },
+    {
+      "id": "twk-47",
+      "teks": "Produk lokal tetangga laris tapi kamu iri. Sikap nasionalisme ekonomi yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Belajar dari strateginya dan kolaborasi bila bisa",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Jatuhkan dengan isu jelek"
+        },
+        {
+          "kode": "C",
+          "teks": "Bajak pelanggannya dengan fitnah"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup usahamu dan nyinyir"
+        },
+        {
+          "kode": "E",
+          "teks": "Bakar lapaknya"
+        }
+      ],
+      "pembahasan": "Cinta tanah air = dukung + belajar + kolaborasi. Jatuhkan atau fitnah itu gagal total."
+    },
+    {
+      "id": "twk-48",
+      "teks": "RT-mu mau pasang portal tapi warga miskin keberatan iuran. Keputusan adil yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Subsidi silang: yang mampu lebih, yang tidak dibebaskan dengan data",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Paksa semua bayar sama"
+        },
+        {
+          "kode": "C",
+          "teks": "Batalkan portal sepihak"
+        },
+        {
+          "kode": "D",
+          "teks": "Hanya yang bayar boleh lewat"
+        },
+        {
+          "kode": "E",
+          "teks": "Naikkan iuran diam-diam"
+        }
+      ],
+      "pembahasan": "Subsidi silang berdasar data itu adil. Paksa rata, batasi jalan, atau naikkan diam-diam itu tidak adil."
+    },
+    {
+      "id": "twk-49",
+      "teks": "Musyawarah kelas buntu 2 lawan 2. Biar sesuai sila keempat, langkah yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Cari titik temu lagi, kalau buntu baru voting jujur",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ketua putuskan sendiri diam-diam"
+        },
+        {
+          "kode": "C",
+          "teks": "Adu otot biar cepat selesai"
+        },
+        {
+          "kode": "D",
+          "teks": "Bubarkan rapat tanpa hasil"
+        },
+        {
+          "kode": "E",
+          "teks": "Serahkan ke lempar koin"
+        }
+      ],
+      "pembahasan": "Musyawarah dulu, voting itu jalan terakhir yang sah. Putusan sepihak atau adu otot gagal sila keempat."
+    },
+    {
+      "id": "twk-50",
+      "teks": "Bendahara kelas narik iuran tanpa catat dan nolak diaudit. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Minta laporan terbuka dan audit bareng",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Biarin karena ia teman dekat"
+        },
+        {
+          "kode": "C",
+          "teks": "Ikut pakai kas buat jajan"
+        },
+        {
+          "kode": "D",
+          "teks": "Sebar fitnah biar lengser"
+        },
+        {
+          "kode": "E",
+          "teks": "Keluar kelas biar aman"
+        }
+      ],
+      "pembahasan": "Integritas = transparan + akuntabel. Minta audit bareng, bukan biarin atau fitnah."
+    },
+    {
+      "id": "twk-51",
+      "teks": "Menjelang pemilu ada yang bagi-bagi uang dengan janji pilih calon tertentu. Sikap bela negara yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ambil uangnya, pilih sesuai hati"
+        },
+        {
+          "kode": "B",
+          "teks": "Tolak politik uang dan laporkan ke pengawas pemilu",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Ambil lalu pilih yang bayar"
+        },
+        {
+          "kode": "D",
+          "teks": "Golput total dan ajak golput"
+        },
+        {
+          "kode": "E",
+          "teks": "Jadi tim sukses bayaran"
+        }
+      ],
+      "pembahasan": "Politik uang merusak demokrasi. Tolak + lapor ke Bawaslu, bukan ambil atau golput."
+    },
+    {
+      "id": "twk-52",
+      "teks": "Tetangga beda agama renovasi tempat ibadah dan minta sumbangan sukarela. Sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Sumbang seikhlasnya dan hormati pembangunannya",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Larang pembangunan itu"
+        },
+        {
+          "kode": "C",
+          "teks": "Ejek dan hasut warga menolak"
+        },
+        {
+          "kode": "D",
+          "teks": "Bakar materialnya malam hari"
+        },
+        {
+          "kode": "E",
+          "teks": "Pungli dengan alasan izin"
+        }
+      ],
+      "pembahasan": "Toleransi = hormat + bantu seikhlasnya. Larang, ejek, atau pungli itu gagal sila pertama."
+    },
+    {
+      "id": "twk-53",
+      "teks": "Kalimat yang hemat dan efektif adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Para para peserta dimohon untuk hadir"
+        },
+        {
+          "kode": "B",
+          "teks": "Peserta dimohon hadir",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "Demi untuk kebaikan bersama-sama"
+        },
+        {
+          "kode": "D",
+          "teks": "Agar supaya cepat selesai"
+        },
+        {
+          "kode": "E",
+          "teks": "Naik ke atas dan turun ke bawah"
+        }
+      ],
+      "pembahasan": "Hindari pleonasme: para-para, demi untuk, agar supaya, naik ke atas. Yang hemat itu Peserta dimohon hadir."
+    },
+    {
+      "id": "twk-54",
+      "teks": "Sekolah adakan lomba 17-an. Kegiatan yang paling mencerminkan nasionalisme adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Lomba yang libatkan semua dan ceritakan nilai juang",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Pesta miras berkedok perayaan"
+        },
+        {
+          "kode": "C",
+          "teks": "Tawuran antar kelas pembuka acara"
+        },
+        {
+          "kode": "D",
+          "teks": "Coret-coret seragam"
+        },
+        {
+          "kode": "E",
+          "teks": "Bolongkan upacara"
+        }
+      ],
+      "pembahasan": "Rayakan dengan karya + libatkan semua + ingat juang. Miras, tawuran, dan bolos itu gagal total."
+    },
+    {
+      "id": "twk-55",
+      "teks": "Bedanya patriotisme dan etnosentrisme adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Patriotisme cinta bangsa tanpa rendahkan suku lain, etnosentrisme anggap sukunya paling unggul",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Sama saja keduanya"
+        },
+        {
+          "kode": "C",
+          "teks": "Etnosentrisme lebih baik"
+        },
+        {
+          "kode": "D",
+          "teks": "Patriotisme artinya benci asing"
+        },
+        {
+          "kode": "E",
+          "teks": "Etnosentrisme artinya cinta damai"
+        }
+      ],
+      "pembahasan": "Cinta suku boleh, anggap suku sendiri paling unggul jangan. Itu bedanya dengan cinta bangsa."
+    },
+    {
+      "id": "twk-56",
+      "teks": "Antre sembako murah campur lansia dan yang muda. Pembagian yang paling adil adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Dahulukan lansia, ibu hamil, dan disabilitas dengan jalur khusus",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Siapa kuat ia dapat"
+        },
+        {
+          "kode": "C",
+          "teks": "Dahulukan yang bayar lebih"
+        },
+        {
+          "kode": "D",
+          "teks": "Bagi ke kenalan panitia dulu"
+        },
+        {
+          "kode": "E",
+          "teks": "Acak tanpa aturan"
+        }
+      ],
+      "pembahasan": "Adil = lindungi yang rentan dulu, antrean sisanya tertib. Siapa kuat ia dapat itu hukum rimba."
+    },
+    {
+      "id": "twk-57",
+      "teks": "Ada yang hina suku tertentu di grup angkatan. Biar sesuai persatuan, sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tegur pelakunya, bela yang dihina, dan ajak grup jaga ucapan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut ketawa biar akrab"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar hinaan ke grup lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Keluar grup dan diam total"
+        },
+        {
+          "kode": "E",
+          "teks": "Balas hina suku pelaku"
+        }
+      ],
+      "pembahasan": "Jaga persatuan = tegur + bela + ajak. Ikut ketawa atau balas menghina itu gagal."
+    },
+    {
+      "id": "twk-58",
+      "teks": "Uang kas kegiatan kurang 50 ribu dan kamu yang pegang. Sikap paling berintegritas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Akui, ganti, dan catat terbuka biar jelas",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Tambal diam-diam tanpa catat"
+        },
+        {
+          "kode": "C",
+          "teks": "Salahkan anggota lain"
+        },
+        {
+          "kode": "D",
+          "teks": "Tutup dengan iuran dadakan tanpa laporan"
+        },
+        {
+          "kode": "E",
+          "teks": "Hilang dan ganti nomor"
+        }
+      ],
+      "pembahasan": "Salah pegang kas = akui + ganti + catat. Tambal diam walau niat baik tetap tidak akuntabel."
+    },
+    {
+      "id": "twk-59",
+      "teks": "Ada ajakan demo anarkis bakar fasilitas umum. Sikap bela negara yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Tolak ikut, ingatkan jalur damai, laporkan bila ada hasutan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut biar terlihat berani"
+        },
+        {
+          "kode": "C",
+          "teks": "Siapkan bensin cadangan"
+        },
+        {
+          "kode": "D",
+          "teks": "Sebar titik kumpulnya"
+        },
+        {
+          "kode": "E",
+          "teks": "Nonton dan siaran langsung"
+        }
+      ],
+      "pembahasan": "Aspirasi boleh, anarkis jangan. Tolak + ingatkan damai + lapor hasutan."
+    },
+    {
+      "id": "twk-60",
+      "teks": "Kamu lihat anak kecil diejek karena beda agama. Sikap yang paling pas sama sila kedua adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bela dan tenangkan, hentikan ejekan dengan baik",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut mengejek biar diterima geng"
+        },
+        {
+          "kode": "C",
+          "teks": "Rekam dan sebar"
+        },
+        {
+          "kode": "D",
+          "teks": "Suruh anak itu pindah keyakinan"
+        },
+        {
+          "kode": "E",
+          "teks": "Biarin karena bukan urusanmu"
+        }
+      ],
+      "pembahasan": "Martabat anak wajib dibela. Ikut mengejek atau biarin itu gagal kemanusiaan."
+    },
+    {
+      "id": "twk-61",
+      "teks": "Penulisan nama geografi yang benar adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "selat sunda"
+        },
+        {
+          "kode": "B",
+          "teks": "Selat Sunda",
+          "benar": true
+        },
+        {
+          "kode": "C",
+          "teks": "SELAT SUNDA"
+        },
+        {
+          "kode": "D",
+          "teks": "Selat sunda"
+        },
+        {
+          "kode": "E",
+          "teks": "selat Sunda"
+        }
+      ],
+      "pembahasan": "Nama geografi tiap unsurnya kapital: Selat Sunda. Selain itu salah."
+    },
+    {
+      "id": "twk-62",
+      "teks": "Lomba desain poster kemerdekaan diadakan. Ikut sertamu yang paling nasionalis adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Bikin karya orisinal yang angkat nilai juang dan persatuan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Jiplak karya orang dan klaim sendiri"
+        },
+        {
+          "kode": "C",
+          "teks": "Beli karya jadi"
+        },
+        {
+          "kode": "D",
+          "teks": "Rusak karya peserta lain"
+        },
+        {
+          "kode": "E",
+          "teks": "Boikot lomba tanpa alasan"
+        }
+      ],
+      "pembahasan": "Nasionalisme = karya jujur + angkat nilai bangsa. Jiplak, beli, atau rusak itu gagal total."
+    },
+    {
+      "id": "twk-63",
+      "teks": "Temanmu bangga berlebihan sampai hina negara lain. Sikap yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Ingatkan bangga boleh, hina bangsa lain jangan",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Ikut hina biar kompak"
+        },
+        {
+          "kode": "C",
+          "teks": "Sebar hinaannya"
+        },
+        {
+          "kode": "D",
+          "teks": "Ajak musuhi negara itu"
+        },
+        {
+          "kode": "E",
+          "teks": "Putus kontak tanpa penjelasan"
+        }
+      ],
+      "pembahasan": "Itu chauvinisme, bukan nasionalisme. Ingatkan dengan baik, jangan ikut-ikutan."
+    },
+    {
+      "id": "twk-64",
+      "teks": "Dana kegiatan cuma cukup untuk separuh peserta. Keputusan adil yang paling pas adalah …",
+      "opsi": [
+        {
+          "kode": "A",
+          "teks": "Prioritaskan yang belum pernah ikut berdasar data, sisanya antre gelombang berikut",
+          "benar": true
+        },
+        {
+          "kode": "B",
+          "teks": "Bagi ke teman dekat saja"
+        },
+        {
+          "kode": "C",
+          "teks": "Siapa cepat ia dapat tanpa info"
+        },
+        {
+          "kode": "D",
+          "teks": "Batalkan diam-diam"
+        },
+        {
+          "kode": "E",
+          "teks": "Naikkan iuran dadakan"
+        }
+      ],
+      "pembahasan": "Keterbatasan = prioritas adil + transparan + gelombang susulan. Teman dekat dulu itu gagal keadilan."
     }
   ]
 }
