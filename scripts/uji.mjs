@@ -124,39 +124,48 @@ try {
       nilai(sel, 'border-top-left-radius');
 
     cek('CSS terurai > 200 aturan', aturan.size > 200, aturan.size);
-    cek(':root --muted = #6b6459', nilai(':root', '--muted') === '#6b6459', nilai(':root', '--muted'));
-    cek(':root --radius = 14px', nilai(':root', '--radius') === '14px');
+    cek(':root --muted = #525252', nilai(':root', '--muted') === '#525252', nilai(':root', '--muted'));
+    cek(':root --radius = 16px', nilai(':root', '--radius') === '16px', nilai(':root', '--radius'));
     cek(':root --maxw = 1080px', nilai(':root', '--maxw') === '1080px');
 
-    /* Palet LocalGuide, verbatim. */
-    cek(':root --accent = #ea580c', nilai(':root', '--accent') === '#ea580c', nilai(':root', '--accent'));
-    cek(':root --teal = #0d9488', nilai(':root', '--teal') === '#0d9488', nilai(':root', '--teal'));
-    cek(':root --green = #16a34a', nilai(':root', '--green') === '#16a34a', nilai(':root', '--green'));
-    cek(':root --amber = #eab308', nilai(':root', '--amber') === '#eab308', nilai(':root', '--amber'));
-    cek(':root --red = #dc2626', nilai(':root', '--red') === '#dc2626', nilai(':root', '--red'));
-    cek('tautan memakai teal', /var\(--teal\)/.test(nilai('a', 'color')), nilai('a', 'color'));
-    cek('kredit memakai teal', /var\(--teal\)/.test(nilai('.credit a', 'color')), nilai('.credit a', 'color'));
-    cek('latar tetap kertas hangat', nilai(':root', '--bg') === '#faf7f0', nilai(':root', '--bg'));
+    /* Neo-brutalism: tinta hitam, isian saturasi tinggi, bayangan keras. */
+    cek(':root --ink = #111111', nilai(':root', '--ink') === '#111111', nilai(':root', '--ink'));
+    cek(':root --accent = #111111 (tinta)', nilai(':root', '--accent') === '#111111', nilai(':root', '--accent'));
+    cek(':root --teal = #111111 (tautan jadi tinta)', nilai(':root', '--teal') === '#111111', nilai(':root', '--teal'));
+    cek(':root --green = #111111 (teks semantik jadi tinta)', nilai(':root', '--green') === '#111111', nilai(':root', '--green'));
+    cek(':root --amber = #111111', nilai(':root', '--amber') === '#111111', nilai(':root', '--amber'));
+    cek(':root --red = #111111', nilai(':root', '--red') === '#111111', nilai(':root', '--red'));
+    cek(':root --yellow = #fddf3a', nilai(':root', '--yellow') === '#fddf3a', nilai(':root', '--yellow'));
+    cek(':root --blue = #38bdf8', nilai(':root', '--blue') === '#38bdf8', nilai(':root', '--blue'));
+    cek(':root --green-wash = #51e28a', nilai(':root', '--green-wash') === '#51e28a', nilai(':root', '--green-wash'));
+    cek(':root --pink = #ff6584', nilai(':root', '--pink') === '#ff6584', nilai(':root', '--pink'));
+    cek(':root --purple = #c084fc', nilai(':root', '--purple') === '#c084fc', nilai(':root', '--purple'));
+    cek('bayangan keras tanpa blur', /4px 4px 0 0 #111111/.test(nilai(':root', '--shadow')),
+      nilai(':root', '--shadow'));
+    cek('latar kertas krem', nilai(':root', '--bg') === '#fbf8ef', nilai(':root', '--bg'));
     cek('custom property terbaca di documentElement',
-      dom.window.getComputedStyle(d.documentElement).getPropertyValue('--muted').trim() === '#6b6459');
+      dom.window.getComputedStyle(d.documentElement).getPropertyValue('--muted').trim() === '#525252');
 
     cek('.card memakai --radius', /var\(--radius\)/.test(radius('.card')), radius('.card'));
     cek('.card tanpa transition transform', !/transform/.test(nilai('.card', 'transition')), nilai('.card', 'transition'));
+    cek('.card memakai bayangan keras', /var\(--shadow\)/.test(nilai('.card', 'box-shadow')), nilai('.card', 'box-shadow'));
+    cek('.card ber-border tebal', /2\.5px/.test(nilai('.card', 'border')), nilai('.card', 'border'));
+    cek('.jump terangkat saat hover', /translate/.test(nilai('.jump:hover', 'transform')), nilai('.jump:hover', 'transform'));
     cek('.q-opt:disabled opacity tetap 1', nilai('.q-opt:disabled', 'opacity') === '1');
     cek('.q-opt.correct::after menampilkan centang', /✓/.test(nilai('.q-opt.correct::after', 'content')),
       nilai('.q-opt.correct::after', 'content'));
     cek('.q-opt.wrong::after menampilkan silang', /✕/.test(nilai('.q-opt.wrong::after', 'content')),
       nilai('.q-opt.wrong::after', 'content'));
-    cek('.qf-btn.active berlatar --accent', /var\(--accent\)/.test(nilai('.qf-btn.active', 'background')),
+    cek('.qf-btn.active berlatar tinta', /var\(--(ink|accent)\)/.test(nilai('.qf-btn.active', 'background')),
       nilai('.qf-btn.active', 'background'));
-    cek('th memakai --muted', /var\(--muted\)/.test(nilai('th', 'color')), nilai('th', 'color'));
+    cek('th memakai tinta', /var\(--ink\)/.test(nilai('th', 'color')), nilai('th', 'color'));
     cek('ada media query prefers-reduced-motion',
       media.some((m) => /prefers-reduced-motion/.test(m)), media.join(' | '));
     cek('ada media query max-width 860px', media.some((m) => /max-width:\s*860px/.test(m)));
-    cek('body memakai font sistem', /-apple-system|Segoe UI/.test(nilai('body', 'font-family')),
+    cek('body memakai font display', /var\(--font-display\)/.test(nilai('body', 'font-family')),
       nilai('body', 'font-family'));
-    cek('judul serif Georgia weight 400',
-      /Georgia/.test(nilai('h2', 'font-family')) && nilai('h2', 'font-weight') === '400',
+    cek('judul sans weight 800',
+      /var\(--font-display\)/.test(nilai('h2', 'font-family')) && nilai('h2', 'font-weight') === '800',
       nilai('h2', 'font-family') + ' / ' + nilai('h2', 'font-weight'));
 
     dom.window.close();

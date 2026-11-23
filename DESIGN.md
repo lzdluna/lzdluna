@@ -2,20 +2,20 @@
 
 ## Overview
 
-SKD Notes adalah halaman belajar SKD CPNS yang **dibaca seperti buku**, bukan
-dipakai seperti dashboard. Arah visualnya editorial print: latar kertas hangat,
-garis tipis berwarna gamping, judul serif Georgia berketebalan 400, dengan palet
-**LocalGuide** — merah-orange untuk aksi primer, teal untuk tautan, kuning untuk
-penanda — dipakai hemat di atas kertas.
+SKD Notes adalah halaman belajar SKD CPNS yang dibaca seperti **buku catatan
+yang ditempel-tempel**, bukan dashboard. Arah visualnya **neo-brutalism**:
+kertas krem bertitik, border hitam tebal, bayangan keras tanpa blur, dan isian
+warna saturasi tinggi.
 
 Tiga prinsip yang membentuk semua keputusan desain:
 
-1. **Hierarki dari ukuran dan warna**, bukan dari bayangan tebal atau gradien.
-   Hanya ada satu token bayangan di seluruh halaman.
+1. **Makna dibawa oleh latar, bukan oleh warna huruf.** Semua teks berwarna
+   tinta; yang berwarna adalah kotaknya. Konsekuensinya kontras tinggi secara
+   bawaan — bukan hasil penyesuaian belakangan.
 2. **Satu berkas statis, tanpa backend.** Tanpa webfont, tanpa CDN, tanpa build
    step. Konten dimuat dari `data/*.json` lewat `fetch()`.
-3. **Tenang dan jujur.** Tidak ada hitung mundur berkedip, tidak ada badge promosi.
-   Warna semantik hanya muncul saat memang perlu.
+3. **Tenang di isi, ramai di kulit.** Angka, pasal, dan disclaimer tetap datar.
+   Yang boleh heboh: sapaan, progres, umpan balik, dekorasi.
 
 ---
 
@@ -25,130 +25,87 @@ Semua token didefinisikan di `:root` pada `assets/css/skd.css`.
 
 ### Permukaan
 
-- **Paper** `--bg` `#FAF7F0` — latar halaman.
-- **Paper Soft** `--bg-soft` `#F3EEE2` — pita seksi, header tabel, permukaan cekung.
-- **Card** `--card` `#FFFDF8` — semua permukaan terangkat.
+- **Kertas** `--bg` `#FBF8EF` — latar halaman, bertitik 18px.
+- **Kertas Gelap** `--bg-soft` `#F2EDDD` — permukaan cekung, hari pada jadwal.
+- **Kartu** `--card` `#FFFFFF` — semua permukaan terangkat.
 
 ### Teks
 
-- **Ink** `--ink` `#1B1A17` — judul dan teks utama.
-- **Ink Soft** `--ink-soft` `#4A463F` — paragraf isi.
-- **Muted** `--muted` `#6B6459` — label, caption, metadata, header tabel.
-- **Line** `--line` `#E3DCCD` — semua garis dan border 1px.
+- **Tinta** `--ink` `#111111` — judul, teks utama, dan **semua teks semantik**.
+- **Tinta Lembut** `--ink-soft` `#262626` — paragraf isi.
+- **Redup** `--muted` `#525252` — label, caption, metadata.
+- **Garis** `--line` `#111111` — semua border, 2.5px.
 
-### Aksen (palet LocalGuide)
-- **Primary Red-Orange** `--accent` `#EA580C` — tombol primer, state aktif, penanda kunci.
-- **Primary Dark** `--accent-soft` `#C2410C` — hover tombol primer.
-- **Primary Wash** `--accent-wash` `#FDF1E8` — callout, latar badge.
-- **Secondary Teal** `--teal` `#0D9488` — semua tautan teks, aksi sekunder.
+### Isian
 
-### Semantik (palet LocalGuide)
+- **Kuning** `--yellow` `#FDDF3A` — sorotan judul, header tabel, penanda.
+- **Oranye** `--orange` `#FF8A3C` — brand, kartu navigasi kedua.
+- **Biru** `--blue` `#38BDF8` — informasi, kartu subtes TIU, header explorer.
+- **Hijau** `--green-fill` `#51E28A` — berhasil, jawaban benar, "Resmi".
+- **Pink** `--pink` `#FF6584` — salah, peringatan kritis, kartu TKP.
+- **Ungu** `--purple` `#C084FC` — aksen dekoratif, avatar.
 
-- **Success** `--green` `#16A34A` / `--green-wash` `#E9F7EF` — jawaban benar,
-  "sudah dipelajari", badge "Resmi".
-- **Warning** `--amber` `#EAB308` / `--amber-wash` `#FEF7E0` — peringatan,
-  badge "Latihan", skor TKP tingkat menengah.
-- **Error** `--red` `#DC2626` / `--red-wash` `#FDECEC` — jawaban salah,
-  timer di bawah 5 menit.
+### Semantik
 
-### Studygram (lapisan dekoratif)
+Semua token semantik **teksnya adalah tinta**. Warna dibawa oleh `*-wash`:
 
-Tiga token tambahan, semuanya untuk meniru alat tulis, bukan UI:
-
-- **Stabilo** `--stabilo` `#FDF0A3` — sorotan marker kuning.
-- **Stabilo Teal** `--stabilo-teal` `#C9ECE7` — sorotan sekunder.
-- **Hand** `--hand` `#3D352B` — tinta untuk teks di atas stabilo.
-
-Aturan pakai: stabilo **selalu di belakang teks gelap**, tidak pernah sebagai
-warna teks. Karena itu lapisan ini menambah keterbacaan, bukan menguranginya.
-
-Satu pengecualian yang harus dijaga: `.note-strip b` dan `.acc-note b` berada di
-dalam callout yang warna teksnya `--accent`/`--amber`. Tanpa paksaan
-`color: var(--ink)`, stabilo kuning akan menyorot teks amber — terukur
-**1.66:1** dan nyaris tak terbaca. Aturan pemaksa itu wajib ada, dan
-`npm run kontras` akan gagal bila dihapus.
-
-### Penyimpangan yang disengaja dari LocalGuide
-
-| LocalGuide | Di proyek ini | Alasan |
+| Peran | Teks | Latar |
 |---|---|---|
-| Background `#FFFFFF` | `#FAF7F0` (kertas) | Karakter editorial print dipertahankan; dipilih sadar |
-| Surface Default `#FFFFFF` | `#FFFDF8` | Menjaga kehangatan kertas |
+| `--green` / `--green-wash` | `#111111` | `#51E28A` |
+| `--amber` / `--amber-wash` | `#111111` | `#FDDF3A` |
+| `--red` / `--red-wash` | `#111111` | `#FF6584` |
+| `--accent` / `--accent-wash` | `#111111` | `#38BDF8` |
 
-Warna Primary, Secondary, Tertiary, Success, Warning, Error, dan Info dipakai
-**verbatim**, sesuai peran yang ditetapkan LocalGuide.
+Karena itu `.q-opt.correct` otomatis menjadi "kotak hijau, huruf hitam" tanpa
+aturan tambahan.
 
-### Kontras (terukur — TIDAK memenuhi WCAG AA)
+### Kontras (terukur — seluruh pasangan lolos WCAG AA)
 
-> **Peringatan.** Palet LocalGuide dirancang untuk latar putih. Di latar kertas
-> proyek ini, seluruh warna semantik **gagal** ambang 4.5:1 bila dipakai sebagai
-> teks. Ini keputusan sadar, bukan kelalaian.
+`npm run kontras` mengukur **90 pasangan** teks–latar yang benar-benar dipakai.
+Hasil: **90 lolos, 0 gagal**. Nilai terendah di halaman adalah `--muted` di atas
+`--yellow` = **5.88:1**, masih di atas ambang 4.5:1.
 
-Angka di bawah berasal dari `npm run kontras`, yang mengukur 77 pasangan
-teks–latar yang benar-benar dipakai. Hasil: **43 lolos, 34 gagal**, semuanya
-gagal karena warna semantik dan aksen.
+| Teks | di `--bg` | di `--bg-soft` | di `--card` |
+|---|---|---|---|
+| `--ink` | 17.78 | 16.13 | 18.88 |
+| `--ink-soft` | 14.25 | 12.92 | 15.13 |
+| `--muted` | 7.36 | 6.67 | 7.81 |
 
-| Token | Hex | di `--bg` | di `--bg-soft` | di `--card` | AA |
-|---|---|---|---|---|---|
-| `--accent` | `#EA580C` | 3.33 | 3.07 | 3.50 | ❌ |
-| `--accent-soft` | `#C2410C` | 4.84 | 4.47 | 5.09 | ❌ (bg-soft) |
-| `--teal` | `#0D9488` | 3.50 | 3.23 | 3.68 | ❌ |
-| `--green` | `#16A34A` | 3.08 | 2.85 | 3.24 | ❌ |
-| `--amber` | `#EAB308` | 1.79 | 1.66 | 1.89 | ❌ |
-| `--red` | `#DC2626` | 4.51 | 4.17 | 4.75 | ❌ (bg-soft) |
-| `--ink` | `#1B1A17` | 16.26 | 15.03 | 17.12 | ✅ |
-| `--ink-soft` | `#4A463F` | 8.77 | 8.10 | 9.23 | ✅ |
-| `--muted` | `#6B6459` | 5.46 | 5.05 | 5.75 | ✅ |
+Di atas isian, tinta tetap unggul: kuning 14.20 · hijau 11.33 · biru 8.81 ·
+oranye 8.05 · ungu 7.15 · pink 6.70. Tombol hitam dengan teks putih = 18.88.
 
-Teks putih di atas `--accent` = **3.56:1**. Paling parah: `--amber` `#EAB308`
-pada `--amber-wash` = **1.79:1**.
-
-**Yang terkena:** callout `.note-strip`, `.acc-note`, badge subtes, `.acc-flag`,
-`.card-kode`, `.acc-num`, `.src-tag`, `.jump-go`, `.q-toggle`, `.timer-note`,
-label `Benar`/`Salah`, dan semua tombol berlatar `--accent`.
-
-**Yang aman:** seluruh teks isi (`--ink`, `--ink-soft`) dan metadata (`--muted`),
-yaitu mayoritas teks di halaman.
-
-**Cara memulihkan AA tanpa mengganti hue:** gelapkan token hingga lolos, dengan
-`--accent` `#BB460A` (4.91), `--teal` `#0B7970` (4.93), `--amber` `#886805`
-(4.87), `--green` `#117D39` (4.89), `--red` `#D22424` (4.88). Angka dalam
-kurung adalah rasio terhadap `--bg`.
-
-**Penjaga regresi.** `npm run kontras` mencatat setiap pasangan yang gagal
-beserta alasannya. Pasangan gagal yang belum terdaftar membuat skrip keluar
-dengan kode 1, jadi CI menolak kombinasi baru yang lebih buruk. Skrip ini juga
-memastikan aturan pengaman stabilo tetap ada.
+Ini perbaikan besar dari palet sebelumnya (43 dari 77 pasangan, terburuk 1.79).
+Kuncinya satu keputusan: **jangan pernah memakai warna sebagai warna teks.**
 
 ---
 
 ## Typography
 
-Tiga keluarga font, semuanya lokal — tidak ada unduhan.
+Satu keluarga font untuk semuanya — system UI stack, tanpa unduhan:
 
-- **Display / Judul**: `Georgia, serif`, **selalu weight 400**. Hierarki dari
-  ukuran, bukan ketebalan.
-- **Body**: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica
-  Neue", Arial, sans-serif`.
-- **Mono**: `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` — hanya
-  untuk timer.
+```
+--font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif
+```
+
+Tidak ada serif. Tidak ada webfont. Timer memakai `ui-monospace` agar digit
+tidak bergeser.
 
 | Peran | Ukuran | Line height | Weight |
 |---|---|---|---|
-| `h1.hero-title` | `clamp(2.1rem, 5.4vw, 3.4rem)` | 1.1 | 400 serif |
-| `h2` | `clamp(1.6rem, 3.2vw, 2.2rem)` | 1.2 | 400 serif |
-| `.card h3` / `.sim h3` | `1.22–1.24rem` | — | 400 serif |
-| `.stat-val` | `1.45rem` | 1 | 400 serif |
+| `h1.hero-title` | `clamp(2.1rem, 5.4vw, 3.4rem)` | 1.06 | 800 |
+| `h2` | `clamp(1.6rem, 3.2vw, 2.2rem)` | 1.15 | 800 |
+| `.card h3` / `.sim h3` | `1.22–1.24rem` | — | 800 |
+| `.stat-val` | `1.45rem` | 1 | 800 |
 | `body` | `16.5px` | 1.68 | 400 |
 | `.q-text` | `15.5px` | — | 500 |
 | `.note-strip` | `14.5px` | — | 400 |
-| `.q-opt` | `14px` | 1.5 | 400 |
+| `.q-opt` | `14px` | 1.5 | 600 |
 | `.eyebrow`, `.sec-num` | `12.5px` | — | 600 uppercase, tracking `.14–.16em` |
-| `th`, `.stat-lbl` | `11–11.5px` | — | 600 uppercase, tracking `.09em` |
-| `.q-badge` | `10.5px` | — | 700 uppercase |
+| `th`, `.stat-lbl` | `11–11.5px` | — | 600–800 uppercase |
+| `.q-badge`, `.acc-flag` | `10.5px` | — | 800 uppercase |
 
-Timer memakai mono `2rem` dengan `font-variant-numeric: tabular-nums` agar digit
-tidak bergeser saat berjalan.
+Judul memakai tracking negatif (`-.035em`) supaya terasa padat dan tegas.
 
 ---
 
@@ -156,8 +113,17 @@ tidak bergeser saat berjalan.
 
 - Lebar konten `--maxw` **1080px**; padding horizontal `.wrap` **24px**;
   padding vertikal halaman **52px 0 80px**.
-- Skala yang dipakai: `4 · 6 · 8 · 10 · 12 · 14 · 16 · 18 · 20 · 24 · 26 · 28 ·
-  30 · 34 · 44 · 46 · 52 · 80` px. Jarak antar seksi lewat `.sub-head` (52px atas).
+- Skala: `4 · 6 · 8 · 10 · 12 · 14 · 16 · 18 · 20 · 24 · 26 · 28 · 30 · 34 ·
+  44 · 46 · 52 · 80` px.
+
+| Radius | Pemakaian |
+|---|---|
+| `16px` (`--radius`) | Kartu, panel, tabel, callout |
+| `12px` | Tombol primer, opsi kuis, sorotan judul |
+| `10px` | Input, brand mark |
+| `8–9px` | Tombol kecil, `.acc-note` |
+| `5–6px` | Badge mikro |
+| `99px` | Nav, chip, tab, filter, pill |
 
 ### Breakpoints
 
@@ -170,26 +136,34 @@ tidak bergeser saat berjalan.
 | ≤ 600px | `.acc-body` tanpa indentasi, `.acc-flag` disembunyikan |
 | ≤ 560px | `.jump-grid` 1 kolom, teks brand disembunyikan, `.schedule-row` 1 kolom |
 
-| Radius | Pemakaian |
-|---|---|
-| `14px` (`--radius`) | Kartu, panel, tabel, callout |
-| `10px` | `.btn`, `.src-ic` |
-| `9px` | Input, `.t-btn`, `.acc-note` |
-| `8px` | `.q-opt`, `.mark-btn`, `.q-toggle` |
-| `5–6px` | Badge mikro |
-| `99px` | Nav, chip, tab, filter, pill |
-| `50%` | Avatar, dot |
+---
 
-### Elevation
+## Elevation
 
-Hanya satu token bayangan:
+Bayangan keras, tanpa blur, tanpa opacity. Empat tingkat:
 
 ```css
---shadow: 0 1px 2px rgba(27,26,23,.04), 0 8px 28px -18px rgba(27,26,23,.35);
+--shadow-sm: 2px 2px 0 0 #111111;
+--shadow:    4px 4px 0 0 #111111;
+--shadow-lg: 6px 6px 0 0 #111111;
+--shadow-xl: 8px 8px 0 0 #111111;
 ```
 
-Tidak ada glow, tidak ada bayangan berlapis. Efek terangkat saat hover **hanya**
-untuk elemen yang benar-benar bisa diklik (`.jump`, `.src`).
+Tidak ada glow, tidak ada bayangan lembut. Semua kartu memakai `--shadow` dan
+border `2.5px solid var(--line)`.
+
+### Fisika
+
+Elemen yang bisa diklik bergerak; yang statis tidak:
+
+| State | Transform | Bayangan |
+|---|---|---|
+| Diam | — | `--shadow` |
+| Hover | `translate(-3px,-3px)` | `--shadow-lg` |
+| Ditekan | `translate(2px,2px)` | tidak ada |
+
+Ini meniru tombol fisik. Semua gerakan dimatikan pada
+`prefers-reduced-motion: reduce`.
 
 ---
 
@@ -200,14 +174,15 @@ index.html          kerangka saja (502 baris), tanpa konten
 assets/css/skd.css  seluruh gaya, termasuk token di :root
 assets/js/          render · router · timer · quiz · materi · sumber · app
 data/               konfigurasi · sumber · materi/{twk,tiu,tkp} · soal/{twk,tiu,tkp}
-scripts/            ekstrak · validasi · uji · serve (tidak di-deploy)
+scripts/            ekstrak · validasi · dokumen · kontras · uji · serve
 ```
 
 - JS memakai classic script + namespace `window.SKD`, dimuat dengan `defer`.
-  Bukan ES modules — jsdom tidak bisa mengeksekusinya, dan seluruh tes bergantung
-  pada jsdom.
+  Bukan ES modules — jsdom tidak bisa mengeksekusinya, dan seluruh tes
+  bergantung pada jsdom.
 - Semua teks dirender lewat `textContent`. Tidak ada `innerHTML`; satu-satunya
   markup yang dibangkitkan adalah `<b>` dari penanda `**tebal**`.
+- Nol request eksternal. Tidak ada Tailwind CDN, tidak ada Google Fonts.
 
 ---
 
@@ -215,45 +190,52 @@ scripts/            ekstrak · validasi · uji · serve (tidak di-deploy)
 
 ### Navigation
 
-Sticky, tinggi `62px`, latar `rgba(250,247,240,.94)` + border bawah 1px. Link
-berbentuk pill 13.5px/500; state aktif berlatar `--accent`, teks putih, plus
-`aria-current="page"`.
+Sticky, tinggi `62px`, latar kertas + border bawah 2.5px. Link berbentuk pill
+dengan border transparan; state aktif memakai isian tinta, teks putih,
+`--shadow-sm`, dan `aria-current="page"`.
 
 ### Timer Pill
 
-Muncul di nav hanya saat timer berjalan. Mono 13px, latar `--accent`. Titik
-indikator hijau `#8fd19e`, berubah merah `#f0a58f` saat habis. Kliknya menavigasi
-ke `#/simulasi`.
+Muncul di nav hanya saat timer berjalan. Latar tinta, teks putih. Kliknya
+menavigasi ke `#/simulasi`.
 
 ### Cards
 
-Dua jenis, jangan dicampur:
+Tiga jenis, jangan dicampur:
 
-- **`.card`** — statis, tidak bisa diklik, **tanpa hover lift**.
-- **`.jump`** / **`.src`** — bisa diklik, punya hover lift atau border accent.
+- **`.card`** — statis. Kartu subtes, diwarnai kuning/biru/pink per kolom.
+- **`.jump`** — kartu navigasi beranda, enam warna berbeda, punya fisika tekan.
+- **`.src`** — kartu tautan, putih, punya fisika tekan.
 
 ### Accordion (Materi)
 
-`.acc-head` adalah `<button>` selebar penuh dengan `aria-expanded`. State:
-tertutup (nomor latar `--accent-wash`), terbuka (chevron diputar 180°), sudah
-dipelajari (nomor hijau + tombol `✓`).
+`.acc-head` adalah `<button>` selebar penuh dengan `aria-expanded`. Nomor topik
+memakai kotak kuning ber-border. Saat selesai, nomor berubah jadi hijau dan
+tombol menjadi `✓ Udah, lanjut`.
 
 ### Option Row (Kuis)
 
 `.q-opt` adalah **`<button type="button">`**, bukan `div` — tanpa itu kuis tidak
-bisa dijawab dengan keyboard. Latar `--bg-soft`, teks rata kiri, `width:100%`.
+bisa dijawab dengan keyboard. Setiap opsi adalah kartu kecil ber-border 2.5px
+dengan `--shadow-sm`.
 
-| State | Penanda |
+| State | Tampilan |
 |---|---|
-| Belum dijawab | hover putih + border `--line` |
-| `.correct` | latar `--green-wash`, teks `--green`, **plus `✓`** |
-| `.wrong` | latar `--red-wash`, teks `--red`, **plus `✕`** |
-| Setelah dijawab | semua `disabled`, opacity tetap 1 agar warna terbaca |
+| Diam | putih, border tinta |
+| Hover | isian kuning |
+| `.correct` | isian hijau + `✓` |
+| `.wrong` | isian pink + `✕` |
+| Dijawab | semua `disabled`, opacity tetap 1 |
 
 ### Callouts
 
-`.note-strip` — latar `--accent-wash`, teks `--accent`, padding `18px 22px`.
-Varian `.warn` memakai `--amber-wash` / `--amber`. Maksimal dua berturut-turut.
+`.note-strip` berisi biru; varian `.warn` berisi kuning. Keduanya ber-border
+2.5px dengan `--shadow-sm`. Teks selalu tinta.
+
+### Tables
+
+Dibungkus `.table-wrap` (radius 16px, `overflow:auto`). Header berisi kuning
+dengan teks tinta. Kolom angka memakai `.num` dan `tabular-nums`.
 
 ---
 
@@ -266,12 +248,13 @@ Varian `.warn` memakai `--amber-wash` / `--amber`. Maksimal dua berturut-turut.
 | Idle | `Mulai` | `100:00` |
 | Running | `Jeda` | pill muncul di nav |
 | Paused | `Lanjut` | sisa waktu dibekukan |
+| Kritis (≤5 menit) | `Lanjut` | angka jadi blok pink ber-border |
 | Finished | `Mulai ulang` | `00:00`, pesan, alarm, judul berkedip |
 
-Timer dihitung dari `Date.now()` terhadap `deadline`, **bukan** penambahan per
+Timer dihitung dari `Date.now()` terhadap `deadline`, bukan penambahan per
 tick: browser men-throttle `setInterval` di tab latar, sehingga penghitung
 per-tick akan melambat. Status disimpan di `sessionStorage` dan dipulihkan saat
-reload (running → dilanjutkan, paused → tetap jeda, lewat deadline → selesai).
+reload.
 
 ### Kuis
 
@@ -280,63 +263,50 @@ bertambah. Reset mengembalikan semuanya ke "belum dijawab".
 
 ---
 
-## Studygram Layer
+## Neo-brutalism Layer
 
-Halaman ini dibaca oleh orang yang sedang belajar, jadi bahasanya sengaja
-meniru **buku catatan yang ditempel-tempel**, bukan dashboard. Semua dekorasi
-memakai CSS atau SVG inline — tidak ada satu pun berkas gambar.
-
-### Prinsip
-
-**Playful di kulit, serius di isi.** Yang boleh lucu: sapaan, progres, umpan
-balik, dekorasi. Yang tidak boleh disentuh humor: ambang batas, nomor regulasi,
-disclaimer "bukan situs resmi BKN". Kredibilitas halaman bertumpu pada angka
-yang benar.
-
-### Elemen
+Dekorasi memakai CSS dan SVG inline — tidak ada berkas gambar.
 
 | Elemen | Implementasi | Di mana |
 |---|---|---|
-| **Stabilo** | `linear-gradient` menutup 52%–94% tinggi teks di belakang `<b>` | `.kp li b`, `.q-explain b`, `.note-strip b` |
-| **Stabilo teal** | Sama, warna sekunder | `.cakupan li b` |
-| **Pita washi** | `::before` 66×18px, garis diagonal, diputar −1.6° | `.card` (kartu subtes) |
-| **Stiker** | `transform: rotate(-2.5deg)` + `box-shadow` 1px | `.acc-flag`, `.q-badge` |
-| **Coretan judul** | SVG `path` bergelombang sebagai `background-image` | `.page-head h2::after`, `.sub-head h2::after` |
-| **Lingkaran nomor** | SVG `path` elips tidak rapi | `.jump-num::before` |
-| **Kertas titik** | `radial-gradient` 1px, `background-size: 22px` | `body` |
-| **Sudut kartu** | Rotasi kecil berbeda per kartu (−0.35°, 0.25°, −0.2°) | `.grid-3 > .card` |
-| **Stiker profil** | `::after` bertuliskan "study with me" | `.id-card` |
-| **Pop** | `@keyframes` skala 1 → 1.035 → 1 selama 0.32s | `.q-opt.correct` |
+| **Border tebal** | `2.5px solid #111111` | semua kartu, tombol, input |
+| **Bayangan keras** | offset 2–8px tanpa blur | semua permukaan terangkat |
+| **Kertas titik** | `radial-gradient` 1px, 18px | `body` |
+| **Pita kartu** | `::before` garis diagonal diputar −1.6° | `.card` |
+| **Coretan judul** | SVG bergelombang | `.page-head h2::after` |
+| **Lingkaran nomor** | SVG elips tidak rapi | `.jump-num::before` |
+| **Stabilo** | `linear-gradient` menutup 52–94% tinggi teks | `.kp li b`, `.q-explain b` |
+| **Stiker** | rotasi −2.5° + bayangan keras | `.acc-flag`, `.q-badge` |
+| **Pop** | `@keyframes` skala 1 → 1.035 | `.q-opt.correct` |
 
-Semua rotasi dan animasi dimatikan di `@media (prefers-reduced-motion: reduce)`.
+### Aturan stabilo
+
+Stabilo **selalu di belakang teks tinta**. Di dalam callout, warna induknya juga
+tinta, jadi tidak ada risiko. Aturan pengaman
+`.note-strip b,.acc-note b{color:var(--ink)}` tetap dipertahankan dan dijaga
+`npm run kontras` — pernah ada regresi teks amber di atas stabilo kuning
+(1.66:1) yang membuat teks nyaris tak terbaca.
 
 ### Nada tulisan
 
 - Penulis menyebut diri **"aku"**, pembaca **"kamu"**. Jangan campur dengan
   "saya" atau "Anda".
-- Slang yang dipakai hanya yang **tahan lama**: "nggak", "gas", "kuy", "mager",
-  "santai". Hindari istilah tren yang akan basi dalam hitungan bulan.
-- Emoji dipakai **hemat**, satu per kalimat, dan hanya di mikrocopy — bukan di
-  judul seksi atau tabel aturan.
+- Slang hanya yang tahan lama: "nggak", "gas", "kuy", "mager".
+- Emoji dipakai hemat, satu per kalimat, hanya di mikrocopy.
 
 ---
 
 ## Accessibility
 
-Standar yang diterapkan. **Satu butir sengaja tidak dipenuhi** — lihat catatan di
-bawah:
-
-1. ⚠️ **Kontras tidak memenuhi 4.5:1** untuk warna semantik dan aksen. Teks isi
-   (`--ink`, `--ink-soft`, `--muted`) tetap lolos. Rincian dan cara memulihkan
-   ada di bagian [Kontras](#kontras-terukur--tidak-memenuhi-wcag-aa).
-2. Semua kontrol adalah elemen native (`button`, `a`, `input`), bukan `div`
-   dengan click handler.
+1. **Kontras ≥ 4.5:1 untuk semua teks** — terverifikasi 90 pasangan, terendah
+   5.88:1. Dijaga `npm run kontras`.
+2. Semua kontrol adalah elemen native (`button`, `a`, `input`), bukan `div`.
 3. Status tidak hanya warna — benar/salah memakai `✓`/`✕`, nav memakai
-   `aria-current`. Ini makin penting karena kontras warna rendah.
+   `aria-current`.
 4. ARIA secukupnya: `aria-expanded` + `aria-controls` pada toggle pembahasan,
    `aria-selected` pada tab, `role="status"` + `aria-live` pada pesan timer.
-5. `:focus-visible` dengan outline `--accent` 2px, offset 2px.
-6. `prefers-reduced-motion` mematikan lift dan smooth scroll.
+5. `:focus-visible` dengan outline 3px tinta, offset 2px.
+6. `prefers-reduced-motion` mematikan fisika tekan dan smooth scroll.
 7. Target sentuh minimal 32px tinggi.
 
 ---
@@ -348,45 +318,33 @@ bawah:
 | `skdnotes.materi.done.v1` | `localStorage` | `{ "twk-nasionalisme": true, ... }` |
 | `skdnotes.timer.v1` | `sessionStorage` | `{ running, deadline, remaining }` |
 
-Keduanya dibungkus `try/catch`: storage rusak atau diblokir tidak boleh mematikan
-halaman. Naikkan versi key (`.v1` → `.v2`) bila bentuk data berubah — jangan
-migrasi diam-diam.
+Keduanya dibungkus `try/catch`: storage rusak atau diblokir tidak boleh
+mematikan halaman. Naikkan versi key (`.v1` → `.v2`) bila bentuk data berubah —
+jangan migrasi diam-diam.
 
 ---
 
 ## Do's and Don'ts
 
-1. **Do** pertahankan judul serif weight 400. Hierarki datang dari ukuran dan
-   warna, bukan bold.
-2. **Do** pakai `--accent` (merah-orange) untuk aksi primer dan `--teal` untuk
-   tautan; hijau/amber/merah hanya untuk makna.
-3. **Do** beri hover lift hanya pada elemen yang bisa diklik.
-4. **Do** sertakan ikon di samping warna untuk status benar/salah — sekarang
-   wajib, karena kontras warna rendah.
-5. **Do** ukur ulang tabel kontras bila token berubah, dan perbarui angka di
-   dokumen ini. Jangan mengklaim AA tanpa mengukur.
+1. **Do** bawa makna lewat latar. Teks berwarna semantik dilarang — itu yang
+   membuat palet sebelumnya gagal.
+2. **Do** pakai border 2.5px dan bayangan keras. Tidak ada bayangan blur.
+3. **Do** beri fisika tekan hanya pada elemen yang bisa diklik.
+4. **Do** sertakan ikon di samping warna untuk status benar/salah.
+5. **Do** jalankan `npm run kontras` setiap mengubah token atau menambah pasangan.
 6. **Do** pertahankan base body 16.5px / 1.68 — ini halaman bacaan panjang.
 7. **Do** hormati `prefers-reduced-motion` pada setiap animasi baru.
-8. **Don't** memakai warna aksen untuk paragraf panjang. Semakin banyak teks
-   berwarna, semakin sulit dibaca pada kontras 3.3:1.
-9. **Do** pakai stabilo untuk menekankan kata kunci, bukan warna teks. Sorotan
-   menambah keterbacaan; teks berwarna menguranginya.
-10. **Do** jaga "playful di kulit, serius di isi": angka, pasal, dan disclaimer
-    tetap datar dan tanpa hiasan.
-11. **Don't** memakai slang tren yang cepat basi ("no cap", "rizz"). Pakai
-    bahasa sehari-hari yang tahan lama.
-12. **Don't** menambah webfont, CDN, atau aset eksternal. Halaman harus utuh tanpa
-    jaringan.
-13. **Don't** memakai putih murni `#FFFFFF` sebagai latar halaman — selalu kertas
-    hangat.
-14. **Don't** membuat bayangan berlapis atau glow. Satu token bayangan saja.
-15. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
+8. **Do** jaga "ramai di kulit, tenang di isi": angka, pasal, dan disclaimer
+   tanpa hiasan.
+9. **Don't** memakai webfont, Tailwind CDN, atau aset eksternal apa pun.
+10. **Don't** memakai putih murni sebagai latar halaman — selalu kertas krem.
+11. **Don't** memakai `div`/`span` sebagai tombol, dan jangan bungkus elemen blok
     di dalam `span`.
-16. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
-17. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat` agar
-    selalu sama dengan isi `data/*.json`.
-18. **Don't** mengklaim halaman ini resmi. Selalu tegaskan "bukan situs resmi BKN"
-    dan cantumkan tahun regulasi.
+12. **Don't** mengandalkan backend, cookie, atau analytics. State hanya di browser.
+13. **Don't** menulis jumlah soal/topik manual di HTML — pakai `data-stat`.
+14. **Don't** memakai slang tren yang cepat basi.
+15. **Don't** mengklaim halaman ini resmi, dan jangan pernah menulis klaim
+    "bocoran soal". Selalu tegaskan "bukan situs resmi BKN" plus tahun regulasi.
 
 ---
 
@@ -394,15 +352,6 @@ migrasi diam-diam.
 
 Dicatat jujur supaya tidak dianggap sudah selesai:
 
-- **Kontras di bawah WCAG AA** untuk seluruh warna semantik dan aksen
-  (3.07–4.84:1). Ini konsekuensi langsung dari memakai palet LocalGuide verbatim
-  di atas latar kertas. Varian yang sudah dihitung untuk memulihkan AA ada di
-  bagian Kontras. Bila aksesibilitas diprioritaskan kembali, ganti lima token
-  dengan varian gelap — tidak perlu mengubah struktur CSS.
-- Teks putih di atas tombol `--accent` = 3.56:1. Alternatif: teks `--ink` di atas
-  tombol, atau gelapkan `--accent`.
-- Emoji di mikrocopy (🤔 ☕ 🔥) ikut dibacakan pembaca layar karena berada di
-  dalam teks. Jumlahnya sengaja dibatasi; jangan menambah tanpa alasan.
 - Progres kuis belum persisten (materi sudah). Jika ditambahkan, pakai
   `sessionStorage` dengan key berversi, sejalan dengan timer.
 - Tab materi belum mendukung navigasi panah kiri/kanan sesuai pola WAI-ARIA
@@ -411,3 +360,5 @@ Dicatat jujur supaya tidak dianggap sudah selesai:
   dipindah ke kelas utilitas saat disentuh lagi.
 - Konten tidak ada di HTML awal, sehingga crawler dan pengguna tanpa JS tidak
   melihat 18 soal / 16 topik. Mitigasi saat ini: `<noscript>` penjelas.
+- Emoji di mikrocopy (🤔 ☕ 🔥) ikut dibacakan pembaca layar karena berada di
+  dalam teks. Jumlahnya sengaja dibatasi.

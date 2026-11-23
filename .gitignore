@@ -23,3 +23,6 @@ desktop.ini
 # Artefak verifikasi lokal
 scripts/out/
 scripts/.cache/
+
+# Mockup referensi: tidak pernah di-deploy
+inspirasi.html
