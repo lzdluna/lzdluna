@@ -104,21 +104,38 @@ try {
     const cssSiap = await tungguCss(dom);
     cek('stylesheet eksternal termuat', cssSiap && d.styleSheets.length >= 1, d.styleSheets.length);
 
+    /* Deklarasi digabung per selector: aturan terakhir menimpa properti yang
+       sama, tetapi properti lain dari aturan sebelumnya tetap berlaku. Tanpa
+       ini, satu aturan `.jump:hover{border-color:...}` akan menghapus
+       transform dari aturan `.jump:hover` sebelumnya. */
     const aturan = new Map();
+    const aturanMedia = new Map();
     const media = [];
-    (function jelajah(daftar) {
+    (function jelajah(daftar, didalamMedia) {
       for (let i = 0; i < daftar.length; i++) {
         const r = daftar[i];
-        if (r.selectorText) aturan.set(r.selectorText, r.style);
-        else if (r.cssRules) {
+        if (r.selectorText) {
+          const target = didalamMedia ? aturanMedia : aturan;
+          for (const sel of r.selectorText.split(',')) {
+            const k = sel.trim();
+            const gabung = { ...(target.get(k) || {}) };
+            for (let j = 0; j < r.style.length; j++) {
+              gabung[r.style[j]] = r.style.getPropertyValue(r.style[j]);
+            }
+            target.set(k, gabung);
+          }
+        } else if (r.cssRules) {
           if (r.conditionText) media.push(r.conditionText);
-          jelajah(r.cssRules);
+          jelajah(r.cssRules, true);
         }
       }
-    })(d.styleSheets[0].cssRules);
+    })(d.styleSheets[0].cssRules, false);
 
     const gaya = (sel) => aturan.get(sel);
-    const nilai = (sel, prop) => (gaya(sel) ? gaya(sel).getPropertyValue(prop).trim() : '');
+    const nilai = (sel, prop) => {
+      const g = aturan.get(sel);
+      return g && g[prop] !== undefined ? String(g[prop]).trim() : '';
+    };
     const radius = (sel) =>
       nilai(sel, 'border-radius') ||
       nilai(sel, 'border-top-left-radius');
@@ -151,6 +168,20 @@ try {
     cek('.card memakai bayangan keras', /var\(--shadow\)/.test(nilai('.card', 'box-shadow')), nilai('.card', 'box-shadow'));
     cek('.card ber-border tebal', /2\.5px/.test(nilai('.card', 'border')), nilai('.card', 'border'));
     cek('.jump terangkat saat hover', /translate/.test(nilai('.jump:hover', 'transform')), nilai('.jump:hover', 'transform'));
+    cek('panah bergeser saat hover', /translateX/.test(nilai('.jump:hover .jump-go', 'transform')),
+      nilai('.jump:hover .jump-go', 'transform'));
+    cek('ikon modul berputar saat hover', /rotate/.test(nilai('.jump:hover .jump-ic', 'transform')),
+      nilai('.jump:hover .jump-ic', 'transform'));
+    cek('ikon modul di kotak putih ber-border', /var\(--card\)/.test(nilai('.jump-ic', 'background')) &&
+      /2\.5px/.test(nilai('.jump-ic', 'border')), nilai('.jump-ic', 'border'));
+    cek('metrik netral (bukan blok warna)', /var\(--card\)/.test(nilai('.stat-strip > div', 'background')),
+      nilai('.stat-strip > div', 'background'));
+    cek('metrik punya garis aksen atas', /inset/.test(nilai('.stat-strip > div:nth-child(1)', 'box-shadow')),
+      nilai('.stat-strip > div:nth-child(1)', 'box-shadow'));
+    cek('label kelompok badge ada', /var\(--muted\)/.test(nilai('.meta-label', 'color')),
+      nilai('.meta-label', 'color'));
+    cek('badge dikelompokkan dua kolom', /column/.test(nilai('.meta-grup', 'flex-direction')),
+      nilai('.meta-grup', 'flex-direction'));
     cek('.q-opt:disabled opacity tetap 1', nilai('.q-opt:disabled', 'opacity') === '1');
     cek('.q-opt.correct::after menampilkan centang', /✓/.test(nilai('.q-opt.correct::after', 'content')),
       nilai('.q-opt.correct::after', 'content'));

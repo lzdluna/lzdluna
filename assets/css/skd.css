@@ -117,7 +117,13 @@ h1.hero-title em{
   font-size:clamp(1rem,1.7vw,1.15rem);
   color:var(--ink-soft);max-width:60ch;margin:0 0 30px;
 }
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-start;}
+.meta-grup{display:flex;flex-direction:column;gap:9px;}
+.meta-label{
+  font-size:10.5px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);
+}
+.meta-chips{display:flex;flex-wrap:wrap;gap:8px;}
 .chip{
   display:inline-flex;align-items:center;gap:7px;
   font-size:13px;font-weight:700;color:var(--ink);
@@ -785,19 +791,21 @@ footer{padding:46px 0 54px;background:var(--bg-soft);border-top:1px solid var(--
 .jump:active,.src:active{transform:translate(2px,2px);box-shadow:none;}
 
 /* Hero chip: satu warna per butir, seperti stiker */
-.hero-meta .chip:nth-child(1){background:var(--yellow);}
-.hero-meta .chip:nth-child(2){background:var(--green-fill);}
-.hero-meta .chip:nth-child(3){background:var(--blue);}
-.hero-meta .chip:nth-child(4){background:var(--pink);}
-.hero-meta .chip:nth-child(5){background:var(--purple);}
+.meta-grup:nth-child(1) .chip:nth-child(1){background:var(--yellow);}
+.meta-grup:nth-child(1) .chip:nth-child(2){background:var(--orange);}
+.meta-grup:nth-child(1) .chip:nth-child(3){background:var(--blue);}
+.meta-grup:nth-child(2) .chip:nth-child(1){background:var(--green-fill);}
+.meta-grup:nth-child(2) .chip:nth-child(2){background:var(--pink);}
+.meta-grup:nth-child(2) .chip:nth-child(3){background:var(--purple);}
 
 /* Empat kartu metrik beranda */
-.stat-strip > div:nth-child(1){background:var(--yellow);}
-.stat-strip > div:nth-child(2){background:var(--orange);}
-.stat-strip > div:nth-child(3){background:var(--blue);}
-.stat-strip > div:nth-child(4){background:var(--green-fill);}
-.stat-strip > div{border-color:var(--line);}
-.stat-strip b,.stat-strip span{color:var(--ink);}
+.stat-strip > div{background:var(--card);border-color:var(--line);}
+.stat-strip > div:nth-child(1){box-shadow:inset 0 6px 0 var(--yellow);}
+.stat-strip > div:nth-child(2){box-shadow:inset 0 6px 0 var(--orange);}
+.stat-strip > div:nth-child(3){box-shadow:inset 0 6px 0 var(--blue);}
+.stat-strip > div:nth-child(4){box-shadow:inset 0 6px 0 var(--green-fill);}
+.stat-strip b{color:var(--ink);}
+.stat-strip span{color:var(--muted);}
 
 /* Tiga kartu subtes + enam kartu navigasi */
 .grid-3 > .card:nth-child(1){background:var(--yellow);}
@@ -897,4 +905,34 @@ td{border-bottom:1.5px solid var(--line);}
   .jump:active,.src:active,.btn:active,
   .t-btn:active,.qf-btn:active,.me-tab:active,.mark-btn:active,
   .q-toggle:active,.quiz-reset:active,.me-mini:active{transform:none;}
+}
+
+/* ---------- Ikon modul ----------
+   Nomor tetap ada sebagai urutan, ikon ditambahkan untuk daya ingat visual.
+   Ikon duduk di kotak putih ber-border, jadi terbaca di atas warna apa pun. */
+.jump-top{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;margin-bottom:12px;
+}
+.jump-top .jump-num{margin-bottom:0;}
+.jump-ic{
+  display:grid;place-items:center;width:40px;height:40px;flex:0 0 auto;
+  background:var(--card);color:var(--ink);
+  border:2.5px solid var(--line);border-radius:10px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.jump-ic svg{width:20px;height:20px;display:block;}
+.jump:hover .jump-ic{transform:rotate(-6deg) scale(1.06);box-shadow:var(--shadow);}
+
+/* Panah dan label aksi bergeser saat hover: penanda "ini bisa diklik" */
+.jump-go{display:inline-block;transition:transform .12s ease;}
+.jump:hover .jump-go{transform:translateX(5px);}
+
+/* Kartu navigasi juga menebalkan border saat hover agar makin jelas */
+.jump:hover{border-color:var(--line);}
+.jump:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+
+@media (prefers-reduced-motion:reduce){
+  .jump:hover .jump-ic,.jump:hover .jump-go{transform:none;}
 }

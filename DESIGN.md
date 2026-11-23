@@ -207,6 +207,25 @@ Tiga jenis, jangan dicampur:
 - **`.jump`** — kartu navigasi beranda, enam warna berbeda, punya fisika tekan.
 - **`.src`** — kartu tautan, putih, punya fisika tekan.
 
+### Metrik vs Navigasi
+
+Kartu metrik (`.stat-strip`) sengaja **tidak berwarna penuh**: sel putih dengan
+garis aksen 6px di atas dan angka tinta besar. Hanya elemen yang bisa diklik yang
+memakai isian penuh. Ini yang membedakan "informasi" dari "aksi" tanpa perlu
+label tambahan.
+
+### Ikon modul
+
+Setiap kartu navigasi beranda punya ikon vektor 20px di kotak putih ber-border
+(`.jump-ic`), berdampingan dengan nomor urut. Nomor menjaga urutan, ikon
+mempercepat pengenalan. Ikon memutar −6° saat hover, sejalan dengan panah
+`.jump-go` yang bergeser 5px.
+
+### Badge hero
+
+Chip dikelompokkan menjadi dua kluster berlabel ("Metrik ujian", "Isi catatan")
+alih-alih satu baris panjang, sehingga hierarkinya terbaca di layar sempit.
+
 ### Accordion (Materi)
 
 `.acc-head` adalah `<button>` selebar penuh dengan `aria-expanded`. Nomor topik
@@ -277,6 +296,7 @@ Dekorasi memakai CSS dan SVG inline — tidak ada berkas gambar.
 | **Lingkaran nomor** | SVG elips tidak rapi | `.jump-num::before` |
 | **Stabilo** | `linear-gradient` menutup 52–94% tinggi teks | `.kp li b`, `.q-explain b` |
 | **Stiker** | rotasi −2.5° + bayangan keras | `.acc-flag`, `.q-badge` |
+| **Ikon modul** | SVG 20px di kotak putih ber-border | `.jump-ic` |
 | **Pop** | `@keyframes` skala 1 → 1.035 | `.q-opt.correct` |
 
 ### Aturan stabilo
