@@ -190,14 +190,31 @@ scripts/            ekstrak · validasi · dokumen · kontras · uji · serve
 
 ### Navigation
 
-Sticky, tinggi `62px`, latar kertas + border bawah 2.5px. Link berbentuk pill
-dengan border transparan; state aktif memakai isian tinta, teks putih,
-`--shadow-sm`, dan `aria-current="page"`.
+Navbar adalah **kartu mengambang**, bukan bilah penuh selebar layar: pembungkus
+sticky berlatar kertas, dan di dalamnya `.nav-card` putih ber-border 2.5px,
+radius 16px, serta `--shadow`.
+
+- Brand: kotak oranye berbentuk **lingkaran** 36px berisi huruf `l`, memutar 12°
+  saat hover.
+- Link: pill dengan border transparan 2.5px. Hover memberi isian warna
+  **berbeda per menu** (Materi hijau, Bank Data oranye, Simulasi biru, Strategi
+  kuning, Latihan pink, Catatan ungu) plus border tinta.
+- State aktif: isian oranye, teks tinta, `--shadow-sm`, dan `aria-current="page"`.
+- Link boleh wrap; tidak ada lagi scroll horizontal tersembunyi.
+
+### Footer
+
+Kartu putih ber-border 2.5px dengan `--shadow`, tiga kolom yang menjadi satu
+kolom di bawah 720px:
+
+1. Nama + disclaimer "bukan situs resmi BKN".
+2. Stiker pill `Made with 💖 for Gen Z` (isian pink, diputar −1.5°).
+3. Penyusun + tautan repositori yang sebenarnya.
 
 ### Timer Pill
 
-Muncul di nav hanya saat timer berjalan. Latar tinta, teks putih. Kliknya
-menavigasi ke `#/simulasi`.
+Muncul di nav hanya saat timer berjalan. Latar tinta, teks putih, ber-border
+2.5px dengan `--shadow-sm`. Kliknya menavigasi ke `#/simulasi`.
 
 ### Cards
 

@@ -182,6 +182,26 @@ try {
       nilai('.meta-label', 'color'));
     cek('badge dikelompokkan dua kolom', /column/.test(nilai('.meta-grup', 'flex-direction')),
       nilai('.meta-grup', 'flex-direction'));
+
+    /* Navbar & footer ala inspirasi.html */
+    cek('navbar berupa kartu ber-border', /2\.5px/.test(nilai('.nav-card', 'border')), nilai('.nav-card', 'border'));
+    cek('navbar memakai bayangan keras', /var\(--shadow\)/.test(nilai('.nav-card', 'box-shadow')),
+      nilai('.nav-card', 'box-shadow'));
+    cek('navbar tidak lagi bergaris bawah', !/border-bottom/.test(nilai('.nav', 'border')),
+      nilai('.nav', 'border'));
+    cek('brand mark berbentuk lingkaran', /50%/.test(nilai('.brand-mark', 'border-radius')),
+      nilai('.brand-mark', 'border-radius'));
+    cek('brand mark oranye', /var\(--orange\)/.test(nilai('.brand-mark', 'background')),
+      nilai('.brand-mark', 'background'));
+    cek('nav aktif oranye + tinta', /var\(--orange\)/.test(nilai('.nav-links a.active', 'background')) &&
+      /var\(--ink\)/.test(nilai('.nav-links a.active', 'color')),
+      nilai('.nav-links a.active', 'background'));
+    cek('nav punya border transparan', /transparent/.test(nilai('.nav-links a', 'border')),
+      nilai('.nav-links a', 'border'));
+    cek('hover nav per menu berwarna', /var\(--green-fill\)/.test(nilai('.nav-links a[data-nav="materi"]:hover', 'background')),
+      nilai('.nav-links a[data-nav="materi"]:hover', 'background'));
+    cek('footer berupa kartu', /var\(--shadow\)/.test(nilai('.foot', 'box-shadow')), nilai('.foot', 'box-shadow'));
+    cek('footer punya stiker', /var\(--pink\)/.test(nilai('.sticker', 'background')), nilai('.sticker', 'background'));
     cek('.q-opt:disabled opacity tetap 1', nilai('.q-opt:disabled', 'opacity') === '1');
     cek('.q-opt.correct::after menampilkan centang', /✓/.test(nilai('.q-opt.correct::after', 'content')),
       nilai('.q-opt.correct::after', 'content'));
