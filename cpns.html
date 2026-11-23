@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SKD Notes — Materi, Bank Data & Simulasi CPNS</title>
+<meta name="description" content="Ruang belajar SKD CPNS: peta materi interaktif, bank data, simulasi CAT, strategi, dan 18 soal latihan kilat. Dikurasi oleh lz.dln." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314345c'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23faf7f0' text-anchor='middle'%3El%3C/text%3E%3C/svg%3E" />
+<style>
+  :root{
+    --bg:#faf7f0;--bg-soft:#f3eee2;--card:#fffdf8;
+    --ink:#1b1a17;--ink-soft:#4a463f;--muted:#7d776c;
+    --line:#e3dccd;--accent:#14345c;--accent-soft:#1f4a7d;--accent-wash:#e8eef6;
+    --green:#1f5d31;--green-wash:#e7f0e8;
+    --amber:#8a4a12;--amber-wash:#fdeee0;
+    --red:#a8341f;--red-wash:#fbe9e5;
+    --radius:14px;--maxw:1080px;
+    --shadow:0 1px 2px rgba(27,26,23,.04), 0 8px 28px -18px rgba(27,26,23,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px;line-height:1.68;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;text-underline-offset:3px;}
+  a,button{touch-action:manipulation;}
+
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,247,240,.94);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;gap:14px;height:62px;flex-wrap:nowrap;}
+  .brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:Georgia,serif;font-size:18px;letter-spacing:.2px;
+    color:var(--ink);text-decoration:none;flex:0 0 auto;
+  }
+  .brand:hover{text-decoration:none;}
+  .brand-mark{
+    width:30px;height:30px;border-radius:9px;background:var(--accent);
+    color:var(--bg);display:grid;place-items:center;
+    font-size:16px;font-family:Georgia,serif;flex:0 0 auto;
+  }
+  .nav-links{
+    display:flex;align-items:center;gap:2px;
+    flex:1;justify-content:flex-end;
+    overflow-x:auto;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;padding:4px 0;
+  }
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links a{
+    color:var(--ink-soft);font-size:13.5px;font-weight:500;
+    padding:7px 12px;border-radius:99px;
+    transition:background .18s,color .18s;
+    white-space:nowrap;flex:0 0 auto;cursor:pointer;
+  }
+  .nav-links a:hover{background:var(--bg-soft);color:var(--accent);text-decoration:none;}
+  .nav-links a.active{background:var(--accent);color:#fff;}
+
+  .timer-pill{
+    display:none;align-items:center;gap:8px;
+    background:var(--accent);color:#fff;border:0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;font-weight:600;padding:7px 12px;border-radius:99px;
+    cursor:pointer;flex:0 0 auto;
+  }
+  .timer-pill.show{display:inline-flex;}
+  .timer-pill .tp-dot{width:6px;height:6px;border-radius:50%;background:#8fd19e;}
+  .timer-pill.done .tp-dot{background:#f0a58f;}
+
+  @media (max-width:560px){
+    .brand span:last-child{display:none;}
+    .nav-inner{gap:8px;}
+    .nav-links a{padding:7px 10px;font-size:13px;}
+  }
+
+  .page{display:none;}
+  .page.active{display:block;}
+  .page-inner{padding:52px 0 80px;}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:22px;
+  }
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  h1.hero-title{
+    font-family:Georgia,serif;font-weight:400;
+    font-size:clamp(2.1rem,5.4vw,3.4rem);
+    line-height:1.1;letter-spacing:-.02em;margin:0 0 20px;max-width:18ch;
+  }
+  h1.hero-title em{font-style:italic;color:var(--accent);}
+  .hero-lead{
+    font-size:clamp(1rem,1.7vw,1.15rem);
+    color:var(--ink-soft);max-width:60ch;margin:0 0 30px;
+  }
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+  .chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:500;color:var(--ink-soft);
+    background:var(--card);border:1px solid var(--line);
+    padding:7px 13px;border-radius:99px;
+  }
+  .chip b{color:var(--ink);font-weight:600;}
+
+  .page-head{margin-bottom:36px;max-width:66ch;}
+  .sec-num{
+    font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:10px;
+  }
+  h2{
+    font-family:Georgia,serif;font-weight:400;
+    font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.2;
+    letter-spacing:-.015em;margin:0 0 12px;
+  }
+  .sec-desc{margin:0;color:var(--ink-soft);}
+
+  .stat-strip{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--card);overflow:hidden;margin:34px 0 46px;
+    box-shadow:var(--shadow);
+  }
+  .stat-strip > div{padding:20px 16px;text-align:center;}
+  .stat-strip > div + div{border-left:1px solid var(--line);}
+  .stat-strip b{
+    display:block;font-family:Georgia,serif;font-weight:400;
+    font-size:1.55rem;line-height:1.1;margin-bottom:5px;
+  }
+  .stat-strip span{
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  @media (max-width:640px){
+    .stat-strip{grid-template-columns:1fr 1fr;}
+    .stat-strip > div:nth-child(3){border-left:0;}
+    .stat-strip > div:nth-child(n+3){border-top:1px solid var(--line);}
+  }
+
+  .jump-label{
+    font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:16px;
+  }
+  .jump-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:860px){.jump-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.jump-grid{grid-template-columns:1fr;}}
+  .jump{
+    display:flex;flex-direction:column;
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px;
+    color:inherit;text-decoration:none;box-shadow:var(--shadow);cursor:pointer;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .jump:hover{
+    transform:translateY(-3px);border-color:var(--accent);text-decoration:none;
+    box-shadow:0 2px 4px rgba(27,26,23,.05), 0 18px 40px -24px rgba(27,26,23,.45);
+  }
+  .jump-num{
+    font-family:Georgia,serif;font-size:11.5px;letter-spacing:.14em;
+    color:var(--muted);font-weight:600;margin-bottom:10px;
+  }
+  .jump h3{
+    font-family:Georgia,serif;font-weight:400;font-size:1.12rem;
+    margin:0 0 6px;letter-spacing:-.01em;
+  }
+  .jump p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.55;flex:1;}
+  .jump-go{
+    font-size:12.5px;font-weight:600;color:var(--accent);
+    letter-spacing:.04em;margin-top:12px;
+  }
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media (max-width:860px){.grid-3{grid-template-columns:1fr;}}
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 24px;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .card:hover{transform:translateY(-3px);border-color:#cfc5b0;}
+  .card-kode{
+    font-family:Georgia,serif;font-size:13px;letter-spacing:.1em;
+    color:var(--accent);background:var(--accent-wash);
+    padding:5px 11px;border-radius:8px;align-self:flex-start;
+    font-weight:600;margin-bottom:16px;
+  }
+  .card h3{
+    font-family:Georgia,serif;font-weight:400;font-size:1.22rem;
+    margin:0 0 6px;letter-spacing:-.01em;
+  }
+  .card-sub{font-size:13.5px;color:var(--muted);margin:0 0 20px;}
+
+  .stat-row{
+    display:flex;gap:0;border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);margin-bottom:18px;
+  }
+  .stat{flex:1;padding:13px 0;text-align:center;}
+  .stat + .stat{border-left:1px solid var(--line);}
+  .stat-val{
+    font-family:Georgia,serif;font-size:1.45rem;line-height:1;
+    color:var(--ink);display:block;margin-bottom:5px;
+  }
+  .stat-lbl{
+    font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .cakupan{list-style:none;padding:0;margin:0;font-size:14px;color:var(--ink-soft);}
+  .cakupan li{position:relative;padding-left:18px;margin-bottom:7px;}
+  .cakupan li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.45;
+  }
+  .cakupan li b{color:var(--ink);font-weight:600;}
+
+  .note-strip{
+    margin-top:26px;padding:18px 22px;
+    background:var(--accent-wash);border-radius:var(--radius);
+    font-size:14.5px;color:var(--accent);border:1px solid #d5e0ee;
+  }
+  .note-strip b{font-weight:600;}
+  .note-strip.warn{background:var(--amber-wash);color:var(--amber);border-color:#f0d9be;}
+
+  .sub-head{margin:52px 0 16px;max-width:66ch;}
+  .sub-head h2{font-size:clamp(1.3rem,2.4vw,1.6rem);}
+
+  .me{
+    margin-top:18px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--card);box-shadow:var(--shadow);overflow:hidden;
+  }
+  .me-head{
+    display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    padding:16px 20px;background:var(--bg-soft);border-bottom:1px solid var(--line);
+  }
+  .me-tabs{display:flex;gap:6px;flex-wrap:wrap;}
+  .me-tab{
+    display:inline-flex;align-items:center;gap:8px;
+    background:transparent;border:1px solid transparent;
+    color:var(--ink-soft);font-family:inherit;font-size:13.5px;font-weight:600;
+    padding:8px 14px;border-radius:99px;cursor:pointer;
+  }
+  .me-tab span{
+    font-size:11px;font-weight:600;color:var(--muted);
+    background:rgba(0,0,0,.05);padding:2px 7px;border-radius:99px;
+  }
+  .me-tab:hover{background:#fff;border-color:var(--line);color:var(--accent);}
+  .me-tab.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .me-tab.active span{background:rgba(255,255,255,.22);color:#fff;}
+  .me-progress{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);}
+  .me-bar{width:86px;height:6px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;}
+  .me-bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .35s ease;}
+  .me-tools{
+    display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+    padding:14px 20px;border-bottom:1px solid var(--line);
+  }
+  .me-search{flex:1;min-width:180px;position:relative;}
+  .me-search input{
+    width:100%;font-family:inherit;font-size:14px;
+    padding:9px 13px 9px 34px;
+    border:1px solid var(--line);border-radius:9px;
+    background:var(--bg);color:var(--ink);outline:none;
+  }
+  .me-search input:focus{border-color:var(--accent);background:#fff;}
+  .me-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.45;pointer-events:none;}
+  .me-mini{
+    font-family:inherit;font-size:12.5px;font-weight:600;
+    color:var(--ink-soft);background:var(--bg);
+    border:1px solid var(--line);padding:8px 13px;border-radius:9px;
+    cursor:pointer;
+  }
+  .me-mini:hover{border-color:var(--accent);color:var(--accent);background:#fff;}
+  .me-panel{display:none;padding:6px 20px 20px;}
+  .me-panel.active{display:block;}
+
+  .acc{border-bottom:1px solid var(--line);}
+  .acc:last-of-type{border-bottom:0;}
+  .acc-head{
+    width:100%;display:flex;align-items:center;gap:14px;
+    background:none;border:0;font-family:inherit;text-align:left;
+    padding:16px 0;cursor:pointer;color:var(--ink);
+  }
+  .acc-num{
+    font-family:Georgia,serif;font-size:12.5px;
+    color:var(--accent);background:var(--accent-wash);
+    width:28px;height:28px;border-radius:8px;
+    display:grid;place-items:center;flex:0 0 auto;font-weight:600;
+  }
+  .acc-title{flex:1;font-size:15px;font-weight:600;line-height:1.4;}
+  .acc-title em{
+    font-style:normal;font-weight:500;color:var(--muted);
+    font-size:13px;display:block;margin-top:2px;
+  }
+  .acc-flag{
+    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:700;color:var(--green);background:var(--green-wash);
+    padding:3px 8px;border-radius:5px;flex:0 0 auto;
+  }
+  .acc-chev{
+    width:22px;height:22px;display:grid;place-items:center;
+    color:var(--muted);transition:transform .25s ease;flex:0 0 auto;
+  }
+  .acc.open .acc-chev{transform:rotate(180deg);}
+  .acc.done .acc-num{background:var(--green-wash);color:var(--green);}
+  .acc-body{display:none;padding:0 0 20px 42px;}
+  .acc.open .acc-body{display:block;}
+  .acc-body p{font-size:14.5px;color:var(--ink-soft);margin:0 0 12px;}
+  .acc-body h5{
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin:16px 0 8px;font-weight:700;
+  }
+  .kp{list-style:none;padding:0;margin:0 0 14px;font-size:14px;color:var(--ink-soft);}
+  .kp li{position:relative;padding-left:18px;margin-bottom:7px;}
+  .kp li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.45;
+  }
+  .kp li b{color:var(--ink);font-weight:600;}
+  .acc-note{
+    font-size:13px;color:var(--accent);background:var(--accent-wash);
+    border-radius:9px;padding:11px 14px;margin:0 0 14px;line-height:1.6;
+  }
+  .mark-btn{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:inherit;font-size:12.5px;font-weight:600;
+    padding:7px 13px;border-radius:8px;
+    border:1px solid var(--line);background:var(--bg);
+    color:var(--ink-soft);cursor:pointer;
+  }
+  .mark-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .mark-btn.on{background:var(--green-wash);border-color:#c5dcc9;color:var(--green);}
+  .me-empty{display:none;padding:26px 0;text-align:center;font-size:14px;color:var(--muted);}
+  @media (max-width:600px){
+    .acc-body{padding-left:0;}
+    .acc-flag{display:none;}
+    .me-head{padding:14px 16px;}
+    .me-tools{padding:12px 16px;}
+    .me-panel{padding:4px 16px 16px;}
+  }
+
+  .table-wrap{
+    margin-top:30px;border:1px solid var(--line);
+    border-radius:var(--radius);overflow:auto;background:var(--card);
+  }
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px;}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{
+    font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;background:var(--bg-soft);
+  }
+  tr:last-child td{border-bottom:0;}
+  td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
+  .td-strong{font-weight:600;color:var(--ink);}
+  .score-pattern td:first-child{width:48px;text-align:center;font-weight:700;}
+
+  .src-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:760px){.src-list{grid-template-columns:1fr;}}
+  .src{
+    display:flex;gap:16px;align-items:flex-start;
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 22px;
+    color:inherit;text-decoration:none;
+  }
+  .src:hover{text-decoration:none;border-color:var(--accent);background:#fff;}
+  .src-ic{
+    flex:0 0 auto;width:36px;height:36px;border-radius:10px;
+    background:var(--bg-soft);display:grid;place-items:center;
+    font-family:Georgia,serif;font-size:15px;color:var(--accent);font-weight:600;
+  }
+  .src-body h4{margin:0 0 4px;font-size:15.5px;font-weight:600;color:var(--ink);}
+  .src-body p{margin:0;font-size:14px;color:var(--muted);line-height:1.55;}
+  .src-tag{
+    display:inline-block;margin-top:9px;font-size:11.5px;
+    letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    color:var(--accent);opacity:.85;
+  }
+
+  .sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:860px){.sim-grid{grid-template-columns:1fr;}}
+  .sim{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px 26px;
+    display:flex;flex-direction:column;box-shadow:var(--shadow);
+  }
+  .sim-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .sim-badge{
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    font-weight:700;padding:4px 10px;border-radius:6px;
+  }
+  .b-resmi{background:var(--green-wash);color:var(--green);}
+  .b-latihan{background:var(--amber-wash);color:var(--amber);}
+  .sim h3{font-family:Georgia,serif;font-weight:400;font-size:1.24rem;margin:0 0 8px;}
+  .sim p{margin:0 0 18px;font-size:14.5px;color:var(--ink-soft);flex:1;}
+  .sim ul{list-style:none;padding:0;margin:0 0 22px;font-size:13.5px;color:var(--muted);}
+  .sim ul li{padding-left:18px;position:relative;margin-bottom:6px;}
+  .sim ul li::before{content:"→";position:absolute;left:0;color:var(--accent);opacity:.6;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;
+    padding:12px 20px;border-radius:10px;border:1px solid var(--accent);
+    align-self:flex-start;
+  }
+  .btn:hover{background:var(--accent-soft);text-decoration:none;}
+
+  .timer-box{
+    margin-top:18px;background:var(--bg-soft);
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;display:flex;flex-wrap:wrap;align-items:center;
+    justify-content:space-between;gap:20px;
+  }
+  .timer-info h3{font-family:Georgia,serif;font-weight:400;font-size:1.1rem;margin:0 0 4px;}
+  .timer-info p{margin:0;font-size:13.5px;color:var(--muted);max-width:42ch;}
+  .timer-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .timer-display{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:2rem;font-weight:600;letter-spacing:.02em;
+    color:var(--ink);min-width:5.6ch;text-align:center;
+    font-variant-numeric:tabular-nums;
+  }
+  .timer-display.warn{color:var(--red);}
+  .t-btn{
+    background:var(--card);border:1px solid var(--line);
+    color:var(--ink);font-size:13.5px;font-weight:600;
+    padding:9px 16px;border-radius:9px;cursor:pointer;font-family:inherit;
+  }
+  .t-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .t-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .t-btn.primary:hover{background:var(--accent-soft);color:#fff;}
+
+  .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:860px){.strategy-grid{grid-template-columns:1fr;}}
+  .strategy-card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
+  }
+  .strategy-card h3{font-family:Georgia,serif;font-weight:400;font-size:1.15rem;margin:0 0 6px;}
+  .strategy-card .sub{font-size:13px;color:var(--muted);margin:0 0 16px;}
+  .strategy-card p{margin:0 0 12px;font-size:14.5px;color:var(--ink-soft);}
+  .strategy-card p:last-child{margin-bottom:0;}
+  .mini-list{list-style:none;padding:0;margin:0;font-size:14px;color:var(--ink-soft);}
+  .mini-list li{padding-left:18px;position:relative;margin-bottom:7px;}
+  .mini-list li::before{
+    content:"";position:absolute;left:0;top:.62em;
+    width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.45;
+  }
+  .order-options{display:grid;gap:10px;margin-top:4px;}
+  .order-opt{
+    border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+    background:var(--bg-soft);font-size:13.5px;
+  }
+  .order-opt b{
+    display:block;font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:3px;
+  }
+  .order-opt span{color:var(--ink-soft);}
+  .alloc-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;}
+  .alloc-label{width:46px;font-weight:600;color:var(--ink);flex:0 0 auto;}
+  .alloc-bar{flex:1;height:10px;border-radius:99px;background:var(--bg-soft);overflow:hidden;}
+  .alloc-fill{height:100%;border-radius:99px;background:var(--accent);}
+  .alloc-time{width:64px;text-align:right;color:var(--muted);font-size:13px;flex:0 0 auto;}
+
+  /* ---------- QUIZ ---------- */
+  .quiz-bar{
+    display:flex;flex-wrap:wrap;justify-content:space-between;
+    gap:14px;align-items:center;margin-bottom:20px;
+    padding:16px 20px;background:var(--card);
+    border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  .quiz-filter{display:flex;gap:6px;flex-wrap:wrap;}
+  .qf-btn{
+    font-family:inherit;font-size:13px;font-weight:600;
+    padding:7px 14px;border-radius:99px;
+    border:1px solid var(--line);background:var(--bg);
+    color:var(--ink-soft);cursor:pointer;transition:all .16s;
+  }
+  .qf-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .qf-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .quiz-score{
+    display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+    font-size:13px;color:var(--muted);
+  }
+  .quiz-score b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;}
+  .quiz-reset{
+    font-family:inherit;font-size:12.5px;font-weight:600;
+    padding:7px 12px;border-radius:8px;
+    border:1px solid var(--line);background:var(--bg);
+    color:var(--ink-soft);cursor:pointer;
+  }
+  .quiz-reset:hover{border-color:var(--accent);color:var(--accent);}
+
+  .quiz{display:grid;gap:16px;}
+  .q-item{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
+  }
+  .q-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .q-badge{
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    font-weight:700;padding:4px 9px;border-radius:5px;
+    background:var(--accent-wash);color:var(--accent);
+  }
+  .q-badge.tiu{background:var(--amber-wash);color:var(--amber);}
+  .q-badge.tkp{background:var(--green-wash);color:var(--green);}
+  .q-text{font-size:15.5px;margin:0 0 16px;color:var(--ink);font-weight:500;}
+  .q-opts{display:grid;gap:7px;margin:0 0 16px;}
+  .q-opt{
+    font-size:14px;padding:9px 13px;border-radius:8px;
+    background:var(--bg-soft);color:var(--ink-soft);
+    border:1px solid transparent;transition:all .15s;cursor:pointer;
+  }
+  .q-opt:hover{background:#fff;border-color:var(--line);}
+  .q-opt.correct{background:var(--green-wash);color:var(--green);border-color:#c5dcc9;font-weight:600;}
+  .q-opt.wrong{background:var(--red-wash);color:var(--red);border-color:#f0ccc5;}
+  .q-toggle{
+    background:none;border:1px solid var(--line);
+    color:var(--accent);font-size:13.5px;font-weight:600;
+    padding:8px 15px;border-radius:8px;cursor:pointer;font-family:inherit;
+  }
+  .q-toggle:hover{background:var(--accent-wash);border-color:var(--accent);}
+  .q-explain{
+    display:none;margin-top:14px;padding-top:14px;
+    border-top:1px dashed var(--line);
+    font-size:14px;color:var(--ink-soft);line-height:1.65;
+  }
+  .q-explain.open{display:block;}
+  .q-explain b{color:var(--ink);}
+
+  .notes-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start;}
+  @media (max-width:860px){.notes-wrap{grid-template-columns:1fr;gap:32px;}}
+  .prose p{margin:0 0 16px;color:var(--ink-soft);}
+  .prose p:last-child{margin-bottom:0;}
+  .prose strong{color:var(--ink);font-weight:600;}
+  .prose h3{font-family:Georgia,serif;font-weight:400;font-size:1.1rem;margin:32px 0 6px;}
+  .quote{
+    border-left:3px solid var(--accent);
+    padding:4px 0 4px 22px;margin:26px 0 0;
+    font-family:Georgia,serif;font-style:italic;
+    font-size:1.1rem;line-height:1.55;color:var(--ink);
+  }
+  .id-card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px 26px;
+    box-shadow:var(--shadow);text-align:center;
+  }
+  .avatar{
+    width:64px;height:64px;border-radius:50%;
+    background:var(--accent);color:var(--bg);
+    display:grid;place-items:center;margin:0 auto 16px;
+    font-family:Georgia,serif;font-size:23px;letter-spacing:.5px;
+  }
+  .id-name{font-family:Georgia,serif;font-size:1.15rem;margin:0 0 4px;}
+  .id-role{font-size:13px;color:var(--muted);margin:0 0 20px;}
+  .id-list{
+    list-style:none;padding:0;margin:0;text-align:left;
+    border-top:1px solid var(--line);
+  }
+  .id-list li{
+    display:flex;justify-content:space-between;gap:14px;
+    padding:11px 0;border-bottom:1px solid var(--line);font-size:13.5px;
+  }
+  .id-list li span:first-child{color:var(--muted);}
+  .id-list li span:last-child{color:var(--ink);font-weight:600;}
+
+  .schedule{
+    margin-top:14px;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;background:var(--card);
+  }
+  .schedule-row{
+    display:grid;grid-template-columns:110px 1fr;gap:0;
+    border-bottom:1px solid var(--line);font-size:14px;
+  }
+  .schedule-row:last-child{border-bottom:0;}
+  .schedule-day{
+    padding:12px 16px;background:var(--bg-soft);
+    font-weight:600;color:var(--ink);font-size:13px;
+    display:flex;align-items:center;
+  }
+  .schedule-desc{padding:12px 16px;color:var(--ink-soft);}
+  @media (max-width:560px){
+    .schedule-row{grid-template-columns:1fr;}
+    .schedule-day{border-bottom:1px solid var(--line);}
+  }
+
+  footer{padding:46px 0 54px;background:var(--bg-soft);border-top:1px solid var(--line);}
+  .foot{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    gap:28px;flex-wrap:wrap;
+  }
+  .foot-brand{font-family:Georgia,serif;font-size:1.05rem;margin:0 0 6px;}
+  .foot p{margin:0;font-size:13.5px;color:var(--muted);max-width:46ch;line-height:1.6;}
+  .foot-right{text-align:right;font-size:13.5px;color:var(--muted);}
+  @media (max-width:720px){.foot-right{text-align:left;}}
+  .credit{font-family:Georgia,serif;font-size:15px;color:var(--ink);}
+  .credit a{color:var(--accent);font-weight:600;}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .jump:hover,.card:hover,.src:hover{transform:none;}
+  }
+
+  .page[data-page="beranda"]{display:block;}
+  .page[data-page="beranda"].active{display:block;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#/beranda" class="brand" data-nav="beranda">
+      <span class="brand-mark">l</span>
+      <span>SKD&nbsp;Notes</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+      <a href="#/beranda" data-nav="beranda">Beranda</a>
+      <a href="#/materi" data-nav="materi">Materi</a>
+      <a href="#/bankdata" data-nav="bankdata">Bank Data</a>
+      <a href="#/simulasi" data-nav="simulasi">Simulasi</a>
+      <a href="#/strategi" data-nav="strategi">Strategi</a>
+      <a href="#/latihan" data-nav="latihan">Latihan</a>
+      <a href="#/catatan" data-nav="catatan">Catatan</a>
+    </nav>
+    <button class="timer-pill" id="navTimer" type="button" aria-label="Buka timer latihan">
+      <span class="tp-dot"></span>
+      <span id="navTimerText">100:00</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- BERANDA -->
+  <div class="page active" data-page="beranda">
+    <div class="wrap page-inner">
+      <div class="eyebrow"><span class="dot"></span> Catatan belajar personal</div>
+      <h1 class="hero-title">Ruang belajar <em>SKD CPNS</em> yang saya rapikan.</h1>
+      <p class="hero-lead">
+        Bukan portal resmi, bukan bimbel. Ini tempat saya mengumpulkan peta materi,
+        aturan penilaian, sumber latihan, simulasi ujian, dan strategi waktu —
+        dipisah per halaman supaya tidak jadi satu gulungan panjang.
+      </p>
+      <div class="hero-meta">
+        <span class="chip"><b>110</b> soal · <b>100</b> menit</span>
+        <span class="chip">≈ <b>54 detik</b> per soal</span>
+        <span class="chip"><b>16</b> topik materi</span>
+        <span class="chip"><b>18</b> soal latihan</span>
+        <span class="chip">Dikurasi oleh <b>lz.dln</b></span>
+      </div>
+
+      <div class="stat-strip">
+        <div><b>3</b><span>Subtes</span></div>
+        <div><b>110</b><span>Soal</span></div>
+        <div><b>100</b><span>Menit</span></div>
+        <div><b>550</b><span>Skor maks</span></div>
+      </div>
+
+      <div class="jump-label">Mulai dari mana</div>
+      <div class="jump-grid">
+        <a class="jump" href="#/materi">
+          <span class="jump-num">01</span>
+          <h3>Materi</h3>
+          <p>Peta TWK, TIU, TKP plus 16 topik yang bisa dibuka dan ditandai sudah dipelajari.</p>
+          <span class="jump-go">Buka materi →</span>
+        </a>
+        <a class="jump" href="#/bankdata">
+          <span class="jump-num">02</span>
+          <h3>Bank Data</h3>
+          <p>Delapan sumber latihan yang saya pakai, dipilah berdasarkan fungsi.</p>
+          <span class="jump-go">Lihat sumber →</span>
+        </a>
+        <a class="jump" href="#/simulasi">
+          <span class="jump-num">03</span>
+          <h3>Simulasi</h3>
+          <p>Simulasi CAT resmi, tryout latihan, mekanisme ujian, dan timer 100 menit.</p>
+          <span class="jump-go">Mulai simulasi →</span>
+        </a>
+        <a class="jump" href="#/strategi">
+          <span class="jump-num">04</span>
+          <h3>Strategi</h3>
+          <p>Urutan pengerjaan, cara menghadapi tiap subtes, dan logika skor TKP.</p>
+          <span class="jump-go">Baca strategi →</span>
+        </a>
+        <a class="jump" href="#/latihan">
+          <span class="jump-num">05</span>
+          <h3>Latihan Kilat</h3>
+          <p>18 soal bertingkat dengan filter subtes, pembahasan, dan pelacak skor.</p>
+          <span class="jump-go">Coba soal →</span>
+        </a>
+        <a class="jump" href="#/catatan">
+          <span class="jump-num">06</span>
+          <h3>Catatan</h3>
+          <p>Kenapa halaman ini ada, jadwal belajar, dan siapa yang menyusunnya.</p>
+          <span class="jump-go">Baca catatan →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATERI -->
+  <div class="page" data-page="materi">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">01 — Materi</div>
+        <h2>Tiga subtes, satu ambang batas per subtes.</h2>
+        <p class="sec-desc">
+          SKD berbasis CAT terdiri dari 110 soal dalam 100 menit. Setiap subtes punya
+          passing grade sendiri — nilai total yang tinggi tidak menolong kalau salah satu
+          subtes tidak lolos ambang batas.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="card-kode">TWK</span>
+          <h3>Tes Wawasan Kebangsaan</h3>
+          <p class="card-sub">Konseptual · implementasi nilai</p>
+          <div class="stat-row">
+            <div class="stat"><span class="stat-val">30</span><span class="stat-lbl">Soal</span></div>
+            <div class="stat"><span class="stat-val">65</span><span class="stat-lbl">Passing</span></div>
+            <div class="stat"><span class="stat-val">150</span><span class="stat-lbl">Maks</span></div>
+          </div>
+          <ul class="cakupan">
+            <li><b>Nasionalisme</b> — kepentingan nasional di atas pribadi</li>
+            <li><b>Integritas</b> — kejujuran, konsistensi, ketangguhan</li>
+            <li><b>Bela negara</b> — peran aktif mempertahankan bangsa</li>
+            <li><b>Pilar negara</b> — Pancasila, UUD 1945, Bhinneka Tunggal Ika, NKRI</li>
+            <li><b>Bahasa negara</b> — Bahasa Indonesia yang baik dan benar</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="card-kode">TIU</span>
+          <h3>Tes Intelegensia Umum</h3>
+          <p class="card-sub">Logika · kecepatan · tanpa kalkulator</p>
+          <div class="stat-row">
+            <div class="stat"><span class="stat-val">35</span><span class="stat-lbl">Soal</span></div>
+            <div class="stat"><span class="stat-val">80</span><span class="stat-lbl">Passing</span></div>
+            <div class="stat"><span class="stat-val">175</span><span class="stat-lbl">Maks</span></div>
+          </div>
+          <ul class="cakupan">
+            <li><b>Verbal</b> — sinonim, antonim, analogi, silogisme</li>
+            <li><b>Numerik</b> — operasi hitung, persen, deret, soal cerita</li>
+            <li><b>Figural</b> — analogi gambar, ketidaksamaan, serial</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="card-kode">TKP</span>
+          <h3>Tes Karakteristik Pribadi</h3>
+          <p class="card-sub">Perilaku · skor 1–5 per opsi</p>
+          <div class="stat-row">
+            <div class="stat"><span class="stat-val">45</span><span class="stat-lbl">Soal</span></div>
+            <div class="stat"><span class="stat-val">166</span><span class="stat-lbl">Passing</span></div>
+            <div class="stat"><span class="stat-val">225</span><span class="stat-lbl">Maks</span></div>
+          </div>
+          <ul class="cakupan">
+            <li><b>Pelayanan publik</b> — ramah, cepat, solutif</li>
+            <li><b>Jejaring kerja</b> — kolaborasi dan berbagi info</li>
+            <li><b>Sosial budaya</b> — toleransi dan adaptasi</li>
+            <li><b>TIK</b> — teknologi untuk kinerja</li>
+            <li><b>Profesionalisme</b> — sesuai tuntutan jabatan</li>
+            <li><b>Anti-radikalisme</b> — sikap terhadap stimulus</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="sub-head">
+        <h2>Buka materinya, bukan cuma daftar topik.</h2>
+        <p class="sec-desc">
+          Pilih subtes, buka topik untuk membaca ringkasan dan poin kuncinya, lalu tandai
+          topik yang sudah kamu pelajari. Progres tersimpan di browser ini.
+        </p>
+      </div>
+
+      <div class="me" id="materiExplorer">
+        <div class="me-head">
+          <div class="me-tabs" role="tablist" aria-label="Pilih subtes">
+            <button class="me-tab active" type="button" role="tab" aria-selected="true" data-tab="twk">TWK <span>5</span></button>
+            <button class="me-tab" type="button" role="tab" aria-selected="false" data-tab="tiu">TIU <span>5</span></button>
+            <button class="me-tab" type="button" role="tab" aria-selected="false" data-tab="tkp">TKP <span>6</span></button>
+          </div>
+          <div class="me-progress">
+            <span class="me-progress-text">0/5 ditandai</span>
+            <span class="me-bar"><i></i></span>
+          </div>
+        </div>
+
+        <div class="me-tools">
+          <span class="me-search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input id="meSearch" type="search" placeholder="Cari topik materi…" aria-label="Cari materi" autocomplete="off" />
+          </span>
+          <button class="me-mini me-expand" type="button">Buka semua</button>
+        </div>
+
+        <div class="me-panel active" data-panel="twk" role="tabpanel">
+          <div class="acc" data-materi-id="twk-nasionalisme">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">01</span>
+              <span class="acc-title">Nasionalisme<em>Kesetiaan pada bangsa tanpa merendahkan bangsa lain</em></span>
+              <span class="acc-flag">Sering keluar</span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Nasionalisme adalah paham kebangsaan yang menempatkan kesetiaan tertinggi pada bangsa dan negara. Nasionalisme Indonesia bukan chauvinisme.</p>
+              <h5>Poin kunci</h5>
+              <ul class="kp">
+                <li><b>Cinta tanah air</b> dan bangga menjadi bagian dari bangsa Indonesia.</li>
+                <li><b>Rela berkorban</b> untuk kepentingan bangsa di atas kepentingan pribadi.</li>
+                <li><b>Menjaga persatuan</b> dalam keberagaman.</li>
+                <li><b>Menghargai bangsa lain</b> tanpa kehilangan identitas.</li>
+              </ul>
+              <div class="acc-note">Pilih respons yang mengedepankan kepentingan bersama.</div>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="twk-integritas">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">02</span>
+              <span class="acc-title">Integritas<em>Konsistensi antara nilai, ucapan, dan tindakan</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Integritas adalah kesesuaian antara nilai yang diyakini, ucapan, dan tindakan — termasuk saat tidak ada yang mengawasi.</p>
+              <h5>Indikator</h5>
+              <ul class="kp">
+                <li><b>Jujur</b> — menyampaikan fakta apa adanya.</li>
+                <li><b>Konsisten</b> — sama di depan maupun di belakang.</li>
+                <li><b>Tanggung jawab</b> — mengakui kesalahan dan memperbaikinya.</li>
+                <li><b>Menolak gratifikasi.</b></li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="twk-bela-negara">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">03</span>
+              <span class="acc-title">Bela Negara<em>Hak sekaligus kewajiban setiap warga negara</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Dasar hukumnya Pasal 27 ayat (3) UUD 1945.</p>
+              <h5>Lima nilai dasar</h5>
+              <ul class="kp">
+                <li>Cinta tanah air.</li>
+                <li>Kesadaran berbangsa dan bernegara.</li>
+                <li>Yakin Pancasila sebagai ideologi negara.</li>
+                <li>Rela berkorban untuk bangsa dan negara.</li>
+                <li>Memiliki kemampuan awal bela negara.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="twk-pilar-negara">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">04</span>
+              <span class="acc-title">Pilar Negara<em>Pancasila, UUD 1945, NKRI, Bhinneka Tunggal Ika</em></span>
+              <span class="acc-flag">Sering keluar</span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Empat pilar kebangsaan menjadi kerangka utama soal TWK.</p>
+              <h5>Hafalan pasal yang sering diuji</h5>
+              <ul class="kp">
+                <li><b>Pasal 1 ayat (1)</b> — negara kesatuan berbentuk republik. <b>Ayat (3)</b> — negara hukum.</li>
+                <li><b>Pasal 27</b> — kesamaan di depan hukum. <b>Pasal 28</b> — HAM. <b>Pasal 31</b> — pendidikan. <b>Pasal 33</b> — perekonomian.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="twk-bahasa-negara">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">05</span>
+              <span class="acc-title">Bahasa Negara<em>Kedudukan Bahasa Indonesia dan kalimat efektif</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Pasal 36 UUD 1945 menyatakan bahwa bahasa negara ialah Bahasa Indonesia.</p>
+              <h5>Sering diuji</h5>
+              <ul class="kp">
+                <li><b>Kata baku:</b> praktik, analisis, apotek, izin, silakan.</li>
+                <li><b>Penulisan “di”:</b> kata depan dipisah, awalan disambung.</li>
+                <li><b>Kalimat efektif:</b> subjek dan predikat jelas.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="me-empty">Tidak ada topik yang cocok dengan pencarian.</div>
+        </div>
+
+        <div class="me-panel" data-panel="tiu" role="tabpanel">
+          <div class="acc" data-materi-id="tiu-verbal">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">01</span>
+              <span class="acc-title">Verbal: Sinonim &amp; Analogi<em>Hubungan makna dan padanan kata</em></span>
+              <span class="acc-flag">Sering keluar</span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Soal verbal menguji kemampuan memahami hubungan makna antar kata.</p>
+              <h5>Jenis hubungan analogi</h5>
+              <ul class="kp">
+                <li><b>Fungsi:</b> pisau : memotong.</li>
+                <li><b>Bagian–keseluruhan:</b> roda : mobil.</li>
+                <li><b>Sebab–akibat:</b> hujan : banjir.</li>
+                <li><b>Tingkat:</b> hangat : panas.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tiu-silogisme">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">02</span>
+              <span class="acc-title">Silogisme &amp; Penalaran Analitis<em>Menarik kesimpulan dari premis</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Silogisme menarik kesimpulan dari dua premis atau lebih.</p>
+              <h5>Pola yang sering muncul</h5>
+              <ul class="kp">
+                <li><b>Modus ponens:</b> P → Q; P benar; maka Q benar.</li>
+                <li><b>Modus tollens:</b> P → Q; Q salah; maka P salah.</li>
+                <li><b>Silogisme hipotetis:</b> P → Q; Q → R; maka P → R.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tiu-aritmatika">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">03</span>
+              <span class="acc-title">Numerik: Aritmatika &amp; Persen<em>Hitung cepat tanpa kalkulator</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Soal numerik menuntut kecepatan, bukan hanya ketepatan.</p>
+              <h5>Rumus yang sering dipakai</h5>
+              <ul class="kp">
+                <li><b>Persen:</b> x% dari N = (x/100) × N.</li>
+                <li><b>Diskon bertingkat:</b> dihitung berurutan, bukan dijumlahkan.</li>
+                <li><b>Kerja bersama:</b> 1/t = 1/t₁ + 1/t₂.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tiu-deret">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">04</span>
+              <span class="acc-title">Deret Angka<em>Mengenali pola barisan</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Periksa pola secara berurutan: selisih, rasio, lalu pola bertingkat atau berselang.</p>
+              <h5>Jenis pola</h5>
+              <ul class="kp">
+                <li><b>Aritmetika:</b> selisih tetap.</li>
+                <li><b>Geometri:</b> rasio tetap.</li>
+                <li><b>Fibonacci:</b> jumlah dua suku sebelumnya.</li>
+                <li><b>Pola loncat:</b> dua deret berselang-seling.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tiu-figural">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">05</span>
+              <span class="acc-title">Figural<em>Rotasi, pencerminan, jumlah sisi</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Soal figural menguji kemampuan membaca perubahan bentuk gambar.</p>
+              <h5>Hal yang perlu diperiksa</h5>
+              <ul class="kp">
+                <li><b>Rotasi:</b> arah dan besar sudut.</li>
+                <li><b>Pencerminan:</b> sumbu vertikal atau horizontal.</li>
+                <li><b>Jumlah sisi:</b> bertambah, berkurang, atau tetap.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="me-empty">Tidak ada topik yang cocok dengan pencarian.</div>
+        </div>
+
+        <div class="me-panel" data-panel="tkp" role="tabpanel">
+          <div class="acc" data-materi-id="tkp-pelayanan">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">01</span>
+              <span class="acc-title">Pelayanan Publik<em>Ramah, cepat, tepat, solutif</em></span>
+              <span class="acc-flag">Sering keluar</span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek ini menguji cara merespons kebutuhan masyarakat.</p>
+              <h5>Poin kunci</h5>
+              <ul class="kp">
+                <li><b>Empati:</b> memahami keluhan tanpa terbawa emosi.</li>
+                <li><b>Solusi konkret.</b></li>
+                <li><b>Tidak melempar tanggung jawab.</b></li>
+                <li><b>Sesuai kewenangan.</b></li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tkp-jejaring">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">02</span>
+              <span class="acc-title">Jejaring Kerja<em>Kolaborasi dan berbagi informasi</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek ini menilai kemampuan membangun hubungan kerja untuk tujuan organisasi.</p>
+              <ul class="kp">
+                <li>Berbagi informasi yang relevan.</li>
+                <li>Mengoordinasikan pekerjaan lintas bagian.</li>
+                <li>Membangun relasi jangka panjang.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tkp-sosbud">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">03</span>
+              <span class="acc-title">Sosial Budaya<em>Toleransi dan adaptasi</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek ini menilai sikap terhadap keberagaman.</p>
+              <ul class="kp">
+                <li>Menghargai perbedaan.</li>
+                <li>Beradaptasi tanpa kehilangan identitas.</li>
+                <li>Tidak memaksakan nilai pribadi.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tkp-tik">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">04</span>
+              <span class="acc-title">Teknologi Informasi &amp; Komunikasi<em>Memanfaatkan teknologi untuk kinerja</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek TIK menilai kemauan memanfaatkan teknologi.</p>
+              <ul class="kp">
+                <li>Mempelajari aplikasi atau sistem baru.</li>
+                <li>Menggunakan teknologi untuk efisiensi.</li>
+                <li>Menjaga keamanan data.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tkp-profesionalisme">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">05</span>
+              <span class="acc-title">Profesionalisme<em>Tugas sesuai tuntutan jabatan</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek ini menilai cara menjalankan tugas sesuai standar.</p>
+              <ul class="kp">
+                <li>Disiplin waktu dan prosedur.</li>
+                <li>Bertanggung jawab atas hasil kerja.</li>
+                <li>Menjaga kualitas meski tanpa pengawasan.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="acc" data-materi-id="tkp-radikalisme">
+            <button class="acc-head" type="button" aria-expanded="false">
+              <span class="acc-num">06</span>
+              <span class="acc-title">Anti-Radikalisme<em>Sikap terhadap stimulus radikal</em></span>
+              <span class="acc-chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="acc-body">
+              <p>Aspek ini menilai sikap terhadap paham yang bertentangan dengan Pancasila.</p>
+              <ul class="kp">
+                <li>Kritis terhadap informasi.</li>
+                <li>Memverifikasi sumber.</li>
+                <li>Melaporkan ke kanal resmi.</li>
+              </ul>
+              <button class="mark-btn" type="button">Tandai sudah dipelajari</button>
+            </div>
+          </div>
+
+          <div class="me-empty">Tidak ada topik yang cocok dengan pencarian.</div>
+        </div>
+      </div>
+
+      <div class="sub-head">
+        <h2>Aturan penilaian &amp; ambang batas.</h2>
+        <p class="sec-desc">
+          TWK dan TIU memakai sistem benar–salah murni. TKP memakai skala bertingkat.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Subtes</th><th class="num">Soal</th><th class="num">Nilai / Soal</th>
+              <th class="num">Nilai Maks</th><th class="num">Passing Grade</th><th class="num">Target Aman</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="td-strong">TWK</td><td class="num">30</td><td class="num">Benar 5 · Salah 0</td><td class="num">150</td><td class="num">65</td><td class="num">75–85</td></tr>
+            <tr><td class="td-strong">TIU</td><td class="num">35</td><td class="num">Benar 5 · Salah 0</td><td class="num">175</td><td class="num">80</td><td class="num">95–110</td></tr>
+            <tr><td class="td-strong">TKP</td><td class="num">45</td><td class="num">Skala 1–5 · Kosong 0</td><td class="num">225</td><td class="num">166</td><td class="num">180–200</td></tr>
+            <tr><td class="td-strong">Total</td><td class="num">110</td><td class="num">—</td><td class="num">550</td><td class="num">—</td><td class="num">350–395</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-strip warn">
+        <b>Yang sering disalahpahami:</b> lolos passing grade bukan berarti lolos SKD.
+        Yang lanjut ke SKB adalah peringkat terbaik sebanyak 3 kali jumlah formasi.
+        Nilai akhir = 40% SKD + 60% SKB.
+      </div>
+
+      <div class="note-strip">
+        <b>Jalur khusus:</b> cumlaude/diaspora — TIU minimal 85, kumulatif 311. Disabilitas dan
+        putra/putri Papua serta Kalimantan — TIU minimal 60, kumulatif 286.
+      </div>
+    </div>
+  </div>
+
+  <!-- BANK DATA -->
+  <div class="page" data-page="bankdata">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">02 — Bank Data</div>
+        <h2>Sumber yang saya pakai, dipilah berdasarkan fungsi.</h2>
+        <p class="sec-desc">
+          Semua tautan mengarah ke sumber eksternal, diurutkan berdasarkan kegunaan.
+        </p>
+      </div>
+
+      <div class="src-list">
+        <a class="src" href="https://jadiasn.id/materi-skd-cpns/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">Ja</span>
+          <span class="src-body">
+            <h4>JadiASN — Materi SKD Lengkap</h4>
+            <p>Rangkuman TWK, TIU, dan TKP per sub-materi.</p>
+            <span class="src-tag">Materi konsep</span>
+          </span>
+        </a>
+        <a class="src" href="https://dealls.com/pengembangan-karir/contoh-soal-tiu" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">De</span>
+          <span class="src-body">
+            <h4>Dealls — 100+ Contoh Soal TIU</h4>
+            <p>Soal verbal, numerik, logika, dan figural dengan pembahasan.</p>
+            <span class="src-tag">Contoh soal TIU</span>
+          </span>
+        </a>
+        <a class="src" href="https://jadisekdin.id/soal-skd-cpns-2026/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">JS</span>
+          <span class="src-body">
+            <h4>JadiSekdin — 50 Soal SKD + Pembahasan</h4>
+            <p>Paket TWK, TIU, TKP dengan pembahasan singkat.</p>
+            <span class="src-tag">Paket latihan</span>
+          </span>
+        </a>
+        <a class="src" href="https://jadiasn.id/55-latihan-soal-cpns/" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">55</span>
+          <span class="src-body">
+            <h4>JadiASN — 55 Latihan Soal + PDF</h4>
+            <p>55 soal ilustratif plus tiga dokumen PDF TWK/TIU/TKP.</p>
+            <span class="src-tag">Soal + PDF</span>
+          </span>
+        </a>
+        <a class="src" href="http://pejuangpns.com/artikel/contoh-soal-tkp-pelayanan-publik-pembahasan" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">PP</span>
+          <span class="src-body">
+            <h4>PejuangPNS — TKP Pelayanan Publik + Skor</h4>
+            <p>Contoh soal TKP dengan estimasi skor 1–5 per opsi.</p>
+            <span class="src-tag">TKP mendalam</span>
+          </span>
+        </a>
+        <a class="src" href="https://tes-cpns.com/artikel/50-contoh-soal-tiu-cpns-2026-dan-pembahasan" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">TC</span>
+          <span class="src-body">
+            <h4>Tes-CPNS.com — 50 Soal TIU + Strategi</h4>
+            <p>Soal TIU dengan pembahasan dan tips membaca pola.</p>
+            <span class="src-tag">TIU + strategi</span>
+          </span>
+        </a>
+        <a class="src" href="https://www.misipns.com/blog/apa-itu-skd-cpns" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">Mi</span>
+          <span class="src-body">
+            <h4>MisipNS — Struktur &amp; Skor Aman SKD</h4>
+            <p>Struktur SKD, sistem penilaian, dan target skor aman.</p>
+            <span class="src-tag">Orientasi &amp; target</span>
+          </span>
+        </a>
+        <a class="src" href="https://www.plcpekanbaru.com/artikel/detail/1723/trik-cerdas-mengerjakan-skd-sesuai-tipe-soal" target="_blank" rel="noopener noreferrer">
+          <span class="src-ic">PL</span>
+          <span class="src-body">
+            <h4>PLC Pekanbaru — Trik Mengerjakan per Tipe Soal</h4>
+            <p>Strategi urutan pengerjaan dan pendekatan per subtes.</p>
+            <span class="src-tag">Strategi ujian</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="note-strip">
+        <b>Cara memilih sumber:</b> jangan menumpuk semua tautan. Pilih satu sumber materi,
+        satu bank soal untuk latihan harian, dan satu platform tryout untuk evaluasi.
+      </div>
+    </div>
+  </div>
+
+  <!-- SIMULASI -->
+  <div class="page" data-page="simulasi">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">03 — Simulasi</div>
+        <h2>Dua jenis simulasi, dua tujuan berbeda.</h2>
+        <p class="sec-desc">
+          Satu untuk membiasakan diri dengan tampilan ujian resmi, satu untuk mengukur
+          kemampuan dengan soal latihan bertimer.
+        </p>
+      </div>
+
+      <div class="sim-grid">
+        <article class="sim">
+          <div class="sim-head"><span class="sim-badge b-resmi">Resmi</span></div>
+          <h3>Simulasi CAT BKN</h3>
+          <p>Pengenalan antarmuka dan mekanisme ujian resmi. Soalnya bersifat dummy.</p>
+          <ul>
+            <li>Tampilan sesuai CAT resmi</li>
+            <li>Soal dummy, bukan prediksi</li>
+            <li>Fokus: kenali sistemnya dulu</li>
+          </ul>
+          <a class="btn" href="https://cat.bkn.go.id/simulasi" target="_blank" rel="noopener noreferrer">Buka Simulasi CAT →</a>
+        </article>
+
+        <article class="sim">
+          <div class="sim-head"><span class="sim-badge b-latihan">Latihan</span></div>
+          <h3>Tryout SKD JadiASN</h3>
+          <p>Format penuh 110 soal dalam 100 menit dengan timer.</p>
+          <ul>
+            <li>110 soal · 100 menit</li>
+            <li>TWK, TIU, TKP dalam satu sesi</li>
+            <li>Fokus: ukur stamina &amp; skor</li>
+          </ul>
+          <a class="btn" href="https://app.jadiasn.id/tryout-cpns" target="_blank" rel="noopener noreferrer">Mulai Tryout →</a>
+        </article>
+      </div>
+
+      <div class="strategy-grid" style="margin-top:18px;">
+        <div class="strategy-card">
+          <h3>Yang perlu diketahui soal CAT</h3>
+          <p class="sub">Mekanisme dasar sebelum masuk ruang ujian</p>
+          <ul class="mini-list">
+            <li>Bisa berpindah antar-soal, mengubah jawaban, dan menandai soal.</li>
+            <li>Tidak ada sistem minus — menebak lebih baik daripada mengosongkan.</li>
+            <li>Tanpa kalkulator — latih kecepatan hitung manual.</li>
+            <li>Pastikan seluruh 110 soal terisi sebelum waktu habis.</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <h3>Alokasi waktu yang saya pakai</h3>
+          <p class="sub">Total 100 menit — ini pembagian kasarnya</p>
+          <div class="alloc-row"><span class="alloc-label">TKP</span><div class="alloc-bar"><div class="alloc-fill" style="width:35%"></div></div><span class="alloc-time">35 mnt</span></div>
+          <div class="alloc-row"><span class="alloc-label">TIU</span><div class="alloc-bar"><div class="alloc-fill" style="width:35%"></div></div><span class="alloc-time">35 mnt</span></div>
+          <div class="alloc-row"><span class="alloc-label">TWK</span><div class="alloc-bar"><div class="alloc-fill" style="width:20%"></div></div><span class="alloc-time">20 mnt</span></div>
+          <div class="alloc-row"><span class="alloc-label">Review</span><div class="alloc-bar"><div class="alloc-fill" style="width:10%;background:var(--muted)"></div></div><span class="alloc-time">10 mnt</span></div>
+        </div>
+      </div>
+
+      <div class="timer-box">
+        <div class="timer-info">
+          <h3>Timer latihan 100 menit</h3>
+          <p>Timer tetap berjalan meski kamu pindah tab — indikatornya muncul di navigasi atas.</p>
+        </div>
+        <div class="timer-controls">
+          <div class="timer-display" id="timerDisplay" aria-live="off">100:00</div>
+          <button class="t-btn primary" id="timerToggle" type="button">Mulai</button>
+          <button class="t-btn" id="timerReset" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRATEGI -->
+  <div class="page" data-page="strategi">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">04 — Strategi</div>
+        <h2>Urutan pengerjaan dan cara menghadapi tiap subtes.</h2>
+        <p class="sec-desc">
+          Karena sistem CAT memungkinkan berpindah soal, urutan bisa disesuaikan dengan
+          karakter dan kekuatan masing-masing.
+        </p>
+      </div>
+
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <h3>Pilih urutan yang cocok</h3>
+          <p class="sub">Tiga pendekatan yang umum dipakai</p>
+          <div class="order-options">
+            <div class="order-opt">
+              <b>TKP → TIU → TWK</b>
+              <span>Cocok untuk mengumpulkan poin dari soal situasi dulu. TKP tidak punya jawaban nol.</span>
+            </div>
+            <div class="order-opt">
+              <b>TIU → TKP → TWK</b>
+              <span>Untuk yang nyaman memakai konsentrasi logika di awal.</span>
+            </div>
+            <div class="order-opt">
+              <b>TWK → TIU → TKP</b>
+              <span>Mulai dari hafalan konsep, lalu penalaran, menutup dengan soal kepribadian.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="strategy-card">
+          <h3>Cara menghadapi tiap subtes</h3>
+          <p class="sub">Pendekatan singkat per jenis soal</p>
+          <ul class="mini-list">
+            <li><b style="color:var(--ink)">TWK:</b> pahami konsep, bukan sekadar hafal pasal.</li>
+            <li><b style="color:var(--ink)">TIU:</b> mulai dari sinonim/analogi; gunakan eliminasi; jangan lama di satu soal.</li>
+            <li><b style="color:var(--ink)">TKP:</b> pilih respons paling profesional, proaktif, solutif, dan sesuai aturan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="strategy-card" style="margin-top:18px;">
+        <h3>Logika skor TKP: kenapa opsi A bisa 5 dan opsi B cuma 2</h3>
+        <p class="sub">TKP menilai kualitas respons, bukan benar–salah.</p>
+        <div class="table-wrap" style="margin-top:0;">
+          <table class="score-pattern">
+            <thead>
+              <tr><th class="num">Skor</th><th>Pola opsi</th><th>Contoh respons</th></tr>
+            </thead>
+            <tbody>
+              <tr><td style="color:var(--green);">5</td><td>Empati + aturan + solusi + tindak lanjut</td><td>Menenangkan warga, mengecek berkas, memberi kepastian waktu.</td></tr>
+              <tr><td style="color:var(--green);">4</td><td>Benar arahnya, kurang tuntas</td><td>Mencatat keluhan dan meneruskan ke bagian terkait.</td></tr>
+              <tr><td style="color:var(--amber);">3</td><td>Prosedural tetapi pasif</td><td>Meminta warga mengajukan pengaduan tertulis dulu.</td></tr>
+              <tr><td style="color:var(--amber);">2</td><td>Menghindar, menunda tanpa kepastian</td><td>Menyarankan warga datang lagi besok.</td></tr>
+              <tr><td style="color:var(--red);">1</td><td>Konfrontatif atau melanggar integritas</td><td>Membalas memarahi; menerima uang pelicin.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="note-strip">
+        <b>Kebiasaan yang membantu:</b> latihan minimal 30 soal per hari per subtes,
+        simulasi CAT dua kali seminggu, catat pola kesalahan, dan ulangi materi dengan
+        tingkat kesalahan tertinggi.
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LATIHAN (DIPERLUAS) ================= -->
+  <div class="page" data-page="latihan">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">05 — Latihan Kilat</div>
+        <h2>18 soal, tiga subtes. Coba dulu, baru buka pembahasan.</h2>
+        <p class="sec-desc">
+          Bukan soal resmi BKN — hanya contoh untuk merasakan pola. Pilih jawaban yang
+          menurutmu paling tepat. Skor bertambah otomatis; gunakan filter untuk fokus
+          pada satu subtes.
+        </p>
+      </div>
+
+      <!-- Quiz bar: filter + skor -->
+      <div class="quiz-bar">
+        <div class="quiz-filter" role="group" aria-label="Filter subtes">
+          <button class="qf-btn active" type="button" data-filter="all">Semua (18)</button>
+          <button class="qf-btn" type="button" data-filter="twk">TWK (6)</button>
+          <button class="qf-btn" type="button" data-filter="tiu">TIU (6)</button>
+          <button class="qf-btn" type="button" data-filter="tkp">TKP (6)</button>
+        </div>
+        <div class="quiz-score">
+          <span>Dikerjakan <b id="qDone">0</b>/18</span>
+          <span style="color:var(--green);">Benar <b id="qCorrect">0</b></span>
+          <span style="color:var(--red);">Salah <b id="qWrong">0</b></span>
+          <button class="quiz-reset" id="qReset" type="button">Reset</button>
+        </div>
+      </div>
+
+      <div class="quiz" id="quizList">
+
+        <!-- ============ TWK ============ -->
+
+        <!-- TWK 1 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Berdasarkan Pasal 1 ayat (3) UUD 1945, Indonesia merupakan negara …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. Serikat</div>
+            <div class="q-opt" data-opt data-correct>B. Hukum</div>
+            <div class="q-opt" data-opt>C. Kesatuan</div>
+            <div class="q-opt" data-opt>D. Republik</div>
+            <div class="q-opt" data-opt>E. Demokrasi</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. Hukum.</b> Pasal 1 ayat (3) UUD 1945 menyatakan bahwa Negara Indonesia adalah negara hukum — penyelenggaraan negara berdasarkan hukum, bukan kekuasaan semata.
+          </div>
+        </article>
+
+        <!-- TWK 2 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Pancasila disahkan sebagai dasar negara Indonesia pada tanggal …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. 1 Juni 1945</div>
+            <div class="q-opt" data-opt>B. 22 Juni 1945</div>
+            <div class="q-opt" data-opt data-correct>C. 18 Agustus 1945</div>
+            <div class="q-opt" data-opt>D. 17 Agustus 1945</div>
+            <div class="q-opt" data-opt>E. 29 Mei 1945</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: C. 18 Agustus 1945.</b> Pada sidang PPKI tanggal 18 Agustus 1945, Pancasila (rumusan final) disahkan bersama UUD 1945. Tanggal 1 Juni adalah pidato Soekarno, 22 Juni adalah Piagam Jakarta, 17 Agustus adalah proklamasi.
+          </div>
+        </article>
+
+        <!-- TWK 3 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Semboyan "Bhinneka Tunggal Ika" diambil dari kitab …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. Negarakertagama</div>
+            <div class="q-opt" data-opt data-correct>B. Sutasoma</div>
+            <div class="q-opt" data-opt>C. Arjunawiwaha</div>
+            <div class="q-opt" data-opt>D. Bharatayudha</div>
+            <div class="q-opt" data-opt>E. Ramayana</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. Sutasoma.</b> Semboyan ini berasal dari Kakawin Sutasoma karya Mpu Tantular pada masa Majapahit. Negarakertagama ditulis Mpu Prapanca, Arjunawiwaha oleh Mpu Kanwa.
+          </div>
+        </article>
+
+        <!-- TWK 4 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Dasar hukum kewajiban bela negara bagi setiap warga negara adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt data-correct>A. Pasal 27 ayat (3) UUD 1945</div>
+            <div class="q-opt" data-opt>B. Pasal 28 UUD 1945</div>
+            <div class="q-opt" data-opt>C. Pasal 30 ayat (1) UUD 1945</div>
+            <div class="q-opt" data-opt>D. Pasal 33 ayat (1) UUD 1945</div>
+            <div class="q-opt" data-opt>E. Pasal 36 UUD 1945</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: A. Pasal 27 ayat (3).</b> Berbunyi: "Setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara." Ketentuan teknisnya diatur UU No. 3 Tahun 2002 tentang Pertahanan Negara.
+          </div>
+        </article>
+
+        <!-- TWK 5 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Penulisan kata baku yang benar adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. Apotik</div>
+            <div class="q-opt" data-opt data-correct>B. Apotek</div>
+            <div class="q-opt" data-opt>C. Analisa</div>
+            <div class="q-opt" data-opt>D. Praktek</div>
+            <div class="q-opt" data-opt>E. Ijin</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. Apotek.</b> Bentuk baku menurut KBBI: apotek (bukan apotik), analisis (bukan analisa), praktik (bukan praktek), izin (bukan ijin), silakan (bukan silahkan).
+          </div>
+        </article>
+
+        <!-- TWK 6 -->
+        <article class="q-item" data-quiz data-subtes="twk">
+          <div class="q-head"><span class="q-badge">TWK</span></div>
+          <p class="q-text">Lambang negara Indonesia, Garuda Pancasila, diatur dalam …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt data-correct>A. UU No. 24 Tahun 2009</div>
+            <div class="q-opt" data-opt>B. UU No. 12 Tahun 2011</div>
+            <div class="q-opt" data-opt>C. UU No. 5 Tahun 2014</div>
+            <div class="q-opt" data-opt>D. UU No. 20 Tahun 2003</div>
+            <div class="q-opt" data-opt>E. UU No. 23 Tahun 2006</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: A. UU No. 24 Tahun 2009.</b> Tentang Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan. UU No. 12/2011 tentang Pembentukan Peraturan, UU No. 5/2014 tentang ASN, UU No. 20/2003 tentang Sisdiknas.
+          </div>
+        </article>
+
+        <!-- ============ TIU ============ -->
+
+        <!-- TIU 1 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">NADA : MELODI = BAIT : …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt data-correct>A. Puisi</div>
+            <div class="q-opt" data-opt>B. Lagu</div>
+            <div class="q-opt" data-opt>C. Irama</div>
+            <div class="q-opt" data-opt>D. Syair</div>
+            <div class="q-opt" data-opt>E. Kalimat</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: A. Puisi.</b> Hubungan komponen pembentuk: nada membentuk melodi, bait membentuk puisi. Pola analogi "komponen → hasil" sering muncul di TIU.
+          </div>
+        </article>
+
+        <!-- TIU 2 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">Lanjutkan deret berikut: 3, 6, 11, 18, 27, …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. 36</div>
+            <div class="q-opt" data-opt data-correct>B. 38</div>
+            <div class="q-opt" data-opt>C. 40</div>
+            <div class="q-opt" data-opt>D. 35</div>
+            <div class="q-opt" data-opt>E. 42</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. 38.</b> Selisih bertingkat naik: +3, +5, +7, +9, lalu +11. Maka 27 + 11 = 38. Periksa dulu selisih antar suku sebelum menebak.
+          </div>
+        </article>
+
+        <!-- TIU 3 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">Semua PNS wajib disiplin. Sebagian pegawai di kantor X adalah PNS. Kesimpulan yang tepat adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. Semua pegawai kantor X disiplin</div>
+            <div class="q-opt" data-opt data-correct>B. Sebagian pegawai kantor X disiplin</div>
+            <div class="q-opt" data-opt>C. Semua PNS di kantor X disiplin</div>
+            <div class="q-opt" data-opt>D. Tidak ada pegawai kantor X yang disiplin</div>
+            <div class="q-opt" data-opt>E. Pegawai kantor X tidak disiplin</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. Sebagian pegawai kantor X disiplin.</b> Karena hanya "sebagian" pegawai kantor X adalah PNS, maka hanya sebagian itu yang dapat disimpulkan disiplin. Kesimpulan "semua" melampaui cakupan premis.
+          </div>
+        </article>
+
+        <!-- TIU 4 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">Sebuah baju berharga Rp200.000 mendapat diskon 20%, lalu tambahan diskon 10% dari harga setelah diskon pertama. Harga akhirnya adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt data-correct>A. Rp144.000</div>
+            <div class="q-opt" data-opt>B. Rp140.000</div>
+            <div class="q-opt" data-opt>C. Rp150.000</div>
+            <div class="q-opt" data-opt>D. Rp160.000</div>
+            <div class="q-opt" data-opt>E. Rp130.000</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: A. Rp144.000.</b> Diskon bertingkat dihitung berurutan: 200.000 × 0,80 = 160.000, lalu 160.000 × 0,90 = 144.000. Bukan dijumlahkan menjadi 30%.
+          </div>
+        </article>
+
+        <!-- TIU 5 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">Sinonim kata "baku" yang paling tepat adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt data-correct>A. Standar</div>
+            <div class="q-opt" data-opt>B. Bebas</div>
+            <div class="q-opt" data-opt>C. Kasar</div>
+            <div class="q-opt" data-opt>D. Berbeda</div>
+            <div class="q-opt" data-opt>E. Umum</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: A. Standar.</b> "Baku" berarti pokok, utama, tolok ukur, atau sesuai standar yang ditetapkan. Dalam konteks bahasa, "kata baku" = kata yang sesuai standar (KBBI/PUEBI).
+          </div>
+        </article>
+
+        <!-- TIU 6 -->
+        <article class="q-item" data-quiz data-subtes="tiu">
+          <div class="q-head"><span class="q-badge tiu">TIU</span></div>
+          <p class="q-text">DOKTER : STETOSKOP = PETANI : …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>A. Sawah</div>
+            <div class="q-opt" data-opt data-correct>B. Cangkul</div>
+            <div class="q-opt" data-opt>C. Padi</div>
+            <div class="q-opt" data-opt>D. Traktor</div>
+            <div class="q-opt" data-opt>E. Kerbau</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban: B. Cangkul.</b> Hubungannya adalah "profesi → alat kerja manual". Stetoskop adalah alat kerja dokter, cangkul adalah alat kerja petani. "Traktor" adalah mesin, bukan alat manual — kurang sejajar.
+          </div>
+        </article>
+
+        <!-- ============ TKP ============ -->
+
+        <!-- TKP 1 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Saat melayani masyarakat, ada warga yang datang dengan nada marah karena antrean panjang. Respons terbaik Anda adalah …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Meminta warga sabar dan menunggu tanpa penjelasan</div>
+            <div class="q-opt" data-opt>Mengabaikan karena masih melayani yang lain</div>
+            <div class="q-opt" data-opt data-correct>Menyapa dengan tenang, menjelaskan perkiraan waktu tunggu, dan meminta maaf</div>
+            <div class="q-opt" data-opt>Menyuruh warga pulang dan kembali lain hari</div>
+            <div class="q-opt" data-opt>Meminta rekan kerja menangani warga tersebut</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: C.</b> Respons terbaik menggabungkan empati, penjelasan, dan permintaan maaf — pola yang biasanya diberi skor 5 dalam TKP.
+          </div>
+        </article>
+
+        <!-- TKP 2 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Rekan kerja Anda sering menyelesaikan tugas tidak sesuai standar sehingga menghambat pekerjaan tim. Sikap Anda …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Membiarkan karena bukan tanggung jawab saya</div>
+            <div class="q-opt" data-opt>Melaporkan ke atasan tanpa memberi tahu rekan tersebut</div>
+            <div class="q-opt" data-opt data-correct>Mengajak rekan tersebut berdiskusi dan membantu memahami standar yang benar</div>
+            <div class="q-opt" data-opt>Mengerjakan tugasnya sendiri agar cepat selesai</div>
+            <div class="q-opt" data-opt>Menegurnya di depan rekan kerja lain agar jera</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: C.</b> Jejaring kerja yang baik menuntut kolaborasi dan pembinaan, bukan pelaporan diam-diam atau menegur di depan orang banyak. Membantu rekan memahami standar adalah bentuk profesionalisme.
+          </div>
+        </article>
+
+        <!-- TKP 3 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Atasan memberi Anda tugas baru yang belum pernah Anda kerjakan dengan tenggat singkat. Sikap Anda …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Menolak karena di luar kemampuan</div>
+            <div class="q-opt" data-opt data-correct>Menerima, lalu mempelajari dan mencari referensi atau bertanya kepada yang lebih berpengalaman</div>
+            <div class="q-opt" data-opt>Menerima tetapi mengerjakan semampunya tanpa usaha belajar</div>
+            <div class="q-opt" data-opt>Meminta rekan lain mengerjakan</div>
+            <div class="q-opt" data-opt>Meminta perpanjangan waktu tanpa mencoba dulu</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: B.</b> Profesionalisme menuntut kemauan belajar dan mengambil inisiatif. Menerima tugas, mempelajarinya, dan mencari bantuan yang tepat mencerminkan sikap berkembang.
+          </div>
+        </article>
+
+        <!-- TKP 4 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Dalam rapat, pendapat Anda berbeda dengan mayoritas tim. Sikap Anda …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Diam saja mengikuti keputusan mayoritas</div>
+            <div class="q-opt" data-opt>Memaksa pendapat sendiri diterima</div>
+            <div class="q-opt" data-opt data-correct>Menyampaikan argumen dengan data dan tetap menerima keputusan bersama</div>
+            <div class="q-opt" data-opt>Meninggalkan rapat karena tidak setuju</div>
+            <div class="q-opt" data-opt>Menyampaikan ketidaksetujuan setelah rapat kepada atasan</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: C.</b> Sikap terbaik adalah menyampaikan argumen berbasis data dan tetap menghormati keputusan bersama. Ini mencerminkan profesionalisme dan jejaring kerja yang sehat.
+          </div>
+        </article>
+
+        <!-- TKP 5 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Anda menemukan kesalahan data dalam laporan yang akan segera diserahkan ke pimpinan. Sikap Anda …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Membiarkan karena bukan bagian tugas saya</div>
+            <div class="q-opt" data-opt>Memperbaiki sendiri tanpa memberi tahu siapa pun</div>
+            <div class="q-opt" data-opt data-correct>Melaporkan ke atasan atau rekan penyusun dan mengusulkan perbaikan</div>
+            <div class="q-opt" data-opt>Menyerahkan laporan apa adanya</div>
+            <div class="q-opt" data-opt>Menyalahkan rekan yang membuat data</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: C.</b> Integritas dan tanggung jawab menuntut Anda melaporkan dan mengusulkan perbaikan, bukan mendiamkan, memperbaiki diam-diam, atau menyalahkan. Ini melindungi kualitas hasil tim.
+          </div>
+        </article>
+
+        <!-- TKP 6 -->
+        <article class="q-item" data-quiz data-subtes="tkp">
+          <div class="q-head"><span class="q-badge tkp">TKP</span></div>
+          <p class="q-text">Anda mendengar rekan kerja menyebarkan informasi yang mengarah pada paham radikal. Sikap Anda …</p>
+          <div class="q-opts">
+            <div class="q-opt" data-opt>Mengabaikan karena bukan urusan saya</div>
+            <div class="q-opt" data-opt>Menyebarkan juga agar orang lain tahu</div>
+            <div class="q-opt" data-opt data-correct>Mengajak diskusi secara santun dan melaporkan ke pihak berwenang jika berlanjut</div>
+            <div class="q-opt" data-opt>Memutuskan hubungan kerja</div>
+            <div class="q-opt" data-opt>Menyebarkan klarifikasi di media sosial pribadi</div>
+          </div>
+          <button class="q-toggle" type="button">Buka pembahasan</button>
+          <div class="q-explain">
+            <b>Jawaban terbaik: C.</b> Sikap terbaik adalah tenang, tidak menyebarkan, mengajak dialog, dan menindaklanjuti melalui jalur resmi. Ini mencerminkan kematangan dalam aspek anti-radikalisme.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CATATAN -->
+  <div class="page" data-page="catatan">
+    <div class="wrap page-inner">
+      <div class="page-head">
+        <div class="sec-num">06 — Catatan</div>
+        <h2>Kenapa halaman ini ada.</h2>
+      </div>
+
+      <div class="notes-wrap">
+        <div class="prose">
+          <p>
+            Saya membuat halaman ini untuk diri sendiri. Saat mulai belajar SKD, masalahnya
+            bukan kurang sumber — justru kebanyakan.
+          </p>
+          <p>
+            Jadi saya pangkas. Sekarang isinya <strong>enam halaman terpisah</strong>:
+            materi, bank data, simulasi, strategi, latihan, dan catatan ini.
+          </p>
+          <p>
+            Materi di tab Materi bisa dibuka per topik dan ditandai setelah dipelajari.
+            Latihan punya 18 soal dengan filter subtes dan pelacak skor. Progres latihan
+            hanya tersimpan selama halaman dibuka — tidak dikirim ke mana pun.
+          </p>
+
+          <blockquote class="quote">
+            “Skor bukan soal seberapa banyak soal yang dikerjakan, tapi seberapa jelas
+            tahu mana yang belum dikuasai.”
+          </blockquote>
+
+          <h3>Jadwal belajar yang saya coba pakai</h3>
+          <div class="schedule">
+            <div class="schedule-row">
+              <div class="schedule-day">Senin–Rabu</div>
+              <div class="schedule-desc">TWK &amp; TIU — konsep dan latihan soal per submateri.</div>
+            </div>
+            <div class="schedule-row">
+              <div class="schedule-day">Kamis–Jumat</div>
+              <div class="schedule-desc">TKP &amp; evaluasi — latihan pola skor, catat kesalahan.</div>
+            </div>
+            <div class="schedule-row">
+              <div class="schedule-day">Sabtu</div>
+              <div class="schedule-desc">Tryout CAT lengkap 110 soal, 100 menit, tanpa jeda.</div>
+            </div>
+            <div class="schedule-row">
+              <div class="schedule-day">Minggu</div>
+              <div class="schedule-desc">Review hasil, ulangi submateri dengan kesalahan tertinggi.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="id-card">
+          <div class="avatar">lz</div>
+          <p class="id-name">lz.dln</p>
+          <p class="id-role">Penyusun &amp; kurator halaman</p>
+          <ul class="id-list">
+            <li><span>Status</span><span>Belajar mandiri</span></li>
+            <li><span>Fokus</span><span>SKD CPNS</span></li>
+            <li><span>Materi</span><span>16 topik aktif</span></li>
+            <li><span>Latihan</span><span>18 soal</span></li>
+            <li><span>Versi</span><span>3.2</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p class="foot-brand">SKD Notes</p>
+      <p>Halaman personal berisi materi, bank data, simulasi, dan strategi SKD CPNS. Bukan situs resmi BKN.</p>
+    </div>
+    <div class="foot-right">
+      <p class="credit">Disusun oleh <a href="#/catatan">lz.dln</a></p>
+      <p style="margin-top:6px;"><a href="https://github.com" target="_blank" rel="noopener noreferrer">Repositori GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  function eachNode(nodes, fn) {
+    if (!nodes) return;
+    for (var i = 0; i < nodes.length; i++) {
+      try { fn(nodes[i], i); } catch (e) {}
+    }
+  }
+
+  /* ============================================================
+     ROUTER
+     ============================================================ */
+  try {
+    var pageEls = document.querySelectorAll('.page');
+    var navEls = document.querySelectorAll('[data-nav]');
+
+    var TITLES = {
+      beranda: 'SKD Notes — Materi, Bank Data & Simulasi CPNS',
+      materi: 'Materi — SKD Notes',
+      bankdata: 'Bank Data — SKD Notes',
+      simulasi: 'Simulasi — SKD Notes',
+      strategi: 'Strategi — SKD Notes',
+      latihan: 'Latihan Kilat — SKD Notes',
+      catatan: 'Catatan — SKD Notes'
+    };
+
+    function getPageId() {
+      var h = (location.hash || '').replace(/^#\/?/, '').split('?')[0].trim();
+      if (!h) return 'beranda';
+      for (var i = 0; i < pageEls.length; i++) {
+        if (pageEls[i].getAttribute('data-page') === h) return h;
+      }
+      return 'beranda';
+    }
+
+    function showPage(id) {
+      eachNode(pageEls, function (p) {
+        if (p.getAttribute('data-page') === id) {
+          p.classList.add('active');
+          p.style.display = 'block';
+        } else {
+          p.classList.remove('active');
+          p.style.display = 'none';
+        }
+      });
+      eachNode(navEls, function (a) {
+        var on = a.getAttribute('data-nav') === id;
+        if (on) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+        else { a.classList.remove('active'); a.removeAttribute('aria-current'); }
+      });
+      document.title = TITLES[id] || TITLES.beranda;
+    }
+
+    function navigateTo(id) {
+      showPage(id);
+      try { window.scrollTo(0, 0); } catch (e) {}
+    }
+
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+      while (el && el !== document) {
+        if (el.tagName === 'A') {
+          var href = el.getAttribute('href') || '';
+          if (href.indexOf('#/') === 0) {
+            var id = href.substring(2).split('?')[0];
+            navigateTo(id);
+            return;
+          }
+          break;
+        }
+        el = el.parentNode;
+      }
+    }, false);
+
+    window.addEventListener('hashchange', function () {
+      navigateTo(getPageId());
+    }, false);
+
+    navigateTo(getPageId());
+  } catch (e) {
+    if (window.console) console.error('Router error:', e);
+  }
+
+  /* ============================================================
+     TIMER
+     ============================================================ */
+  try {
+    var TOTAL = 100 * 60;
+    var remaining = TOTAL;
+    var intervalId = null;
+
+    var display = document.getElementById('timerDisplay');
+    var toggleBtn = document.getElementById('timerToggle');
+    var resetBtn = document.getElementById('timerReset');
+    var navTimer = document.getElementById('navTimer');
+    var navTimerText = document.getElementById('navTimerText');
+
+    function format(sec) {
+      var m = Math.floor(sec / 60);
+      var s = sec % 60;
+      return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function renderTimer() {
+      var txt = format(remaining);
+      if (display) {
+        display.textContent = txt;
+        if (remaining <= 300) display.classList.add('warn');
+        else display.classList.remove('warn');
+      }
+      if (navTimerText) navTimerText.textContent = txt;
+      if (navTimer) {
+        if (remaining === 0) navTimer.classList.add('done');
+        else navTimer.classList.remove('done');
+      }
+    }
+
+    function tick() {
+      if (remaining <= 0) { stopTimer(); remaining = 0; renderTimer(); return; }
+      remaining -= 1;
+      renderTimer();
+    }
+
+    function startTimer() {
+      if (intervalId !== null) return;
+      intervalId = window.setInterval(tick, 1000);
+      if (toggleBtn) { toggleBtn.textContent = 'Jeda'; toggleBtn.classList.remove('primary'); }
+      if (navTimer) navTimer.classList.add('show');
+    }
+
+    function stopTimer() {
+      if (intervalId === null) return;
+      window.clearInterval(intervalId);
+      intervalId = null;
+      if (toggleBtn) {
+        toggleBtn.textContent = remaining === 0 ? 'Selesai' : 'Lanjut';
+        toggleBtn.classList.add('primary');
+      }
+    }
+
+    if (display && toggleBtn && resetBtn) {
+      toggleBtn.addEventListener('click', function () {
+        if (intervalId !== null) stopTimer();
+        else { if (remaining === 0) remaining = TOTAL; startTimer(); }
+      });
+      resetBtn.addEventListener('click', function () {
+        stopTimer(); remaining = TOTAL;
+        toggleBtn.textContent = 'Mulai'; toggleBtn.classList.add('primary');
+        renderTimer();
+      });
+      renderTimer();
+    }
+
+    if (navTimer) {
+      navTimer.addEventListener('click', function () {
+        try { location.hash = '#/simulasi'; } catch (e) {}
+      });
+    }
+  } catch (e) { if (window.console) console.error('Timer error:', e); }
+
+  /* ============================================================
+     QUIZ — 18 soal + filter + skor + reset
+     ============================================================ */
+  try {
+    var qStats = { done: 0, correct: 0, wrong: 0 };
+    var qTotal = 0;
+    var qResets = [];
+
+    var qDoneEl = document.getElementById('qDone');
+    var qCorrectEl = document.getElementById('qCorrect');
+    var qWrongEl = document.getElementById('qWrong');
+    var qResetBtn = document.getElementById('qReset');
+
+    function updateQuizStats() {
+      if (qDoneEl) qDoneEl.textContent = qStats.done;
+      if (qCorrectEl) qCorrectEl.textContent = qStats.correct;
+      if (qWrongEl) qWrongEl.textContent = qStats.wrong;
+    }
+
+    eachNode(document.querySelectorAll('[data-quiz]'), function (item) {
+      qTotal++;
+      var toggle = item.querySelector('.q-toggle');
+      var explain = item.querySelector('.q-explain');
+      var opts = item.querySelectorAll('[data-opt]');
+      var answered = false;
+
+      if (!toggle || !explain) return;
+
+      toggle.addEventListener('click', function () {
+        var isOpen = explain.classList.toggle('open');
+        toggle.textContent = isOpen ? 'Tutup pembahasan' : 'Buka pembahasan';
+        if (isOpen && !answered) {
+          eachNode(opts, function (opt) {
+            if (opt.getAttribute('data-correct') !== null) opt.classList.add('correct');
+          });
+        }
+      });
+
+      eachNode(opts, function (opt) {
+        opt.addEventListener('click', function () {
+          if (answered) return;
+          eachNode(opts, function (o) { o.style.pointerEvents = 'none'; });
+          var isCorrect = opt.getAttribute('data-correct') !== null;
+          if (isCorrect) {
+            opt.classList.add('correct');
+            qStats.correct++;
+          } else {
+            opt.classList.add('wrong');
+            qStats.wrong++;
+            eachNode(opts, function (o) {
+              if (o.getAttribute('data-correct') !== null) o.classList.add('correct');
+            });
+          }
+          qStats.done++;
+          updateQuizStats();
+          answered = true;
+          explain.classList.add('open');
+          toggle.textContent = 'Tutup pembahasan';
+        });
+      });
+
+      /* Simpan fungsi reset per soal */
+      qResets.push(function () {
+        answered = false;
+        eachNode(opts, function (o) {
+          o.classList.remove('correct');
+          o.classList.remove('wrong');
+          o.style.pointerEvents = '';
+        });
+        explain.classList.remove('open');
+        toggle.textContent = 'Buka pembahasan';
+      });
+    });
+
+    /* Filter subtes */
+    var filterBtns = document.querySelectorAll('.qf-btn');
+    eachNode(filterBtns, function (btn) {
+      btn.addEventListener('click', function () {
+        eachNode(filterBtns, function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.getAttribute('data-filter');
+        eachNode(document.querySelectorAll('[data-quiz]'), function (item) {
+          var match = (f === 'all') || (item.getAttribute('data-subtes') === f);
+          item.style.display = match ? '' : 'none';
+        });
+      });
+    });
+
+    /* Reset */
+    if (qResetBtn) {
+      qResetBtn.addEventListener('click', function () {
+        qStats.done = 0;
+        qStats.correct = 0;
+        qStats.wrong = 0;
+        eachNode(qResets, function (fn) { fn(); });
+        updateQuizStats();
+      });
+    }
+
+    updateQuizStats();
+  } catch (e) { if (window.console) console.error('Quiz error:', e); }
+
+  /* ============================================================
+     MATERI EXPLORER
+     ============================================================ */
+  try {
+    var explorer = document.getElementById('materiExplorer');
+    if (explorer) {
+      var STORE_KEY = 'skdnotes.materi.done.v1';
+      var done = {};
+      try {
+        var stored = window.localStorage && window.localStorage.getItem(STORE_KEY);
+        if (stored) done = JSON.parse(stored) || {};
+      } catch (e) { done = {}; }
+
+      function saveDone() {
+        try {
+          if (window.localStorage) window.localStorage.setItem(STORE_KEY, JSON.stringify(done));
+        } catch (e) {}
+      }
+
+      var meTabs = explorer.querySelectorAll('.me-tab');
+      var mePanels = explorer.querySelectorAll('.me-panel');
+      var progressText = explorer.querySelector('.me-progress-text');
+      var progressFill = explorer.querySelector('.me-bar i');
+      var searchInput = explorer.querySelector('#meSearch');
+      var expandBtn = explorer.querySelector('.me-expand');
+
+      function activePanel() {
+        return explorer.querySelector('.me-panel.active');
+      }
+
+      function updateProgress() {
+        var panel = activePanel();
+        if (!panel) return;
+        var items = panel.querySelectorAll('.acc');
+        var total = items.length;
+        var count = 0;
+        eachNode(items, function (it) {
+          if (it.classList.contains('done')) count++;
+        });
+        if (progressText) progressText.textContent = count + '/' + total + ' ditandai';
+        if (progressFill) progressFill.style.width = total ? (count / total * 100) + '%' : '0%';
+      }
+
+      function applyDone() {
+        eachNode(explorer.querySelectorAll('.acc'), function (acc) {
+          var id = acc.getAttribute('data-materi-id');
+          var btn = acc.querySelector('.mark-btn');
+          if (done[id]) {
+            acc.classList.add('done');
+            if (btn) { btn.classList.add('on'); btn.textContent = '✓ Sudah dipelajari'; }
+          }
+        });
+      }
+
+      function filterPanel() {
+        var panel = activePanel();
+        if (!panel) return;
+        var q = (searchInput && searchInput.value || '').toLowerCase().trim();
+        var items = panel.querySelectorAll('.acc');
+        var shown = 0;
+        eachNode(items, function (it) {
+          var head = it.querySelector('.acc-head');
+          var body = it.querySelector('.acc-body');
+          var text = ((head ? head.textContent : '') + ' ' + (body ? body.textContent : '')).toLowerCase();
+          var match = !q || text.indexOf(q) !== -1;
+          it.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        var empty = panel.querySelector('.me-empty');
+        if (empty) empty.style.display = shown ? 'none' : 'block';
+      }
+
+      eachNode(meTabs, function (tab) {
+        tab.addEventListener('click', function () {
+          eachNode(meTabs, function (t) {
+            t.classList.remove('active'); t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          var key = tab.getAttribute('data-tab');
+          eachNode(mePanels, function (pn) {
+            if (pn.getAttribute('data-panel') === key) pn.classList.add('active');
+            else pn.classList.remove('active');
+          });
+          updateProgress();
+          filterPanel();
+        });
+      });
+
+      eachNode(explorer.querySelectorAll('.acc-head'), function (head) {
+        head.addEventListener('click', function () {
+          var acc = head.closest ? head.closest('.acc') : head.parentNode;
+          if (!acc) return;
+          var open = acc.classList.toggle('open');
+          head.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+
+      eachNode(explorer.querySelectorAll('.mark-btn'), function (btn) {
+        btn.addEventListener('click', function (e) {
+          if (e.stopPropagation) e.stopPropagation();
+          var acc = btn.closest ? btn.closest('.acc') : null;
+          if (!acc) return;
+          var id = acc.getAttribute('data-materi-id');
+          if (!id) return;
+          if (done[id]) {
+            delete done[id];
+            acc.classList.remove('done');
+            btn.classList.remove('on');
+            btn.textContent = 'Tandai sudah dipelajari';
+          } else {
+            done[id] = true;
+            acc.classList.add('done');
+            btn.classList.add('on');
+            btn.textContent = '✓ Sudah dipelajari';
+          }
+          saveDone();
+          updateProgress();
+        });
+      });
+
+      if (expandBtn) {
+        expandBtn.addEventListener('click', function () {
+          var panel = activePanel();
+          if (!panel) return;
+          var items = panel.querySelectorAll('.acc');
+          var anyClosed = false;
+          eachNode(items, function (it) {
+            if (it.style.display !== 'none' && !it.classList.contains('open')) anyClosed = true;
+          });
+          eachNode(items, function (it) {
+            if (it.style.display === 'none') return;
+            if (anyClosed) it.classList.add('open');
+            else it.classList.remove('open');
+            var head = it.querySelector('.acc-head');
+            if (head) head.setAttribute('aria-expanded', anyClosed ? 'true' : 'false');
+          });
+          expandBtn.textContent = anyClosed ? 'Tutup semua' : 'Buka semua';
+        });
+      }
+
+      if (searchInput) searchInput.addEventListener('input', filterPanel);
+
+      applyDone();
+      updateProgress();
+      filterPanel();
+    }
+  } catch (e) { if (window.console) console.error('Explorer error:', e); }
+
+})();
+</script>
+</body>
+</html>
