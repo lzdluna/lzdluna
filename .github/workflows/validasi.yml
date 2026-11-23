@@ -30,5 +30,14 @@ jobs:
       - name: Audit kontras
         run: npm run kontras
 
+      - name: Cek kontrak breakpoint
+        run: npm run responsif
+
       - name: Uji perilaku halaman
         run: npm run uji
+
+      - name: Pasang Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Uji responsif di browser
+        run: npm run layar

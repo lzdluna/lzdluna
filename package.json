@@ -11,9 +11,12 @@
     "uji": "node scripts/uji.mjs",
     "dokumen": "node scripts/cek-dokumen.mjs",
     "kontras": "node scripts/audit-kontras.mjs",
-    "cek": "npm run validasi && npm run dokumen && npm run kontras && npm run uji"
+    "responsif": "node scripts/cek-responsif.mjs",
+    "layar": "node scripts/uji-responsif.mjs",
+    "cek": "npm run validasi && npm run dokumen && npm run kontras && npm run responsif && npm run uji"
   },
   "devDependencies": {
-    "jsdom": "^26.1.0"
+    "jsdom": "^26.1.0",
+    "playwright": "^1.49.1"
   }
 }

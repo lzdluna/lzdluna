@@ -310,6 +310,32 @@ try {
     dom.window.location.hash = '#/tidak-ada';
     cek('hash tak dikenal fallback ke beranda', await tungguHalaman('beranda'));
 
+    /* --------------------------------------------------------- menu lipat */
+    const toggle = d.getElementById('navToggle');
+    const navLinks = d.getElementById('navLinks');
+    cek('tombol menu ada', !!toggle);
+    cek('menu tertutup secara default', !navLinks.classList.contains('is-open') &&
+      toggle.getAttribute('aria-expanded') === 'false', toggle.getAttribute('aria-expanded'));
+    cek('tombol menu punya aria-controls', toggle.getAttribute('aria-controls') === 'navLinks');
+
+    klik(dom.window, toggle);
+    cek('klik menu membuka panel', navLinks.classList.contains('is-open'));
+    cek('aria-expanded jadi true', toggle.getAttribute('aria-expanded') === 'true');
+    cek('label tombol berubah', /Tutup/.test(toggle.getAttribute('aria-label')), toggle.getAttribute('aria-label'));
+
+    d.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    cek('Esc menutup menu', !navLinks.classList.contains('is-open'));
+    cek('Esc mengembalikan fokus ke tombol', d.activeElement === toggle);
+
+    klik(dom.window, toggle);
+    cek('menu bisa dibuka lagi', navLinks.classList.contains('is-open'));
+    klik(dom.window, d.querySelector('.page[data-page="beranda"] .hero-title'));
+    cek('klik di luar menutup menu', !navLinks.classList.contains('is-open'));
+
+    klik(dom.window, toggle);
+    klik(dom.window, d.querySelector('[data-nav="materi"]'));
+    cek('memilih menu menutup panel', !navLinks.classList.contains('is-open'));
+
     /* --------------------------------------------------------------- kuis */
     dom.window.location.hash = '#/latihan';
     cek('navigasi ke halaman latihan', await tungguHalaman('latihan'));

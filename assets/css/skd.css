@@ -25,8 +25,10 @@
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+html{overflow-x:clip;}
 body{
   margin:0;background:var(--bg);color:var(--ink);
+  overflow-x:clip;
   background-image:radial-gradient(circle at 1px 1px, rgba(17,17,17,.16) 1px, transparent 0);
   background-size:18px 18px;
   font-family:var(--font-display);
@@ -37,7 +39,7 @@ a{color:var(--teal);text-decoration:none;}
 a:hover{text-decoration:underline;text-underline-offset:3px;}
 a,button{touch-action:manipulation;}
 
-.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,24px);}
 
 .nav{
   position:sticky;top:0;z-index:100;
@@ -69,6 +71,19 @@ a,button{touch-action:manipulation;}
   transition:transform .15s ease;
 }
 .brand:hover .brand-mark{transform:rotate(12deg);}
+
+.nav-toggle{
+  display:none;align-items:center;gap:7px;
+  background:var(--card);color:var(--ink);
+  border:2.5px solid var(--line);border-radius:10px;
+  box-shadow:var(--shadow-sm);
+  font-family:inherit;font-size:13px;font-weight:800;
+  padding:7px 12px;cursor:pointer;
+  min-height:40px;
+}
+.nav-toggle:hover{background:var(--yellow);}
+.nav-toggle-ic svg{width:18px;height:18px;display:block;}
+
 .nav-links{
   display:flex;align-items:center;gap:6px;
   flex:1 1 auto;min-width:0;
@@ -107,15 +122,36 @@ a,button{touch-action:manipulation;}
 .timer-pill .tp-dot{width:6px;height:6px;border-radius:50%;background:#8fd19e;}
 .timer-pill.done .tp-dot{background:#f0a58f;}
 
-@media (max-width:560px){
-  .brand span:last-child{display:none;}
-  .nav-card{gap:8px;padding:8px 10px;}
-  .nav-links a{padding:7px 10px;font-size:13px;}
+/* ---------------------------------------------------------------- 860px
+   Navbar berubah jadi menu lipat di bawah 860px. Tujuh menu tidak muat satu
+   baris bersama brand dan timer sampai lebar ~860px; pada 768px navbar yang
+   dibiarkan wrap setinggi 113px dan menutupi layar. */
+@media (max-width:860px){
+  .nav-toggle{display:inline-flex;margin-left:auto;}
+  .nav-links{
+    display:none;
+    flex:1 1 100%;order:3;
+    flex-direction:column;align-items:stretch;gap:8px;
+    padding-top:4px;
+  }
+  .nav-links.is-open{display:flex;}
+  .nav-links a{
+    display:flex;align-items:center;
+    min-height:44px;padding:10px 12px;
+    border-color:var(--line);border-radius:10px;
+    background:var(--card);
+    box-shadow:var(--shadow-sm);
+    font-size:14px;
+  }
+  .nav-links a.active{background:var(--orange);}
+  .timer-pill{order:2;margin-left:0;}
 }
+
+/* ---------------------------------------------------------------- 560px */
 
 .page{display:none;}
 .page.active{display:block;}
-.page-inner{padding:52px 0 80px;}
+.page-inner{padding:clamp(32px,6vw,52px) 0 clamp(56px,8vw,80px);}
 
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
@@ -196,8 +232,6 @@ h2{
   color:var(--muted);font-weight:600;margin-bottom:16px;
 }
 .jump-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media (max-width:860px){.jump-grid{grid-template-columns:1fr 1fr;}}
-@media (max-width:560px){.jump-grid{grid-template-columns:1fr;}}
 .jump{
   display:flex;flex-direction:column;
   background:var(--card);border:2.5px solid var(--line);
@@ -224,7 +258,6 @@ h2{
 }
 
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-@media (max-width:860px){.grid-3{grid-template-columns:1fr;}}
 .card{
   position:relative;
   background:var(--card);border:2.5px solid var(--line);
@@ -440,7 +473,6 @@ td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
 }
 
 .sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-@media (max-width:860px){.sim-grid{grid-template-columns:1fr;}}
 .sim{
   background:var(--card);border:2.5px solid var(--line);
   border-radius:var(--radius);padding:28px 26px;
@@ -495,7 +527,6 @@ td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
 .t-btn.primary:hover{background:var(--accent-soft);color:#fff;}
 
 .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-@media (max-width:860px){.strategy-grid{grid-template-columns:1fr;}}
 .strategy-card{
   background:var(--card);border:2.5px solid var(--line);
   border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
@@ -602,7 +633,6 @@ td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
 .q-explain b{color:var(--ink);}
 
 .notes-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start;}
-@media (max-width:860px){.notes-wrap{grid-template-columns:1fr;gap:32px;}}
 .prose p{margin:0 0 16px;color:var(--ink-soft);}
 .prose p:last-child{margin-bottom:0;}
 .prose strong{color:var(--ink);font-weight:600;}
@@ -652,10 +682,6 @@ td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;}
   display:flex;align-items:center;
 }
 .schedule-desc{padding:12px 16px;color:var(--ink-soft);}
-@media (max-width:560px){
-  .schedule-row{grid-template-columns:1fr;}
-  .schedule-day{border-bottom:1px solid var(--line);}
-}
 
 footer{padding:0 0 40px;background:transparent;border-top:0;}
 .foot{
@@ -979,4 +1005,134 @@ td{border-bottom:1.5px solid var(--line);}
 
 @media (prefers-reduced-motion:reduce){
   .jump:hover .jump-ic,.jump:hover .jump-go{transform:none;}
+}
+
+/* ============================================================
+   RESPONSIF — 720 / 600 / 480 / 360 px
+   Diurutkan dari lebar ke sempit. Blok ini sengaja di akhir berkas
+   agar menang atas aturan dasar dengan spesifisitas sama.
+   ============================================================ */
+
+/* Petunjuk geser tabel: hanya muncul saat tabel benar-benar terpotong */
+.table-hint{
+  display:none;
+  margin:26px 0 -18px;
+  font-size:12px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* ------------------------------------------------------------ 720px */
+@media (max-width:720px){
+  /* Timer menumpuk: info di atas, kontrol di bawah. */
+  .timer-box{
+    flex-direction:column;align-items:stretch;gap:18px;
+    padding:22px 18px;
+  }
+  .timer-info p{max-width:none;}
+  .timer-controls{justify-content:center;gap:10px;}
+  .timer-display{
+    font-size:clamp(1.9rem,7vw,2.4rem);
+    min-width:0;flex:1 1 auto;
+  }
+}
+
+/* ------------------------------------------------------------ 600px */
+@media (max-width:600px){
+  /* Tabel: kolom pertama menempel, sisanya bisa digeser. */
+  .table-hint{display:block;}
+  .table-wrap table{min-width:520px;}
+  .table-wrap th:first-child,
+  .table-wrap td:first-child{
+    position:sticky;left:0;z-index:2;
+    background:var(--card);
+    box-shadow:1px 0 0 var(--line);
+  }
+  .table-wrap th:first-child{background:var(--yellow);}
+}
+
+/* ------------------------------------------------------------ 480px */
+@media (max-width:480px){
+  /* Timer: kontrol penuh selebar kartu. */
+  .timer-controls{flex-direction:column;align-items:stretch;gap:8px;}
+  .timer-controls .t-btn{width:100%;}
+  .timer-display{width:100%;text-align:center;}
+
+  /* Badge hero: satu kluster per baris. */
+  .hero-meta{gap:16px;}
+  .meta-grup{width:100%;}
+  .meta-chips{gap:6px;}
+  .hero-meta .chip{font-size:12.5px;padding:6px 11px;}
+
+  /* Bar kuis: filter lalu skor, masing-masing satu baris. */
+  .quiz-bar{flex-direction:column;align-items:stretch;gap:12px;padding:14px;}
+  .quiz-filter,.quiz-score{width:100%;}
+  .quiz-filter .qf-btn{flex:1 1 0;text-align:center;}
+  .quiz-score{justify-content:space-between;}
+
+  /* Opsi kuis lebih rapat. */
+  .q-opt{padding:10px 12px;font-size:13.5px;}
+  .q-item{padding:18px 16px;}
+
+  /* Ikon modul sedikit lebih kecil. */
+  .jump-ic{width:34px;height:34px;}
+  .jump-ic svg{width:17px;height:17px;}
+
+  /* Stiker kartu profil tidak lagi keluar tepi. */
+  .id-card::after{right:0;transform:rotate(3deg);}
+
+  /* Pita kartu subtes ikut menyempit. */
+  .card::before{width:52px;height:15px;}
+}
+
+/* ------------------------------------------------------------ 360px */
+@media (max-width:360px){
+  .nav-card{padding:8px;}
+  .brand{font-size:16px;}
+  .stat-strip b{font-size:1.35rem;}
+  .jump-grid > .jump,
+  .grid-3 > .card{padding:18px 16px;}
+  .q-opt{font-size:13px;padding:9px 11px;}
+  .chip{font-size:12px;}
+  .hero-title{padding-bottom:4px;}
+}
+
+/* ------------------------------------------- target sentuh perangkat sentuh */
+@media (pointer:coarse){
+  .nav-toggle,
+  .nav-links a,
+  .btn,
+  .t-btn,
+  .qf-btn,
+  .me-tab,
+  .mark-btn,
+  .q-toggle,
+  .q-opt,
+  .quiz-reset,
+  .me-mini,
+  .brand{
+    min-height:44px;
+  }
+  .nav-links a{
+    display:flex;align-items:center;
+  }
+  .q-opt{align-items:center;}
+}
+
+/* Blok ini HARUS berada setelah aturan dasarnya. Sebelumnya ia diletakkan
+   di atas .grid-3/.sim-grid/.strategy-grid sehingga kalah oleh aturan dasar
+   yang datang belakangan — akibatnya grid tetap 3 kolom di ponsel. */
+@media (max-width:860px){
+  .jump-grid{grid-template-columns:1fr 1fr;}
+  .grid-3{grid-template-columns:1fr;}
+  .sim-grid{grid-template-columns:1fr;}
+  .strategy-grid{grid-template-columns:1fr;}
+  .notes-wrap{grid-template-columns:1fr;gap:32px;}
+}
+
+@media (max-width:560px){
+  .brand span:last-child{display:none;}
+  .nav-card{gap:8px;padding:8px 10px;}
+  .jump-grid{grid-template-columns:1fr;}
+  .schedule-row{grid-template-columns:1fr;}
+  .schedule-day{border-bottom:1px solid var(--line);}
 }

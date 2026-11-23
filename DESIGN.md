@@ -127,14 +127,36 @@ Judul memakai tracking negatif (`-.035em`) supaya terasa padat dan tegas.
 
 ### Breakpoints
 
+Target minimum yang diuji: **320px**. Skala dijaga sengaja kecil supaya
+perilaku tiap lebar bisa diprediksi.
+
 | Lebar | Perubahan |
 |---|---|
-| ≤ 860px | `.grid-3`, `.sim-grid`, `.strategy-grid`, `.notes-wrap` jadi 1 kolom; `.jump-grid` 2 kolom |
+| ≤ 860px | `.grid-3`, `.sim-grid`, `.strategy-grid`, `.notes-wrap` jadi 1 kolom; `.jump-grid` 2 kolom; **navbar berubah jadi menu lipat** |
 | ≤ 760px | `.src-list` jadi 1 kolom |
-| ≤ 720px | Footer rata kiri |
+| ≤ 720px | Footer jadi satu kolom; timer menumpuk (info di atas, kontrol di bawah) |
 | ≤ 640px | `.stat-strip` jadi 2×2 |
-| ≤ 600px | `.acc-body` tanpa indentasi, `.acc-flag` disembunyikan |
+| ≤ 600px | `.acc-body` tanpa indentasi, `.acc-flag` disembunyikan; tabel dapat kolom pertama yang menempel + petunjuk geser |
 | ≤ 560px | `.jump-grid` 1 kolom, teks brand disembunyikan, `.schedule-row` 1 kolom |
+| ≤ 480px | Kontrol timer vertikal penuh, kluster badge satu baris, bar kuis menumpuk, opsi kuis lebih rapat, ikon modul 34px |
+| ≤ 360px | Pengaman akhir: padding kartu, ukuran angka metrik, dan font opsi turun |
+
+**Aturan penempatan:** blok `@media` harus berada **setelah** aturan dasarnya.
+Blok 860px pernah diletakkan di atas `.grid-3` sehingga kalah oleh aturan dasar
+dan grid tetap 3 kolom di ponsel — ini pernah lolos tanpa terdeteksi karena
+tidak ada pengujian tata letak.
+
+### Perilaku mobile per komponen
+
+| Komponen | Perilaku |
+|---|---|
+| Navbar | ≤860px: tombol **Menu** dengan `aria-expanded`; panel terbuka di dalam kartu, bukan modal. Esc menutup dan mengembalikan fokus; klik di luar dan memilih menu juga menutup |
+| Timer | ≤720px menumpuk; ≤480px tombol selebar kartu, angka memakai `clamp()` |
+| Tabel | ≤600px `min-width` 520, kolom pertama `position:sticky; left:0`, petunjuk "geser" muncul |
+| Badge hero | ≤480px tiap kluster jadi satu baris penuh |
+| Kuis | ≤480px filter dan skor masing-masing satu baris; opsi `padding:10px 12px` |
+| Sentuh | `@media (pointer:coarse)` memberi `min-height:44px` pada semua kontrol |
+| Overflow | `html, body { overflow-x: clip }` menahan offset negatif dekorasi |
 
 ---
 
@@ -174,7 +196,7 @@ index.html          kerangka saja (502 baris), tanpa konten
 assets/css/skd.css  seluruh gaya, termasuk token di :root
 assets/js/          render · router · timer · quiz · materi · sumber · app
 data/               konfigurasi · sumber · materi/{twk,tiu,tkp} · soal/{twk,tiu,tkp}
-scripts/            ekstrak · validasi · dokumen · kontras · uji · serve
+scripts/            ekstrak · validasi · dokumen · kontras · responsif · uji · uji-responsif · serve
 ```
 
 - JS memakai classic script + namespace `window.SKD`, dimuat dengan `defer`.

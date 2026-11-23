@@ -86,7 +86,64 @@ window.SKD = window.SKD || {};
       navigateTo(getPageId());
     }, false);
 
+    initMenu();
     navigateTo(getPageId());
+  }
+
+  /* Menu lipat untuk layar sempit. Bukan modal: panel terbuka di dalam kartu
+     navbar, jadi tidak perlu focus trap. */
+  function initMenu() {
+    var toggle = document.getElementById('navToggle');
+    var card = document.querySelector('.nav-card');
+    var links = document.getElementById('navLinks');
+    if (!toggle || !card || !links) return;
+
+    function terbuka() {
+      return links.classList.contains('is-open');
+    }
+
+    function setMenu(buka) {
+      if (buka) links.classList.add('is-open');
+      else links.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', buka ? 'true' : 'false');
+      toggle.setAttribute('aria-label', buka ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+    }
+
+    toggle.addEventListener('click', function () {
+      setMenu(!terbuka());
+    });
+
+    /* Esc menutup dan mengembalikan fokus ke tombol. */
+    document.addEventListener('keydown', function (e) {
+      if ((e.key === 'Escape' || e.key === 'Esc') && terbuka()) {
+        setMenu(false);
+        try { toggle.focus(); } catch (err) {}
+      }
+    }, false);
+
+    /* Klik di luar kartu menutup menu. */
+    document.addEventListener('click', function (e) {
+      if (!terbuka()) return;
+      if (card.contains(e.target)) return;
+      setMenu(false);
+    }, false);
+
+    /* Memilih menu menutup panel. */
+    links.addEventListener('click', function (e) {
+      var el = e.target;
+      while (el && el !== links) {
+        if (el.tagName === 'A') { setMenu(false); return; }
+        el = el.parentNode;
+      }
+    }, false);
+
+    /* Kembali ke layar lebar: buang state terbuka agar tidak tersisa. */
+    try {
+      var mq = window.matchMedia('(min-width:601px)');
+      var tangkap = function (e) { if (e.matches) setMenu(false); };
+      if (mq.addEventListener) mq.addEventListener('change', tangkap);
+      else if (mq.addListener) mq.addListener(tangkap);
+    } catch (err) {}
   }
 
   SKD.router = { init: init, buka: navigateTo };
