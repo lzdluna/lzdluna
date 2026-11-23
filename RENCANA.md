@@ -1,7 +1,28 @@
 # Rencana: Pisahkan Data ke Folder `data/`
 
-Status: **disetujui**, sedang dieksekusi.
-Target: `index.html` 2.458 baris → kerangka ±350 baris + data terstruktur.
+Status: **selesai** (commit 1–4). `index.html` 2.458 baris → 502 baris.
+
+---
+
+## Hasil akhir
+
+| Langkah | Status | Bukti |
+|---|---|---|
+| 1. Ekstraksi data | selesai | 16 topik, 18 soal, 90 opsi, 12 sumber, 0 id duplikat |
+| 2. Render dari JSON + pisah CSS/JS | selesai | `index.html` 112 KB → 23 KB (502 baris) |
+| 3. Turunkan 14 angka | selesai | semua lewat `data-stat`; angka manual di HTML = 0 |
+| 4. Tes + CI | selesai | 101 cek lolos; `.github/workflows/validasi.yml` |
+
+Ukuran sekarang: `index.html` 502 baris · `assets/css/skd.css` 617 baris ·
+7 modul JS total 1.213 baris · `data/` 28 KB.
+
+Verifikasi round-trip terhadap `v1-baseline`: 484 perbandingan teks identik.
+Selisih yang tersisa hanya tiga hal yang memang diniatkan:
+
+1. Label jawaban soal 4 diturunkan dari opsi — kini menyertakan "UUD 1945".
+2. Opsi TKP 13–18 mendapat label A–E (sebelumnya tidak ada, padahal pembahasan
+   menyebut "Jawaban terbaik: C").
+3. Empat angka dibungkus `<span data-stat>`.
 
 ---
 
