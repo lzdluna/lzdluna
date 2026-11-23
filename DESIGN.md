@@ -213,8 +213,10 @@ scripts/            ekstrak · validasi · dokumen · kontras · responsif · uj
 ### Navigation
 
 Navbar adalah **kartu mengambang**, bukan bilah penuh selebar layar: pembungkus
-sticky berlatar kertas, dan di dalamnya `.nav-card` putih ber-border 2.5px,
-radius 16px, serta `--shadow`.
+`.nav` transparan (`top:12px`), dan di dalamnya `.nav-card` putih ber-border
+2.5px, radius 16px, serta `--shadow-lg` agar terangkat dari konten. Rasanya
+seperti di `inspirasi.html`, tapi tetap `sticky` supaya navigasi dan timer-pill
+selalu terjangkau saat scroll.
 
 - Brand: kotak oranye berbentuk **lingkaran** 36px berisi huruf `l`, memutar 12°
   saat hover.

@@ -183,10 +183,12 @@ try {
     cek('badge dikelompokkan dua kolom', /column/.test(nilai('.meta-grup', 'flex-direction')),
       nilai('.meta-grup', 'flex-direction'));
 
-    /* Navbar & footer ala inspirasi.html */
+    /* Navbar melayang: kartu terlepas dari tepi atas, bukan bilah flush. */
     cek('navbar berupa kartu ber-border', /2\.5px/.test(nilai('.nav-card', 'border')), nilai('.nav-card', 'border'));
-    cek('navbar memakai bayangan keras', /var\(--shadow\)/.test(nilai('.nav-card', 'box-shadow')),
+    cek('navbar memakai bayangan keras', /var\(--shadow-lg\)/.test(nilai('.nav-card', 'box-shadow')),
       nilai('.nav-card', 'box-shadow'));
+    cek('navbar terlepas dari tepi atas', /^12px$/.test(nilai('.nav', 'top')), nilai('.nav', 'top'));
+    cek('navbar transparan', /transparent/.test(nilai('.nav', 'background')), nilai('.nav', 'background'));
     cek('navbar tidak lagi bergaris bawah', !/border-bottom/.test(nilai('.nav', 'border')),
       nilai('.nav', 'border'));
     cek('brand mark berbentuk lingkaran', /50%/.test(nilai('.brand-mark', 'border-radius')),
