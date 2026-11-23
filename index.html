@@ -2027,6 +2027,7 @@
     function beep() {
       try {
         if (!audioCtx) return;
+        if (audioCtx.state === 'suspended' && audioCtx.resume) audioCtx.resume();
         var t0 = audioCtx.currentTime;
         for (var i = 0; i < 3; i++) {
           var osc = audioCtx.createOscillator();
@@ -2164,6 +2165,13 @@
         renderTimer();
         saveTimer();
       });
+
+      /* Audio disiapkan pada interaksi pertama, supaya alarm tetap bisa
+         berbunyi walau timer dilanjutkan dari sesi sebelumnya. */
+      document.addEventListener('pointerdown', function once() {
+        document.removeEventListener('pointerdown', once, false);
+        primeAudio();
+      }, false);
 
       /* Sinkron ulang tepat saat tab kembali aktif, bukan menunggu tick berikutnya. */
       document.addEventListener('visibilitychange', function () {
