@@ -27,5 +27,8 @@ jobs:
       - name: Periksa konsistensi DESIGN.md
         run: npm run dokumen
 
+      - name: Audit kontras
+        run: npm run kontras
+
       - name: Uji perilaku halaman
         run: npm run uji

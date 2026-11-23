@@ -10,7 +10,8 @@
     "validasi": "node scripts/validasi.mjs",
     "uji": "node scripts/uji.mjs",
     "dokumen": "node scripts/cek-dokumen.mjs",
-    "cek": "npm run validasi && npm run dokumen && npm run uji"
+    "kontras": "node scripts/audit-kontras.mjs",
+    "cek": "npm run validasi && npm run dokumen && npm run kontras && npm run uji"
   },
   "devDependencies": {
     "jsdom": "^26.1.0"

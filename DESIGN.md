@@ -62,6 +62,12 @@ Tiga token tambahan, semuanya untuk meniru alat tulis, bukan UI:
 Aturan pakai: stabilo **selalu di belakang teks gelap**, tidak pernah sebagai
 warna teks. Karena itu lapisan ini menambah keterbacaan, bukan menguranginya.
 
+Satu pengecualian yang harus dijaga: `.note-strip b` dan `.acc-note b` berada di
+dalam callout yang warna teksnya `--accent`/`--amber`. Tanpa paksaan
+`color: var(--ink)`, stabilo kuning akan menyorot teks amber — terukur
+**1.66:1** dan nyaris tak terbaca. Aturan pemaksa itu wajib ada, dan
+`npm run kontras` akan gagal bila dihapus.
+
 ### Penyimpangan yang disengaja dari LocalGuide
 
 | LocalGuide | Di proyek ini | Alasan |
@@ -76,8 +82,11 @@ Warna Primary, Secondary, Tertiary, Success, Warning, Error, dan Info dipakai
 
 > **Peringatan.** Palet LocalGuide dirancang untuk latar putih. Di latar kertas
 > proyek ini, seluruh warna semantik **gagal** ambang 4.5:1 bila dipakai sebagai
-> teks. Ini keputusan sadar, bukan kelalaian. Angka di bawah adalah hasil ukur,
-> bukan perkiraan.
+> teks. Ini keputusan sadar, bukan kelalaian.
+
+Angka di bawah berasal dari `npm run kontras`, yang mengukur 77 pasangan
+teks–latar yang benar-benar dipakai. Hasil: **43 lolos, 34 gagal**, semuanya
+gagal karena warna semantik dan aksen.
 
 | Token | Hex | di `--bg` | di `--bg-soft` | di `--card` | AA |
 |---|---|---|---|---|---|
@@ -91,20 +100,25 @@ Warna Primary, Secondary, Tertiary, Success, Warning, Error, dan Info dipakai
 | `--ink-soft` | `#4A463F` | 8.77 | 8.10 | 9.23 | ✅ |
 | `--muted` | `#6B6459` | 5.46 | 5.05 | 5.75 | ✅ |
 
-Teks putih di atas tombol juga di bawah ambang: `#FFFFFF` pada `--accent` = **3.56:1**.
+Teks putih di atas `--accent` = **3.56:1**. Paling parah: `--amber` `#EAB308`
+pada `--amber-wash` = **1.79:1**.
 
-**Yang terkena:** `.note-strip` (paragraf penuh), `.acc-note`, `.timer-note`,
-`.q-toggle`, `.src-tag`, `.jump-go`, `.order-opt b`, `.card-kode`, `.acc-num`,
-`.q-badge`, `.acc-flag`, serta label `Benar`/`Salah` pada pelacak skor.
+**Yang terkena:** callout `.note-strip`, `.acc-note`, badge subtes, `.acc-flag`,
+`.card-kode`, `.acc-num`, `.src-tag`, `.jump-go`, `.q-toggle`, `.timer-note`,
+label `Benar`/`Salah`, dan semua tombol berlatar `--accent`.
 
-**Yang aman:** seluruh teks isi (`--ink`, `--ink-soft`) dan metadata (`--muted`)
-tetap lolos — dan itu mayoritas teks di halaman.
+**Yang aman:** seluruh teks isi (`--ink`, `--ink-soft`) dan metadata (`--muted`),
+yaitu mayoritas teks di halaman.
 
 **Cara memulihkan AA tanpa mengganti hue:** gelapkan token hingga lolos, dengan
 `--accent` `#BB460A` (4.91), `--teal` `#0B7970` (4.93), `--amber` `#886805`
 (4.87), `--green` `#117D39` (4.89), `--red` `#D22424` (4.88). Angka dalam
-kurung adalah rasio terhadap `--bg`. Jalankan `npm run uji` setelah mengubah —
-tes mengunci nilai token, jadi perubahan akan terdeteksi.
+kurung adalah rasio terhadap `--bg`.
+
+**Penjaga regresi.** `npm run kontras` mencatat setiap pasangan yang gagal
+beserta alasannya. Pasangan gagal yang belum terdaftar membuat skrip keluar
+dengan kode 1, jadi CI menolak kombinasi baru yang lebih buruk. Skrip ini juga
+memastikan aturan pengaman stabilo tetap ada.
 
 ---
 

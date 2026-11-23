@@ -649,6 +649,9 @@ footer{padding:46px 0 54px;background:var(--bg-soft);border-top:1px solid var(--
   padding:0 2px;
   font-weight:700;
 }
+/* Stabilo hanya boleh menyorot teks gelap. Di dalam callout, warna teks
+   induknya amber/orange, jadi dipaksa ke tinta supaya tetap terbaca. */
+.note-strip b,.acc-note b{color:var(--ink);}
 .cakupan li b{background:linear-gradient(180deg,
     transparent 52%, var(--stabilo-teal) 52%, var(--stabilo-teal) 94%, transparent 94%);}
 
